@@ -207,6 +207,27 @@
       gtag('consent', 'update', {
         'analytics_storage': 'granted'
       });
+
+      // If GA was initialized while consent was denied, it may not emit the
+      // initial page_view. Re-run config (or send a page_view) after consent.
+      const pagePath = window.location.pathname + window.location.search + window.location.hash;
+      const gaScript = document.querySelector('script[src*="googletagmanager.com/gtag/js?id="]');
+
+      let measurementId = null;
+      if (gaScript && gaScript.getAttribute('src')) {
+        try {
+          const u = new URL(gaScript.getAttribute('src'), window.location.href);
+          measurementId = u.searchParams.get('id');
+        } catch (_) {
+          measurementId = null;
+        }
+      }
+
+      if (measurementId) {
+        gtag('config', measurementId, { page_path: pagePath });
+      } else {
+        gtag('event', 'page_view', { page_path: pagePath });
+      }
     }
   }
 
