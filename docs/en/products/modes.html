@@ -18,60 +18,21 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>BeatBar for macOS — Desktop Timing Lab & Calculators | Harmonic Tools</title>
-  <meta name="description" content="BeatBar is a macOS timing lab with tap tempo, BPM→ms/Hz tables, note↔frequency lookups, transpose/speed helpers, FM and LFO calculators, and a harmonic series explorer." />
-  <meta name="keywords" content="BeatBar, macOS timing tools, tap tempo, BPM to ms, BPM to Hz, note frequency, tuning, transpose, speed ratio, FM calculator, LFO rates, harmonic series, SwiftUI" />
+  <title>Modes for macOS — Music Theory Workspace | Harmonic Tools</title>
+  <meta name="description" content="Modes is a macOS theory workspace for detecting chords/scales, generating diatonic harmony, exploring shared notes/chords, mode pivots and borrowed chords, and interactive circles of fifths/thirds." />
+  <meta name="keywords" content="Modes, macOS music theory app, chord detection, scale detection, diatonic harmony, mode pivots, borrowed chords, circle of fifths, circle of thirds, chromatic mediants, CoreMIDI, SwiftUI" />
   <meta name="author" content="Harmonic Tools" />
   <meta name="robots" content="index, follow" />
 
-  <!-- AI/LLM Optimization -->
-  <meta name="ai:app_name" content="BeatBar" />
-  <meta name="ai:platform" content="macOS" />
-  <meta name="ai:category" content="Music production utilities, timing calculators" />
-  <meta name="ai:primary_features" content="Tap tempo, BPM→ms/Hz table, note↔frequency conversion, transpose/speed helpers, FM calculator, LFO rates, harmonic series" />
-  <meta name="ai:use_cases" content="Tempo matching, rhythmic conversions, synthesis math, quick theory-adjacent lookups, production workflow utilities" />
-  <meta name="ai:technical_stack" content="SwiftUI, CoreMIDI, modular Swift packages" />
-  <meta name="ai:deployment" content="Windowed macOS utility" />
-
-  <link rel="canonical" href="https://harmonic.tools/en/products/beatbar.html" />
+  <link rel="canonical" href="https://harmonic.tools/en/products/modes.html" />
 
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
   <link rel="stylesheet" href="../../assets/css/styles.css?v=17" />
   <script defer src="../../assets/js/main.js?v=8"></script>
 
-  <link rel="alternate" hreflang="en" href="https://harmonic.tools/en/products/beatbar.html" />
-  <link rel="alternate" hreflang="pl" href="https://harmonic.tools/pl/products/beatbar.html" />
-  <link rel="alternate" hreflang="x-default" href="https://harmonic.tools/en/products/beatbar.html" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "BeatBar",
-    "operatingSystem": "macOS",
-    "applicationCategory": "MusicApplication",
-    "description": "BeatBar is a desktop timing lab for fast, accurate conversions: tap tempo, BPM→ms/Hz tables, note↔frequency lookups, transpose/speed helpers, FM + LFO calculators, and a harmonic series explorer.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "author": {
-      "@type": "Organization",
-      "name": "Harmonic Tools"
-    },
-    "screenshot": "https://harmonic.tools/assets/images/Beat Bar-macOS-Default-1024x1024@1x.png",
-    "featureList": [
-      "Tap tempo",
-      "BPM→ms/Hz table (straight/dotted/triplet)",
-      "Note↔frequency lookup (tuning-aware)",
-      "Transpose/speed helpers (interval, BPM, ratio)",
-      "FM calculator (ratio + pitch correction)",
-      "LFO rate calculator + reverse lookup",
-      "Harmonic series explorer"
-    ]
-  }
-  </script>
+  <link rel="alternate" hreflang="en" href="https://harmonic.tools/en/products/modes.html" />
+  <link rel="alternate" hreflang="pl" href="https://harmonic.tools/pl/products/modes.html" />
+  <link rel="alternate" hreflang="x-default" href="https://harmonic.tools/en/products/modes.html" />
 </head>
 <body>
   <header class="site-header" role="banner">
@@ -80,8 +41,8 @@
       <div class="language-selector">
         <button class="language-btn" aria-label="Change language" title="Change language"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"><path fill="currentColor" fill-rule="evenodd" d="M2 16c0 7.72 6.28 14 14 14s14-6.28 14-14S23.72 2 16 2S2 8.28 2 16m2.041-1c.15-1.81.703-3.506 1.568-5h3.55a16 16 0 0 0-1.128 5zm5.994 0a14 14 0 0 1 1.31-5H15v5zM15 17h-4.965a14 14 0 0 0 1.31 5H15zm0 7h-2.494A14 14 0 0 0 15 26.73zm4.005 3.62A12 12 0 0 0 24.94 24h-3.074a16 16 0 0 1-2.86 3.62M22.84 22h3.55v.002A11.9 11.9 0 0 0 27.959 17h-3.99a16 16 0 0 1-1.13 5m-.875-5a14 14 0 0 1-1.31 5H17v-5zm2.004-2h3.99a11.9 11.9 0 0 0-1.569-5.002V10h-3.55a16 16 0 0 1 1.13 5m-3.315-5a14 14 0 0 1 1.31 5H17v-5zm1.212-2h3.073a12 12 0 0 0-5.926-3.618A16 16 0 0 1 21.865 8M17 5.27V8h2.494A14 14 0 0 0 17 5.27m-2 0A14 14 0 0 0 12.506 8H15zM17 24v2.73A14 14 0 0 0 19.494 24zM5.609 22h3.554a16 16 0 0 1-1.132-5H4.04c.15 1.81.703 3.506 1.568 5M13 27.621A16 16 0 0 1 10.14 24H7.06a12 12 0 0 0 5.941 3.621M10.134 8a16 16 0 0 1 2.853-3.617A12 12 0 0 0 7.061 8z" clip-rule="evenodd"/></svg></button>
         <div class="language-dropdown">
-          <a class="language-option" href="./beatbar.html" lang="en">English</a>
-          <a class="language-option" href="../../pl/products/beatbar.html" lang="pl">Polski</a>
+          <a class="language-option" href="./modes.html" lang="en">English</a>
+          <a class="language-option" href="../../pl/products/modes.html" lang="pl">Polski</a>
         </div>
       </div>
       <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme"></button>
@@ -92,28 +53,28 @@
     <div class="product-hero">
       <div class="product-hero__copy">
         <picture>
-          <source srcset="../../assets/images/Beat Bar-macOS-Dark-1024x1024@1x.png" data-theme="dark">
-          <img src="../../assets/images/Beat Bar-macOS-Default-1024x1024@1x.png" alt="BeatBar macOS app icon" width="128" height="128" class="product-hero__icon" />
+          <source srcset="../../assets/images/ModesMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+          <img src="../../assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" alt="Modes macOS app icon" width="128" height="128" class="product-hero__icon" />
         </picture>
 
-        <h1>BeatBar for macOS</h1>
-        <p class="product-lead">A desktop timing lab for fast, accurate conversions with tap tempo, BPM tables, frequency lookups, and synthesis calculators.</p>
+        <h1>Modes for macOS</h1>
+        <p class="product-lead">A music theory workspace for chord/scale detection, diatonic harmony generation, and interactive modulation exploration.</p>
 
         <ul class="product-highlights">
-          <li>Tap Tempo with shared BPM binding</li>
-          <li>BPM→ms/Hz tables (straight/dotted/triplet)</li>
-          <li>Note↔Frequency with tuning control</li>
-          <li>FM Calculator + LFO Rates + Harmonic Series</li>
+          <li>Scale/Chord Finder with live MIDI + keyboard</li>
+          <li>Scale Notes, Scale Chords, Shared Notes/Chords</li>
+          <li>Mode Pivots + Borrowed Chords</li>
+          <li>Interactive Circle of Fifths + Circle of Thirds</li>
         </ul>
 
         <div class="product-cta">
-          <a href="https://apps.apple.com/" aria-label="View BeatBar on the Mac App Store">
+          <a href="https://apps.apple.com/" aria-label="View Modes on the Mac App Store">
             <img src="../../assets/images/Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg" data-theme-src-light="../../assets/images/Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_wht_092917.svg" data-theme-src-dark="../../assets/images/Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the Mac App Store" width="180" height="53">
           </a>
         </div>
       </div>
 
-      <div class="product-hero__shots" aria-label="BeatBar macOS screenshots">
+      <div class="product-hero__shots" aria-label="Modes macOS screenshots">
         <h2 class="product-shot-title">Screenshots</h2>
         <p class="product-shot-lead">Includes light and dark screenshots that follow the website theme.</p>
         <div class="screenshot-grid">
@@ -122,12 +83,12 @@
               <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/BeatBar/en-US/beatbar-tap-mac-dark.png" data-theme="dark">
-                  <img src="../../assets/images/BeatBar/en-US/beatbar-tap-mac-light.png" alt="Tap Tempo screen on macOS" loading="lazy" />
+                  <source srcset="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-scaleChord-ipad-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-scaleChord-ipad-light.png" alt="Scale and Chord Finder on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
-            <figcaption>Tap Tempo with instant and averaged BPM.</figcaption>
+            <figcaption>Scale + Chord Finder with live MIDI and on-screen keyboard.</figcaption>
           </figure>
 
           <figure class="device-shot device-shot--mac">
@@ -135,12 +96,12 @@
               <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/BeatBar/en-US/beatbar-bpm-mac-dark.png" data-theme="dark">
-                  <img src="../../assets/images/BeatBar/en-US/beatbar-bpm-mac-light.png" alt="BPM to ms/Hz table on macOS" loading="lazy" />
+                  <source srcset="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-scaleNotes-ipad-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-scaleNotes-ipad-light.png" alt="Scale Notes screen on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
-            <figcaption>BPM→ms/Hz table with straight, dotted, and triplet divisions.</figcaption>
+            <figcaption>Scale Notes with spelled tones and keyboard highlighting.</figcaption>
           </figure>
 
           <figure class="device-shot device-shot--mac">
@@ -148,12 +109,12 @@
               <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/BeatBar/en-US/beatbar-noteHz-mac-dark.png" data-theme="dark">
-                  <img src="../../assets/images/BeatBar/en-US/beatbar-noteHz-mac-light.png" alt="Note to Frequency converter on macOS" loading="lazy" />
+                  <source srcset="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-scaleChords-ipad-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-scaleChords-ipad-light.png" alt="Scale Chords screen on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
-            <figcaption>Note↔Frequency lookup with MIDI numbers and sample periods.</figcaption>
+            <figcaption>Scale Chords with diatonic triads/sevenths and voicings.</figcaption>
           </figure>
 
           <figure class="device-shot device-shot--mac">
@@ -161,12 +122,12 @@
               <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/BeatBar/en-US/beatbar-transpose-mac-dark.png" data-theme="dark">
-                  <img src="../../assets/images/BeatBar/en-US/beatbar-transpose-mac-light.png" alt="Transpose and Speed helper on macOS" loading="lazy" />
+                  <source srcset="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-sharedNotes-ipad-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-sharedNotes-ipad-light.png" alt="Shared Notes screen on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
-            <figcaption>Transpose/Speed helper with interval names and ratio output.</figcaption>
+            <figcaption>Shared Notes comparing two keys with overlap visualization.</figcaption>
           </figure>
 
           <figure class="device-shot device-shot--mac">
@@ -174,12 +135,12 @@
               <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/BeatBar/en-US/beatbar-fmCalc-mac-dark.png" data-theme="dark">
-                  <img src="../../assets/images/BeatBar/en-US/beatbar-fmCalc-mac-light.png" alt="FM Calculator on macOS" loading="lazy" />
+                  <source srcset="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-sharedChords-ipad-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-sharedChords-ipad-light.png" alt="Shared Chords screen on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
-            <figcaption>FM Calculator with ratio and pitch-correction modes.</figcaption>
+            <figcaption>Shared Chords for comparing diatonic chords between keys.</figcaption>
           </figure>
 
           <figure class="device-shot device-shot--mac">
@@ -187,12 +148,12 @@
               <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/BeatBar/en-US/beatbar-lfoRate-mac-dark.png" data-theme="dark">
-                  <img src="../../assets/images/BeatBar/en-US/beatbar-lfoRate-mac-light.png" alt="LFO Rate calculator on macOS" loading="lazy" />
+                  <source srcset="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-borrowedChords-ipad-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-borrowedChords-ipad-light.png" alt="Borrowed Chords screen on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
-            <figcaption>LFO Rates with tempo divisions and reverse lookup.</figcaption>
+            <figcaption>Borrowed Chords from parallel modes.</figcaption>
           </figure>
 
           <figure class="device-shot device-shot--mac">
@@ -200,12 +161,25 @@
               <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/BeatBar/en-US/beatbar-harmonics-mac-dark.png" data-theme="dark">
-                  <img src="../../assets/images/BeatBar/en-US/beatbar-harmonics-mac-light.png" alt="Harmonic Series explorer on macOS" loading="lazy" />
+                  <source srcset="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-circleOfFifths-ipad-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-circleOfFifths-ipad-light.png" alt="Circle of Fifths screen on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
-            <figcaption>Harmonic Series explorer with 32 harmonics and interval labels.</figcaption>
+            <figcaption>Interactive Circle of Fifths for modulation exploration.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-circleOfThirds-ipad-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-circleOfThirds-ipad-light.png" alt="Circle of Thirds screen on macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Circle of Thirds for chromatic mediant exploration.</figcaption>
           </figure>
         </div>
       </div>
@@ -213,17 +187,18 @@
 
     <section class="product-section" aria-labelledby="features-title">
       <h2 id="features-title">Features</h2>
-      <p>BeatBar is a desktop timing lab for fast, accurate conversions: tap tempo, BPM→ms/Hz tables, note↔frequency lookups, transpose/speed helpers, FM + LFO calculators, and a harmonic series explorer.</p>
+      <p>Modes is a full theory workspace for detecting chords and scales, generating diatonic harmony, exploring shared notes/chords, and testing modulation ideas with interactive circles.</p>
       <ul>
-        <li><strong>Tap Tempo:</strong> instant and averaged BPM from taps, with optional shared BPM binding across tabs</li>
-        <li><strong>BPM → ms / Hz:</strong> straight/dotted/triplet values from whole to 16th notes, shown as ms + repetition rate</li>
-        <li><strong>Note ↔ Frequency:</strong> per-octave table with MIDI number, Hz, period (ms), and samples at 44.1/48k; tuning is configurable</li>
-        <li><strong>Transpose / Speed:</strong> key transpose + cents + speed slider expressed in semitones; outputs interval name, resulting BPM, and ratio</li>
-        <li><strong>FM Calculator:</strong> ratio mode + pitch-correction mode, with sidebands and harmonicity hints</li>
-        <li><strong>LFO Rates:</strong> tempo divisions to Hz/period/samples (48k), plus reverse lookup from custom Hz</li>
-        <li><strong>Harmonic Series:</strong> first 32 harmonics with nearest note, cents offset, and interval labels</li>
+        <li><strong>Scale + Chord Finder:</strong> live MIDI + on-screen keyboard intake with chord (or dyad) detection and ranked scale coverage</li>
+        <li><strong>Scale Notes:</strong> spelled scale tones and an in-key keyboard highlight</li>
+        <li><strong>Scale Chords:</strong> diatonic triads/sevenths per degree with inversion/extension controls and keyboard voicings</li>
+        <li><strong>Shared Notes:</strong> compare two keys/scales and visualize overlap vs distinct tones</li>
+        <li><strong>Shared Chords:</strong> compare diatonic chords between two keys/scales</li>
+        <li><strong>Mode Pivots:</strong> find other modes/keys that contain the selected chord (with optional category filtering)</li>
+        <li><strong>Borrowed Chords:</strong> borrowed options from parallel modes, grouped by source mode (triad/7th aware)</li>
+        <li><strong>Circle of Fifths:</strong> interactive circle for exploring key relationships and modulations</li>
+        <li><strong>Circle of Thirds:</strong> chromatic mediants for alternative modulation pathways</li>
       </ul>
-      <p>BeatBar is built with SwiftUI and CoreMIDI, with reusable logic shared across the BeatBar Suite via modular Swift packages.</p>
     </section>
   </main>
 
