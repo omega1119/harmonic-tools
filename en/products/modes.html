@@ -18,29 +18,36 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>Modes iOS — Touch‑First Theory Lab | Harmonic Tools</title>
-  <meta name="description" content="Modes iOS is a touch-first theory lab for iPhone/iPad: chord/scale detection, diatonic harmony tools, shared notes/chords, mode pivots, borrowed chords, and interactive circles of fifths/thirds." />
-  <meta name="keywords" content="Modes iOS, iPhone music theory, iPad music theory, chord detection, scale detection, diatonic harmony, mode pivots, borrowed chords, circle of fifths, circle of thirds, SwiftUI, CoreMIDI" />
+  <title>Modes for macOS Music Theory Workspace | Harmonic Tools</title>
+  <meta name="description" content="Modes is a macOS theory workspace for detecting chords/scales, generating diatonic harmony, exploring shared notes/chords, mode pivots and borrowed chords, and interactive circles of fifths/thirds." />
+  <meta name="keywords" content="Modes, macOS music theory app, chord detection, scale detection, diatonic harmony, mode pivots, borrowed chords, circle of fifths, circle of thirds, chromatic mediants, CoreMIDI, SwiftUI" />
   <meta name="author" content="Harmonic Tools" />
   <meta name="robots" content="index, follow" />
 
-  <link rel="canonical" href="https://harmonic.tools/en/products/modes-ios.html" />
+  <link rel="canonical" href="https://harmonic.tools/en/products/modes.html" />
 
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
-  <link rel="stylesheet" href="../../assets/css/styles.css?v=17" />
-  <script defer src="../../assets/js/main.js?v=8"></script>
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=20" />
+  <script defer src="../../assets/js/main.js?v=10"></script>
 
-  <link rel="alternate" hreflang="en" href="https://harmonic.tools/en/products/modes-ios.html" />
-  <link rel="alternate" hreflang="x-default" href="https://harmonic.tools/en/products/modes-ios.html" />
+  <link rel="alternate" hreflang="en" href="https://harmonic.tools/en/products/modes.html" />
+  <link rel="alternate" hreflang="x-default" href="https://harmonic.tools/en/products/modes.html" />
 </head>
 <body>
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="logo" href="../" aria-label="Harmonic Tools home">Harmonic Tools</a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">Menu</button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="../">Home</a></li>
+          <li><a href="../#products">Products</a></li>
+        </ul>
+      </nav>
       <div class="language-selector">
         <button class="language-btn" aria-label="Change language" title="Change language"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"><path fill="currentColor" fill-rule="evenodd" d="M2 16c0 7.72 6.28 14 14 14s14-6.28 14-14S23.72 2 16 2S2 8.28 2 16m2.041-1c.15-1.81.703-3.506 1.568-5h3.55a16 16 0 0 0-1.128 5zm5.994 0a14 14 0 0 1 1.31-5H15v5zM15 17h-4.965a14 14 0 0 0 1.31 5H15zm0 7h-2.494A14 14 0 0 0 15 26.73zm4.005 3.62A12 12 0 0 0 24.94 24h-3.074a16 16 0 0 1-2.86 3.62M22.84 22h3.55v.002A11.9 11.9 0 0 0 27.959 17h-3.99a16 16 0 0 1-1.13 5m-.875-5a14 14 0 0 1-1.31 5H17v-5zm2.004-2h3.99a11.9 11.9 0 0 0-1.569-5.002V10h-3.55a16 16 0 0 1 1.13 5m-3.315-5a14 14 0 0 1 1.31 5H17v-5zm1.212-2h3.073a12 12 0 0 0-5.926-3.618A16 16 0 0 1 21.865 8M17 5.27V8h2.494A14 14 0 0 0 17 5.27m-2 0A14 14 0 0 0 12.506 8H15zM17 24v2.73A14 14 0 0 0 19.494 24zM5.609 22h3.554a16 16 0 0 1-1.132-5H4.04c.15 1.81.703 3.506 1.568 5M13 27.621A16 16 0 0 1 10.14 24H7.06a12 12 0 0 0 5.941 3.621M10.134 8a16 16 0 0 1 2.853-3.617A12 12 0 0 0 7.061 8z" clip-rule="evenodd"/></svg></button>
         <div class="language-dropdown">
-          <a class="language-option" href="./modes-ios.html" lang="en">English</a>
+          <a class="language-option" href="./modes.html" lang="en">English</a>
         </div>
       </div>
       <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme"></button>
@@ -51,130 +58,130 @@
     <div class="product-hero">
       <div class="product-hero__copy">
         <picture>
-          <source srcset="../../assets/images/ModesiOSAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
-          <img src="../../assets/images/ModesiOSAppIcon-macOS-Default-1024x1024@1x.png" alt="Modes iOS app icon" width="128" height="128" class="product-hero__icon" />
+          <source srcset="../../assets/images/ModesMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+          <img src="../../assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" alt="Modes macOS app icon" width="128" height="128" class="product-hero__icon" />
         </picture>
 
-        <h1>Modes iOS</h1>
-        <p class="product-lead">A touch-first theory lab for iPhone and iPad with chord/scale detection, harmony tools, and interactive circles.</p>
+        <h1>Modes for macOS</h1>
+        <p class="product-lead">A music theory workspace for chord/scale detection, diatonic harmony generation, and interactive modulation exploration.</p>
 
         <ul class="product-highlights">
-          <li>Scale/Chord Finder with MIDI + touch keyboard</li>
+          <li>Scale/Chord Finder with live MIDI + keyboard</li>
           <li>Scale Notes, Scale Chords, Shared Notes/Chords</li>
-          <li>Borrowed Chords</li>
+          <li>Mode Pivots + Borrowed Chords</li>
           <li>Interactive Circle of Fifths + Circle of Thirds</li>
         </ul>
 
         <div class="product-cta">
-          <span class="store-badge store-badge--disabled" aria-label="Modes iOS coming soon on the App Store">
-            <img src="../../assets/images/Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" data-theme-src-light="../../assets/images/Download-on-the-App-Store/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" data-theme-src-dark="../../assets/images/Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" width="180" height="53">
+          <span class="store-badge store-badge--disabled" aria-label="Modes coming soon on the Mac App Store">
+            <img src="../../assets/images/Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg" data-theme-src-light="../../assets/images/Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_wht_092917.svg" data-theme-src-dark="../../assets/images/Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the Mac App Store" width="180" height="53">
             <span class="coming-soon-label">Coming Soon</span>
           </span>
         </div>
       </div>
 
-      <div class="product-hero__shots" aria-label="Modes iOS screenshots">
+      <div class="product-hero__shots" aria-label="Modes macOS screenshots">
         <h2 class="product-shot-title">Screenshots</h2>
         <p class="product-shot-lead">Includes light and dark screenshots that follow the website theme.</p>
         <div class="screenshot-grid">
-          <figure class="device-shot device-shot--iphone">
-            <div class="device-shot__stage" aria-label="iPhone screenshot">
-              <img class="device-shot__bezel" src="../../assets/images/Bezels/iPhone 17 Pro - Deep Blue - Portrait.png" alt="" loading="lazy" />
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/ModesiOS/en-US/iPhone 17 Pro-scaleChord-iphone-dark.png" data-theme="dark">
-                  <img src="../../assets/images/ModesiOS/en-US/iPhone 17 Pro-scaleChord-iphone-light.png" alt="Scale and Chord Finder on iPhone" loading="lazy" />
+                  <source srcset="../../assets/images/ModesMac/en-US/modes-scaleChord-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/en-US/modes-scaleChord-mac-light.png" alt="Scale and Chord Finder on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
-            <figcaption>Scale + Chord Finder with live MIDI and touch keyboard.</figcaption>
+            <figcaption>Scale + Chord Finder with live MIDI and on-screen keyboard.</figcaption>
           </figure>
 
-          <figure class="device-shot device-shot--ipad">
-            <div class="device-shot__stage" aria-label="iPad screenshot">
-              <img class="device-shot__bezel" src="../../assets/images/Bezels/iPad Pro 11 - M4 - Space Gray - Landscape.png" alt="" loading="lazy" />
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-scaleNotes-ipad-dark.png" data-theme="dark">
-                  <img src="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-scaleNotes-ipad-light.png" alt="Scale Notes screen on iPad" loading="lazy" />
+                  <source srcset="../../assets/images/ModesMac/en-US/modes-scaleNotes-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/en-US/modes-scaleNotes-mac-light.png" alt="Scale Notes screen on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
-            <figcaption>Scale Notes with spelled tones and in-key keyboard highlight.</figcaption>
+            <figcaption>Scale Notes with spelled tones and keyboard highlighting.</figcaption>
           </figure>
 
-          <figure class="device-shot device-shot--iphone">
-            <div class="device-shot__stage" aria-label="iPhone screenshot">
-              <img class="device-shot__bezel" src="../../assets/images/Bezels/iPhone 17 Pro - Deep Blue - Portrait.png" alt="" loading="lazy" />
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/ModesiOS/en-US/iPhone 17 Pro-scaleChords-iphone-dark.png" data-theme="dark">
-                  <img src="../../assets/images/ModesiOS/en-US/iPhone 17 Pro-scaleChords-iphone-light.png" alt="Scale Chords screen on iPhone" loading="lazy" />
+                  <source srcset="../../assets/images/ModesMac/en-US/modes-scaleChords-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/en-US/modes-scaleChords-mac-light.png" alt="Scale Chords screen on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
             <figcaption>Scale Chords with diatonic triads/sevenths and voicings.</figcaption>
           </figure>
 
-          <figure class="device-shot device-shot--ipad">
-            <div class="device-shot__stage" aria-label="iPad screenshot">
-              <img class="device-shot__bezel" src="../../assets/images/Bezels/iPad Pro 11 - M4 - Space Gray - Landscape.png" alt="" loading="lazy" />
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-sharedNotes-ipad-dark.png" data-theme="dark">
-                  <img src="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-sharedNotes-ipad-light.png" alt="Shared Notes screen on iPad" loading="lazy" />
+                  <source srcset="../../assets/images/ModesMac/en-US/modes-sharedNotes-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/en-US/modes-sharedNotes-mac-light.png" alt="Shared Notes screen on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
             <figcaption>Shared Notes comparing two keys with overlap visualization.</figcaption>
           </figure>
 
-          <figure class="device-shot device-shot--iphone">
-            <div class="device-shot__stage" aria-label="iPhone screenshot">
-              <img class="device-shot__bezel" src="../../assets/images/Bezels/iPhone 17 Pro - Deep Blue - Portrait.png" alt="" loading="lazy" />
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/ModesiOS/en-US/iPhone 17 Pro-sharedChords-iphone-dark.png" data-theme="dark">
-                  <img src="../../assets/images/ModesiOS/en-US/iPhone 17 Pro-sharedChords-iphone-light.png" alt="Shared Chords screen on iPhone" loading="lazy" />
+                  <source srcset="../../assets/images/ModesMac/en-US/modes-sharedChords-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/en-US/modes-sharedChords-mac-light.png" alt="Shared Chords screen on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
-            <figcaption>Shared Chords for comparing two keys/scales.</figcaption>
+            <figcaption>Shared Chords for comparing diatonic chords between keys.</figcaption>
           </figure>
 
-          <figure class="device-shot device-shot--ipad">
-            <div class="device-shot__stage" aria-label="iPad screenshot">
-              <img class="device-shot__bezel" src="../../assets/images/Bezels/iPad Pro 11 - M4 - Space Gray - Landscape.png" alt="" loading="lazy" />
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-borrowedChords-ipad-dark.png" data-theme="dark">
-                  <img src="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-borrowedChords-ipad-light.png" alt="Borrowed Chords screen on iPad" loading="lazy" />
+                  <source srcset="../../assets/images/ModesMac/en-US/modes-borrowedChords-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/en-US/modes-borrowedChords-mac-light.png" alt="Borrowed Chords screen on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
             <figcaption>Borrowed Chords from parallel modes.</figcaption>
           </figure>
 
-          <figure class="device-shot device-shot--iphone">
-            <div class="device-shot__stage" aria-label="iPhone screenshot">
-              <img class="device-shot__bezel" src="../../assets/images/Bezels/iPhone 17 Pro - Deep Blue - Portrait.png" alt="" loading="lazy" />
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/ModesiOS/en-US/iPhone 17 Pro-circleOfFifths-iphone-dark.png" data-theme="dark">
-                  <img src="../../assets/images/ModesiOS/en-US/iPhone 17 Pro-circleOfFifths-iphone-light.png" alt="Circle of Fifths screen on iPhone" loading="lazy" />
+                  <source srcset="../../assets/images/ModesMac/en-US/modes-circleOfFifths-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/en-US/modes-circleOfFifths-mac-light.png" alt="Circle of Fifths screen on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
             <figcaption>Interactive Circle of Fifths for modulation exploration.</figcaption>
           </figure>
 
-          <figure class="device-shot device-shot--ipad">
-            <div class="device-shot__stage" aria-label="iPad screenshot">
-              <img class="device-shot__bezel" src="../../assets/images/Bezels/iPad Pro 11 - M4 - Space Gray - Landscape.png" alt="" loading="lazy" />
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
               <div class="device-shot__screen">
                 <picture>
-                  <source srcset="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-circleOfThirds-ipad-dark.png" data-theme="dark">
-                  <img src="../../assets/images/ModesiOS/en-US/iPad Pro 11-inch (M5)-circleOfThirds-ipad-light.png" alt="Circle of Thirds screen on iPad" loading="lazy" />
+                  <source srcset="../../assets/images/ModesMac/en-US/modes-circleOfThirds-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/en-US/modes-circleOfThirds-mac-light.png" alt="Circle of Thirds screen on macOS" loading="lazy" />
                 </picture>
               </div>
             </div>
@@ -186,14 +193,14 @@
 
     <section class="product-section" aria-labelledby="features-title">
       <h2 id="features-title">Features</h2>
-      <p>Modes iOS brings Modes' detection, harmony generators, borrows, and interactive circles to iPhone and iPad with a touch-first interface.</p>
+      <p>Modes is a full theory workspace for detecting chords and scales, generating diatonic harmony, exploring shared notes/chords, and testing modulation ideas with interactive circles.</p>
       <ul>
-        <li><strong>Built for iPhone/iPad:</strong> touch-first layout optimized for quick exploration and live use</li>
         <li><strong>Scale + Chord Finder:</strong> live MIDI + on-screen keyboard intake with chord (or dyad) detection and ranked scale coverage</li>
         <li><strong>Scale Notes:</strong> spelled scale tones and an in-key keyboard highlight</li>
         <li><strong>Scale Chords:</strong> diatonic triads/sevenths per degree with inversion/extension controls and keyboard voicings</li>
         <li><strong>Shared Notes:</strong> compare two keys/scales and visualize overlap vs distinct tones</li>
         <li><strong>Shared Chords:</strong> compare diatonic chords between two keys/scales</li>
+        <li><strong>Mode Pivots:</strong> find other modes/keys that contain the selected chord (with optional category filtering)</li>
         <li><strong>Borrowed Chords:</strong> borrowed options from parallel modes, grouped by source mode (triad/7th aware)</li>
         <li><strong>Circle of Fifths:</strong> interactive circle for exploring key relationships and modulations</li>
         <li><strong>Circle of Thirds:</strong> chromatic mediants for alternative modulation pathways</li>
@@ -214,7 +221,7 @@
       </div>
 
       <div class="theory-group">
-        <h3>Scales &amp; Modes — 61 Total</h3>
+        <h3>Scales &amp; Modes 61 Total</h3>
 
         <h4>Major Modes (Diatonic)</h4>
         <ul class="theory-tags">
@@ -329,7 +336,7 @@
       <div class="theory-group">
         <h3>Chords</h3>
 
-        <h4>Detected Chord Types — 21</h4>
+        <h4>Detected Chord Types 21</h4>
         <p>21 detected chord types with automatic extended-tension detection (9th, 11th, 13th shown as add9, add11, add13 when no 7th is present).</p>
         <ul class="theory-tags">
           <li>Major</li>
@@ -355,7 +362,7 @@
           <li>Dominant 7sus2</li>
         </ul>
 
-        <h4>Chord Qualities (Builder) — 6</h4>
+        <h4>Chord Qualities (Builder) 6</h4>
         <p>Chord qualities available in the builder with Roman numeral analysis.</p>
         <ul class="theory-tags">
           <li>Major</li>
@@ -368,7 +375,7 @@
       </div>
 
       <div class="theory-group">
-        <h3>Chord Voicings — 8 Types</h3>
+        <h3>Chord Voicings 8 Types</h3>
         <p>From stacked-thirds tertian voicings through quartal and quintal stacks, with triad through thirteenth sizes.</p>
         <ul class="theory-tags">
           <li>Tertian</li>
