@@ -8,77 +8,75 @@ Website for [harmonic.tools](https://harmonic.tools)
 harmonic-tools/
 ├── _config.yml              # Jekyll configuration
 ├── CNAME                    # Domain configuration (harmonic.tools)
-├── README.md
-└── docs/                    # GitHub Pages root
-    ├── index.html           # Redirect page (language detection)
-    ├── favicon.svg
-    ├── privacy.html         # Privacy policy (redirect)
-    ├── terms.html           # Terms of service (redirect)
-    ├── assets/
-    │   ├── css/
-    │   │   └── styles.css   # Main stylesheet
-    │   ├── images/
-    │   │   ├── BeatBar/     # BeatBar screenshots (localized)
-    │   │   ├── BeatBarPocket/
-    │   │   ├── BeatLab/
-    │   │   ├── BeatLabiOS/
-    │   │   └── ...
-    │   └── js/
-    │       ├── main.js      # Theme toggle & utilities
-    │       └── redirect.js  # Language redirect logic
-    ├── products/            # Product pages (redirect)
-    ├── en/                  # English locale
-    │   ├── index.html       # Main landing page
-    │   ├── privacy.html     # Privacy policy
-    │   ├── terms.html       # Terms of service
-    │   └── products/
-    │       ├── beatbar.html
-    │       ├── beatbar-pocket.html
-    │       ├── beatlab.html
-    │       └── beatlab-ios.html
-    └── pl/                  # Polish locale
-        ├── index.html
-        ├── privacy.html
-        ├── terms.html
-        └── products/
-            └── ...
+├── favicon.svg
+├── index.html               # Redirect page (language detection)
+├── privacy.html             # Privacy policy (redirect)
+├── terms.html               # Terms of service (redirect)
+├── assets/
+│   ├── css/
+│   │   └── styles.css       # Main stylesheet
+│   ├── images/
+│   │   ├── Bezels/          # Device bezel frames
+│   │   ├── Download-on-the-App-Store/
+│   │   ├── Download-on-the-Mac-App-Store/
+│   │   ├── MetricMac/       # Metric macOS screenshots (localized)
+│   │   ├── MetriciOS/       # Metric iOS screenshots (localized)
+│   │   ├── ModesMac/        # Modes macOS screenshots (localized)
+│   │   ├── ModesiOS/        # Modes iOS screenshots (localized)
+│   │   └── ...              # App icons, OG images, SVG assets
+│   └── js/
+│       ├── main.js          # Theme toggle, modals & utilities
+│       └── redirect.js      # Language redirect logic
+├── products/                # Product pages (redirect)
+│   ├── metric.html
+│   ├── metric-ios.html
+│   ├── modes.html
+│   └── modes-ios.html
+└── en/                      # English locale
+    ├── index.html           # Main landing page
+    ├── privacy.html         # Privacy policy
+    ├── terms.html           # Terms of service
+    └── products/
+        ├── metric.html
+        ├── metric-ios.html
+        ├── modes.html
+        └── modes-ios.html
 ```
 
 ## Products
 
-- **BeatBar** — Timing calculator for macOS
-- **BeatBar Pocket** — Timing calculator for iOS
-- **BeatLab** — Music theory explorer for macOS
-- **BeatLab iOS** — Music theory explorer for iOS
+- **Metric** — Desktop timing lab for macOS
+- **Metric iOS** — Timing toolkit for iOS
+- **Modes** — Music theory workspace for macOS
+- **Modes iOS** — Touch-first theory lab for iOS
 
 ## Localization
 
 The site supports multiple languages. Currently available:
 
 - English (`/en/`)
-- Polish (`/pl/`)
 
 To add a new language:
 
-1. Create a new folder under `docs/` (e.g., `docs/de/` for German)
+1. Create a new locale folder at the repo root (e.g., `pl/` for Polish)
 2. Copy the English files and translate content
-3. Update `docs/index.html` to add the new language redirect
+3. Update `index.html` to add the new language redirect
 4. Update language selectors in all HTML files
-5. Add localized screenshots to `docs/assets/images/*/`
+5. Add localized screenshots to `assets/images/*/`
 
 ## Local Development
 
-Open `docs/en/index.html` in a browser, or use a local server:
+Open `en/index.html` in a browser, or use a local server:
 
 ```bash
-cd docs && python3 -m http.server 8080
+python3 -m http.server 8080
 ```
 
 Then visit `http://localhost:8080/en/`
 
 ## Deployment
 
-The site is deployed via GitHub Pages from the `docs/` folder on the `main` branch.
+The site is deployed via GitHub Pages from the repo root on the `main` branch.
 
 ## Related Repositories
 
