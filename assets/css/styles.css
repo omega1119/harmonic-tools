@@ -800,6 +800,16 @@ img { max-width: 100%; height: auto; display: block }
   right: calc(var(--screen-inset-x) + var(--device-screen-scale));
 }
 
+/* Portrait iPad bezel — different proportions to landscape */
+.device-shot--ipad-portrait .device-shot__screen {
+  --screen-inset-y: 5.0%;
+  --screen-inset-x: 8.0%;
+  top: calc(var(--screen-inset-y) + var(--device-screen-scale));
+  bottom: calc(var(--screen-inset-y) + var(--device-screen-scale));
+  left: calc(var(--screen-inset-x) + var(--device-screen-scale));
+  right: calc(var(--screen-inset-x) + var(--device-screen-scale));
+}
+
 .device-shot--mac .device-shot__screen {
   --screen-inset-y: 6.5%;
   --screen-inset-x: 10%;
