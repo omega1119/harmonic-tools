@@ -708,7 +708,57 @@ img { max-width: 100%; height: auto; display: block }
 }
 
 .product-section {
-  margin-top: 60px;
+  margin-top: 80px;
+  max-width: 720px;
+}
+
+.product-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin: 0 0 28px;
+}
+
+.product-section h3 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin: 40px 0 16px;
+}
+
+.product-section > p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+.product-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 24px;
+}
+
+.product-section li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.product-section li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.product-section li strong {
+  color: var(--text);
+  font-weight: 600;
 }
 
 .product-shot-title {
@@ -732,10 +782,10 @@ img { max-width: 100%; height: auto; display: block }
 }
 
 .device-shot {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  padding: 18px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
 }
 
 .device-shot__stage {
@@ -769,10 +819,12 @@ img { max-width: 100%; height: auto; display: block }
 }
 
 .device-shot figcaption {
-  margin-top: 14px;
+  margin-top: 12px;
+  padding: 0 4px;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: center;
 }
 
 /* Insets are best-effort; tune per bezel asset */
@@ -926,25 +978,28 @@ img { max-width: 100%; height: auto; display: block }
   }
 
   .product-section {
-    margin-top: 48px;
+    margin-top: 56px;
   }
 
   .product-section h2 {
     font-size: 22px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 
-  .product-section p {
-    margin-bottom: 16px;
+  .product-section h3 {
+    font-size: 18px;
+    margin: 32px 0 12px;
   }
 
-  .product-section ul {
-    padding-left: 20px;
+  .product-section > p {
+    font-size: 14px;
+    margin-bottom: 20px;
   }
 
   .product-section li {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     font-size: 14px;
+    padding-left: 20px;
   }
 }
 
@@ -1045,7 +1100,9 @@ img { max-width: 100%; height: auto; display: block }
    Theory Coverage Section
    ========================================== */
 .theory-coverage {
-  margin-top: 60px;
+  margin-top: 80px;
+  border-top: 1px solid var(--border);
+  padding-top: 64px;
 }
 
 .theory-coverage h2 {
@@ -1057,36 +1114,52 @@ img { max-width: 100%; height: auto; display: block }
 
 .theory-coverage > p {
   color: var(--muted);
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   font-size: 15px;
   line-height: 1.6;
 }
 
 .theory-group {
-  margin-bottom: 28px;
+  margin-bottom: 40px;
+}
+
+.theory-group + .theory-group {
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
 }
 
 .theory-group h3 {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.3px;
-  margin: 0 0 8px;
+  margin: 0 0 16px;
   color: var(--text);
 }
 
-.theory-group h4 {
+.theory-group > p {
+  color: var(--muted);
   font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.theory-group h4 {
+  font-size: 12px;
   font-weight: 600;
-  margin: 16px 0 6px;
+  margin: 20px 0 8px;
   color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+}
+
+.theory-group h4:first-of-type {
+  margin-top: 0;
 }
 
 .theory-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1095,8 +1168,8 @@ img { max-width: 100%; height: auto; display: block }
 .theory-tags li {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 4px 10px;
+  border-radius: 6px;
+  padding: 5px 12px;
   font-size: 13px;
   line-height: 1.4;
   color: var(--text);
@@ -1106,41 +1179,63 @@ img { max-width: 100%; height: auto; display: block }
 .theory-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 16px;
-  margin-bottom: 32px;
+  gap: 12px;
+  margin-bottom: 48px;
 }
 
 .theory-stat {
-  background: var(--card);
+  background: transparent;
   border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 16px;
+  border-radius: 8px;
+  padding: 20px 16px;
   text-align: center;
 }
 
 .theory-stat strong {
   display: block;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 800;
   letter-spacing: -1px;
   color: var(--green);
+  margin-bottom: 4px;
 }
 
 .theory-stat span {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--muted);
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 600px) {
+  .theory-coverage {
+    margin-top: 56px;
+    padding-top: 48px;
+  }
   .theory-coverage h2 {
     font-size: 22px;
   }
   .theory-stats {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .theory-stat {
+    padding: 14px 8px;
+  }
+  .theory-stat strong {
+    font-size: 24px;
+  }
+  .theory-stat span {
+    font-size: 11px;
   }
   .theory-tags li {
     font-size: 12px;
-    padding: 3px 8px;
+    padding: 4px 8px;
+  }
+  .theory-group {
+    margin-bottom: 32px;
+  }
+  .theory-group + .theory-group {
+    padding-top: 24px;
   }
 }
 
