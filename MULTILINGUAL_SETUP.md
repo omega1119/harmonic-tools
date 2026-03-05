@@ -7,6 +7,7 @@ This site uses a **static, per-language folder** approach (no JavaScript-based t
 - **English**: `/en/`
 - **Polish**: `/pl/`
 - **French**: `/fr/`
+- **German**: `/de/`
 
 Each language has its own fully rendered HTML pages. Language switching is done via a dropdown in the header and automatic geo/locale-based redirection.
 
@@ -14,9 +15,9 @@ Each language has its own fully rendered HTML pages. Language switching is done 
 
 - **Canonical content** lives under `/en/` and `/pl/`.
 - **Root-level URLs** (like `/index.html`, `/privacy.html`, `/products/*.html`) use `redirect.js` to detect the user's language via browser locale and IP geolocation, then redirect to the appropriate language folder.
-- **Language dropdown** in every page header lets users manually switch between English, Polski, and Français.
-- **SEO** uses `hreflang` alternates for `en`, `pl`, `fr`, and `x-default`.
-- **`redirect.js`** uses a `SUPPORTED_LANGS` array and `COUNTRY_TO_LANG` map. It checks `navigator.languages` for `pl` or `fr` prefixes first, then falls back to an IP geolocation lookup via `ipapi.co` to detect Poland (`PL`) or France (`FR`). English is the default fallback. Adding a new language only requires extending these two data structures and adding `data-redirect-XX` attributes to root stubs.
+- **Language dropdown** in every page header lets users manually switch between English, Polski, Français, and Deutsch.
+- **SEO** uses `hreflang` alternates for `en`, `pl`, `fr`, `de`, and `x-default`.
+- **`redirect.js`** uses a `SUPPORTED_LANGS` array and `COUNTRY_TO_LANG` map. It checks `navigator.languages` for `pl`, `fr`, or `de` prefixes first, then falls back to an IP geolocation lookup via `ipapi.co` to detect Poland (`PL`), France (`FR`), Germany (`DE`), Austria (`AT`), or Switzerland (`CH`). English is the default fallback. Adding a new language only requires extending these two data structures and adding `data-redirect-XX` attributes to root stubs.
 
 ## Site Structure
 
@@ -49,6 +50,14 @@ Each language has its own fully rendered HTML pages. Language switching is done 
 /fr/products/metric-ios.html
 /fr/products/modes.html
 /fr/products/modes-ios.html
+/de/                     → German pages
+/de/index.html
+/de/privacy.html
+/de/terms.html
+/de/products/metric.html
+/de/products/metric-ios.html
+/de/products/modes.html
+/de/products/modes-ios.html
 /assets/                 → shared CSS, JS, images
 ```
 
@@ -73,3 +82,4 @@ Then open:
 - `http://localhost:8080/en/`
 - `http://localhost:8080/pl/`
 - `http://localhost:8080/fr/`
+- `http://localhost:8080/de/`

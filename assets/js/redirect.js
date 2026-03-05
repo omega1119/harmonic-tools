@@ -1,11 +1,14 @@
 (function () {
   /** Non-English languages supported by the site. */
-  var SUPPORTED_LANGS = ['pl', 'fr'];
+  var SUPPORTED_LANGS = ['pl', 'fr', 'de'];
 
   /** Country-code → language mapping for geo-based fallback. */
   var COUNTRY_TO_LANG = {
     PL: 'pl',
-    FR: 'fr'
+    FR: 'fr',
+    DE: 'de',
+    AT: 'de',
+    CH: 'de'
   };
 
   function normalizeLocale(locale) {
