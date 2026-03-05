@@ -5,6 +5,52 @@
   const navToggle = document.querySelector('.nav-toggle');
   const yearEl = document.getElementById('year');
 
+  // ── Language Dropdown Injector ──────────────────────────────
+  // Usage: <div class="language-selector"
+  //             data-languages='{"en":"./","de":"../de/"}'
+  //             data-active-lang="en"></div>
+  const LANG_NAMES = {
+    en:'English', de:'Deutsch', es:'Español', fr:'Français',
+    pl:'Polski', ja:'日本語', ko:'한국어', pt:'Português',
+    it:'Italiano', nl:'Nederlands', zh:'中文', ru:'Русский',
+    sv:'Svenska', da:'Dansk', fi:'Suomi', nb:'Norsk',
+    tr:'Türkçe', cs:'Čeština', ro:'Română', hu:'Magyar'
+  };
+  const GLOBE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"><path fill="currentColor" fill-rule="evenodd" d="M2 16c0 7.72 6.28 14 14 14s14-6.28 14-14S23.72 2 16 2S2 8.28 2 16m2.041-1c.15-1.81.703-3.506 1.568-5h3.55a16 16 0 0 0-1.128 5zm5.994 0a14 14 0 0 1 1.31-5H15v5zM15 17h-4.965a14 14 0 0 0 1.31 5H15zm0 7h-2.494A14 14 0 0 0 15 26.73zm4.005 3.62A12 12 0 0 0 24.94 24h-3.074a16 16 0 0 1-2.86 3.62M22.84 22h3.55v.002A11.9 11.9 0 0 0 27.959 17h-3.99a16 16 0 0 1-1.13 5m-.875-5a14 14 0 0 1-1.31 5H17v-5zm2.004-2h3.99a11.9 11.9 0 0 0-1.569-5.002V10h-3.55a16 16 0 0 1 1.13 5m-3.315-5a14 14 0 0 1 1.31 5H17v-5zm1.212-2h3.073a12 12 0 0 0-5.926-3.618A16 16 0 0 1 21.865 8M17 5.27V8h2.494A14 14 0 0 0 17 5.27m-2 0A14 14 0 0 0 12.506 8H15zM17 24v2.73A14 14 0 0 0 19.494 24zM5.609 22h3.554a16 16 0 0 1-1.132-5H4.04c.15 1.81.703 3.506 1.568 5M13 27.621A16 16 0 0 1 10.14 24H7.06a12 12 0 0 0 5.941 3.621M10.134 8a16 16 0 0 1 2.853-3.617A12 12 0 0 0 7.061 8z" clip-rule="evenodd"/></svg>';
+
+  function initLanguageDropdowns() {
+    document.querySelectorAll('.language-selector[data-languages]').forEach((el) => {
+      let langs;
+      try { langs = JSON.parse(el.getAttribute('data-languages')); } catch { return; }
+      const activeLang = (el.getAttribute('data-active-lang') || '').toLowerCase();
+      const keys = Object.keys(langs);
+      if (!keys.length) return;
+
+      const btn = document.createElement('button');
+      btn.className = 'language-btn';
+      btn.setAttribute('aria-label', 'Change language');
+      btn.setAttribute('title', 'Change language');
+      btn.innerHTML = GLOBE_SVG;
+
+      const dropdown = document.createElement('div');
+      dropdown.className = 'language-dropdown';
+      keys.forEach((code) => {
+        const a = document.createElement('a');
+        a.className = 'language-option';
+        a.setAttribute('href', langs[code]);
+        a.setAttribute('lang', code);
+        a.textContent = LANG_NAMES[code] || code;
+        if (code === activeLang) a.classList.add('active');
+        dropdown.appendChild(a);
+      });
+
+      el.innerHTML = '';
+      el.appendChild(btn);
+      el.appendChild(dropdown);
+    });
+  }
+  initLanguageDropdowns();
+
   // Theme-aware <picture> swapping
   function updateThemeImages(theme) {
     // First: explicit theme-src swapping (used for store badges).
