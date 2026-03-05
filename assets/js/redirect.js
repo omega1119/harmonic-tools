@@ -1,4 +1,13 @@
 (function () {
+  /** Non-English languages supported by the site. */
+  var SUPPORTED_LANGS = ['pl', 'fr'];
+
+  /** Country-code → language mapping for geo-based fallback. */
+  var COUNTRY_TO_LANG = {
+    PL: 'pl',
+    FR: 'fr'
+  };
+
   function normalizeLocale(locale) {
     return String(locale || '').trim().toLowerCase();
   }
@@ -17,7 +26,10 @@
 
     for (var i = 0; i < list.length; i++) {
       var loc = normalizeLocale(list[i]);
-      if (loc === 'pl' || loc.indexOf('pl-') === 0) return 'pl';
+      for (var j = 0; j < SUPPORTED_LANGS.length; j++) {
+        var lang = SUPPORTED_LANGS[j];
+        if (loc === lang || loc.indexOf(lang + '-') === 0) return lang;
+      }
     }
 
     return 'en';
@@ -31,46 +43,47 @@
   function findConfigScript() {
     // Prefer currentScript, but fall back for browsers where it can be null.
     var s = document.currentScript;
-    if (s && s.dataset && (s.dataset.redirectEn || s.dataset.redirectPl)) return s;
-    return document.querySelector('script[data-redirect-en], script[data-redirect-pl]');
+    if (s && s.dataset && s.dataset.redirectEn) return s;
+    return document.querySelector('script[data-redirect-en]');
   }
 
   function getTargetsFromScript(scriptEl) {
     var ds = scriptEl && scriptEl.dataset ? scriptEl.dataset : {};
-    return {
+    var targets = {
       en: ds.redirectEn || 'en/',
-      pl: ds.redirectPl || 'pl/',
       defaultLang: (ds.defaultLang || 'en').toLowerCase(),
       countryTimeoutMs: Number(ds.countryTimeoutMs || 2500)
     };
-  }
-
-  function isSupported(lang, targets) {
-    return lang === 'pl' || lang === 'en' || (lang === targets.defaultLang);
+    // Dynamically read data-redirect-<lang> for every supported language.
+    for (var i = 0; i < SUPPORTED_LANGS.length; i++) {
+      var lang = SUPPORTED_LANGS[i];
+      var key = 'redirect' + lang.charAt(0).toUpperCase() + lang.slice(1);
+      if (ds[key]) targets[lang] = ds[key];
+    }
+    return targets;
   }
 
   function main() {
     var scriptEl = findConfigScript();
     var targets = getTargetsFromScript(scriptEl);
 
-    // If we don't have explicit targets, do nothing.
-    if (!targets.en && !targets.pl) return;
+    if (!targets.en) return;
 
     var preferred = getPreferredLanguage();
 
-    // Prefer explicit Polish locale immediately.
-    if (preferred === 'pl' && targets.pl) {
-      redirectTo(targets.pl);
+    // Immediate redirect for non-English preferred locale.
+    if (preferred !== 'en' && targets[preferred]) {
+      redirectTo(targets[preferred]);
       return;
     }
 
-    // Fallback: do a quick country lookup (useful for VPN testing).
+    // Fallback: quick country lookup (useful for VPN / locale mismatch).
     // If lookup fails or is slow, default to English.
     var didRedirect = false;
     var timeoutId = window.setTimeout(function () {
       if (didRedirect) return;
       didRedirect = true;
-      redirectTo(targets.en || targets[targets.defaultLang]);
+      redirectTo(targets.en);
     }, targets.countryTimeoutMs);
 
     fetch('https://ipapi.co/country/', { cache: 'no-store' })
@@ -84,17 +97,18 @@
         var cc = String(text || '').trim().toUpperCase();
         // Be defensive: ipapi can return error pages/strings when rate limited.
         cc = /^[A-Z]{2}$/.test(cc) ? cc : '';
-        if (cc === 'PL' && targets.pl) {
-          redirectTo(targets.pl);
+        var lang = COUNTRY_TO_LANG[cc];
+        if (lang && targets[lang]) {
+          redirectTo(targets[lang]);
         } else {
-          redirectTo(targets.en || targets[targets.defaultLang]);
+          redirectTo(targets.en);
         }
       })
       .catch(function () {
         if (didRedirect) return;
         didRedirect = true;
         window.clearTimeout(timeoutId);
-        redirectTo(targets.en || targets[targets.defaultLang]);
+        redirectTo(targets.en);
       });
   }
 
