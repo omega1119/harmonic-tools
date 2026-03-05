@@ -1,6 +1,6 @@
 (function () {
   /** Non-English languages supported by the site. */
-  var SUPPORTED_LANGS = ['pl', 'fr', 'de', 'es'];
+  var SUPPORTED_LANGS = ['pl', 'fr', 'de', 'es', 'ko'];
 
   /** Country-code → language mapping for geo-based fallback. */
   var COUNTRY_TO_LANG = {
@@ -28,7 +28,8 @@
     CR: 'es',
     PA: 'es',
     UY: 'es',
-    GQ: 'es'
+    GQ: 'es',
+    KR: 'ko'
   };
 
   function normalizeLocale(locale) {
