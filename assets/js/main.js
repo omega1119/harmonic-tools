@@ -201,6 +201,153 @@
   }
   initNavItems();
 
+  // ── Store Badge Injector ────────────────────────────────
+  // Usage: <span class="store-badge store-badge--disabled"
+  //              data-store="ios|mac"
+  //              data-store-product="Modes iOS"></span>
+  // Injects the localised App Store / Mac App Store badge <img> (with
+  // data-theme-src-light / data-theme-src-dark for theme switching)
+  // plus a translated "Coming Soon" label.
+  const STORE_BADGE_DATA = {
+    en: {
+      comingSoon: 'Coming Soon',
+      ios: {
+        alt: 'Download on the App Store',
+        ariaPrefix: 'coming soon on the App Store',
+        dark: 'Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg',
+        light: 'Download-on-the-App-Store/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg'
+      },
+      mac: {
+        alt: 'Download on the Mac App Store',
+        ariaPrefix: 'coming soon on the Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg',
+        light: 'Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_wht_092917.svg'
+      }
+    },
+    de: {
+      comingSoon: 'Demn\u00e4chst verf\u00fcgbar',
+      ios: {
+        alt: 'Laden im App Store',
+        ariaPrefix: 'bald im App Store verf\u00fcgbar',
+        dark: 'Download-on-the-App-Store/DE/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg',
+        light: 'Download-on-the-App-Store/DE/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_DE_RGB_wht_092917.svg'
+      },
+      mac: {
+        alt: 'Laden im Mac App Store',
+        ariaPrefix: 'bald im Mac App Store verf\u00fcgbar',
+        dark: 'Download-on-the-Mac-App-Store/DE/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_DE_RGB_blk_092917.svg',
+        light: 'Download-on-the-Mac-App-Store/DE/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_DE_RGB_wht_092917.svg'
+      }
+    },
+    es: {
+      comingSoon: 'Pr\u00f3ximamente',
+      ios: {
+        alt: 'Descargar en el App Store',
+        ariaPrefix: 'pr\u00f3ximamente en el App Store',
+        dark: 'Download-on-the-App-Store/ES/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_ES_RGB_blk_100217.svg',
+        light: 'Download-on-the-App-Store/ES/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_ES_RGB_wht_100217.svg'
+      },
+      mac: {
+        alt: 'Descargar en el Mac App Store',
+        ariaPrefix: 'pr\u00f3ximamente en el Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/ES/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_ES_RGB_blk_100217.svg',
+        light: 'Download-on-the-Mac-App-Store/ES/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_ES_RGB_wht_100217.svg'
+      }
+    },
+    fr: {
+      comingSoon: 'Bient\u00f4t disponible',
+      ios: {
+        alt: "T\u00e9l\u00e9charger sur l'App Store",
+        ariaPrefix: "bient\u00f4t disponible sur l'App Store",
+        dark: 'Download-on-the-App-Store/FR/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_FR_RGB_blk_100517.svg',
+        light: 'Download-on-the-App-Store/FR/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_FR_RGB_wht_100217.svg'
+      },
+      mac: {
+        alt: "T\u00e9l\u00e9charger sur le Mac App Store",
+        ariaPrefix: "bient\u00f4t disponible sur le Mac App Store",
+        dark: 'Download-on-the-Mac-App-Store/FR/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_FR_RGB_blk_100217.svg',
+        light: 'Download-on-the-Mac-App-Store/FR/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_FR_RGB_wht_100217.svg'
+      }
+    },
+    ja: {
+      comingSoon: '\u8fd1\u65e5\u516c\u958b',
+      ios: {
+        alt: 'App Store\u304b\u3089\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9',
+        ariaPrefix: '\u8fd1\u65e5App Store\u306b\u767b\u5834',
+        dark: 'Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg',
+        light: 'Download-on-the-App-Store/JP/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_wht_100317.svg'
+      },
+      mac: {
+        alt: 'Mac App Store\u304b\u3089\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9',
+        ariaPrefix: '\u8fd1\u65e5Mac App Store\u306b\u767b\u5834',
+        dark: 'Download-on-the-Mac-App-Store/JP/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_JP_RGB_blk_100317.svg',
+        light: 'Download-on-the-Mac-App-Store/JP/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_JP_RGB_wht_100317.svg'
+      }
+    },
+    ko: {
+      comingSoon: '\ucd9c\uc2dc \uc608\uc815',
+      ios: {
+        alt: 'App Store\uc5d0\uc11c \ub2e4\uc6b4\ub85c\ub4dc',
+        ariaPrefix: '\uace7 App Store\uc5d0 \ucd9c\uc2dc',
+        dark: 'Download-on-the-App-Store/KR/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.svg',
+        light: 'Download-on-the-App-Store/KR/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_KR_RGB_wht_100317.svg'
+      },
+      mac: {
+        alt: 'Mac App Store\uc5d0\uc11c \ub2e4\uc6b4\ub85c\ub4dc',
+        ariaPrefix: '\uace7 Mac App Store\uc5d0 \ucd9c\uc2dc',
+        dark: 'Download-on-the-Mac-App-Store/KR/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_KR_RGB_blk_100317.svg',
+        light: 'Download-on-the-Mac-App-Store/KR/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_KR_RGB_wht_100317.svg'
+      }
+    },
+    pl: {
+      comingSoon: 'Wkr\u00f3tce',
+      ios: {
+        alt: 'Pobierz z App Store',
+        ariaPrefix: 'wkr\u00f3tce w App Store',
+        dark: 'Download-on-the-App-Store/PL/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_PL_RGB_blk_100317.svg',
+        light: 'Download-on-the-App-Store/PL/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_PL_RGB_wht_100317.svg'
+      },
+      mac: {
+        alt: 'Pobierz z Mac App Store',
+        ariaPrefix: 'wkr\u00f3tce w Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/PL/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_PL_RGB_blk_100317.svg',
+        light: 'Download-on-the-Mac-App-Store/PL/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_PL_RGB_wht_100317.svg'
+      }
+    }
+  };
+
+  function initStoreBadges() {
+    var lang = (root.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    var data = STORE_BADGE_DATA[lang] || STORE_BADGE_DATA.en;
+    var inProducts = window.location.pathname.includes('/products/');
+    var assetsPrefix = inProducts ? '../../assets/images/' : '../assets/images/';
+
+    document.querySelectorAll('.store-badge[data-store]').forEach(function(el) {
+      var store = el.getAttribute('data-store'); // "ios" or "mac"
+      var product = el.getAttribute('data-store-product') || '';
+      var info = data[store];
+      if (!info) return;
+
+      el.setAttribute('aria-label', product + ' ' + info.ariaPrefix);
+
+      var img = document.createElement('img');
+      img.src = assetsPrefix + info.dark;
+      img.setAttribute('data-theme-src-light', assetsPrefix + info.light);
+      img.setAttribute('data-theme-src-dark', assetsPrefix + info.dark);
+      img.alt = info.alt;
+      img.width = 180;
+      img.height = 53;
+
+      var label = document.createElement('span');
+      label.className = 'coming-soon-label';
+      label.textContent = data.comingSoon;
+
+      el.appendChild(img);
+      el.appendChild(label);
+    });
+  }
+  initStoreBadges();
+
   // Theme-aware <picture> swapping
   function updateThemeImages(theme) {
     // First: explicit theme-src swapping (used for store badges).
