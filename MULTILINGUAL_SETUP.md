@@ -6,6 +6,7 @@ This site uses a **static, per-language folder** approach (no JavaScript-based t
 
 - **English**: `/en/`
 - **Polish**: `/pl/`
+- **French**: `/fr/`
 
 Each language has its own fully rendered HTML pages. Language switching is done via a dropdown in the header and automatic geo/locale-based redirection.
 
@@ -13,9 +14,9 @@ Each language has its own fully rendered HTML pages. Language switching is done 
 
 - **Canonical content** lives under `/en/` and `/pl/`.
 - **Root-level URLs** (like `/index.html`, `/privacy.html`, `/products/*.html`) use `redirect.js` to detect the user's language via browser locale and IP geolocation, then redirect to the appropriate language folder.
-- **Language dropdown** in every page header lets users manually switch between English and Polski.
-- **SEO** uses `hreflang` alternates for `en`, `pl`, and `x-default`.
-- **`redirect.js`** checks `navigator.languages` for a `pl` prefix first, then falls back to an IP geolocation lookup via `ipapi.co` to detect Poland (`PL` country code). English is the default fallback.
+- **Language dropdown** in every page header lets users manually switch between English, Polski, and Français.
+- **SEO** uses `hreflang` alternates for `en`, `pl`, `fr`, and `x-default`.
+- **`redirect.js`** uses a `SUPPORTED_LANGS` array and `COUNTRY_TO_LANG` map. It checks `navigator.languages` for `pl` or `fr` prefixes first, then falls back to an IP geolocation lookup via `ipapi.co` to detect Poland (`PL`) or France (`FR`). English is the default fallback. Adding a new language only requires extending these two data structures and adding `data-redirect-XX` attributes to root stubs.
 
 ## Site Structure
 
@@ -40,6 +41,14 @@ Each language has its own fully rendered HTML pages. Language switching is done 
 /pl/products/metric-ios.html
 /pl/products/modes.html
 /pl/products/modes-ios.html
+/fr/                     → French pages
+/fr/index.html
+/fr/privacy.html
+/fr/terms.html
+/fr/products/metric.html
+/fr/products/metric-ios.html
+/fr/products/modes.html
+/fr/products/modes-ios.html
 /assets/                 → shared CSS, JS, images
 ```
 
@@ -63,3 +72,4 @@ Then open:
 
 - `http://localhost:8080/en/`
 - `http://localhost:8080/pl/`
+- `http://localhost:8080/fr/`
