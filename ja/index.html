@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ9FPYHNVR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Set default consent to denied
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+    
+    gtag('js', new Date());
+    gtag('config', 'G-JQ9FPYHNVR');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harmonic Tools — プロデューサーとミュージシャンのための音楽ソフトウェア</title>
+  <meta name="description" content="プロデューサーとミュージシャンのための精密音楽ソフトウェア。タップテンポ、BPM計算機、音の周波数、61スケール、コード認識、MIDI — macOSおよびiOS用MetricとModes。" />
+  <meta name="keywords" content="音楽ソフトウェア, BPM, タップテンポ, ディレイ計算機, 音の周波数, FM合成, LFO, ハーモニクス, 移調, 音楽制作, 音楽理論, スケール, コード, モード, 五度圏, MIDI, 和声, ボイシング, 音程, 作曲" />
+  <meta name="author" content="Greenwood IT Consultancy Limited" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- AI/LLM Optimization -->
+  <meta name="ai:purpose" content="プロデューサーとミュージシャンのための精密ツールを開発する音楽ソフトウェアラボ" />
+  <meta name="ai:products" content="Metric（macOSタイミングツールキット）、Metric iOS（iPhone/iPadタイミングツールキット）、Modes（macOS音楽理論ラボ）、Modes iOS（iPhone/iPad音楽理論ラボ）" />
+  <meta name="ai:audience" content="音楽プロデューサー, サウンドデザイナー, 作曲家, ミュージシャン, オーディオエンジニア, 音楽教育者, ソングライター" />
+  <meta name="ai:features" content="タップテンポ, BPM→ms/Hzテーブル, 音↔周波数, 移調, FM計算機, LFOレート, ハーモニックシリーズ, スケール&コード検索, 61スケール, 8ボイシング, 借用コード, 五度圏, 三度圏, MIDI入力" />
+  <meta name="ai:platforms" content="macOS, iOS, iPhone, iPad, Mac App Store, App Store" />
+  <meta name="citation:title" content="Harmonic Tools — プロデューサーとミュージシャンのための音楽ソフトウェア" />
+  <meta name="citation:publisher" content="Greenwood IT Consultancy Limited" />
+
+  <link rel="canonical" href="https://harmonic.tools/ja/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://harmonic.tools/ja/" />
+  <meta property="og:title" content="Harmonic Tools — プロデューサーとミュージシャンのための音楽ソフトウェア" />
+  <meta property="og:description" content="タップテンポ、BPM計算機、音の周波数、61スケール、コード認識、MIDI — macOSおよびiOS用MetricとModes。" />
+  <meta property="og:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta property="og:image:alt" content="Harmonic Tools" />
+  <meta property="og:site_name" content="Harmonic Tools" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:url" content="https://harmonic.tools/ja/" />
+  <meta name="twitter:title" content="Harmonic Tools — プロデューサーとミュージシャンのための音楽ソフトウェア" />
+  <meta name="twitter:description" content="タップテンポ、BPM計算機、音の周波数、61スケール、コード認識、MIDI — macOSおよびiOS用MetricとModes。" />
+  <meta name="twitter:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta name="twitter:image:alt" content="Harmonic Tools" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../assets/css/styles.css?v=21" />
+  <script defer src="../assets/js/main.js?v=10"></script>
+
+  <!-- Language alternates for SEO -->
+  <link rel="alternate" hreflang="en" href="https://harmonic.tools/en/" />
+  <link rel="alternate" hreflang="pl" href="https://harmonic.tools/pl/" />
+  <link rel="alternate" hreflang="fr" href="https://harmonic.tools/fr/" />
+  <link rel="alternate" hreflang="de" href="https://harmonic.tools/de/" />
+  <link rel="alternate" hreflang="es" href="https://harmonic.tools/es/" />
+  <link rel="alternate" hreflang="ko" href="https://harmonic.tools/ko/" />
+  <link rel="alternate" hreflang="ja" href="https://harmonic.tools/ja/" />
+  <link rel="alternate" hreflang="x-default" href="https://harmonic.tools/en/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Greenwood IT Consultancy Limited",
+    "alternateName": "Harmonic Tools",
+    "url": "https://harmonic.tools",
+    "logo": "https://harmonic.tools/favicon.svg",
+    "description": "プロデューサーとミュージシャンのための精密ツールを開発する音楽ソフトウェアラボ。macOSおよびiOS用タイミングツールキットMetricと音楽理論ラボModes。",
+    "foundingDate": "2020",
+    "sameAs": [
+      "https://github.com/harmonic-tools"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "contact@gitc.digital"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "SoftwareApplication",
+        "position": 1,
+        "name": "Metric",
+        "operatingSystem": "macOS",
+        "applicationCategory": "MusicApplication",
+        "description": "macOS用タイミング＆周波数ツールキット。タップテンポ、BPM→ms/Hzテーブル、音↔周波数検索、移調、FM+LFO計算機、32ハーモニクス。",
+        "url": "https://harmonic.tools/ja/products/metric.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 2,
+        "name": "Metric iOS",
+        "operatingSystem": "iOS",
+        "applicationCategory": "MusicApplication",
+        "description": "iPhoneおよびiPad用ポケットタイミング＆周波数ツールキット。タップテンポ、BPM→ms/Hzテーブル、音↔周波数、移調、FM+LFO計算機、32ハーモニクス。",
+        "url": "https://harmonic.tools/ja/products/metric-ios.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 3,
+        "name": "Modes",
+        "operatingSystem": "macOS",
+        "applicationCategory": "MusicApplication",
+        "description": "macOS用インタラクティブ音楽理論ラボ。61スケール、8ボイシング、コード認識、ダイアトニックハーモニー、借用コード、五度圏、三度圏。",
+        "url": "https://harmonic.tools/ja/products/modes.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 4,
+        "name": "Modes iOS",
+        "operatingSystem": "iOS",
+        "applicationCategory": "MusicApplication",
+        "description": "iPhoneおよびiPad用インタラクティブ音楽理論ラボ。61スケール、8ボイシング、コード認識、ダイアトニックハーモニー、借用コード、五度圏、三度圏。",
+        "url": "https://harmonic.tools/ja/products/modes-ios.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="./" aria-label="Harmonic Tools — ホーム">Harmonic Tools</a>
+      <nav class="nav" role="navigation" aria-label="メインナビゲーション">
+        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">メニュー</button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="#products">製品</a></li>
+          <li><a href="#pillars">分野</a></li>
+          <li><a href="#philosophy">理念</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <div class="language-selector">
+        <button class="language-btn" aria-label="言語を変更" title="言語を変更"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"><path fill="currentColor" fill-rule="evenodd" d="M2 16c0 7.72 6.28 14 14 14s14-6.28 14-14S23.72 2 16 2S2 8.28 2 16m2.041-1c.15-1.81.703-3.506 1.568-5h3.55a16 16 0 0 0-1.128 5zm5.994 0a14 14 0 0 1 1.31-5H15v5zM15 17h-4.965a14 14 0 0 0 1.31 5H15zm0 7h-2.494A14 14 0 0 0 15 26.73zm4.005 3.62A12 12 0 0 0 24.94 24h-3.074a16 16 0 0 1-2.86 3.62M22.84 22h3.55v.002A11.9 11.9 0 0 0 27.959 17h-3.99a16 16 0 0 1-1.13 5m-.875-5a14 14 0 0 1-1.31 5H17v-5zm2.004-2h3.99a11.9 11.9 0 0 0-1.569-5.002V10h-3.55a16 16 0 0 1 1.13 5m-3.315-5a14 14 0 0 1 1.31 5H17v-5zm1.212-2h3.073a12 12 0 0 0-5.926-3.618A16 16 0 0 1 21.865 8M17 5.27V8h2.494A14 14 0 0 0 17 5.27m-2 0A14 14 0 0 0 12.506 8H15zM17 24v2.73A14 14 0 0 0 19.494 24zM5.609 22h3.554a16 16 0 0 1-1.132-5H4.04c.15 1.81.703 3.506 1.568 5M13 27.621A16 16 0 0 1 10.14 24H7.06a12 12 0 0 0 5.941 3.621M10.134 8a16 16 0 0 1 2.853-3.617A12 12 0 0 0 7.061 8z" clip-rule="evenodd"/></svg></button>
+        <div class="language-dropdown">
+          <a class="language-option" href="../en/" lang="en">English</a>
+          <a class="language-option" href="../de/" lang="de">Deutsch</a>
+          <a class="language-option" href="../es/" lang="es">Español</a>
+          <a class="language-option" href="../fr/" lang="fr">Français</a>
+          <a class="language-option" href="../pl/" lang="pl">Polski</a>
+          <a class="language-option" href="./" lang="ja">日本語</a>
+          <a class="language-option" href="../ko/" lang="ko">한국어</a>
+        </div>
+      </div>
+      <button class="theme-toggle" aria-label="テーマを変更" title="テーマを変更"></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ═══════════════════════════════════════════
+         HERO ブランドポジショニング
+         ═══════════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <p class="hero-label">Harmonic.Tools</p>
+        <h1 id="hero-title">構造化された音楽ソフトウェア。</h1>
+        <p class="subhead">作曲家とオーディオエンジニアのために。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#products">製品を見る</a>
+          <a class="btn btn-secondary" href="#pillars">ドキュメントを見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         WHAT WE BUILD ブランドステートメント
+         ═══════════════════════════════════════════ -->
+    <section class="brand-statement" aria-labelledby="brand-title">
+      <div class="container">
+        <h2 id="brand-title" class="section-title">私たちが作るもの</h2>
+        <p class="brand-text">Harmonic.Toolsは、macOS、iOSおよびiPadOS用の構造化された音楽アプリケーションを開発しています。</p>
+        <p class="brand-text">明確さ、速度、精度のために設計されています。</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CORE FOCUS AREAS エコシステム主要分野
+         ═══════════════════════════════════════════ -->
+    <section id="pillars" class="pillars" aria-labelledby="pillars-title">
+      <div class="container">
+        <h2 id="pillars-title" class="section-title">主要分野</h2>
+        <div class="pillar-grid" role="list">
+          <article class="pillar-card" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="24" r="12" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="currentColor" opacity="0.4"/></svg>
+            </div>
+            <h3>和声システム</h3>
+            <p>スケールマッピング、モーダル変換、音程構造、代替チューニングの探求。</p>
+          </article>
+          <article class="pillar-card" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="48" height="48"><rect x="6" y="6" width="36" height="36" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="6" y1="18" x2="42" y2="18" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="6" y1="30" x2="42" y2="30" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="18" y1="6" x2="18" y2="42" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="30" y1="6" x2="30" y2="42" stroke="currentColor" stroke-width="1" opacity="0.5"/></svg>
+            </div>
+            <h3>作曲ツール</h3>
+            <p>パターンベースのワークフロー、コード進行ツール、構造化された作曲。</p>
+          </article>
+          <article class="pillar-card" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="48" height="48"><line x1="8" y1="40" x2="40" y2="8" stroke="currentColor" stroke-width="1.5"/><circle cx="14" cy="34" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="34" cy="14" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="24" x2="40" y2="24" stroke="currentColor" stroke-width="0.75" opacity="0.3"/></svg>
+            </div>
+            <h3>分析とリファレンス</h3>
+            <p>音程、調性、コード-スケール関係、和声的等価性のクイックルックアップ。</p>
+          </article>
+          <article class="pillar-card" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="48" height="48"><rect x="10" y="28" width="4" height="12" rx="1" fill="currentColor" opacity="0.3"/><rect x="18" y="20" width="4" height="20" rx="1" fill="currentColor" opacity="0.5"/><rect x="26" y="14" width="4" height="26" rx="1" fill="currentColor" opacity="0.7"/><rect x="34" y="8" width="4" height="32" rx="1" fill="currentColor" opacity="0.9"/></svg>
+            </div>
+            <h3>楽器と入力</h3>
+            <p>MIDI変換、フレットボードマッピング、和声認識ビジュアライゼーションツール。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PRODUCTS 製品概要
+         ═══════════════════════════════════════════ -->
+    <section id="products" class="products" aria-labelledby="products-title">
+      <div class="container">
+        <h2 id="products-title" class="section-title">製品</h2>
+        <p class="section-lead">音楽構造に素早く正確にアクセスするためのツール。</p>
+
+        <div class="platform-group" aria-labelledby="platform-ios-title">
+          <h3 id="platform-ios-title" class="platform-group__title">iOSおよびiPadOS</h3>
+          <div class="platform-hero" aria-label="iOSおよびiPadOSの例">
+            <div class="screenshot-grid">
+              <a class="platform-hero__link" href="./products/modes-ios.html" aria-label="Modes iOSを見る">
+                <figure class="device-shot device-shot--ipad-portrait">
+                  <div class="device-shot__stage" aria-label="iPadスクリーンショット">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/iPad Pro 13 - M4 - Space Gray - Portrait.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesiOS/ja/iPad Pro 13-inch (M5)-scaleChord-sidebar-ipad-portrait-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesiOS/ja/iPad Pro 13-inch (M5)-scaleChord-sidebar-ipad-portrait-light.png" alt="iPadでのModes iOS" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>iPadでのModes iOS。</figcaption>
+                </figure>
+              </a>
+
+              <a class="platform-hero__link" href="./products/metric-ios.html" aria-label="Metric iOSを見る">
+                <figure class="device-shot device-shot--iphone">
+                  <div class="device-shot__stage" aria-label="iPhoneスクリーンショット">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/iPhone 17 Pro - Deep Blue - Portrait.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/MetriciOS/ja/iPhone 17 Pro Max-tap-iphone-portrait-dark.png" data-theme="dark">
+                        <img src="../assets/images/MetriciOS/ja/iPhone 17 Pro Max-tap-iphone-portrait-light.png" alt="iPhoneでのMetric iOS" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>iPhoneでのMetric iOS。</figcaption>
+                </figure>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-grid product-grid--two" role="list">
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesiOSAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesiOSAppIcon-macOS-Default-1024x1024@1x.png" alt="Modes iOSアプリアイコン" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes</h4>
+                <p class="tagline">インタラクティブ音楽理論ラボ。</p>
+                <p class="blurb">61スケールを探求し、8ボイシングでコードを構築し、インタラクティブサークルで和声をマッピングしましょう。</p>
+                <ul class="features">
+                  <li>スケール＆コード検索（MIDI＋タッチキーボード）</li>
+                  <li>61スケール・21コードタイプ・8ボイシング</li>
+                  <li>共通音、共通コード、借用コード</li>
+                  <li>五度圏 / 三度圏</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" aria-label="Modes iOS 近日App Storeに登場">
+                    <img src="../assets/images/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" data-theme-src-light="../assets/images/Download-on-the-App-Store/JP/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_wht_100317.svg" data-theme-src-dark="../assets/images/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="App Storeからダウンロード" width="180" height="53">
+                    <span class="coming-soon-label">近日公開</span>
+                  </span>
+                  <a class="btn btn-tertiary" href="./products/modes-ios.html">詳しく見る</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/MetriciOSAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/MetriciOSAppIcon-macOS-Default-1024x1024@1x.png" alt="Metric iOSアプリアイコン" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Metric</h4>
+                <p class="tagline">ポケットテンポ＆周波数ツールキット。</p>
+                <p class="blurb">タップテンポ、BPMテーブル、音↔周波数、移調、FM＆LFO計算機、32ハーモニクス — プロデューサーに必要なすべての答えをオフラインで即座に。</p>
+                <ul class="features">
+                  <li>全ツール共有BPMタップテンポ</li>
+                  <li>BPM → ms / Hz コンバーター</li>
+                  <li>音 ↔ 周波数（108音、チューニング調整可能）</li>
+                  <li>移調、FM、LFO、ハーモニクス</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" aria-label="Metric iOS 近日App Storeに登場">
+                    <img src="../assets/images/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" data-theme-src-light="../assets/images/Download-on-the-App-Store/JP/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_wht_100317.svg" data-theme-src-dark="../assets/images/Download-on-the-App-Store/JP/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_JP_RGB_blk_100317.svg" alt="App Storeからダウンロード" width="180" height="53">
+                    <span class="coming-soon-label">近日公開</span>
+                  </span>
+                  <a class="btn btn-tertiary" href="./products/metric-ios.html">詳しく見る</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="platform-group" aria-labelledby="platform-macos-title">
+          <h3 id="platform-macos-title" class="platform-group__title">macOS</h3>
+          <div class="platform-hero" aria-label="macOSの例">
+            <div class="screenshot-grid">
+              <a class="platform-hero__link" href="./products/modes.html" aria-label="macOS用Modesを見る">
+                <figure class="device-shot device-shot--mac">
+                  <div class="device-shot__stage" aria-label="macOSスクリーンショット">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesMac/ja/modes-scaleChord-mac-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesMac/ja/modes-scaleChord-mac-light.png" alt="macOSでのModes" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>macOSでのModes。</figcaption>
+                </figure>
+              </a>
+
+              <a class="platform-hero__link" href="./products/metric.html" aria-label="macOS用Metricを見る">
+                <figure class="device-shot device-shot--mac">
+                  <div class="device-shot__stage" aria-label="macOSスクリーンショット">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/MetricMac/ja/metric-tap-mac-dark.png" data-theme="dark">
+                        <img src="../assets/images/MetricMac/ja/metric-tap-mac-light.png" alt="macOSでのMetric" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>macOSでのMetric。</figcaption>
+                </figure>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-grid product-grid--two" role="list">
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" alt="Modes macOSアプリアイコン" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes</h4>
+                <p class="tagline">インタラクティブ音楽理論ラボ。</p>
+                <p class="blurb">61スケールを探求し、8ボイシングでコードを構築し、インタラクティブサークルで和声をマッピングしましょう — Macで直接。</p>
+                <ul class="features">
+                  <li>スケール＆コード検索（MIDI＋キーボード）</li>
+                  <li>61スケール・21コードタイプ・8ボイシング</li>
+                  <li>共通音、共通コード、借用コード</li>
+                  <li>五度圏 / 三度圏</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" aria-label="Modes 近日Mac App Storeに登場">
+                    <img src="../assets/images/Download-on-the-Mac-App-Store/JP/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_JP_RGB_blk_100317.svg" data-theme-src-light="../assets/images/Download-on-the-Mac-App-Store/JP/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_JP_RGB_wht_100317.svg" data-theme-src-dark="../assets/images/Download-on-the-Mac-App-Store/JP/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_JP_RGB_blk_100317.svg" alt="Mac App Storeからダウンロード" width="180" height="53">
+                    <span class="coming-soon-label">近日公開</span>
+                  </span>
+                  <a class="btn btn-tertiary" href="./products/modes.html">詳しく見る</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/MetricMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" alt="Metric macOSアプリアイコン" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Metric</h4>
+                <p class="tagline">デスクトップテンポ＆周波数ツールキット。</p>
+                <p class="blurb">タップテンポ、BPMテーブル、音↔周波数、移調、FM＆LFO計算機、32ハーモニクス — プロデューサーに必要なすべての答えをMacで直接。</p>
+                <ul class="features">
+                  <li>全ツール共有BPMタップテンポ</li>
+                  <li>BPM → ms / Hz ルックアップテーブル</li>
+                  <li>チューニング調整可能な音 ↔ 周波数（108音）</li>
+                  <li>移調、FM、LFO、ハーモニクス</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" aria-label="Metric 近日Mac App Storeに登場">
+                    <img src="../assets/images/Download-on-the-Mac-App-Store/JP/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_JP_RGB_blk_100317.svg" data-theme-src-light="../assets/images/Download-on-the-Mac-App-Store/JP/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_JP_RGB_wht_100317.svg" data-theme-src-dark="../assets/images/Download-on-the-Mac-App-Store/JP/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_JP_RGB_blk_100317.svg" alt="Mac App Storeからダウンロード" width="180" height="53">
+                    <span class="coming-soon-label">近日公開</span>
+                  </span>
+                  <a class="btn btn-tertiary" href="./products/metric.html">詳しく見る</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PHILOSOPHY 理念
+         ═══════════════════════════════════════════ -->
+    <section id="philosophy" class="philosophy" aria-labelledby="philosophy-title">
+      <div class="container">
+        <h2 id="philosophy-title" class="section-title">理念</h2>
+        <blockquote class="philosophy-quote">
+          <p>音楽は構造化されたシステムとして捉えることができます。</p>
+        </blockquote>
+        <p class="philosophy-text">Harmonic.Toolsは、音楽的関係を明確かつ直接的に表示するソフトウェアを開発しています。</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT ブランドアイデンティティ
+         ═══════════════════════════════════════════ -->
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title" class="section-title">概要</h2>
+        <p>Harmonic.Toolsは、Appleプラットフォーム向けの構造的で体系的なツールに注力する長期的な音楽ソフトウェアラボです。</p>
+        <p>SwiftとSwiftUIを使用し、最新のmacOSおよびiOS技術で開発しています。精度、安定性、明確さを重視しています。</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT
+         ═══════════════════════════════════════════ -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section-title">お問い合わせ</h2>
+        <ul class="contact-list">
+          <li><span>メール：</span> <a href="#" data-email="contact|gitc.digital" aria-label="Harmonic Toolsにメールを送る">メールを表示</a></li>
+          <li><span>GitHub：</span> <a href="https://github.com/omega1119" rel="me">github.com/omega1119</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Harmonic.Tools</small>
+      <ul class="footer-links">
+        <li><a href="./privacy.html">プライバシーポリシー</a></li>
+        <li><a href="./terms.html">利用規約</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-consent">
+    <div class="cookie-consent__content">
+      <div class="cookie-consent__text">
+        当サイトでは、トラフィックの分析とユーザーエクスペリエンスの向上のためにCookieを使用しています。「同意」をクリックすると、Cookieの使用に同意したことになります。<a href="./privacy.html">プライバシーポリシー</a>
+      </div>
+      <div class="cookie-consent__buttons">
+        <button class="cookie-consent__btn cookie-consent__btn--accept">同意</button>
+        <button class="cookie-consent__btn cookie-consent__btn--deny">拒否</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
