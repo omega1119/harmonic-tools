@@ -94,6 +94,40 @@
   }
   initFooter();
 
+  // ── Hreflang Injector ───────────────────────────────────
+  // Generates all 8 <link rel="alternate" hreflang="..."> tags
+  // by detecting the current page's language prefix and page path,
+  // then substituting each supported language prefix.
+  // x-default always points to the English version.
+  const HREFLANG_LANGS = ['en', 'pl', 'fr', 'de', 'es', 'ko', 'ja'];
+  const HREFLANG_ORIGIN = 'https://harmonic.tools';
+
+  function initHreflang() {
+    const path = window.location.pathname;
+    // Match /{lang}/ or /{lang}/page.html or /{lang}/products/page.html
+    const match = path.match(/^\/([a-z]{2})(\/.*)?$/);
+    if (!match) return;
+
+    const pagePart = match[2] || '/'; // e.g. "/" or "/privacy.html" or "/products/metric.html"
+
+    const head = document.head;
+    HREFLANG_LANGS.forEach(function(lang) {
+      const link = document.createElement('link');
+      link.rel = 'alternate';
+      link.hreflang = lang;
+      link.href = HREFLANG_ORIGIN + '/' + lang + pagePart;
+      head.appendChild(link);
+    });
+
+    // x-default → English version
+    const xd = document.createElement('link');
+    xd.rel = 'alternate';
+    xd.hreflang = 'x-default';
+    xd.href = HREFLANG_ORIGIN + '/en' + pagePart;
+    head.appendChild(xd);
+  }
+  initHreflang();
+
   // Theme-aware <picture> swapping
   function updateThemeImages(theme) {
     // First: explicit theme-src swapping (used for store badges).
