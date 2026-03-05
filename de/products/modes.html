@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ9FPYHNVR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Set default consent to denied
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+    
+    gtag('js', new Date());
+    gtag('config', 'G-JQ9FPYHNVR');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Modes für macOS — Musiktheorie-Labor | Harmonic Tools</title>
+  <meta name="description" content="Erkunden Sie 61 Tonleitern, bauen Sie Akkorde mit 8 Voicing-Typen und kartieren Sie Harmonie über interaktive Quinten- und Terzenkreise auf Ihrem Mac. MIDI-kompatibel, offline und mit Dark Mode." />
+  <meta name="keywords" content="Musiktheorie, Tonleitern, Akkorde, Modi, Quintenzirkel, MIDI, Harmonie, Tonarten, Voicings, Intervalle, Komposition, macOS, Mac, DAW" />
+  <meta name="author" content="Harmonic Tools" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- AI/LLM Optimization -->
+  <meta name="ai:app_name" content="Modes" />
+  <meta name="ai:platform" content="macOS" />
+  <meta name="ai:category" content="Musiktheorie-Werkzeuge, Tonleiter- und Akkordreferenz" />
+  <meta name="ai:primary_features" content="Tonleiter- und Akkorderkennung, 61 Tonleitern, Töne in der Tonart, Stufenakkorde, 8 Voicing-Typen, gemeinsame Töne/Akkorde, entliehene Akkorde, Quintenzirkel, Terzenzirkel, MIDI-Eingang" />
+  <meta name="ai:use_cases" content="Akkorderkennung, Tonleiter-Erkundung, Modulationsplanung, Komposition, Musikausbildung, harmonische Analyse" />
+
+  <link rel="canonical" href="https://harmonic.tools/de/products/modes.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://harmonic.tools/de/products/modes.html" />
+  <meta property="og:title" content="Modes für macOS — Musiktheorie-Labor" />
+  <meta property="og:description" content="61 Tonleitern, 8 Voicing-Typen, Akkorderkennung, entliehene Akkorde und interaktive Kreise — MIDI-kompatibel und offline." />
+  <meta property="og:image" content="https://harmonic.tools/assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta property="og:image:alt" content="Modes macOS Symbol" />
+  <meta property="og:site_name" content="Harmonic Tools" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Modes für macOS — Musiktheorie-Labor" />
+  <meta name="twitter:description" content="61 Tonleitern, 8 Voicing-Typen, Akkorderkennung, entliehene Akkorde und interaktive Kreise — MIDI-kompatibel und offline." />
+  <meta name="twitter:image" content="https://harmonic.tools/assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta name="twitter:image:alt" content="Modes macOS Symbol" />
+
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=20" />
+  <script defer src="../../assets/js/main.js?v=10"></script>
+
+  <link rel="alternate" hreflang="en" href="https://harmonic.tools/en/products/modes.html" />
+  <link rel="alternate" hreflang="pl" href="https://harmonic.tools/pl/products/modes.html" />
+  <link rel="alternate" hreflang="fr" href="https://harmonic.tools/fr/products/modes.html" />
+  <link rel="alternate" hreflang="de" href="https://harmonic.tools/de/products/modes.html" />
+  <link rel="alternate" hreflang="x-default" href="https://harmonic.tools/en/products/modes.html" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Modes",
+    "operatingSystem": "macOS",
+    "applicationCategory": "MusicApplication",
+    "description": "Ein praktisches Musiktheorie-Labor für macOS. 61 Tonleitern, 8 Voicing-Typen, Akkorderkennung, diatonische Harmonik, entliehene Akkorde und interaktive Quinten- und Terzenkreise — alles in einer App mit Seitenleisten-Navigation.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Harmonic Tools"
+    },
+    "screenshot": "https://harmonic.tools/assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png",
+    "featureList": [
+      "Tonleiter- und Akkorderkennung mit MIDI-Eingang",
+      "61 Tonleitern und Modi",
+      "Töne in der Tonart",
+      "Stufenakkorde mit Funktions-Badges",
+      "8 Voicing-Typen (Dreiklänge bis Tredezimakkorde)",
+      "Gemeinsame Töne und Akkorde",
+      "Entliehene Akkorde",
+      "Quintenzirkel",
+      "Terzenzirkel"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="../" aria-label="Harmonic Tools — Startseite">Harmonic Tools</a>
+      <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">Menü</button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="../">Startseite</a></li>
+          <li><a href="../#products">Produkte</a></li>
+        </ul>
+      </nav>
+      <div class="language-selector">
+        <button class="language-btn" aria-label="Sprache wechseln" title="Sprache wechseln"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"><path fill="currentColor" fill-rule="evenodd" d="M2 16c0 7.72 6.28 14 14 14s14-6.28 14-14S23.72 2 16 2S2 8.28 2 16m2.041-1c.15-1.81.703-3.506 1.568-5h3.55a16 16 0 0 0-1.128 5zm5.994 0a14 14 0 0 1 1.31-5H15v5zM15 17h-4.965a14 14 0 0 0 1.31 5H15zm0 7h-2.494A14 14 0 0 0 15 26.73zm4.005 3.62A12 12 0 0 0 24.94 24h-3.074a16 16 0 0 1-2.86 3.62M22.84 22h3.55v.002A11.9 11.9 0 0 0 27.959 17h-3.99a16 16 0 0 1-1.13 5m-.875-5a14 14 0 0 1-1.31 5H17v-5zm2.004-2h3.99a11.9 11.9 0 0 0-1.569-5.002V10h-3.55a16 16 0 0 1 1.13 5m-3.315-5a14 14 0 0 1 1.31 5H17v-5zm1.212-2h3.073a12 12 0 0 0-5.926-3.618A16 16 0 0 1 21.865 8M17 5.27V8h2.494A14 14 0 0 0 17 5.27m-2 0A14 14 0 0 0 12.506 8H15zM17 24v2.73A14 14 0 0 0 19.494 24zM5.609 22h3.554a16 16 0 0 1-1.132-5H4.04c.15 1.81.703 3.506 1.568 5M13 27.621A16 16 0 0 1 10.14 24H7.06a12 12 0 0 0 5.941 3.621M10.134 8a16 16 0 0 1 2.853-3.617A12 12 0 0 0 7.061 8z" clip-rule="evenodd"/></svg></button>
+        <div class="language-dropdown">
+          <a class="language-option" href="../../en/products/modes.html" lang="en">English</a>
+          <a class="language-option" href="../../pl/products/modes.html" lang="pl">Polski</a>
+          <a class="language-option" href="../../fr/products/modes.html" lang="fr">Français</a>
+          <a class="language-option" href="./modes.html" lang="de">Deutsch</a>
+        </div>
+      </div>
+      <button class="theme-toggle" aria-label="Design wechseln" title="Design wechseln"></button>
+    </div>
+  </header>
+
+  <main class="container product-page">
+    <div class="product-hero">
+      <div class="product-hero__copy">
+        <picture>
+          <source srcset="../../assets/images/ModesMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+          <img src="../../assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" alt="Modes macOS Symbol" width="128" height="128" class="product-hero__icon" />
+        </picture>
+
+        <h1>Modes für macOS</h1>
+        <p class="product-lead">Ein praktisches Musiktheorie-Labor für macOS. Ob Sie einen Song schreiben, eine Unterrichtsstunde vorbereiten oder neues harmonisches Terrain erkunden — Modes bietet Ihnen sofortigen Zugriff auf Tonleitern, Akkorde, Voicings und Modulationswege — alles in einer übersichtlichen App mit Seitenleisten-Navigation, die neben Ihrer DAW Platz findet.</p>
+
+        <ul class="product-highlights">
+          <li>Tonleiter- und Akkorderkennung mit MIDI + Bildschirmtastatur</li>
+          <li>61 Tonleitern · 21 Akkordtypen · 8 Voicing-Familien</li>
+          <li>Gemeinsame Töne, gemeinsame Akkorde, entliehene Akkorde</li>
+          <li>Interaktiver Quintenzirkel + Terzenzirkel</li>
+        </ul>
+
+        <div class="product-cta">
+          <span class="store-badge store-badge--disabled" aria-label="Modes bald im Mac App Store verfügbar">
+            <img src="../../assets/images/Download-on-the-Mac-App-Store/DE/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_DE_RGB_blk_092917.svg" data-theme-src-light="../../assets/images/Download-on-the-Mac-App-Store/DE/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_DE_RGB_wht_092917.svg" data-theme-src-dark="../../assets/images/Download-on-the-Mac-App-Store/DE/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_DE_RGB_blk_092917.svg" alt="Laden im Mac App Store" width="180" height="53">
+            <span class="coming-soon-label">Demnächst verfügbar</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="product-hero__shots" aria-label="Modes macOS Screenshots">
+        <h2 class="product-shot-title">Screenshots</h2>
+        <p class="product-shot-lead">Enthält Screenshots im hellen und dunklen Modus, die dem Design der Website folgen.</p>
+        <div class="screenshot-grid">
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS-Screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/de-DE/modes-scaleChord-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/de-DE/modes-scaleChord-mac-light.png" alt="Tonleiter- und Akkorderkennung auf macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Akkorde sofort erkennen. Spielen oder klicken Sie Töne und sehen Sie Ergebnisse in Echtzeit.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS-Screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/de-DE/modes-scaleChord-cmaj7-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/de-DE/modes-scaleChord-cmaj7-mac-light.png" alt="Detaillierte Akkordansicht auf macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>In jeden Akkord eintauchen. Sehen Sie Töne, Intervalle und Voicings auf der Tastatur.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS-Screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/de-DE/modes-scaleNotes-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/de-DE/modes-scaleNotes-mac-light.png" alt="Töne-in-der-Tonart-Bildschirm auf macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Jeden Ton in jeder Tonart sehen. Tonleitern auf einer interaktiven Tastatur hervorgehoben.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS-Screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/de-DE/modes-scaleChords-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/de-DE/modes-scaleChords-mac-light.png" alt="Stufenakkorde-Bildschirm auf macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Diatonische Harmonik aufbauen. Römische Ziffern, Funktionen und Akkorde auf einen Blick.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS-Screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/de-DE/modes-sharedNotes-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/de-DE/modes-sharedNotes-mac-light.png" alt="Gemeinsame-Töne-Bildschirm auf macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Zwei Tonarten nebeneinander vergleichen. Gemeinsame Töne für sanfte Modulation finden.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS-Screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/de-DE/modes-sharedChords-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/de-DE/modes-sharedChords-mac-light.png" alt="Gemeinsame-Akkorde-Bildschirm auf macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Gemeinsame Akkorde zwischen zwei Tonarten finden — für sanfte Modulation.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS-Screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/de-DE/modes-borrowedChords-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/de-DE/modes-borrowedChords-mac-light.png" alt="Entliehene-Akkorde-Bildschirm auf macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Akkorde aus parallelen Modi entleihen. Farbe hinzufügen, ohne Ihre Tonart zu verlassen.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS-Screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/de-DE/modes-circleOfFifths-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/de-DE/modes-circleOfFifths-mac-light.png" alt="Quintenzirkel auf macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Im Quintenzirkel navigieren. Klicken Sie, um Tonarten, Verwandte und Modulationswege zu erkunden.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS-Screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/de-DE/modes-circleOfThirds-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/de-DE/modes-circleOfThirds-mac-light.png" alt="Terzenzirkel auf macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Chromatische Medianten erkunden. Vermindertes Zyklus-Diagramm für filmische Harmonik.</figcaption>
+          </figure>
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS-Screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/de-DE/modes-settings-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/de-DE/modes-settings-mac-light.png" alt="Einstellungen auf macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Ihr Erlebnis anpassen. Enharmonische Schreibweise, Oktavumfang und Anzeigeoptionen.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <section class="product-section" aria-labelledby="features-title">
+      <h2 id="features-title">Funktionen</h2>
+      <ul>
+        <li><strong>Tonleiter- und Akkorderkennung:</strong> Spielen Sie Töne auf der interaktiven Mehrfach-Oktav-Tastatur oder schließen Sie einen MIDI-Controller an. Modes erkennt den gespielten Akkord in Echtzeit: Dur, Moll, vermindert, übermäßig, erweitert, Suspended und mehr. Es ordnet jede passende Tonleiter nach Tonabdeckung ein. Filtern Sie Ergebnisse nach Tonleiter-Kategorie (diatonisch, melodisch Moll, harmonisch Moll, pentatonisch, Bebop, symmetrisch, Weltmusik und mehr), um den gewünschten Klang zu finden.</li>
+        <li><strong>61 Tonleitern und Modi:</strong> Von den sieben diatonischen Modi über melodisch Moll, harmonisch Moll, doppelt harmonisch, neapolitanisch, Bebop, Pentatonik, Blues, Ganzton, vermindert, übermäßig bis hin zu Weltskalen wie Hirajōshi, Kumoi, In Sen, persisch und enigmatisch. Jede Tonleiter wird mit Intervallen dargestellt und auf der Tastatur hervorgehoben.</li>
+        <li><strong>Töne in der Tonart:</strong> Wählen Sie einen beliebigen Grundton und eine Tonleiter, um jeden Ton in der Tonart über zwei Oktaven hervorgehoben zu sehen. Erkennen Sie sofort, welche Töne zur Tonleiter gehören und wo der Grundton liegt.</li>
+        <li><strong>Stufenakkorde:</strong> Erzeugen Sie diatonische Dreiklänge oder Septakkorde für jede Stufe Ihrer gewählten Tonleiter. Sehen Sie römische Ziffern, Akkordnamen, harmonische Funktions-Badges (Tonika, Subdominante, Dominante und über 30 detaillierte Labels) sowie Tastatur-Darstellungen mit Voicings — alles übersichtlich zum einfachen Vergleich.</li>
+        <li><strong>8 Voicing-Typen:</strong> Bauen Sie Akkorde in Terzenschichtung (Tertian), Sus2, Sus4, Sext, Add, Quart, Quint und Power-Voicings. Wählen Sie von Dreiklängen bis Tredezimakkorde — jede Erweiterung wird automatisch beschriftet.</li>
+        <li><strong>Gemeinsame Töne und Akkorde:</strong> Vergleichen Sie zwei Tonarten nebeneinander. Sehen Sie, welche Töne sich überschneiden, welche einzigartig sind und welche Akkorde beide Tonarten teilen. Unverzichtbar für sanfte Modulation und Reharmonisierung.</li>
+        <li><strong>Entliehene Akkorde:</strong> Analysieren Sie Ihre Tonart auf native diatonische Akkorde sowie alle entliehenen Optionen aus parallelen Modi, gruppiert nach Quell-Modus. Entdecken Sie neue harmonische Farben, ohne Ihr tonales Zentrum zu verlassen.</li>
+        <li><strong>Quintenzirkel:</strong> Interaktiver Doppelring-Kreis (Dur außen, natürlich Moll innen). Klicken Sie auf einen Sektor, um die Tonart zu wechseln. Sehen Sie auf einen Blick Dominant-, Subdominant-, Parallel-, Verwandtschafts- und Nachbartonart-Beziehungen mit Modulationsschwierigkeits-Badges und Vorzeichendetails.</li>
+        <li><strong>Terzenzirkel:</strong> Erkunden Sie chromatische Mediant-Beziehungen auf einem verminderten Zyklus-Diagramm. Dur- und Moll-Tasten für jede Tonhöhenklasse zeigen Mediant-, Parallel- und Verwandtschaftsverbindungen. Ideal für die Planung filmischer und neo-riemannscher Modulationen.</li>
+        <li><strong>MIDI-Unterstützung:</strong> Schließen Sie ein beliebiges kompatibles MIDI-Keyboard oder Controller an. Gespielte Töne werden mit Bildschirmklicks für nahtlose Erkennung kombiniert.</li>
+      </ul>
+
+      <h3>Für Ihren Desktop entwickelt</h3>
+      <ul>
+        <li>Funktioniert komplett offline — kein Konto, keine Werbung, kein Tracking</li>
+        <li>Native macOS-App mit Seitenleisten-Navigation</li>
+        <li>Dark-Mode-kompatible Oberfläche, die dem Systemmodus folgt</li>
+        <li>Enharmonische Schreibweise: automatisch, Kreuze oder B-Vorzeichen</li>
+        <li>Größenverstellbares Fenster — halten Sie es neben Ihrer DAW offen</li>
+      </ul>
+      <p>Ob Sie ein Produzent sind, der Akkordfolgen skizziert, ein Gitarrist, der Modi lernt, ein Pianist, der Jazzharmonik studiert, oder ein Student, der sich auf Theorie-Prüfungen vorbereitet — Modes bringt fortgeschrittene Musiktheorie auf Ihren Schreibtisch.</p>
+    </section>
+
+    <section class="theory-coverage" aria-labelledby="theory-title">
+      <h2 id="theory-title">Musiktheorie-Abdeckung</h2>
+      <p>Vollständige Referenz aller Tonleitern, Modi, Akkorde, Voicings und Intervalle in der App.</p>
+
+      <div class="theory-stats">
+        <div class="theory-stat"><strong>61</strong> <span>Tonleitern und Modi</span></div>
+        <div class="theory-stat"><strong>21</strong> <span>Akkordtypen</span></div>
+        <div class="theory-stat"><strong>8</strong> <span>Voicing-Familien</span></div>
+        <div class="theory-stat"><strong>12</strong> <span>Chromatische Intervalle</span></div>
+        <div class="theory-stat"><strong>16</strong> <span>Obertöne</span></div>
+        <div class="theory-stat"><strong>32</strong> <span>Harmonische Funktions-Labels</span></div>
+      </div>
+
+      <div class="theory-group">
+        <h3>Tonleitern und Modi — 61 insgesamt</h3>
+
+        <h4>Dur-Modi (diatonisch)</h4>
+        <ul class="theory-tags">
+          <li>Ionian (Major)</li>
+          <li>Dorian</li>
+          <li>Phrygian</li>
+          <li>Lydian</li>
+          <li>Mixolydian</li>
+          <li>Aeolian (Natural Minor)</li>
+          <li>Locrian</li>
+        </ul>
+
+        <h4>Melodisch-Moll-Modi (Jazz Minor)</h4>
+        <ul class="theory-tags">
+          <li>Melodic Minor (Jazz Minor)</li>
+          <li>Dorian ♭2 (Phrygian ♮6)</li>
+          <li>Lydian Augmented (Lydian ♯5)</li>
+          <li>Lydian Dominant (Lydian ♭7)</li>
+          <li>Mixolydian ♭6 (Aeolian Dominant)</li>
+          <li>Locrian ♯2 (Locrian ♮2)</li>
+          <li>Altered (Super-Locrian)</li>
+        </ul>
+
+        <h4>Harmonisch-Moll-Modi</h4>
+        <ul class="theory-tags">
+          <li>Harmonic Minor</li>
+          <li>Locrian ♮6</li>
+          <li>Ionian ♯5 (Augmented Major)</li>
+          <li>Dorian ♯4 (Ukrainian Dorian)</li>
+          <li>Phrygian Dominant</li>
+          <li>Lydian ♯2</li>
+          <li>Super Locrian ♭♭7 (Altered ♭♭7)</li>
+        </ul>
+
+        <h4>Doppelt-harmonisch-Moll-Modi (Ungarisch Moll)</h4>
+        <ul class="theory-tags">
+          <li>Hungarian Minor (Double Harmonic Minor)</li>
+          <li>Oriental</li>
+          <li>Ionian ♯2 ♯5</li>
+          <li>Locrian ♭♭3 ♭♭7</li>
+          <li>Double Harmonic Major</li>
+          <li>Lydian ♯2 ♯6</li>
+          <li>Ultraphrygian</li>
+        </ul>
+
+        <h4>Harmonisch Dur</h4>
+        <ul class="theory-tags">
+          <li>Harmonic Major (Ionian ♭6)</li>
+          <li>Double Harmonic Major (Byzantine)</li>
+        </ul>
+
+        <h4>Neapolitanisch-Moll-Modi</h4>
+        <ul class="theory-tags">
+          <li>Neapolitan Minor</li>
+          <li>Lydian ♯6</li>
+          <li>Mixolydian Augmented</li>
+          <li>Romani Minor (Aeolian ♯4)</li>
+          <li>Locrian Dominant</li>
+          <li>Ionian ♯2</li>
+          <li>Ultralocrian</li>
+        </ul>
+
+        <h4>Neapolitanisch-Dur-Modi</h4>
+        <ul class="theory-tags">
+          <li>Neapolitan Major</li>
+          <li>Leading Whole Tone (Lydian Augmented ♯6)</li>
+          <li>Lydian Augmented Dominant</li>
+          <li>Lydian Dominant ♭6</li>
+          <li>Major Locrian</li>
+          <li>Half-Diminished ♭4 (Altered Dominant ♯2)</li>
+          <li>Altered Dominant ♭♭3</li>
+        </ul>
+
+        <h4>Bebop</h4>
+        <ul class="theory-tags">
+          <li>Bebop Dominant</li>
+          <li>Bebop Major</li>
+        </ul>
+
+        <h4>Pentatonik und Blues</h4>
+        <ul class="theory-tags">
+          <li>Pentatonic Major</li>
+          <li>Pentatonic Minor</li>
+          <li>Blues</li>
+          <li>Blues (Major)</li>
+        </ul>
+
+        <h4>Symmetrische und synthetische Tonleitern</h4>
+        <ul class="theory-tags">
+          <li>Whole Tone</li>
+          <li>Diminished (Half–Whole)</li>
+          <li>Diminished (Whole–Half)</li>
+          <li>Augmented (Hexatonic)</li>
+          <li>Prometheus (Mystic Hexatonic)</li>
+        </ul>
+
+        <h4>Japanische Pentatonik</h4>
+        <ul class="theory-tags">
+          <li>Hirajōshi</li>
+          <li>Kumoi</li>
+          <li>In Sen</li>
+          <li>Iwato</li>
+        </ul>
+
+        <h4>Welt / Sonstige</h4>
+        <ul class="theory-tags">
+          <li>Persian</li>
+          <li>Enigmatic</li>
+        </ul>
+      </div>
+
+      <div class="theory-group">
+        <h3>Akkorde</h3>
+
+        <h4>Erkannte Akkordtypen — 21</h4>
+        <p>21 erkannte Akkordtypen mit automatischer Erkennung erweiterter Tensions (9., 11., 13. werden als add9, add11, add13 angezeigt, wenn keine 7. vorhanden ist).</p>
+        <ul class="theory-tags">
+          <li>Major</li>
+          <li>Minor</li>
+          <li>Diminished</li>
+          <li>Augmented</li>
+          <li>sus2</li>
+          <li>sus4</li>
+          <li>Power (5)</li>
+          <li>Major 6th</li>
+          <li>Minor 6th</li>
+          <li>Dominant 7th</li>
+          <li>Major 7th</li>
+          <li>Minor 7th</li>
+          <li>Half-Diminished 7th</li>
+          <li>Diminished 7th</li>
+          <li>Minor-Major 7th</li>
+          <li>Augmented 7th</li>
+          <li>Augmented Major 7th</li>
+          <li>Major (♭5)</li>
+          <li>Diminished (♭♭3)</li>
+          <li>Dominant 7sus4</li>
+          <li>Dominant 7sus2</li>
+        </ul>
+
+        <h4>Akkordqualitäten (Akkord-Konstruktor) — 6</h4>
+        <p>Im Konstruktor verfügbare Akkordqualitäten mit Analyse in römischen Ziffern.</p>
+        <ul class="theory-tags">
+          <li>Major</li>
+          <li>Minor</li>
+          <li>Diminished</li>
+          <li>Augmented</li>
+          <li>Major (♭5)</li>
+          <li>Diminished (♭♭3)</li>
+        </ul>
+      </div>
+
+      <div class="theory-group">
+        <h3>Akkord-Voicings — 8 Typen</h3>
+        <p>Von Terzenschichtung (Tertian) bis Quart- und Quintstapelungen, von Dreiklängen bis Tredezimakkorde.</p>
+        <ul class="theory-tags">
+          <li>Tertian</li>
+          <li>sus2</li>
+          <li>sus4</li>
+          <li>6th / 6-9</li>
+          <li>Add (add9, add11)</li>
+          <li>Quartal</li>
+          <li>Quintal</li>
+          <li>Power</li>
+        </ul>
+      </div>
+
+      <div class="theory-group">
+        <h3>Intervalle, Obertonreihe und Analyse</h3>
+        <p>Die 12 chromatischen Intervalle mit Umkehrungen, eine 16-Obertöne-Reihe, vollständige Quintenzirkel-Navigation in allen Tonarten (Kreuz- und B-Schreibweise mit automatischer/manueller enharmonischer Umdeutung) und 32 harmonische Funktions-Labels der Tonika-, Subdominant- und Dominantfamilien.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><small>© <span id="year"></span> Harmonic Tools</small></div></footer>
+
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-consent">
+    <div class="cookie-consent__content">
+      <div class="cookie-consent__text">
+        Wir verwenden Cookies, um den Website-Traffic zu analysieren und Ihre Erfahrung zu verbessern. Durch Klicken auf „Akzeptieren" stimmen Sie unserer Verwendung von Cookies zu. <a href="../privacy.html">Datenschutzerklärung</a>
+      </div>
+      <div class="cookie-consent__buttons">
+        <button class="cookie-consent__btn cookie-consent__btn--accept">Akzeptieren</button>
+        <button class="cookie-consent__btn cookie-consent__btn--deny">Ablehnen</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
