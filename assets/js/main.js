@@ -215,60 +215,77 @@
     initScreenshotModal();
   }
 
-  // Cookie Consent
+  // ── Cookie Consent Injector ──────────────────────────────
+  // Usage: <body data-cookie-consent>
+  // Reads <html lang> to select translated strings.
+  // Privacy-policy href auto-computed from URL path.
+  const COOKIE_STRINGS = {
+    en: { text: 'We use cookies to analyze site traffic and improve your experience. By clicking "Accept", you consent to our use of cookies.', accept: 'Accept', deny: 'Deny', privacy: 'Privacy Policy' },
+    de: { text: 'Wir verwenden Cookies, um den Website-Traffic zu analysieren und Ihre Erfahrung zu verbessern. Durch Klicken auf \u201eAkzeptieren\u201c stimmen Sie unserer Verwendung von Cookies zu.', accept: 'Akzeptieren', deny: 'Ablehnen', privacy: 'Datenschutzerkl\u00e4rung' },
+    es: { text: 'Utilizamos cookies para analizar el tr\u00e1fico del sitio y mejorar su experiencia. Al hacer clic en \u00abAceptar\u00bb acepta nuestro uso de cookies.', accept: 'Aceptar', deny: 'Rechazar', privacy: 'Pol\u00edtica de privacidad' },
+    fr: { text: 'Nous utilisons des cookies pour analyser le trafic du site et am\u00e9liorer votre exp\u00e9rience. En cliquant sur \u00ab\u00a0Accepter\u00a0\u00bb, vous consentez \u00e0 notre utilisation des cookies.', accept: 'Accepter', deny: 'Refuser', privacy: 'Politique de confidentialit\u00e9' },
+    ja: { text: '\u5f53\u30b5\u30a4\u30c8\u3067\u306f\u3001\u30c8\u30e9\u30d5\u30a3\u30c3\u30af\u306e\u5206\u6790\u3068\u30e6\u30fc\u30b6\u30fc\u30a8\u30af\u30b9\u30da\u30ea\u30a8\u30f3\u30b9\u306e\u5411\u4e0a\u306e\u305f\u3081\u306bCookie\u3092\u4f7f\u7528\u3057\u3066\u3044\u307e\u3059\u3002\u300c\u540c\u610f\u300d\u3092\u30af\u30ea\u30c3\u30af\u3059\u308b\u3068\u3001Cookie\u306e\u4f7f\u7528\u306b\u540c\u610f\u3057\u305f\u3053\u3068\u306b\u306a\u308a\u307e\u3059\u3002', accept: '\u540c\u610f', deny: '\u62d2\u5426', privacy: '\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u30dd\u30ea\u30b7\u30fc' },
+    ko: { text: '\ub2f9\uc0ac\ub294 \uc0ac\uc774\ud2b8 \ud2b8\ub798\ud53d\uc744 \ubd84\uc11d\ud558\uace0 \uc0ac\uc6a9\uc790 \uacbd\ud5d8\uc744 \uac1c\uc120\ud558\uae30 \uc704\ud574 \ucfe0\ud0a4\ub97c \uc0ac\uc6a9\ud569\ub2c8\ub2e4. \u00ab\ub3d9\uc758\u00bb\ub97c \ud074\ub9ad\ud558\uba74 \ucfe0\ud0a4 \uc0ac\uc6a9\uc5d0 \ub3d9\uc758\ud558\uac8c \ub429\ub2c8\ub2e4.', accept: '\ub3d9\uc758', deny: '\uac70\ubd80', privacy: '\uac1c\uc778\uc815\ubcf4 \ucc98\ub9ac\ubc29\uce68' },
+    pl: { text: 'U\u017cywamy plik\u00f3w cookie do analizy ruchu na stronie i poprawy Twojego do\u015bwiadczenia. Klikaj\u0105c \u201eAkceptuj\u201d, wyra\u017casz zgod\u0119 na nasze u\u017cycie plik\u00f3w cookie.', accept: 'Akceptuj', deny: 'Odrzu\u0107', privacy: 'Polityka prywatno\u015bci' }
+  };
+
   function initCookieConsent() {
-    const consentBanner = document.querySelector('.cookie-consent');
-    if (!consentBanner) return;
+    if (!document.body.hasAttribute('data-cookie-consent')) return;
 
-    const acceptBtn = consentBanner.querySelector('.cookie-consent__btn--accept');
-    const denyBtn = consentBanner.querySelector('.cookie-consent__btn--deny');
+    const lang = (root.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    const s = COOKIE_STRINGS[lang] || COOKIE_STRINGS.en;
+    const privacyHref = window.location.pathname.includes('/products/') ? '../privacy.html' : './privacy.html';
+    const sep = lang === 'ja' ? '' : ' ';
 
-    // Check if user has already made a choice
-    const consent = localStorage.getItem('cookieConsent');
-    
+    const banner = document.createElement('div');
+    banner.className = 'cookie-consent';
+    banner.innerHTML =
+      '<div class="cookie-consent__content">' +
+        '<div class="cookie-consent__text">' +
+          s.text + sep + '<a href="' + privacyHref + '">' + s.privacy + '</a>' +
+        '</div>' +
+        '<div class="cookie-consent__buttons">' +
+          '<button class="cookie-consent__btn cookie-consent__btn--accept">' + s.accept + '</button>' +
+          '<button class="cookie-consent__btn cookie-consent__btn--deny">' + s.deny + '</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(banner);
+
+    const acceptBtn = banner.querySelector('.cookie-consent__btn--accept');
+    const denyBtn = banner.querySelector('.cookie-consent__btn--deny');
+    const consent = (() => { try { return localStorage.getItem('cookieConsent'); } catch { return null; } })();
+
     if (!consent) {
-      // Show banner if no choice has been made
-      consentBanner.classList.add('show');
+      banner.classList.add('show');
     } else if (consent === 'accepted') {
-      // Enable analytics if previously accepted
       enableAnalytics();
     }
 
-    acceptBtn?.addEventListener('click', () => {
-      localStorage.setItem('cookieConsent', 'accepted');
-      consentBanner.classList.remove('show');
+    acceptBtn.addEventListener('click', () => {
+      try { localStorage.setItem('cookieConsent', 'accepted'); } catch { /* ignore */ }
+      banner.classList.remove('show');
       enableAnalytics();
     });
 
-    denyBtn?.addEventListener('click', () => {
-      localStorage.setItem('cookieConsent', 'denied');
-      consentBanner.classList.remove('show');
+    denyBtn.addEventListener('click', () => {
+      try { localStorage.setItem('cookieConsent', 'denied'); } catch { /* ignore */ }
+      banner.classList.remove('show');
       disableAnalytics();
     });
   }
 
   function enableAnalytics() {
-    // Grant consent for Google Analytics
     if (typeof gtag !== 'undefined') {
-      gtag('consent', 'update', {
-        'analytics_storage': 'granted'
-      });
-
-      // If GA was initialized while consent was denied, it may not emit the
-      // initial page_view. Re-run config (or send a page_view) after consent.
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
       const pagePath = window.location.pathname + window.location.search + window.location.hash;
       const gaScript = document.querySelector('script[src*="googletagmanager.com/gtag/js?id="]');
-
       let measurementId = null;
       if (gaScript && gaScript.getAttribute('src')) {
         try {
           const u = new URL(gaScript.getAttribute('src'), window.location.href);
           measurementId = u.searchParams.get('id');
-        } catch (_) {
-          measurementId = null;
-        }
+        } catch (_) { measurementId = null; }
       }
-
       if (measurementId) {
         gtag('config', measurementId, { page_path: pagePath });
       } else {
@@ -278,15 +295,11 @@
   }
 
   function disableAnalytics() {
-    // Deny consent for Google Analytics
     if (typeof gtag !== 'undefined') {
-      gtag('consent', 'update', {
-        'analytics_storage': 'denied'
-      });
+      gtag('consent', 'update', { 'analytics_storage': 'denied' });
     }
   }
 
-  // Initialize cookie consent
   initCookieConsent();
 
   // Make product cards clickable
