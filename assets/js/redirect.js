@@ -1,6 +1,6 @@
 (function () {
   /** Non-English languages supported by the site. */
-  var SUPPORTED_LANGS = ['pl', 'fr', 'de'];
+  var SUPPORTED_LANGS = ['pl', 'fr', 'de', 'es'];
 
   /** Country-code → language mapping for geo-based fallback. */
   var COUNTRY_TO_LANG = {
@@ -8,7 +8,27 @@
     FR: 'fr',
     DE: 'de',
     AT: 'de',
-    CH: 'de'
+    CH: 'de',
+    ES: 'es',
+    MX: 'es',
+    AR: 'es',
+    CO: 'es',
+    CL: 'es',
+    PE: 'es',
+    VE: 'es',
+    EC: 'es',
+    GT: 'es',
+    CU: 'es',
+    BO: 'es',
+    DO: 'es',
+    HN: 'es',
+    PY: 'es',
+    SV: 'es',
+    NI: 'es',
+    CR: 'es',
+    PA: 'es',
+    UY: 'es',
+    GQ: 'es'
   };
 
   function normalizeLocale(locale) {

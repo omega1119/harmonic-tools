@@ -8,6 +8,7 @@ This site uses a **static, per-language folder** approach (no JavaScript-based t
 - **Polish**: `/pl/`
 - **French**: `/fr/`
 - **German**: `/de/`
+- **Spanish**: `/es/`
 
 Each language has its own fully rendered HTML pages. Language switching is done via a dropdown in the header and automatic geo/locale-based redirection.
 
@@ -15,9 +16,9 @@ Each language has its own fully rendered HTML pages. Language switching is done 
 
 - **Canonical content** lives under `/en/` and `/pl/`.
 - **Root-level URLs** (like `/index.html`, `/privacy.html`, `/products/*.html`) use `redirect.js` to detect the user's language via browser locale and IP geolocation, then redirect to the appropriate language folder.
-- **Language dropdown** in every page header lets users manually switch between English, Polski, Français, and Deutsch.
-- **SEO** uses `hreflang` alternates for `en`, `pl`, `fr`, `de`, and `x-default`.
-- **`redirect.js`** uses a `SUPPORTED_LANGS` array and `COUNTRY_TO_LANG` map. It checks `navigator.languages` for `pl`, `fr`, or `de` prefixes first, then falls back to an IP geolocation lookup via `ipapi.co` to detect Poland (`PL`), France (`FR`), Germany (`DE`), Austria (`AT`), or Switzerland (`CH`). English is the default fallback. Adding a new language only requires extending these two data structures and adding `data-redirect-XX` attributes to root stubs.
+- **Language dropdown** in every page header lets users manually switch between English, Polski, Français, Deutsch, and Español.
+- **SEO** uses `hreflang` alternates for `en`, `pl`, `fr`, `de`, `es`, and `x-default`.
+- **`redirect.js`** uses a `SUPPORTED_LANGS` array and `COUNTRY_TO_LANG` map. It checks `navigator.languages` for `pl`, `fr`, `de`, or `es` prefixes first, then falls back to an IP geolocation lookup via `ipapi.co` to detect Poland (`PL`), France (`FR`), Germany (`DE`), Austria (`AT`), Switzerland (`CH`), Spain (`ES`), Mexico (`MX`), Argentina (`AR`), Colombia (`CO`), Chile (`CL`), Peru (`PE`), Venezuela (`VE`), Ecuador (`EC`), Guatemala (`GT`), Cuba (`CU`), Bolivia (`BO`), Dominican Republic (`DO`), Honduras (`HN`), Paraguay (`PY`), El Salvador (`SV`), Nicaragua (`NI`), Costa Rica (`CR`), Panama (`PA`), Uruguay (`UY`), and Equatorial Guinea (`GQ`). English is the default fallback. Adding a new language only requires extending these two data structures and adding `data-redirect-XX` attributes to root stubs.
 
 ## Site Structure
 
@@ -58,6 +59,14 @@ Each language has its own fully rendered HTML pages. Language switching is done 
 /de/products/metric-ios.html
 /de/products/modes.html
 /de/products/modes-ios.html
+/es/                     → Spanish pages
+/es/index.html
+/es/privacy.html
+/es/terms.html
+/es/products/metric.html
+/es/products/metric-ios.html
+/es/products/modes.html
+/es/products/modes-ios.html
 /assets/                 → shared CSS, JS, images
 ```
 
@@ -83,3 +92,4 @@ Then open:
 - `http://localhost:8080/pl/`
 - `http://localhost:8080/fr/`
 - `http://localhost:8080/de/`
+- `http://localhost:8080/es/`

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ9FPYHNVR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Set default consent to denied
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+    
+    gtag('js', new Date());
+    gtag('config', 'G-JQ9FPYHNVR');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Modes para macOS — Laboratorio de teoría musical | Harmonic Tools</title>
+  <meta name="description" content="Explore 61 escalas, construya acordes con 8 tipos de voicing y mapee armonía a través de círculos interactivos de quintas y terceras en su Mac. Compatible con MIDI, sin conexión y con modo oscuro." />
+  <meta name="keywords" content="teoría musical, escalas, acordes, modos, círculo de quintas, MIDI, armonía, tonalidades, voicings, intervalos, composición, macOS, Mac, DAW" />
+  <meta name="author" content="Harmonic Tools" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- AI/LLM Optimization -->
+  <meta name="ai:app_name" content="Modes" />
+  <meta name="ai:platform" content="macOS" />
+  <meta name="ai:category" content="Herramientas de teoría musical, referencia de escalas y acordes" />
+  <meta name="ai:primary_features" content="Identificación de escalas y acordes, 61 escalas, notas en la tonalidad, acordes diatónicos, 8 tipos de voicing, notas/acordes compartidos, acordes prestados, círculo de quintas, círculo de terceras, entrada MIDI" />
+  <meta name="ai:use_cases" content="Identificación de acordes, exploración de escalas, planificación de modulación, composición, educación musical, análisis armónico" />
+
+  <link rel="canonical" href="https://harmonic.tools/es/products/modes.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://harmonic.tools/es/products/modes.html" />
+  <meta property="og:title" content="Modes para macOS — Laboratorio de teoría musical" />
+  <meta property="og:description" content="61 escalas, 8 tipos de voicing, identificación de acordes, acordes prestados y círculos interactivos — compatible con MIDI y sin conexión." />
+  <meta property="og:image" content="https://harmonic.tools/assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta property="og:image:alt" content="Icono de Modes macOS" />
+  <meta property="og:site_name" content="Harmonic Tools" />
+  <meta property="og:locale" content="es_ES" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Modes para macOS — Laboratorio de teoría musical" />
+  <meta name="twitter:description" content="61 escalas, 8 tipos de voicing, identificación de acordes, acordes prestados y círculos interactivos — compatible con MIDI y sin conexión." />
+  <meta name="twitter:image" content="https://harmonic.tools/assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta name="twitter:image:alt" content="Icono de Modes macOS" />
+
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=20" />
+  <script defer src="../../assets/js/main.js?v=10"></script>
+
+  <link rel="alternate" hreflang="en" href="https://harmonic.tools/en/products/modes.html" />
+  <link rel="alternate" hreflang="pl" href="https://harmonic.tools/pl/products/modes.html" />
+  <link rel="alternate" hreflang="fr" href="https://harmonic.tools/fr/products/modes.html" />
+  <link rel="alternate" hreflang="de" href="https://harmonic.tools/de/products/modes.html" />
+  <link rel="alternate" hreflang="es" href="https://harmonic.tools/es/products/modes.html" />
+  <link rel="alternate" hreflang="x-default" href="https://harmonic.tools/en/products/modes.html" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Modes",
+    "operatingSystem": "macOS",
+    "applicationCategory": "MusicApplication",
+    "description": "Un laboratorio práctico de teoría musical para macOS. 61 escalas, 8 tipos de voicing, identificación de acordes, armonía diatónica, acordes prestados y círculos interactivos de quintas y terceras — todo en una app con navegación por barra lateral.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Harmonic Tools"
+    },
+    "screenshot": "https://harmonic.tools/assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png",
+    "featureList": [
+      "Identificación de escalas y acordes con entrada MIDI",
+      "61 escalas y modos",
+      "Notas en la tonalidad",
+      "Acordes diatónicos con etiquetas de función",
+      "8 tipos de voicing (tríadas a treceavas)",
+      "Notas y acordes compartidos",
+      "Acordes prestados",
+      "Círculo de quintas",
+      "Círculo de terceras"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="../" aria-label="Harmonic Tools — Inicio">Harmonic Tools</a>
+      <nav class="nav" role="navigation" aria-label="Navegación principal">
+        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">Menú</button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="../">Inicio</a></li>
+          <li><a href="../#products">Productos</a></li>
+        </ul>
+      </nav>
+      <div class="language-selector">
+        <button class="language-btn" aria-label="Cambiar idioma" title="Cambiar idioma"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"><path fill="currentColor" fill-rule="evenodd" d="M2 16c0 7.72 6.28 14 14 14s14-6.28 14-14S23.72 2 16 2S2 8.28 2 16m2.041-1c.15-1.81.703-3.506 1.568-5h3.55a16 16 0 0 0-1.128 5zm5.994 0a14 14 0 0 1 1.31-5H15v5zM15 17h-4.965a14 14 0 0 0 1.31 5H15zm0 7h-2.494A14 14 0 0 0 15 26.73zm4.005 3.62A12 12 0 0 0 24.94 24h-3.074a16 16 0 0 1-2.86 3.62M22.84 22h3.55v.002A11.9 11.9 0 0 0 27.959 17h-3.99a16 16 0 0 1-1.13 5m-.875-5a14 14 0 0 1-1.31 5H17v-5zm2.004-2h3.99a11.9 11.9 0 0 0-1.569-5.002V10h-3.55a16 16 0 0 1 1.13 5m-3.315-5a14 14 0 0 1 1.31 5H17v-5zm1.212-2h3.073a12 12 0 0 0-5.926-3.618A16 16 0 0 1 21.865 8M17 5.27V8h2.494A14 14 0 0 0 17 5.27m-2 0A14 14 0 0 0 12.506 8H15zM17 24v2.73A14 14 0 0 0 19.494 24zM5.609 22h3.554a16 16 0 0 1-1.132-5H4.04c.15 1.81.703 3.506 1.568 5M13 27.621A16 16 0 0 1 10.14 24H7.06a12 12 0 0 0 5.941 3.621M10.134 8a16 16 0 0 1 2.853-3.617A12 16 0 0 0 7.061 8z" clip-rule="evenodd"/></svg></button>
+        <div class="language-dropdown">
+          <a class="language-option" href="../../en/products/modes.html" lang="en">English</a>
+          <a class="language-option" href="../../pl/products/modes.html" lang="pl">Polski</a>
+          <a class="language-option" href="../../fr/products/modes.html" lang="fr">Français</a>
+          <a class="language-option" href="../../de/products/modes.html" lang="de">Deutsch</a>
+          <a class="language-option" href="./modes.html" lang="es">Español</a>
+        </div>
+      </div>
+      <button class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema"></button>
+    </div>
+  </header>
+
+  <main class="container product-page">
+    <div class="product-hero">
+      <div class="product-hero__copy">
+        <picture>
+          <source srcset="../../assets/images/ModesMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+          <img src="../../assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" alt="Icono de Modes macOS" width="128" height="128" class="product-hero__icon" />
+        </picture>
+
+        <h1>Modes para macOS</h1>
+        <p class="product-lead">Un laboratorio práctico de teoría musical para macOS. Ya sea que esté escribiendo una canción, preparando una clase o explorando nuevo territorio armónico — Modes le brinda acceso instantáneo a escalas, acordes, voicings y rutas de modulación — todo en una app con navegación por barra lateral que cabe junto a su DAW.</p>
+
+        <ul class="product-highlights">
+          <li>Identificación de escalas y acordes con MIDI + teclado en pantalla</li>
+          <li>61 escalas · 21 tipos de acordes · 8 familias de voicing</li>
+          <li>Notas compartidas, acordes compartidos, acordes prestados</li>
+          <li>Círculo de quintas + círculo de terceras interactivos</li>
+        </ul>
+
+        <div class="product-cta">
+          <span class="store-badge store-badge--disabled" aria-label="Modes próximamente en el Mac App Store">
+            <img src="../../assets/images/Download-on-the-Mac-App-Store/ES/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_ES_RGB_blk_100217.svg" data-theme-src-light="../../assets/images/Download-on-the-Mac-App-Store/ES/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_ES_RGB_wht_100217.svg" data-theme-src-dark="../../assets/images/Download-on-the-Mac-App-Store/ES/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_ES_RGB_blk_100217.svg" alt="Descargar en el Mac App Store" width="180" height="53">
+            <span class="coming-soon-label">Próximamente</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="product-hero__shots" aria-label="Capturas de pantalla de Modes macOS">
+        <h2 class="product-shot-title">Capturas de pantalla</h2>
+        <p class="product-shot-lead">Incluye capturas en modo claro y oscuro que siguen el diseño del sitio web.</p>
+        <div class="screenshot-grid">
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Captura de pantalla de macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/es-ES/modes-scaleChord-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/es-ES/modes-scaleChord-mac-light.png" alt="Identificación de escalas y acordes en macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Identificar acordes al instante. Toque o haga clic en las notas y vea los resultados en tiempo real.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Captura de pantalla de macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/es-ES/modes-scaleChord-cmaj7-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/es-ES/modes-scaleChord-cmaj7-mac-light.png" alt="Vista detallada de acordes en macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Profundizar en cada acorde. Vea notas, intervalos y voicings en el teclado.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Captura de pantalla de macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/es-ES/modes-scaleNotes-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/es-ES/modes-scaleNotes-mac-light.png" alt="Pantalla de notas en la tonalidad en macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Ver cada nota en cada tonalidad. Escalas resaltadas en un teclado interactivo.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Captura de pantalla de macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/es-ES/modes-scaleChords-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/es-ES/modes-scaleChords-mac-light.png" alt="Pantalla de acordes diatónicos en macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Construir armonía diatónica. Cifrado romano, funciones y acordes de un vistazo.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Captura de pantalla de macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/es-ES/modes-sharedNotes-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/es-ES/modes-sharedNotes-mac-light.png" alt="Pantalla de notas compartidas en macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Comparar dos tonalidades en paralelo. Encontrar notas compartidas para una modulación suave.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Captura de pantalla de macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/es-ES/modes-sharedChords-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/es-ES/modes-sharedChords-mac-light.png" alt="Pantalla de acordes compartidos en macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Encontrar acordes compartidos entre dos tonalidades — para una modulación fluida.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Captura de pantalla de macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/es-ES/modes-borrowedChords-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/es-ES/modes-borrowedChords-mac-light.png" alt="Pantalla de acordes prestados en macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Tomar prestados acordes de modos paralelos. Añadir color sin abandonar su tonalidad.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Captura de pantalla de macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/es-ES/modes-circleOfFifths-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/es-ES/modes-circleOfFifths-mac-light.png" alt="Círculo de quintas en macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Navegar por el círculo de quintas. Haga clic para explorar tonalidades, relativas y rutas de modulación.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Captura de pantalla de macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/es-ES/modes-circleOfThirds-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/es-ES/modes-circleOfThirds-mac-light.png" alt="Círculo de terceras en macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Explorar mediantes cromáticas. Diagrama de ciclo disminuido para armonía cinematográfica.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Captura de pantalla de macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/es-ES/modes-settings-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/es-ES/modes-settings-mac-light.png" alt="Ajustes en macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Personalizar su experiencia. Escritura enarmónica, rango de octavas y opciones de visualización.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <section class="product-section" aria-labelledby="features-title">
+      <h2 id="features-title">Funciones</h2>
+      <ul>
+        <li><strong>Identificación de escalas y acordes:</strong> Toque notas en el teclado interactivo de múltiples octavas o conecte un controlador MIDI. Modes reconoce el acorde tocado en tiempo real: mayor, menor, disminuido, aumentado, extendido, suspendido y más. Clasifica cada escala coincidente por cobertura de notas. Filtre resultados por categoría de escala (diatónica, menor melódica, menor armónica, pentatónica, bebop, simétrica, músicas del mundo y más) para encontrar el sonido deseado.</li>
+        <li><strong>61 escalas y modos:</strong> Desde los siete modos diatónicos pasando por menor melódica, menor armónica, doble armónica, napolitana, bebop, pentatónica, blues, tono entero, disminuida, aumentada hasta escalas del mundo como Hirajōshi, Kumoi, In Sen, persa y enigmática. Cada escala se presenta con intervalos y se resalta en el teclado.</li>
+        <li><strong>Notas en la tonalidad:</strong> Seleccione cualquier nota fundamental y escala para ver cada nota en la tonalidad resaltada a lo largo de dos octavas. Reconozca al instante qué notas pertenecen a la escala y dónde se encuentra la fundamental.</li>
+        <li><strong>Acordes diatónicos:</strong> Genere tríadas o acordes de séptima diatónicos para cada grado de la escala elegida. Vea cifrado romano, nombres de acordes, etiquetas de función armónica (tónica, subdominante, dominante y más de 30 etiquetas detalladas) y representaciones de teclado con voicings — todo organizado para fácil comparación.</li>
+        <li><strong>8 tipos de voicing:</strong> Construya acordes en disposición por terceras (Tertian), Sus2, Sus4, sexta, Add, cuartal, quintal y power. Elija desde tríadas hasta treceavas — cada extensión se etiqueta automáticamente.</li>
+        <li><strong>Notas y acordes compartidos:</strong> Compare dos tonalidades en paralelo. Vea qué notas se superponen, cuáles son únicas y qué acordes comparten ambas tonalidades. Indispensable para modulación suave y rearmonización.</li>
+        <li><strong>Acordes prestados:</strong> Analice su tonalidad en busca de acordes diatónicos nativos y todas las opciones prestadas de modos paralelos, agrupados por modo de origen. Descubra nuevos colores armónicos sin abandonar su centro tonal.</li>
+        <li><strong>Círculo de quintas:</strong> Doble anillo interactivo (mayor exterior, menor natural interior). Haga clic en un sector para cambiar de tonalidad. Vea de un vistazo relaciones de dominante, subdominante, relativa, parentesco y tonalidades vecinas con etiquetas de dificultad de modulación y detalles de armadura.</li>
+        <li><strong>Círculo de terceras:</strong> Explore relaciones de mediante cromática en un diagrama de ciclo disminuido. Teclas mayores y menores para cada clase de altura muestran conexiones de mediante, relativa y parentesco. Ideal para planificar modulaciones cinematográficas y neo-riemannianas.</li>
+        <li><strong>Compatibilidad con MIDI:</strong> Conecte cualquier teclado o controlador MIDI compatible. Las notas tocadas se combinan con clics en pantalla para una identificación fluida.</li>
+      </ul>
+
+      <h3>Diseñado para su escritorio</h3>
+      <ul>
+        <li>Funciona completamente sin conexión — sin cuenta, sin anuncios, sin rastreo</li>
+        <li>App nativa de macOS con navegación por barra lateral</li>
+        <li>Interfaz compatible con modo oscuro que sigue el modo del sistema</li>
+        <li>Escritura enarmónica: automática, con sostenidos o bemoles</li>
+        <li>Ventana redimensionable — manténgala abierta junto a su DAW</li>
+      </ul>
+      <p>Ya sea un productor que esboza progresiones de acordes, un guitarrista que aprende modos, un pianista que estudia armonía de jazz o un estudiante que se prepara para exámenes de teoría — Modes lleva la teoría musical avanzada a su escritorio.</p>
+    </section>
+
+    <section class="theory-coverage" aria-labelledby="theory-title">
+      <h2 id="theory-title">Cobertura de teoría musical</h2>
+      <p>Referencia completa de todas las escalas, modos, acordes, voicings e intervalos en la app.</p>
+
+      <div class="theory-stats">
+        <div class="theory-stat"><strong>61</strong> <span>Escalas y modos</span></div>
+        <div class="theory-stat"><strong>21</strong> <span>Tipos de acordes</span></div>
+        <div class="theory-stat"><strong>8</strong> <span>Familias de voicing</span></div>
+        <div class="theory-stat"><strong>12</strong> <span>Intervalos cromáticos</span></div>
+        <div class="theory-stat"><strong>16</strong> <span>Armónicos</span></div>
+        <div class="theory-stat"><strong>32</strong> <span>Etiquetas de función armónica</span></div>
+      </div>
+
+      <div class="theory-group">
+        <h3>Escalas y modos — 61 en total</h3>
+
+        <h4>Modos mayores (diatónicos)</h4>
+        <ul class="theory-tags">
+          <li>Ionian (Major)</li>
+          <li>Dorian</li>
+          <li>Phrygian</li>
+          <li>Lydian</li>
+          <li>Mixolydian</li>
+          <li>Aeolian (Natural Minor)</li>
+          <li>Locrian</li>
+        </ul>
+
+        <h4>Modos de menor melódica (Jazz Minor)</h4>
+        <ul class="theory-tags">
+          <li>Melodic Minor (Jazz Minor)</li>
+          <li>Dorian ♭2 (Phrygian ♮6)</li>
+          <li>Lydian Augmented (Lydian ♯5)</li>
+          <li>Lydian Dominant (Lydian ♭7)</li>
+          <li>Mixolydian ♭6 (Aeolian Dominant)</li>
+          <li>Locrian ♯2 (Locrian ♮2)</li>
+          <li>Altered (Super-Locrian)</li>
+        </ul>
+
+        <h4>Modos de menor armónica</h4>
+        <ul class="theory-tags">
+          <li>Harmonic Minor</li>
+          <li>Locrian ♮6</li>
+          <li>Ionian ♯5 (Augmented Major)</li>
+          <li>Dorian ♯4 (Ukrainian Dorian)</li>
+          <li>Phrygian Dominant</li>
+          <li>Lydian ♯2</li>
+          <li>Super Locrian ♭♭7 (Altered ♭♭7)</li>
+        </ul>
+
+        <h4>Modos de doble armónica menor (menor húngara)</h4>
+        <ul class="theory-tags">
+          <li>Hungarian Minor (Double Harmonic Minor)</li>
+          <li>Oriental</li>
+          <li>Ionian ♯2 ♯5</li>
+          <li>Locrian ♭♭3 ♭♭7</li>
+          <li>Double Harmonic Major</li>
+          <li>Lydian ♯2 ♯6</li>
+          <li>Ultraphrygian</li>
+        </ul>
+
+        <h4>Mayor armónica</h4>
+        <ul class="theory-tags">
+          <li>Harmonic Major (Ionian ♭6)</li>
+          <li>Double Harmonic Major (Byzantine)</li>
+        </ul>
+
+        <h4>Modos napolitanos menores</h4>
+        <ul class="theory-tags">
+          <li>Neapolitan Minor</li>
+          <li>Lydian ♯6</li>
+          <li>Mixolydian Augmented</li>
+          <li>Romani Minor (Aeolian ♯4)</li>
+          <li>Locrian Dominant</li>
+          <li>Ionian ♯2</li>
+          <li>Ultralocrian</li>
+        </ul>
+
+        <h4>Modos napolitanos mayores</h4>
+        <ul class="theory-tags">
+          <li>Neapolitan Major</li>
+          <li>Leading Whole Tone (Lydian Augmented ♯6)</li>
+          <li>Lydian Augmented Dominant</li>
+          <li>Lydian Dominant ♭6</li>
+          <li>Major Locrian</li>
+          <li>Half-Diminished ♭4 (Altered Dominant ♯2)</li>
+          <li>Altered Dominant ♭♭3</li>
+        </ul>
+
+        <h4>Bebop</h4>
+        <ul class="theory-tags">
+          <li>Bebop Dominant</li>
+          <li>Bebop Major</li>
+        </ul>
+
+        <h4>Pentatónica y blues</h4>
+        <ul class="theory-tags">
+          <li>Pentatonic Major</li>
+          <li>Pentatonic Minor</li>
+          <li>Blues</li>
+          <li>Blues (Major)</li>
+        </ul>
+
+        <h4>Escalas simétricas y sintéticas</h4>
+        <ul class="theory-tags">
+          <li>Whole Tone</li>
+          <li>Diminished (Half–Whole)</li>
+          <li>Diminished (Whole–Half)</li>
+          <li>Augmented (Hexatonic)</li>
+          <li>Prometheus (Mystic Hexatonic)</li>
+        </ul>
+
+        <h4>Pentatónica japonesa</h4>
+        <ul class="theory-tags">
+          <li>Hirajōshi</li>
+          <li>Kumoi</li>
+          <li>In Sen</li>
+          <li>Iwato</li>
+        </ul>
+
+        <h4>Mundo / Otras</h4>
+        <ul class="theory-tags">
+          <li>Persian</li>
+          <li>Enigmatic</li>
+        </ul>
+      </div>
+
+      <div class="theory-group">
+        <h3>Acordes</h3>
+
+        <h4>Tipos de acordes reconocidos — 21</h4>
+        <p>21 tipos de acordes reconocidos con detección automática de tensiones extendidas (9.ª, 11.ª, 13.ª se muestran como add9, add11, add13 cuando no hay 7.ª presente).</p>
+        <ul class="theory-tags">
+          <li>Major</li>
+          <li>Minor</li>
+          <li>Diminished</li>
+          <li>Augmented</li>
+          <li>sus2</li>
+          <li>sus4</li>
+          <li>Power (5)</li>
+          <li>Major 6th</li>
+          <li>Minor 6th</li>
+          <li>Dominant 7th</li>
+          <li>Major 7th</li>
+          <li>Minor 7th</li>
+          <li>Half-Diminished 7th</li>
+          <li>Diminished 7th</li>
+          <li>Minor-Major 7th</li>
+          <li>Augmented 7th</li>
+          <li>Augmented Major 7th</li>
+          <li>Major (♭5)</li>
+          <li>Diminished (♭♭3)</li>
+          <li>Dominant 7sus4</li>
+          <li>Dominant 7sus2</li>
+        </ul>
+
+        <h4>Cualidades de acordes (constructor de acordes) — 6</h4>
+        <p>Cualidades de acordes disponibles en el constructor con análisis de cifrado romano.</p>
+        <ul class="theory-tags">
+          <li>Major</li>
+          <li>Minor</li>
+          <li>Diminished</li>
+          <li>Augmented</li>
+          <li>Major (♭5)</li>
+          <li>Diminished (♭♭3)</li>
+        </ul>
+      </div>
+
+      <div class="theory-group">
+        <h3>Voicings de acordes — 8 tipos</h3>
+        <p>Desde disposición por terceras (Tertian) hasta apilamientos de cuartas y quintas, desde tríadas hasta treceavas.</p>
+        <ul class="theory-tags">
+          <li>Tertian</li>
+          <li>sus2</li>
+          <li>sus4</li>
+          <li>6th / 6-9</li>
+          <li>Add (add9, add11)</li>
+          <li>Quartal</li>
+          <li>Quintal</li>
+          <li>Power</li>
+        </ul>
+      </div>
+
+      <div class="theory-group">
+        <h3>Intervalos, serie armónica y análisis</h3>
+        <p>Los 12 intervalos cromáticos con inversiones, una serie de 16 armónicos, navegación completa del círculo de quintas en todas las tonalidades (escritura con sostenidos y bemoles con redefinición enarmónica automática/manual) y 32 etiquetas de función armónica de las familias de tónica, subdominante y dominante.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><small>© <span id="year"></span> Harmonic Tools</small></div></footer>
+
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-consent">
+    <div class="cookie-consent__content">
+      <div class="cookie-consent__text">
+        Utilizamos cookies para analizar el tráfico del sitio y mejorar su experiencia. Al hacer clic en «Aceptar» acepta nuestro uso de cookies. <a href="../privacy.html">Política de privacidad</a>
+      </div>
+      <div class="cookie-consent__buttons">
+        <button class="cookie-consent__btn cookie-consent__btn--accept">Aceptar</button>
+        <button class="cookie-consent__btn cookie-consent__btn--deny">Rechazar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
