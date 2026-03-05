@@ -128,6 +128,79 @@
   }
   initHreflang();
 
+  // ── Skip-Link Injector ──────────────────────────────────
+  // Injects <a class="skip-link" href="#main">Skip to content</a>
+  // (translated) as the first child of <body> on every page.
+  const SKIP_STRINGS = {
+    en: 'Skip to content',
+    de: 'Zum Inhalt springen',
+    es: 'Ir al contenido',
+    fr: 'Aller au contenu',
+    ja: '本文へスキップ',
+    ko: '본문으로 건너뛰기',
+    pl: 'Przejdź do treści'
+  };
+
+  function initSkipLink() {
+    const lang = (root.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    const text = SKIP_STRINGS[lang] || SKIP_STRINGS.en;
+    const a = document.createElement('a');
+    a.className = 'skip-link';
+    a.href = '#main';
+    a.textContent = text;
+    document.body.insertBefore(a, document.body.firstChild);
+  }
+  initSkipLink();
+
+  // ── Nav Items Injector ──────────────────────────────────
+  // Populates <ul id="primary-menu" class="nav-list"></ul> based on page type.
+  // Index pages get 4 anchor links; sub-pages get 2 links (Home + Products).
+  const NAV_STRINGS = {
+    en: { products: 'Products', pillars: 'Focus Areas', philosophy: 'Philosophy', contact: 'Contact', home: 'Home' },
+    de: { products: 'Produkte', pillars: 'Bereiche', philosophy: 'Philosophie', contact: 'Kontakt', home: 'Startseite' },
+    es: { products: 'Productos', pillars: '\u00c1reas', philosophy: 'Filosof\u00eda', contact: 'Contacto', home: 'Inicio' },
+    fr: { products: 'Produits', pillars: 'Domaines', philosophy: 'Philosophie', contact: 'Contact', home: 'Accueil' },
+    ja: { products: '\u88fd\u54c1', pillars: '\u5206\u91ce', philosophy: '\u7406\u5ff5', contact: '\u304a\u554f\u3044\u5408\u308f\u305b', home: '\u30db\u30fc\u30e0' },
+    ko: { products: '\uc81c\ud488', pillars: '\ubd84\uc57c', philosophy: '\ucca0\ud559', contact: '\uc5f0\ub77d\ucc98', home: '\ud648' },
+    pl: { products: 'Produkty', pillars: 'Obszary', philosophy: 'Filozofia', contact: 'Kontakt', home: 'Strona g\u0142\u00f3wna' }
+  };
+
+  function initNavItems() {
+    const ul = document.querySelector('ul#primary-menu.nav-list');
+    if (!ul) return;
+
+    const lang = (root.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    const s = NAV_STRINGS[lang] || NAV_STRINGS.en;
+
+    // Determine page type: index pages have no filename or end with /
+    const path = window.location.pathname;
+    const isIndex = /\/[a-z]{2}\/$/.test(path) || /\/[a-z]{2}\/index\.html$/.test(path);
+    const inProducts = path.includes('/products/');
+    const homeHref = inProducts ? '../' : './';
+
+    const items = [];
+    if (isIndex) {
+      items.push({ label: s.products, href: '#products' });
+      items.push({ label: s.pillars, href: '#pillars' });
+      items.push({ label: s.philosophy, href: '#philosophy' });
+      items.push({ label: s.contact, href: '#contact' });
+    } else {
+      items.push({ label: s.home, href: homeHref });
+      items.push({ label: s.products, href: homeHref + '#products' });
+    }
+
+    ul.innerHTML = '';
+    items.forEach(function(item) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = item.href;
+      a.textContent = item.label;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+  }
+  initNavItems();
+
   // Theme-aware <picture> swapping
   function updateThemeImages(theme) {
     // First: explicit theme-src swapping (used for store badges).
