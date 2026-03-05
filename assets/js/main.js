@@ -51,6 +51,49 @@
   }
   initLanguageDropdowns();
 
+  // ── Footer Injector ─────────────────────────────────────
+  // Usage: <footer class="site-footer" data-footer-type="full"></footer>
+  //    or: <footer class="site-footer" data-footer-type="simple"></footer>
+  // "full" = copyright + Privacy/Terms links (index pages)
+  // "simple" = copyright only (privacy, terms, product pages)
+  const FOOTER_STRINGS = {
+    en: { privacy: 'Privacy', terms: 'Terms' },
+    de: { privacy: 'Datenschutz', terms: 'Nutzungsbedingungen' },
+    es: { privacy: 'Privacidad', terms: 'Condiciones de uso' },
+    fr: { privacy: 'Confidentialit\u00e9', terms: 'Conditions' },
+    ja: { privacy: '\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u30dd\u30ea\u30b7\u30fc', terms: '\u5229\u7528\u898f\u7d04' },
+    ko: { privacy: '\uac1c\uc778\uc815\ubcf4 \ucc98\ub9ac\ubc29\uce68', terms: '\uc774\uc6a9\uc57d\uad00' },
+    pl: { privacy: 'Prywatno\u015b\u0107', terms: 'Regulamin' }
+  };
+
+  function initFooter() {
+    const footer = document.querySelector('footer.site-footer[data-footer-type]');
+    if (!footer) return;
+
+    const type = footer.getAttribute('data-footer-type') || 'simple';
+    const lang = (root.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    const s = FOOTER_STRINGS[lang] || FOOTER_STRINGS.en;
+
+    // Determine privacy/terms paths based on page depth
+    const inProducts = window.location.pathname.includes('/products/');
+    const privacyHref = inProducts ? '../privacy.html' : './privacy.html';
+    const termsHref = inProducts ? '../terms.html' : './terms.html';
+
+    let html = '<div class="container footer-inner">' +
+      '<small>\u00a9 <span id="year"></span> Harmonic Tools</small>';
+
+    if (type === 'full') {
+      html += '<ul class="footer-links">' +
+        '<li><a href="' + privacyHref + '">' + s.privacy + '</a></li>' +
+        '<li><a href="' + termsHref + '">' + s.terms + '</a></li>' +
+        '</ul>';
+    }
+
+    html += '</div>';
+    footer.innerHTML = html;
+  }
+  initFooter();
+
   // Theme-aware <picture> swapping
   function updateThemeImages(theme) {
     // First: explicit theme-src swapping (used for store badges).
