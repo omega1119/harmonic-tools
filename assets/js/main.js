@@ -348,6 +348,51 @@
   }
   initStoreBadges();
 
+  // ── Organization JSON-LD Injector ───────────────────────
+  // Injects the Organization schema block into <head> on index pages.
+  // Only the description varies per language.
+  const ORG_DESCRIPTIONS = {
+    en: 'Music software lab building precision tools for producers and musicians. Metric timing toolkit and Modes music theory lab for macOS and iOS.',
+    de: 'Musiksoftware-Labor, das Pr\u00e4zisionswerkzeuge f\u00fcr Produzenten und Musiker entwickelt. Metric-Timing-Toolkit und Modes-Musiktheorie-Labor f\u00fcr macOS und iOS.',
+    es: 'Laboratorio de software musical que desarrolla herramientas de precisi\u00f3n para productores y m\u00fasicos. Toolkit de timing Metric y laboratorio de teor\u00eda musical Modes para macOS e iOS.',
+    fr: 'Laboratoire de logiciels musicaux cr\u00e9ant des outils de pr\u00e9cision pour producteurs et musiciens. Bo\u00eete \u00e0 outils Metric pour le timing et laboratoire de th\u00e9orie musicale Modes pour macOS et iOS.',
+    ja: '\u30d7\u30ed\u30c7\u30e5\u30fc\u30b5\u30fc\u3068\u30df\u30e5\u30fc\u30b8\u30b7\u30e3\u30f3\u306e\u305f\u3081\u306e\u7cbe\u5bc6\u30c4\u30fc\u30eb\u3092\u958b\u767a\u3059\u308b\u97f3\u697d\u30bd\u30d5\u30c8\u30a6\u30a7\u30a2\u30e9\u30dc\u3002macOS\u304a\u3088\u3073iOS\u7528\u30bf\u30a4\u30df\u30f3\u30b0\u30c4\u30fc\u30eb\u30ad\u30c3\u30c8Metric\u3068\u97f3\u697d\u7406\u8ad6\u30e9\u30dcModes\u3002',
+    ko: '\ud504\ub85c\ub4c0\uc11c\uc640 \ubba4\uc9c0\uc158\uc744 \uc704\ud55c \uc815\ubc00 \ub3c4\uad6c\ub97c \uac1c\ubc1c\ud558\ub294 \uc74c\uc545 \uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5f0\uad6c\uc18c. macOS \ubc0f iOS\uc6a9 \ud0c0\uc774\ubc0d \ud234\ud0b7 Metric\uacfc \uc74c\uc545 \uc774\ub860 \uc5f0\uad6c\uc18c Modes.',
+    pl: 'Laboratorium oprogramowania muzycznego tworz\u0105ce precyzyjne narz\u0119dzia dla producent\u00f3w i muzyk\u00f3w. Zestaw narz\u0119dzi Metric do taktowania oraz laboratorium teorii muzyki Modes na macOS i iOS.'
+  };
+
+  function initOrgJsonLd() {
+    var path = window.location.pathname;
+    var isIndex = /\/[a-z]{2}\/$/.test(path) || /\/[a-z]{2}\/index\.html$/.test(path);
+    if (!isIndex) return;
+
+    var lang = (root.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    var desc = ORG_DESCRIPTIONS[lang] || ORG_DESCRIPTIONS.en;
+
+    var schema = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      'name': 'Greenwood IT Consultancy Limited',
+      'alternateName': 'Harmonic Tools',
+      'url': 'https://harmonic.tools',
+      'logo': 'https://harmonic.tools/favicon.svg',
+      'description': desc,
+      'foundingDate': '2020',
+      'sameAs': ['https://github.com/harmonic-tools'],
+      'contactPoint': {
+        '@type': 'ContactPoint',
+        'contactType': 'Customer Support',
+        'email': 'contact@gitc.digital'
+      }
+    };
+
+    var script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+  }
+  initOrgJsonLd();
+
   // Theme-aware <picture> swapping
   function updateThemeImages(theme) {
     // First: explicit theme-src swapping (used for store badges).
