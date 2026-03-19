@@ -1335,6 +1335,15 @@ img { max-width: 100%; height: auto; display: block }
   }
 }
 
+/* Store badges */
+.store-badge a {
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+.store-badge a:hover {
+  opacity: 0.75;
+}
+
 /* Coming Soon store badges */
 .store-badge--disabled {
   display: inline-flex;
