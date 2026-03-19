@@ -206,8 +206,16 @@
   //              data-store="ios|mac"
   //              data-store-product="Modes iOS"></span>
   // Injects the localised App Store / Mac App Store badge <img> (with
-  // data-theme-src-light / data-theme-src-dark for theme switching)
-  // plus a translated "Coming Soon" label.
+  // data-theme-src-light / data-theme-src-dark for theme switching).
+  // Products with a URL in STORE_URLS become clickable links;
+  // all others render as disabled "Coming Soon" badges.
+  //
+  // Apple universal links handle device routing (iOS vs Mac) and
+  // localisation automatically — one URL per product is sufficient.
+  const STORE_URLS = {
+    'Modes':     'https://apps.apple.com/app/modes/id6757521945',
+    'Modes iOS': 'https://apps.apple.com/app/modes/id6757521945'
+  };
   const STORE_BADGE_DATA = {
     en: {
       comingSoon: 'Coming Soon',
@@ -328,7 +336,7 @@
       var info = data[store];
       if (!info) return;
 
-      el.setAttribute('aria-label', product + ' ' + info.ariaPrefix);
+      var storeUrl = STORE_URLS[product];
 
       var img = document.createElement('img');
       img.src = assetsPrefix + info.dark;
@@ -338,12 +346,23 @@
       img.width = 180;
       img.height = 53;
 
-      var label = document.createElement('span');
-      label.className = 'coming-soon-label';
-      label.textContent = data.comingSoon;
-
-      el.appendChild(img);
-      el.appendChild(label);
+      if (storeUrl) {
+        // Active badge — wrap in a link to the store
+        el.classList.remove('store-badge--disabled');
+        el.setAttribute('aria-label', info.alt + ' \u2014 ' + product);
+        var a = document.createElement('a');
+        a.href = storeUrl;
+        a.appendChild(img);
+        el.appendChild(a);
+      } else {
+        // Coming soon — disabled badge
+        el.setAttribute('aria-label', product + ' ' + info.ariaPrefix);
+        el.appendChild(img);
+        var label = document.createElement('span');
+        label.className = 'coming-soon-label';
+        label.textContent = data.comingSoon;
+        el.appendChild(label);
+      }
     });
   }
   initStoreBadges();
