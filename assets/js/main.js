@@ -215,6 +215,7 @@
   const STORE_URLS = {
     'Modes':      'https://apps.apple.com/app/modes/id6757521945',
     'Modes iOS':  'https://apps.apple.com/app/modes/id6757521945',
+    'Metric':     'https://apps.apple.com/app/metric/id6757522050',
     'Metric iOS': 'https://apps.apple.com/app/metric/id6757522050'
   };
   const STORE_BADGE_DATA = {
