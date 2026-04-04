@@ -5,6 +5,19 @@
   const navToggle = document.querySelector('.nav-toggle');
   const yearEl = document.getElementById('year');
 
+  // ── Language Helper ─────────────────────────────────────
+  // Returns the full lowercase lang code from <html lang>, e.g. 'pt-br', 'zh-hans'.
+  // Use getLang() for dict lookups that have full-code keys; fall back to base.
+  function getPageLang() {
+    return (root.getAttribute('lang') || 'en').toLowerCase();
+  }
+  function resolveLang(dict) {
+    var full = getPageLang();
+    if (dict[full]) return full;
+    var base = full.split('-')[0];
+    return dict[base] ? base : 'en';
+  }
+
   // ── Language Dropdown Injector ──────────────────────────────
   // Usage: <div class="language-selector"
   //             data-languages='{"en":"./","de":"../de/"}'
@@ -12,6 +25,8 @@
   const LANG_NAMES = {
     en:'English', de:'Deutsch', es:'Español', fr:'Français',
     pl:'Polski', ja:'日本語', ko:'한국어', pt:'Português',
+    'pt-br':'Português (Brasil)', 'pt-pt':'Português (Portugal)',
+    'zh-hans':'简体中文', 'zh-hant':'繁體中文',
     it:'Italiano', nl:'Nederlands', zh:'中文', ru:'Русский',
     sv:'Svenska', da:'Dansk', fi:'Suomi', nb:'Norsk',
     tr:'Türkçe', cs:'Čeština', ro:'Română', hu:'Magyar'
@@ -63,7 +78,11 @@
     fr: { privacy: 'Confidentialit\u00e9', terms: 'Conditions' },
     ja: { privacy: '\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u30dd\u30ea\u30b7\u30fc', terms: '\u5229\u7528\u898f\u7d04' },
     ko: { privacy: '\uac1c\uc778\uc815\ubcf4 \ucc98\ub9ac\ubc29\uce68', terms: '\uc774\uc6a9\uc57d\uad00' },
-    pl: { privacy: 'Prywatno\u015b\u0107', terms: 'Regulamin' }
+    pl: { privacy: 'Prywatno\u015b\u0107', terms: 'Regulamin' },
+    'pt-br': { privacy: 'Privacidade', terms: 'Termos de Uso' },
+    'pt-pt': { privacy: 'Privacidade', terms: 'Termos e Condi\u00e7\u00f5es' },
+    'zh-hans': { privacy: '\u9690\u79c1\u653f\u7b56', terms: '\u670d\u52a1\u6761\u6b3e' },
+    'zh-hant': { privacy: '\u96b1\u79c1\u6b0a\u653f\u7b56', terms: '\u670d\u52d9\u689d\u6b3e' }
   };
 
   function initFooter() {
@@ -71,7 +90,7 @@
     if (!footer) return;
 
     const type = footer.getAttribute('data-footer-type') || 'simple';
-    const lang = (root.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    const lang = resolveLang(FOOTER_STRINGS);
     const s = FOOTER_STRINGS[lang] || FOOTER_STRINGS.en;
 
     // Determine privacy/terms paths based on page depth
@@ -99,13 +118,13 @@
   // by detecting the current page's language prefix and page path,
   // then substituting each supported language prefix.
   // x-default always points to the English version.
-  const HREFLANG_LANGS = ['en', 'pl', 'fr', 'de', 'es', 'ko', 'ja'];
+  const HREFLANG_LANGS = ['en', 'pl', 'fr', 'de', 'es', 'ko', 'ja', 'pt-br', 'pt-pt', 'zh-hans', 'zh-hant'];
   const HREFLANG_ORIGIN = 'https://harmonic.tools';
 
   function initHreflang() {
     const path = window.location.pathname;
     // Match /{lang}/ or /{lang}/page.html or /{lang}/products/page.html
-    const match = path.match(/^\/([a-z]{2})(\/.*)?$/);
+    const match = path.match(/^\/([a-z]{2}(?:-[a-z]+)?)(\/.*)?$/);
     if (!match) return;
 
     const pagePart = match[2] || '/'; // e.g. "/" or "/privacy.html" or "/products/metric.html"
@@ -138,11 +157,15 @@
     fr: 'Aller au contenu',
     ja: '本文へスキップ',
     ko: '본문으로 건너뛰기',
-    pl: 'Przejdź do treści'
+    pl: 'Przejdź do treści',
+    'pt-br': 'Pular para o conteúdo',
+    'pt-pt': 'Saltar para o conteúdo',
+    'zh-hans': '跳至正文',
+    'zh-hant': '跳至正文'
   };
 
   function initSkipLink() {
-    const lang = (root.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    const lang = resolveLang(SKIP_STRINGS);
     const text = SKIP_STRINGS[lang] || SKIP_STRINGS.en;
     const a = document.createElement('a');
     a.className = 'skip-link';
@@ -162,19 +185,23 @@
     fr: { products: 'Produits', pillars: 'Domaines', philosophy: 'Philosophie', contact: 'Contact', home: 'Accueil' },
     ja: { products: '\u88fd\u54c1', pillars: '\u5206\u91ce', philosophy: '\u7406\u5ff5', contact: '\u304a\u554f\u3044\u5408\u308f\u305b', home: '\u30db\u30fc\u30e0' },
     ko: { products: '\uc81c\ud488', pillars: '\ubd84\uc57c', philosophy: '\ucca0\ud559', contact: '\uc5f0\ub77d\ucc98', home: '\ud648' },
-    pl: { products: 'Produkty', pillars: 'Obszary', philosophy: 'Filozofia', contact: 'Kontakt', home: 'Strona g\u0142\u00f3wna' }
+    pl: { products: 'Produkty', pillars: 'Obszary', philosophy: 'Filozofia', contact: 'Kontakt', home: 'Strona g\u0142\u00f3wna' },
+    'pt-br': { products: 'Produtos', pillars: '\u00c1reas', philosophy: 'Filosofia', contact: 'Contato', home: 'In\u00edcio' },
+    'pt-pt': { products: 'Produtos', pillars: '\u00c1reas', philosophy: 'Filosofia', contact: 'Contacto', home: 'In\u00edcio' },
+    'zh-hans': { products: '\u4ea7\u54c1', pillars: '\u9886\u57df', philosophy: '\u7406\u5ff5', contact: '\u8054\u7cfb\u6211\u4eec', home: '\u9996\u9875' },
+    'zh-hant': { products: '\u7522\u54c1', pillars: '\u9818\u57df', philosophy: '\u7406\u5ff5', contact: '\u806f\u7d61\u6211\u5011', home: '\u9996\u9801' }
   };
 
   function initNavItems() {
     const ul = document.querySelector('ul#primary-menu.nav-list');
     if (!ul) return;
 
-    const lang = (root.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    const lang = resolveLang(NAV_STRINGS);
     const s = NAV_STRINGS[lang] || NAV_STRINGS.en;
 
     // Determine page type: index pages have no filename or end with /
     const path = window.location.pathname;
-    const isIndex = /\/[a-z]{2}\/$/.test(path) || /\/[a-z]{2}\/index\.html$/.test(path);
+    const isIndex = /\/[a-z]{2}(?:-[a-z]+)?\/$/.test(path) || /\/[a-z]{2}(?:-[a-z]+)?\/index\.html$/.test(path);
     const inProducts = path.includes('/products/');
     const homeHref = inProducts ? '../' : './';
 
@@ -323,11 +350,71 @@
         dark: 'Download-on-the-Mac-App-Store/PL/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_PL_RGB_blk_100317.svg',
         light: 'Download-on-the-Mac-App-Store/PL/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_PL_RGB_wht_100317.svg'
       }
+    },
+    'pt-br': {
+      comingSoon: 'Em breve',
+      ios: {
+        alt: 'Baixar na App Store',
+        ariaPrefix: 'em breve na App Store',
+        dark: 'Download-on-the-App-Store/PTBR/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_PTBR_RGB_blk_092917.svg',
+        light: 'Download-on-the-App-Store/PTBR/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_PTBR_RGB_wht_100317.svg'
+      },
+      mac: {
+        alt: 'Baixar na Mac App Store',
+        ariaPrefix: 'em breve na Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/PTBR/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_PTBR_RGB_blk_100317.svg',
+        light: 'Download-on-the-Mac-App-Store/PTBR/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_PTBR_RGB_wht_100317.svg'
+      }
+    },
+    'pt-pt': {
+      comingSoon: 'Brevemente',
+      ios: {
+        alt: 'Transferir na App Store',
+        ariaPrefix: 'brevemente na App Store',
+        dark: 'Download-on-the-App-Store/PTPT/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_PTPT_RGB_blk_100317.svg',
+        light: 'Download-on-the-App-Store/PTPT/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_PTPT_RGB_wht_100317.svg'
+      },
+      mac: {
+        alt: 'Transferir na Mac App Store',
+        ariaPrefix: 'brevemente na Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/PTPT/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_PTPT_RGB_blk_100317.svg',
+        light: 'Download-on-the-Mac-App-Store/PTPT/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_PTPT_RGB_wht_100317.svg'
+      }
+    },
+    'zh-hans': {
+      comingSoon: '\u5373\u5c06\u63a8\u51fa',
+      ios: {
+        alt: '\u5728 App Store \u4e0b\u8f7d',
+        ariaPrefix: '\u5373\u5c06\u767b\u9646 App Store',
+        dark: 'Download-on-the-App-Store/CN(SC)/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_CNSC_RGB_blk_092917.svg',
+        light: 'Download-on-the-App-Store/CN(SC)/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_CNSC_RGB_wht_092917.svg'
+      },
+      mac: {
+        alt: '\u5728 Mac App Store \u4e0b\u8f7d',
+        ariaPrefix: '\u5373\u5c06\u767b\u9646 Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/CN(SC)/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_CNSC_RGB_blk_092917.svg',
+        light: 'Download-on-the-Mac-App-Store/CN(SC)/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_CNSC_RGB_wht_092917.svg'
+      }
+    },
+    'zh-hant': {
+      comingSoon: '\u5373\u5c07\u63a8\u51fa',
+      ios: {
+        alt: '\u5728 App Store \u4e0b\u8f09',
+        ariaPrefix: '\u5373\u5c07\u767b\u9678 App Store',
+        dark: 'Download-on-the-App-Store/HKTW(TC)/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_CNTC_RGB_blk_100217.svg',
+        light: 'Download-on-the-App-Store/HKTW(TC)/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_CNTC_RGB_wht_100217.svg'
+      },
+      mac: {
+        alt: '\u5728 Mac App Store \u4e0b\u8f09',
+        ariaPrefix: '\u5373\u5c07\u767b\u9678 Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/HKTW(TC)/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_CNTC_RGB_blk_100217.svg',
+        light: 'Download-on-the-Mac-App-Store/HKTW(TC)/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_CNTC_RGB_wht_100217.svg'
+      }
     }
   };
 
   function initStoreBadges() {
-    var lang = (root.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    var lang = resolveLang(STORE_BADGE_DATA);
     var data = STORE_BADGE_DATA[lang] || STORE_BADGE_DATA.en;
     var inProducts = window.location.pathname.includes('/products/');
     var assetsPrefix = inProducts ? '../../assets/images/' : '../assets/images/';
@@ -379,15 +466,19 @@
     fr: 'Laboratoire de logiciels musicaux cr\u00e9ant des outils de pr\u00e9cision pour producteurs et musiciens. Bo\u00eete \u00e0 outils Metric pour le timing et laboratoire de th\u00e9orie musicale Modes pour macOS et iOS.',
     ja: '\u30d7\u30ed\u30c7\u30e5\u30fc\u30b5\u30fc\u3068\u30df\u30e5\u30fc\u30b8\u30b7\u30e3\u30f3\u306e\u305f\u3081\u306e\u7cbe\u5bc6\u30c4\u30fc\u30eb\u3092\u958b\u767a\u3059\u308b\u97f3\u697d\u30bd\u30d5\u30c8\u30a6\u30a7\u30a2\u30e9\u30dc\u3002macOS\u304a\u3088\u3073iOS\u7528\u30bf\u30a4\u30df\u30f3\u30b0\u30c4\u30fc\u30eb\u30ad\u30c3\u30c8Metric\u3068\u97f3\u697d\u7406\u8ad6\u30e9\u30dcModes\u3002',
     ko: '\ud504\ub85c\ub4c0\uc11c\uc640 \ubba4\uc9c0\uc158\uc744 \uc704\ud55c \uc815\ubc00 \ub3c4\uad6c\ub97c \uac1c\ubc1c\ud558\ub294 \uc74c\uc545 \uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5f0\uad6c\uc18c. macOS \ubc0f iOS\uc6a9 \ud0c0\uc774\ubc0d \ud234\ud0b7 Metric\uacfc \uc74c\uc545 \uc774\ub860 \uc5f0\uad6c\uc18c Modes.',
-    pl: 'Laboratorium oprogramowania muzycznego tworz\u0105ce precyzyjne narz\u0119dzia dla producent\u00f3w i muzyk\u00f3w. Zestaw narz\u0119dzi Metric do taktowania oraz laboratorium teorii muzyki Modes na macOS i iOS.'
+    pl: 'Laboratorium oprogramowania muzycznego tworz\u0105ce precyzyjne narz\u0119dzia dla producent\u00f3w i muzyk\u00f3w. Zestaw narz\u0119dzi Metric do taktowania oraz laboratorium teorii muzyki Modes na macOS i iOS.',
+    'pt-br': 'Laborat\u00f3rio de software musical que cria ferramentas de precis\u00e3o para produtores e m\u00fasicos. Toolkit de timing Metric e laborat\u00f3rio de teoria musical Modes para macOS e iOS.',
+    'pt-pt': 'Laborat\u00f3rio de software musical que cria ferramentas de precis\u00e3o para produtores e m\u00fasicos. Toolkit de tempo Metric e laborat\u00f3rio de teoria musical Modes para macOS e iOS.',
+    'zh-hans': '\u4e13\u4e3a\u97f3\u4e50\u5236\u4f5c\u4eba\u548c\u97f3\u4e50\u5bb6\u6253\u9020\u7cbe\u5bc6\u5de5\u5177\u7684\u97f3\u4e50\u8f6f\u4ef6\u5b9e\u9a8c\u5ba4\u3002\u9002\u7528\u4e8e macOS \u548c iOS \u7684\u8282\u62cd\u5de5\u5177 Metric \u548c\u4e50\u7406\u5b9e\u9a8c\u5ba4 Modes\u3002',
+    'zh-hant': '\u5c08\u70ba\u97f3\u6a02\u88fd\u4f5c\u4eba\u548c\u97f3\u6a02\u5bb6\u6253\u9020\u7cbe\u5bc6\u5de5\u5177\u7684\u97f3\u6a02\u8edf\u9ad4\u5be6\u9a57\u5ba4\u3002\u9069\u7528\u65bc macOS \u548c iOS \u7684\u7bc0\u62cd\u5de5\u5177 Metric \u548c\u6a02\u7406\u5be6\u9a57\u5ba4 Modes\u3002'
   };
 
   function initOrgJsonLd() {
     var path = window.location.pathname;
-    var isIndex = /\/[a-z]{2}\/$/.test(path) || /\/[a-z]{2}\/index\.html$/.test(path);
+    var isIndex = /\/[a-z]{2}(?:-[a-z]+)?\/$/.test(path) || /\/[a-z]{2}(?:-[a-z]+)?\/index\.html$/.test(path);
     if (!isIndex) return;
 
-    var lang = (root.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    var lang = resolveLang(ORG_DESCRIPTIONS);
     var desc = ORG_DESCRIPTIONS[lang] || ORG_DESCRIPTIONS.en;
 
     var schema = {
@@ -589,16 +680,20 @@
     fr: { text: 'Nous utilisons des cookies pour analyser le trafic du site et am\u00e9liorer votre exp\u00e9rience. En cliquant sur \u00ab\u00a0Accepter\u00a0\u00bb, vous consentez \u00e0 notre utilisation des cookies.', accept: 'Accepter', deny: 'Refuser', privacy: 'Politique de confidentialit\u00e9' },
     ja: { text: '\u5f53\u30b5\u30a4\u30c8\u3067\u306f\u3001\u30c8\u30e9\u30d5\u30a3\u30c3\u30af\u306e\u5206\u6790\u3068\u30e6\u30fc\u30b6\u30fc\u30a8\u30af\u30b9\u30da\u30ea\u30a8\u30f3\u30b9\u306e\u5411\u4e0a\u306e\u305f\u3081\u306bCookie\u3092\u4f7f\u7528\u3057\u3066\u3044\u307e\u3059\u3002\u300c\u540c\u610f\u300d\u3092\u30af\u30ea\u30c3\u30af\u3059\u308b\u3068\u3001Cookie\u306e\u4f7f\u7528\u306b\u540c\u610f\u3057\u305f\u3053\u3068\u306b\u306a\u308a\u307e\u3059\u3002', accept: '\u540c\u610f', deny: '\u62d2\u5426', privacy: '\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u30dd\u30ea\u30b7\u30fc' },
     ko: { text: '\ub2f9\uc0ac\ub294 \uc0ac\uc774\ud2b8 \ud2b8\ub798\ud53d\uc744 \ubd84\uc11d\ud558\uace0 \uc0ac\uc6a9\uc790 \uacbd\ud5d8\uc744 \uac1c\uc120\ud558\uae30 \uc704\ud574 \ucfe0\ud0a4\ub97c \uc0ac\uc6a9\ud569\ub2c8\ub2e4. \u00ab\ub3d9\uc758\u00bb\ub97c \ud074\ub9ad\ud558\uba74 \ucfe0\ud0a4 \uc0ac\uc6a9\uc5d0 \ub3d9\uc758\ud558\uac8c \ub429\ub2c8\ub2e4.', accept: '\ub3d9\uc758', deny: '\uac70\ubd80', privacy: '\uac1c\uc778\uc815\ubcf4 \ucc98\ub9ac\ubc29\uce68' },
-    pl: { text: 'U\u017cywamy plik\u00f3w cookie do analizy ruchu na stronie i poprawy Twojego do\u015bwiadczenia. Klikaj\u0105c \u201eAkceptuj\u201d, wyra\u017casz zgod\u0119 na nasze u\u017cycie plik\u00f3w cookie.', accept: 'Akceptuj', deny: 'Odrzu\u0107', privacy: 'Polityka prywatno\u015bci' }
+    pl: { text: 'U\u017cywamy plik\u00f3w cookie do analizy ruchu na stronie i poprawy Twojego do\u015bwiadczenia. Klikaj\u0105c \u201eAkceptuj\u201d, wyra\u017casz zgod\u0119 na nasze u\u017cycie plik\u00f3w cookie.', accept: 'Akceptuj', deny: 'Odrzu\u0107', privacy: 'Polityka prywatno\u015bci' },
+    'pt-br': { text: 'Usamos cookies para analisar o tr\u00e1fego do site e melhorar sua experi\u00eancia. Ao clicar em \u201cAceitar\u201d, voc\u00ea consente com o uso de cookies.', accept: 'Aceitar', deny: 'Recusar', privacy: 'Pol\u00edtica de Privacidade' },
+    'pt-pt': { text: 'Utilizamos cookies para analisar o tr\u00e1fego do site e melhorar a sua experi\u00eancia. Ao clicar em \u201cAceitar\u201d, consente a utiliza\u00e7\u00e3o de cookies.', accept: 'Aceitar', deny: 'Recusar', privacy: 'Pol\u00edtica de Privacidade' },
+    'zh-hans': { text: '\u6211\u4eec\u4f7f\u7528 Cookie \u6765\u5206\u6790\u7f51\u7ad9\u6d41\u91cf\u5e76\u6539\u5584\u60a8\u7684\u4f53\u9a8c\u3002\u70b9\u51fb\u201c\u63a5\u53d7\u201d\u5373\u8868\u793a\u540c\u610f\u6211\u4eec\u4f7f\u7528 Cookie\u3002', accept: '\u63a5\u53d7', deny: '\u62d2\u7edd', privacy: '\u9690\u79c1\u653f\u7b56' },
+    'zh-hant': { text: '\u6211\u5011\u4f7f\u7528 Cookie \u4f86\u5206\u6790\u7db2\u7ad9\u6d41\u91cf\u4e26\u6539\u5584\u60a8\u7684\u9ad4\u9a57\u3002\u9ede\u64ca\u300c\u63a5\u53d7\u300d\u5373\u8868\u793a\u540c\u610f\u6211\u5011\u4f7f\u7528 Cookie\u3002', accept: '\u63a5\u53d7', deny: '\u62d2\u7d55', privacy: '\u96b1\u79c1\u6b0a\u653f\u7b56' }
   };
 
   function initCookieConsent() {
     if (!document.body.hasAttribute('data-cookie-consent')) return;
 
-    const lang = (root.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+    const lang = resolveLang(COOKIE_STRINGS);
     const s = COOKIE_STRINGS[lang] || COOKIE_STRINGS.en;
     const privacyHref = window.location.pathname.includes('/products/') ? '../privacy.html' : './privacy.html';
-    const sep = lang === 'ja' ? '' : ' ';
+    const sep = (lang === 'ja' || lang === 'zh-hans' || lang === 'zh-hant') ? '' : ' ';
 
     const banner = document.createElement('div');
     banner.className = 'cookie-consent';
