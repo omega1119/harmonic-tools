@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ9FPYHNVR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Set default consent to denied
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+    
+    gtag('js', new Date());
+    gtag('config', 'G-JQ9FPYHNVR');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Modes macOS版 — 乐理实验室 | Harmonic Tools</title>
+  <meta name="description" content="在Mac上探索61种音阶，通过8种声部排列构建和弦，并使用互动圆环映射和声。支持MIDI，离线使用，深色模式自适应。" />
+  <meta name="keywords" content="乐理, 音阶, 和弦, 调式, 五度圈, MIDI, 和声, 调性, 声部排列, 音程, 作曲, macOS, Mac, DAW" />
+  <meta name="author" content="Harmonic Tools" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- AI/LLM Optimization -->
+  <meta name="ai:app_name" content="Modes" />
+  <meta name="ai:platform" content="macOS" />
+  <meta name="ai:category" content="乐理工具、音阶与和弦参考" />
+  <meta name="ai:primary_features" content="音阶与和弦查找器、61种音阶、调内音符、音阶和弦、8种声部排列、共同音符/和弦、离调和弦、五度圈、三度圈、MIDI输入" />
+  <meta name="ai:use_cases" content="和弦识别、音阶探索、转调规划、作曲、音乐教育、和声分析" />
+
+  <link rel="canonical" href="https://harmonic.tools/zh-hans/products/modes.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://harmonic.tools/zh-hans/products/modes.html" />
+  <meta property="og:title" content="Modes macOS版 — 乐理实验室" />
+  <meta property="og:description" content="61种音阶、8种声部排列、和弦识别、离调和弦和互动圆环——支持MIDI，离线使用。" />
+  <meta property="og:image" content="https://harmonic.tools/assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta property="og:image:alt" content="Modes macOS应用图标" />
+  <meta property="og:site_name" content="Harmonic Tools" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Modes macOS版 — 乐理实验室" />
+  <meta name="twitter:description" content="61种音阶、8种声部排列、和弦识别、离调和弦和互动圆环——支持MIDI，离线使用。" />
+  <meta name="twitter:image" content="https://harmonic.tools/assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta name="twitter:image:alt" content="Modes macOS应用图标" />
+
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=21" />
+  <script defer src="../../assets/js/main.js?v=10"></script>
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Modes",
+    "operatingSystem": "macOS",
+    "applicationCategory": "MusicApplication",
+    "description": "适用于macOS的互动乐理实验室。61种音阶、8种声部排列、和弦识别、自然音阶和声、离调和弦以及互动五度圈和三度圈，集于一个侧边栏导航应用中。",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Harmonic Tools"
+    },
+    "screenshot": "https://harmonic.tools/assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png",
+    "featureList": [
+      "音阶与和弦查找器，支持MIDI输入",
+      "61种音阶与调式",
+      "调内音符",
+      "带功能标签的音阶和弦",
+      "8种声部排列（三和弦到十三和弦）",
+      "共同音符与共同和弦",
+      "离调和弦",
+      "五度圈",
+      "三度圈"
+    ]
+  }
+  </script>
+</head>
+<body data-cookie-consent>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="../" aria-label="Harmonic Tools 首页">Harmonic Tools</a>
+      <nav class="nav" role="navigation" aria-label="主导航">
+        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">菜单</button>
+        <ul id="primary-menu" class="nav-list">
+        </ul>
+      </nav>
+      <div class="language-selector" data-languages='{"en":"../../en/products/modes.html","de":"../../de/products/modes.html","es":"../../es/products/modes.html","fr":"../../fr/products/modes.html","pl":"../../pl/products/modes.html","ja":"../../ja/products/modes.html","ko":"../../ko/products/modes.html","pt-br":"../../pt-br/products/modes.html","pt-pt":"../../pt-pt/products/modes.html","zh-hans":"./modes.html","zh-hant":"../../zh-hant/products/modes.html"}' data-active-lang="zh-hans"></div>
+      <button class="theme-toggle" aria-label="切换主题" title="切换主题"></button>
+    </div>
+  </header>
+
+  <main class="container product-page">
+    <div class="product-hero">
+      <div class="product-hero__copy">
+        <picture>
+          <source srcset="../../assets/images/ModesMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+          <img src="../../assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" alt="Modes macOS应用图标" width="128" height="128" class="product-hero__icon" />
+        </picture>
+
+        <h1>Modes macOS版</h1>
+        <p class="product-lead">适用于macOS的互动乐理实验室。无论您是在创作歌曲、备课还是探索新的和声领域，Modes都能让您即时访问音阶、和弦、声部排列和转调路径，集于一个简洁的侧边栏导航应用中，与您的DAW并排使用。</p>
+
+        <ul class="product-highlights">
+          <li>音阶与和弦查找器，支持MIDI + 屏幕键盘</li>
+          <li>61种音阶 · 21种和弦类型 · 8种声部排列族</li>
+          <li>共同音符、共同和弦、离调和弦</li>
+          <li>互动五度圈 + 三度圈</li>
+        </ul>
+
+        <div class="product-cta">
+          <span class="store-badge store-badge--disabled" data-store="mac" data-store-product="Modes"></span>
+        </div>
+      </div>
+
+      <div class="product-hero__shots" aria-label="Modes macOS截图">
+        <h2 class="product-shot-title">截图</h2>
+        <p class="product-shot-lead">包含随网站主题切换的浅色和深色截图。</p>
+        <div class="screenshot-grid">
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS截图">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/zh-Hans/modes-scaleChord-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/zh-Hans/modes-scaleChord-mac-light.png" alt="macOS上的音阶与和弦查找器" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>即时识别和弦。弹奏或点击音符即可实时查看结果。</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS截图">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/zh-Hans/modes-scaleChord-cmaj7-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/zh-Hans/modes-scaleChord-cmaj7-mac-light.png" alt="macOS上的和弦详情视图" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>深入了解任意和弦。查看音符、音程和键盘上的声部排列。</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS截图">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/zh-Hans/modes-scaleNotes-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/zh-Hans/modes-scaleNotes-mac-light.png" alt="macOS上的音阶音符界面" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>查看任意调内的每个音符。音阶在互动键盘上高亮显示。</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS截图">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/zh-Hans/modes-scaleChords-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/zh-Hans/modes-scaleChords-mac-light.png" alt="macOS上的音阶和弦界面" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>构建自然音阶和声。罗马数字、功能和声部排列的和弦一目了然。</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS截图">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/zh-Hans/modes-sharedNotes-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/zh-Hans/modes-sharedNotes-mac-light.png" alt="macOS上的共同音符界面" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>并排比较两个调。找到共同音符以实现平滑转调。</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS截图">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/zh-Hans/modes-sharedChords-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/zh-Hans/modes-sharedChords-mac-light.png" alt="macOS上的共同和弦界面" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>查找两个调之间的共同和弦，实现平滑转调。</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS截图">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/zh-Hans/modes-borrowedChords-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/zh-Hans/modes-borrowedChords-mac-light.png" alt="macOS上的离调和弦界面" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>从平行调式借用和弦。无需离开调性即可增添色彩。</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS截图">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/zh-Hans/modes-circleOfFifths-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/zh-Hans/modes-circleOfFifths-mac-light.png" alt="macOS上的五度圈界面" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>浏览五度圈。点击探索调性、关系调和转调路径。</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS截图">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/zh-Hans/modes-circleOfThirds-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/zh-Hans/modes-circleOfThirds-mac-light.png" alt="macOS上的三度圈界面" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>探索半音中间音。用于电影和声的减音程循环图。</figcaption>
+          </figure>
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS截图">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/ModesMac/zh-Hans/modes-settings-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/ModesMac/zh-Hans/modes-settings-mac-light.png" alt="macOS上的设置界面" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>自定义您的体验。等音记谱、八度范围和显示选项。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <section class="product-section" aria-labelledby="features-title">
+      <h2 id="features-title">功能特色</h2>
+      <ul>
+        <li><strong>音阶与和弦查找器：</strong>在互动多八度键盘上弹奏音符或连接MIDI控制器。Modes可实时识别您演奏的和弦：大调、小调、减和弦、增和弦、延伸和弦、挂留和弦等。它按音符覆盖率对每个匹配的音阶进行排名。按音阶类别（自然音阶、旋律小调、和声小调、五声音阶、Bebop、对称、世界音阶等）筛选结果，精准锁定您想要的音色。</li>
+        <li><strong>61种音阶与调式：</strong>从七种自然调式到旋律小调、和声小调、双重和声、那不勒斯、Bebop、五声、蓝调、全音、减音、增音以及世界音阶如Hirajōshi、Kumoi、In Sen、Persian和Enigmatic。每种音阶都标注了音程符号并在键盘上高亮显示。</li>
+        <li><strong>调内音符：</strong>选择任意根音和音阶，查看在两个八度上高亮显示的每个调内音符。即时可视化哪些音符属于该调以及根音的位置。</li>
+        <li><strong>音阶和弦：</strong>为您选择的音阶的每个音级生成自然三和弦或七和弦。查看罗马数字、和弦名称、和声功能标签（主功能、下属功能、属功能及30+详细标签）和声部排列键盘展示，方便比较。</li>
+        <li><strong>8种声部排列：</strong>以三度叠置、sus2、sus4、六度、附加、四度叠置、五度叠置和强力和弦构建和弦。从三和弦到十三和弦可选，每个延伸音自动标注。</li>
+        <li><strong>共同音符与共同和弦：</strong>并排比较任意两个调。查看哪些音符重叠、哪些独有、哪些和弦两个调共享。这对于平滑转调和重新和声编配至关重要。</li>
+        <li><strong>离调和弦：</strong>分析您的调内自然和弦以及来自平行调式的所有可借用选项，按来源调式分组。在不离开调性中心的情况下发现新鲜的和声色彩。</li>
+        <li><strong>五度圈：</strong>互动双环圆（外圈大调，内圈自然小调）。点击扇区可重新设定调性。一目了然地查看属、下属、关系调、平行调和相近调关系，带有转调难度标签和调号详情。</li>
+        <li><strong>三度圈：</strong>在减音程循环图上探索半音中间音关系。每个音级的大调和小调按钮显示中间音、关系调和平行调连接。非常适合电影配乐和新里曼转调规划。</li>
+        <li><strong>MIDI支持：</strong>连接任何符合标准的MIDI键盘或控制器。演奏的音符与屏幕点击无缝融合进行识别。</li>
+      </ul>
+
+      <h3>专为桌面打造</h3>
+      <ul>
+        <li>完全离线运行——无需账户、无广告、无追踪</li>
+        <li>原生macOS应用，侧边栏导航</li>
+        <li>深色模式感知界面，跟随系统外观</li>
+        <li>等音记谱：自动、升号或降号</li>
+        <li>可调整窗口大小——与DAW并排使用</li>
+      </ul>
+      <p>无论您是勾画和弦进行的制作人、学习调式的吉他手、研究爵士和声的钢琴家还是备考乐理的学生，Modes都将深入的乐理知识呈现在您的桌面上。</p>
+    </section>
+
+    <section class="theory-coverage" aria-labelledby="theory-title">
+      <h2 id="theory-title">乐理覆盖范围</h2>
+      <p>应用内所有可用音阶、调式、和弦、声部排列和音程的完整参考。</p>
+
+      <div class="theory-stats">
+        <div class="theory-stat"><strong>61</strong> <span>种音阶与调式</span></div>
+        <div class="theory-stat"><strong>21</strong> <span>种和弦类型</span></div>
+        <div class="theory-stat"><strong>8</strong> <span>种声部排列族</span></div>
+        <div class="theory-stat"><strong>12</strong> <span>个半音音程</span></div>
+        <div class="theory-stat"><strong>16</strong> <span>次泛音</span></div>
+        <div class="theory-stat"><strong>32</strong> <span>个和弦功能标签</span></div>
+      </div>
+
+      <div class="theory-group">
+        <h3>音阶与调式 共61种</h3>
+
+        <h4>大调调式（自然音阶）</h4>
+        <ul class="theory-tags">
+          <li>Ionian (Major)</li>
+          <li>Dorian</li>
+          <li>Phrygian</li>
+          <li>Lydian</li>
+          <li>Mixolydian</li>
+          <li>Aeolian (Natural Minor)</li>
+          <li>Locrian</li>
+        </ul>
+
+        <h4>旋律小调（爵士小调）调式</h4>
+        <ul class="theory-tags">
+          <li>Melodic Minor (Jazz Minor)</li>
+          <li>Dorian ♭2 (Phrygian ♮6)</li>
+          <li>Lydian Augmented (Lydian ♯5)</li>
+          <li>Lydian Dominant (Lydian ♭7)</li>
+          <li>Mixolydian ♭6 (Aeolian Dominant)</li>
+          <li>Locrian ♯2 (Locrian ♮2)</li>
+          <li>Altered (Super-Locrian)</li>
+        </ul>
+
+        <h4>和声小调调式</h4>
+        <ul class="theory-tags">
+          <li>Harmonic Minor</li>
+          <li>Locrian ♮6</li>
+          <li>Ionian ♯5 (Augmented Major)</li>
+          <li>Dorian ♯4 (Ukrainian Dorian)</li>
+          <li>Phrygian Dominant</li>
+          <li>Lydian ♯2</li>
+          <li>Super Locrian ♭♭7 (Altered ♭♭7)</li>
+        </ul>
+
+        <h4>双重和声小调（匈牙利小调）调式</h4>
+        <ul class="theory-tags">
+          <li>Hungarian Minor (Double Harmonic Minor)</li>
+          <li>Oriental</li>
+          <li>Ionian ♯2 ♯5</li>
+          <li>Locrian ♭♭3 ♭♭7</li>
+          <li>Double Harmonic Major</li>
+          <li>Lydian ♯2 ♯6</li>
+          <li>Ultraphrygian</li>
+        </ul>
+
+        <h4>和声大调</h4>
+        <ul class="theory-tags">
+          <li>Harmonic Major (Ionian ♭6)</li>
+          <li>Double Harmonic Major (Byzantine)</li>
+        </ul>
+
+        <h4>那不勒斯小调调式</h4>
+        <ul class="theory-tags">
+          <li>Neapolitan Minor</li>
+          <li>Lydian ♯6</li>
+          <li>Mixolydian Augmented</li>
+          <li>Romani Minor (Aeolian ♯4)</li>
+          <li>Locrian Dominant</li>
+          <li>Ionian ♯2</li>
+          <li>Ultralocrian</li>
+        </ul>
+
+        <h4>那不勒斯大调调式</h4>
+        <ul class="theory-tags">
+          <li>Neapolitan Major</li>
+          <li>Leading Whole Tone (Lydian Augmented ♯6)</li>
+          <li>Lydian Augmented Dominant</li>
+          <li>Lydian Dominant ♭6</li>
+          <li>Major Locrian</li>
+          <li>Half-Diminished ♭4 (Altered Dominant ♯2)</li>
+          <li>Altered Dominant ♭♭3</li>
+        </ul>
+
+        <h4>Bebop</h4>
+        <ul class="theory-tags">
+          <li>Bebop Dominant</li>
+          <li>Bebop Major</li>
+        </ul>
+
+        <h4>五声与蓝调</h4>
+        <ul class="theory-tags">
+          <li>Pentatonic Major</li>
+          <li>Pentatonic Minor</li>
+          <li>Blues</li>
+          <li>Blues (Major)</li>
+        </ul>
+
+        <h4>对称与合成</h4>
+        <ul class="theory-tags">
+          <li>Whole Tone</li>
+          <li>Diminished (Half–Whole)</li>
+          <li>Diminished (Whole–Half)</li>
+          <li>Augmented (Hexatonic)</li>
+          <li>Prometheus (Mystic Hexatonic)</li>
+        </ul>
+
+        <h4>日本五声音阶</h4>
+        <ul class="theory-tags">
+          <li>Hirajōshi</li>
+          <li>Kumoi</li>
+          <li>In Sen</li>
+          <li>Iwato</li>
+        </ul>
+
+        <h4>世界 / 其他</h4>
+        <ul class="theory-tags">
+          <li>Persian</li>
+          <li>Enigmatic</li>
+        </ul>
+      </div>
+
+      <div class="theory-group">
+        <h3>和弦</h3>
+
+        <h4>可识别和弦类型 21种</h4>
+        <p>21种可识别和弦类型，支持自动延伸音检测（无七音时，九度、十一度、十三度显示为add9、add11、add13）。</p>
+        <ul class="theory-tags">
+          <li>Major</li>
+          <li>Minor</li>
+          <li>Diminished</li>
+          <li>Augmented</li>
+          <li>sus2</li>
+          <li>sus4</li>
+          <li>Power (5)</li>
+          <li>Major 6th</li>
+          <li>Minor 6th</li>
+          <li>Dominant 7th</li>
+          <li>Major 7th</li>
+          <li>Minor 7th</li>
+          <li>Half-Diminished 7th</li>
+          <li>Diminished 7th</li>
+          <li>Minor-Major 7th</li>
+          <li>Augmented 7th</li>
+          <li>Augmented Major 7th</li>
+          <li>Major (♭5)</li>
+          <li>Diminished (♭♭3)</li>
+          <li>Dominant 7sus4</li>
+          <li>Dominant 7sus2</li>
+        </ul>
+
+        <h4>和弦性质（构建器） 6种</h4>
+        <p>构建器中可用的和弦性质，含罗马数字分析。</p>
+        <ul class="theory-tags">
+          <li>Major</li>
+          <li>Minor</li>
+          <li>Diminished</li>
+          <li>Augmented</li>
+          <li>Major (♭5)</li>
+          <li>Diminished (♭♭3)</li>
+        </ul>
+      </div>
+
+      <div class="theory-group">
+        <h3>和弦声部排列 8种</h3>
+        <p>从三度叠置的声部排列到四度叠置和五度叠置，从三和弦到十三和弦。</p>
+        <ul class="theory-tags">
+          <li>Tertian</li>
+          <li>sus2</li>
+          <li>sus4</li>
+          <li>6th / 6-9</li>
+          <li>Add (add9, add11)</li>
+          <li>Quartal</li>
+          <li>Quintal</li>
+          <li>Power</li>
+        </ul>
+      </div>
+
+      <div class="theory-group">
+        <h3>音程、泛音列与分析</h3>
+        <p>全部12个半音音程及其转位、16次泛音的泛音列、跨所有调的完整五度圈导航（升号和降号记谱，支持自动/手动等音转换），以及涵盖主功能、下属功能和属功能族的32个和声功能标签。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-footer-type="simple"></footer>
+</body>
+</html>

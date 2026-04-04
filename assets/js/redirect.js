@@ -1,6 +1,6 @@
 (function () {
   /** Non-English languages supported by the site. */
-  var SUPPORTED_LANGS = ['pl', 'fr', 'de', 'es', 'ko', 'ja'];
+  var SUPPORTED_LANGS = ['pl', 'fr', 'de', 'es', 'ko', 'ja', 'pt-br', 'pt-pt', 'zh-hans', 'zh-hant'];
 
   /** Country-code → language mapping for geo-based fallback. */
   var COUNTRY_TO_LANG = {
@@ -30,12 +30,28 @@
     UY: 'es',
     GQ: 'es',
     KR: 'ko',
-    JP: 'ja'
+    JP: 'ja',
+    BR: 'pt-br',
+    PT: 'pt-pt',
+    AO: 'pt-pt',
+    MZ: 'pt-pt',
+    CN: 'zh-hans',
+    SG: 'zh-hans',
+    TW: 'zh-hant',
+    HK: 'zh-hant',
+    MO: 'zh-hant'
   };
 
   function normalizeLocale(locale) {
     return String(locale || '').trim().toLowerCase();
   }
+
+  // Maps browser locale codes to our supported language codes where they differ.
+  var LOCALE_ALIASES = {
+    'zh': 'zh-hans', 'zh-cn': 'zh-hans', 'zh-sg': 'zh-hans', 'zh-hans': 'zh-hans',
+    'zh-tw': 'zh-hant', 'zh-hk': 'zh-hant', 'zh-mo': 'zh-hant', 'zh-hant': 'zh-hant',
+    'pt': 'pt-pt', 'pt-pt': 'pt-pt', 'pt-br': 'pt-br'
+  };
 
   function getPreferredLanguage() {
     var list = [];
@@ -51,10 +67,16 @@
 
     for (var i = 0; i < list.length; i++) {
       var loc = normalizeLocale(list[i]);
+      // Check aliases first (for zh-*, pt-* variants)
+      if (LOCALE_ALIASES[loc]) return LOCALE_ALIASES[loc];
+      // Then check supported languages directly
       for (var j = 0; j < SUPPORTED_LANGS.length; j++) {
         var lang = SUPPORTED_LANGS[j];
         if (loc === lang || loc.indexOf(lang + '-') === 0) return lang;
       }
+      // Base language fallback for aliased families
+      var base = loc.split('-')[0];
+      if (LOCALE_ALIASES[base]) return LOCALE_ALIASES[base];
     }
 
     return 'en';
@@ -80,9 +102,10 @@
       countryTimeoutMs: Number(ds.countryTimeoutMs || 2500)
     };
     // Dynamically read data-redirect-<lang> for every supported language.
+    // data-redirect-pt-br → dataset.redirectPtBr (camelCase conversion)
     for (var i = 0; i < SUPPORTED_LANGS.length; i++) {
       var lang = SUPPORTED_LANGS[i];
-      var key = 'redirect' + lang.charAt(0).toUpperCase() + lang.slice(1);
+      var key = 'redirect' + lang.replace(/(^|-)([a-z])/g, function(_, __, c) { return c.toUpperCase(); });
       if (ds[key]) targets[lang] = ds[key];
     }
     return targets;
