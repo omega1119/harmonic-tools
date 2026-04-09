@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-Hans" dir="ltr">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ9FPYHNVR"></script>
@@ -23,11 +23,14 @@
   <link rel="canonical" href="https://harmonic.tools/zh-hans/privacy.html" />
 
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="stylesheet" href="../assets/css/styles.css?v=21" />
   <script defer src="../assets/js/main.js?v=10"></script>
 </head>
-<body>
+<body data-cookie-consent>
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="logo" href="./" aria-label="Harmonic Tools 首页">Harmonic Tools</a>
@@ -40,74 +43,80 @@
       <button class="theme-toggle" aria-label="切换主题" title="切换主题"></button>
     </div>
   </header>
-  <main class="container" style="padding:40px 0">
-    <h1>隐私政策</h1>
-    <p><strong>最后更新：</strong>2026年2月28日</p>
+  <main id="main">
+    <section class="hero" style="padding: 60px 0;">
+      <div class="container hero-inner" style="text-align: left;">
+        <h1 id="hero-title" style="font-size: clamp(32px, 5vw, 48px); margin-bottom: 32px;">隐私政策</h1>
+        <div class="legal-content">
 
-    <h2>1. 我们是谁</h2>
-    <p>Harmonic Tools是<strong>Greenwood IT Consultancy Ltd</strong>的商用名称，该公司是一家在英格兰和威尔士注册的有限公司。我们是负责管理您个人数据的数据控制者。</p>
-    <p>联系方式：<a href="mailto:contact@gitc.digital">contact@gitc.digital</a></p>
+          <h2>1. 我们是谁</h2>
+          <p>Harmonic Tools是<strong>Greenwood IT Consultancy Ltd</strong>的商用名称，该公司是一家在英格兰和威尔士注册的有限公司。我们是负责管理您个人数据的数据控制者。</p>
+          <p>联系方式：<a href="mailto:contact@gitc.digital">contact@gitc.digital</a></p>
 
-    <h2>2. 我们收集哪些数据</h2>
-    <p>我们致力于最小化数据收集。我们的应用程序和网站可能收集以下信息：</p>
-    <ul>
-      <li><strong>分析数据</strong>——通过Google Analytics在征得同意后收集的匿名聚合使用数据（如页面浏览量、应用功能使用情况）。通过分析收集的数据不包含任何个人身份信息。</li>
-      <li><strong>联系信息</strong>——如果您通过邮件联系我们寻求支持，我们将保存您的姓名和邮箱地址，仅用于回复您的咨询。</li>
-      <li><strong>购买数据</strong>——应用购买完全由Apple通过App Store处理。我们不会接收或存储您的支付信息。</li>
-    </ul>
+          <h2>2. 我们收集哪些数据</h2>
+          <p>我们致力于最小化数据收集。我们的应用程序和网站可能收集以下信息：</p>
+          <ul>
+          <li><strong>分析数据</strong>——通过Google Analytics在征得同意后收集的匿名聚合使用数据（如页面浏览量、应用功能使用情况）。通过分析收集的数据不包含任何个人身份信息。</li>
+          <li><strong>联系信息</strong>——如果您通过邮件联系我们寻求支持，我们将保存您的姓名和邮箱地址，仅用于回复您的咨询。</li>
+          <li><strong>购买数据</strong>——应用购买完全由Apple通过App Store处理。我们不会接收或存储您的支付信息。</li>
+          </ul>
 
-    <h2>3. 处理数据的法律依据</h2>
-    <p>根据英国通用数据保护条例（UK GDPR）和欧盟通用数据保护条例（EU GDPR），我们基于以下合法依据处理个人数据：</p>
-    <ul>
-      <li><strong>同意</strong>——用于分析cookies和任何可选数据收集。您可以随时撤回同意。</li>
-      <li><strong>合法利益</strong>——用于改进我们的产品和回复支持请求。</li>
-      <li><strong>法律义务</strong>——法律要求我们保留数据的情况。</li>
-    </ul>
+          <h2>3. 处理数据的法律依据</h2>
+          <p>根据英国通用数据保护条例（UK GDPR）和欧盟通用数据保护条例（EU GDPR），我们基于以下合法依据处理个人数据：</p>
+          <ul>
+          <li><strong>同意</strong>——用于分析cookies和任何可选数据收集。您可以随时撤回同意。</li>
+          <li><strong>合法利益</strong>——用于改进我们的产品和回复支持请求。</li>
+          <li><strong>法律义务</strong>——法律要求我们保留数据的情况。</li>
+          </ul>
 
-    <h2>4. Cookies与分析</h2>
-    <p>我们的网站使用Google Analytics来了解访客如何使用本站。分析cookies仅在您提供同意后设置。您可以随时通过我们网站上的cookie横幅管理cookie偏好设置。</p>
-    <p>Google Analytics数据是匿名的，我们不会将其与其他数据源结合以识别个人身份。如需了解更多信息，请参阅<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google隐私政策</a>。</p>
+          <h2>4. Cookies与分析</h2>
+          <p>我们的网站使用Google Analytics来了解访客如何使用本站。分析cookies仅在您提供同意后设置。您可以随时通过我们网站上的cookie横幅管理cookie偏好设置。</p>
+          <p>Google Analytics数据是匿名的，我们不会将其与其他数据源结合以识别个人身份。如需了解更多信息，请参阅<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google隐私政策</a>。</p>
 
-    <h2>5. 数据共享</h2>
-    <p>我们不会出售、交易或出租您的个人数据给第三方。数据仅与以下方共享：</p>
-    <ul>
-      <li><strong>Google Analytics</strong>——匿名使用数据（经您同意）。</li>
-      <li><strong>Apple</strong>——购买和订阅数据由Apple根据其自身隐私政策管理。</li>
-      <li><strong>法律机关</strong>——在法律要求的情况下。</li>
-    </ul>
+          <h2>5. 数据共享</h2>
+          <p>我们不会出售、交易或出租您的个人数据给第三方。数据仅与以下方共享：</p>
+          <ul>
+          <li><strong>Google Analytics</strong>——匿名使用数据（经您同意）。</li>
+          <li><strong>Apple</strong>——购买和订阅数据由Apple根据其自身隐私政策管理。</li>
+          <li><strong>法律机关</strong>——在法律要求的情况下。</li>
+          </ul>
 
-    <h2>6. 数据保留</h2>
-    <p>我们仅在实现收集目的所必需的期限内保留个人数据。支持通信在最后一次沟通后保留最长24个月，除非法律要求更长的保留期。</p>
+          <h2>6. 数据保留</h2>
+          <p>我们仅在实现收集目的所必需的期限内保留个人数据。支持通信在最后一次沟通后保留最长24个月，除非法律要求更长的保留期。</p>
 
-    <h2>7. 国际传输</h2>
-    <p>当数据传输至英国或欧洲经济区（EEA）以外时，我们会按照UK GDPR和EU GDPR的要求确保采取适当的保障措施。</p>
+          <h2>7. 国际传输</h2>
+          <p>当数据传输至英国或欧洲经济区（EEA）以外时，我们会按照UK GDPR和EU GDPR的要求确保采取适当的保障措施。</p>
 
-    <h2>8. 您的权利</h2>
-    <p>根据英国和欧盟数据保护法，您享有以下权利：</p>
-    <ul>
-      <li><strong>访问权</strong>——请求获取我们持有的您的个人数据副本。</li>
-      <li><strong>更正权</strong>——请求更正不准确的数据。</li>
-      <li><strong>删除权</strong>——请求删除您的个人数据（"被遗忘权"）。</li>
-      <li><strong>限制权</strong>——请求限制我们使用您数据的方式。</li>
-      <li><strong>可携权</strong>——请求以结构化、机器可读的格式获取您的数据。</li>
-      <li><strong>反对权</strong>——反对基于合法利益的处理。</li>
-      <li><strong>撤回同意</strong>——当处理基于同意时，您可以随时撤回同意。</li>
-    </ul>
-    <p>如需行使上述任何权利，请通过<a href="mailto:contact@gitc.digital">contact@gitc.digital</a>联系我们。我们将按照法律要求在一个月内回复。</p>
+          <h2>8. 您的权利</h2>
+          <p>根据英国和欧盟数据保护法，您享有以下权利：</p>
+          <ul>
+          <li><strong>访问权</strong>——请求获取我们持有的您的个人数据副本。</li>
+          <li><strong>更正权</strong>——请求更正不准确的数据。</li>
+          <li><strong>删除权</strong>——请求删除您的个人数据（"被遗忘权"）。</li>
+          <li><strong>限制权</strong>——请求限制我们使用您数据的方式。</li>
+          <li><strong>可携权</strong>——请求以结构化、机器可读的格式获取您的数据。</li>
+          <li><strong>反对权</strong>——反对基于合法利益的处理。</li>
+          <li><strong>撤回同意</strong>——当处理基于同意时，您可以随时撤回同意。</li>
+          </ul>
+          <p>如需行使上述任何权利，请通过<a href="mailto:contact@gitc.digital">contact@gitc.digital</a>联系我们。我们将按照法律要求在一个月内回复。</p>
 
-    <h2>9. 投诉</h2>
-    <p>如果您对我们处理数据的方式不满意，您有权向<a href="https://ico.org.uk/" target="_blank" rel="noopener">信息专员办公室（ICO）</a>投诉，该机构是英国的数据保护监管机构。如果您位于欧盟，您也可以联系当地的数据保护机构。</p>
+          <h2>9. 投诉</h2>
+          <p>如果您对我们处理数据的方式不满意，您有权向<a href="https://ico.org.uk/" target="_blank" rel="noopener">信息专员办公室（ICO）</a>投诉，该机构是英国的数据保护监管机构。如果您位于欧盟，您也可以联系当地的数据保护机构。</p>
 
-    <h2>10. 儿童隐私</h2>
-    <p>我们的应用程序和服务不面向13岁以下的儿童。我们不会故意收集儿童的个人数据。如果您认为我们无意中收集了此类数据，请联系我们，我们将及时删除。</p>
+          <h2>10. 儿童隐私</h2>
+          <p>我们的应用程序和服务不面向13岁以下的儿童。我们不会故意收集儿童的个人数据。如果您认为我们无意中收集了此类数据，请联系我们，我们将及时删除。</p>
 
-    <h2>11. 政策变更</h2>
-    <p>我们可能会不时更新本隐私政策。任何变更将会在本页面上发布并更新修订日期。我们建议您定期查阅本政策。</p>
+          <h2>11. 政策变更</h2>
+          <p>我们可能会不时更新本隐私政策。任何变更将会在本页面上发布并更新修订日期。我们建议您定期查阅本政策。</p>
 
-    <h2>12. 联系我们</h2>
-    <p>如果您对本隐私政策或我们的数据实践有任何疑问，请联系我们：</p>
-    <p>邮箱：<a href="mailto:contact@gitc.digital">contact@gitc.digital</a></p>
-    <p>Greenwood IT Consultancy Ltd<br>United Kingdom</p>
+          <h2>12. 联系我们</h2>
+          <p>如果您对本隐私政策或我们的数据实践有任何疑问，请联系我们：</p>
+          <p>邮箱：<a href="mailto:contact@gitc.digital">contact@gitc.digital</a></p>
+          <p>Greenwood IT Consultancy Ltd<br>United Kingdom</p>
+        </div>
+        <p class="legal-date">最后更新： 2026年2月28日</p>
+      </div>
+    </section>
   </main>
   <footer class="site-footer" data-footer-type="simple"></footer>
 </body>
