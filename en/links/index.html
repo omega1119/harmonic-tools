@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ9FPYHNVR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+
+    gtag('js', new Date());
+    gtag('config', 'G-JQ9FPYHNVR');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Links — Harmonic Tools</title>
+  <meta name="description" content="Download Harmonic Tools apps — Metric and Modes for macOS and iOS." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="canonical" href="https://harmonic.tools/en/links/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://harmonic.tools/en/links/" />
+  <meta property="og:title" content="Links — Harmonic Tools" />
+  <meta property="og:description" content="Download Harmonic Tools apps — Metric and Modes for macOS and iOS." />
+  <meta property="og:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta property="og:site_name" content="Harmonic Tools" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+
+  <style>
+    :root {
+      --green: #43B02A;
+      --accent: #43B02A;
+      --text: #0a0a0a;
+      --muted: #555;
+      --bg: #ffffff;
+      --card: #f7f7f7;
+      --card-hover: #f0f0f0;
+      --border: #e0e0e0;
+      --shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0a0a0a;
+        --text: #e8e8e8;
+        --muted: #888;
+        --card: #141414;
+        --card-hover: #1a1a1a;
+        --border: #222;
+        --shadow: 0 2px 8px rgba(255,255,255,0.02);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 24px 32px;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--text); text-decoration: none; }
+
+    .links-page {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+
+    /* Profile section */
+    .profile {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .profile-name {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .profile-bio {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 300px;
+      line-height: 1.5;
+    }
+
+    /* Link list */
+    .link-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .link-section-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin-top: 8px;
+      padding-left: 2px;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      padding: 16px 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .link-item:hover {
+      background: var(--card-hover);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+    }
+    .link-item:active {
+      transform: translateY(0);
+    }
+
+    .link-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .link-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .link-text {
+      flex: 1;
+      min-width: 0;
+    }
+    .link-title {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+    }
+    .link-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .link-arrow {
+      flex-shrink: 0;
+      color: var(--muted);
+      transition: transform 0.2s ease;
+    }
+    .link-item:hover .link-arrow {
+      transform: translateX(2px);
+      color: var(--accent);
+    }
+
+    /* Website link */
+    .link-item--website {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: white;
+    }
+    .link-item--website .link-subtitle {
+      color: rgba(255,255,255,0.75);
+    }
+    .link-item--website .link-arrow {
+      color: rgba(255,255,255,0.75);
+    }
+    .link-item--website:hover {
+      background: #3a9c24;
+      border-color: #3a9c24;
+      color: white;
+    }
+    .link-item--website:hover .link-arrow {
+      color: white;
+    }
+
+    /* Footer */
+    .links-footer {
+      margin-top: auto;
+      padding-top: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .links-footer a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .links-footer a:hover {
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="links-page">
+
+    <!-- Profile -->
+    <div class="profile">
+      <div class="profile-name">Harmonic Tools</div>
+      <div class="profile-bio">Music software for producers &amp; musicians</div>
+    </div>
+
+    <!-- Links -->
+    <div class="link-list">
+
+      <!-- Website -->
+      <a class="link-item link-item--website" href="https://harmonic.tools/en/">
+        <div class="link-text">
+          <div class="link-title">harmonic.tools</div>
+          <div class="link-subtitle">Visit our website</div>
+        </div>
+        <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <!-- Apps -->
+      <div class="link-section-label">Apps</div>
+
+      <a class="link-item" href="https://apps.apple.com/app/metric/id6757522050" target="_blank" rel="noopener">
+        <div class="link-icon">
+          <img src="../../assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" alt="Metric app icon" />
+        </div>
+        <div class="link-text">
+          <div class="link-title">Metric</div>
+          <div class="link-subtitle">Timing &amp; frequency toolkit — macOS &amp; iOS</div>
+        </div>
+        <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="link-item" href="https://apps.apple.com/app/modes/id6757521945" target="_blank" rel="noopener">
+        <div class="link-icon">
+          <img src="../../assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" alt="Modes app icon" />
+        </div>
+        <div class="link-text">
+          <div class="link-title">Modes</div>
+          <div class="link-subtitle">Music theory lab — macOS &amp; iOS</div>
+        </div>
+        <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="links-footer">
+      &copy; Harmonic Tools
+    </div>
+
+  </div>
+
+</body>
+</html>
