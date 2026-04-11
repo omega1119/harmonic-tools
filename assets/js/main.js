@@ -98,8 +98,13 @@
     const privacyHref = inProducts ? '../privacy.html' : './privacy.html';
     const termsHref = inProducts ? '../terms.html' : './terms.html';
 
+    var INSTAGRAM_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>';
+
     let html = '<div class="container footer-inner">' +
-      '<small>\u00a9 <span id="year"></span> Harmonic Tools</small>';
+      '<small>\u00a9 <span id="year"></span> Harmonic Tools</small>' +
+      '<ul class="footer-social">' +
+      '<li><a href="https://www.instagram.com/harmonictools.app" target="_blank" rel="noopener noreferrer" aria-label="Harmonic Tools on Instagram">' + INSTAGRAM_SVG + '</a></li>' +
+      '</ul>';
 
     if (type === 'full') {
       html += '<ul class="footer-links">' +
