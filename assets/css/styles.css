@@ -1227,6 +1227,74 @@ img { max-width: 100%; height: auto; display: block }
   letter-spacing: 0.02em;
 }
 
+.theory-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 0 12px;
+}
+
+.theory-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.theory-table th,
+.theory-table td {
+  text-align: left;
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.theory-table thead th {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.theory-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.theory-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.theory-table .intervals,
+.theory-table .sym {
+  color: var(--muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.theory-notes {
+  margin: 4px 0 12px;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.theory-notes li {
+  margin-bottom: 6px;
+}
+
+.theory-notes strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.theory-flow {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
 @media (max-width: 600px) {
   .theory-coverage {
     margin-top: 56px;
@@ -1251,6 +1319,13 @@ img { max-width: 100%; height: auto; display: block }
   .theory-tags li {
     font-size: 12px;
     padding: 4px 8px;
+  }
+  .theory-table {
+    font-size: 12px;
+  }
+  .theory-table th,
+  .theory-table td {
+    padding: 6px 8px;
   }
   .theory-group {
     margin-bottom: 32px;
