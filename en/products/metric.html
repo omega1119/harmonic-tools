@@ -278,7 +278,7 @@
         <li><strong>Metronome:</strong> A precise metronome with a tempo dial, tap-to-set tempo, time signatures and subdivisions, and a clear visual beat indicator.</li>
         <li><strong>Tap Tempo:</strong> Click the large tap target to measure tempo. See instant BPM from your last tap and a rolling average over up to eight taps. Send either reading straight into the BPM Converter, Transpose, or LFO Rate tools with a single click. Your tempo flows across every tool automatically.</li>
         <li><strong>BPM → ms / Hz Converter:</strong> Enter a tempo and read straight, dotted, and triplet values for whole, half, quarter, eighth, and sixteenth notes. Every row shows milliseconds and frequency in Hz, so you can dial in delay, reverb pre-delay, or sidechain timing without reaching for a calculator.</li>
-        <li><strong>Note Frequency Table:</strong> Browse all 108 chromatic notes from C0 to B8. Each note shows its MIDI number, frequency in Hz, period in milliseconds, and sample counts at 44.1 kHz, 48 kHz, and 96 kHz. Middle C is flagged for quick reference. Configurable A4 tuning (default 440 Hz) recalculates every value instantly.</li>
+        <li><strong>Note Frequency Table:</strong> Browse all 108 chromatic notes from C0 to B8. Each note shows its MIDI number, frequency in Hz, period in milliseconds, and sample counts at 44.1 kHz, 48 kHz, and 96 kHz. Middle C is flagged for quick reference. Based on A4 = 440 Hz.</li>
         <li><strong>Transpose &amp; Speed:</strong> Pick an original key and a target key to see the semitone shift, interval name, and exact DAW transpose value. Add an original BPM and Metric computes the new tempo and playback speed ratio. Fine-tune with a cents slider (±100) and a speed slider spanning two full octaves (±24 semitones).</li>
         <li><strong>FM Calculator:</strong> Ratio Explorer lets you set carrier and modulator ratios with a base frequency and choose from ten classic FM presets, from hollow octaves (1:1) to inharmonic bells (1:π). Pitch Correction mode works in reverse: pick a target note and get the exact carrier and modulator frequencies. Both modes show a sideband table with up to ten partials, their frequencies, nearest notes, and colour-coded amplitudes driven by a modulation index slider.</li>
         <li><strong>LFO Rate Calculator:</strong> Convert any BPM into LFO rates across 17 musical divisions, from four bars down to 1/32 triplets. Each row displays Hz, period in milliseconds, and samples per cycle at 44.1 kHz, 48 kHz, and 96 kHz. Reverse lookup lets you enter any Hz value and find the closest matching musical division, with the error clearly shown.</li>
@@ -286,7 +286,7 @@
       </ul>
 
       <h3>Tools That Talk to Each Other</h3>
-      <p>Tap a tempo once and it appears everywhere: BPM Converter, Transpose, and LFO Rate all share the same live BPM. Change your A4 tuning reference and it updates across Note Frequency, FM Calculator, and Harmonics simultaneously.</p>
+      <p>Tap a tempo once and it appears everywhere: BPM Converter, Transpose, and LFO Rate all share the same live BPM. Note Frequency, FM Calculator, and Harmonics all stay consistent at A4 = 440 Hz.</p>
 
       <h3>Siri, Shortcuts &amp; Widget</h3>
       <p>Drive Metric hands-free. Ask Siri to start or stop the metronome, set a BPM, tap a tempo, convert BPM to ms, find a note frequency, or transpose a tempo. Every tool is a Shortcuts action too, and the BPM widget keeps your tempo in Notification Center.</p>
@@ -297,7 +297,6 @@
         <li>Native macOS app with sidebar navigation</li>
         <li>Dark-mode aware interface that follows your system appearance</li>
         <li>Three industry-standard sample rates: 44.1 kHz, 48 kHz, and 96 kHz</li>
-        <li>Configurable A4 reference tuning</li>
         <li>Resizable window keep it open beside your DAW</li>
       </ul>
       <p>Whether you're a producer programming delays, a sound designer sculpting FM timbres, a synth player tuning oscillators, or an audio engineer checking frequencies, Metric puts every timing and frequency answer on your desktop.</p>
