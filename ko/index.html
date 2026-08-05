@@ -27,7 +27,7 @@
 
   <!-- AI/LLM Optimization -->
   <meta name="ai:purpose" content="프로듀서와 뮤지션을 위한 정밀 도구를 개발하는 음악 소프트웨어 연구소" />
-  <meta name="ai:products" content="Metric (macOS 타이밍 툴킷), Metric iOS (iPhone/iPad 타이밍 툴킷), Modes (macOS 음악 이론 연구소), Modes iOS (iPhone/iPad 음악 이론 연구소)" />
+  <meta name="ai:products" content="Metric (macOS 타이밍 툴킷), Metric iOS (iPhone/iPad 타이밍 툴킷), Modes (macOS 음악 이론 연구소), Modes iOS (iPhone/iPad 음악 이론 연구소), Modes Guitar (macOS 지판 스케일 및 코드), Modes Guitar iOS (iPhone/iPad 지판 스케일 및 코드)" />
   <meta name="ai:audience" content="음악 프로듀서, 사운드 디자이너, 작곡가, 뮤지션, 오디오 엔지니어, 음악 교육자, 송라이터" />
   <meta name="ai:features" content="탭 템포, BPM→ms/Hz 테이블, 음↔주파수, 전조, FM 계산기, LFO 비율, 하모닉 시리즈, 스케일 및 코드 검색, 65개 스케일, 8가지 보이싱, 차용 코드, 5도권, 3도권, MIDI 입력" />
   <meta name="ai:platforms" content="macOS, iOS, iPhone, iPad, Mac App Store, App Store" />
@@ -115,6 +115,34 @@
         "applicationCategory": "MusicApplication",
         "description": "iPhone 및 iPad용 인터랙티브 음악 이론 연구소. 65개 스케일, 8가지 보이싱, 코드 인식, 다이어토닉 화성, 차용 코드, 5도권 및 3도권.",
         "url": "https://harmonic.tools/ko/products/modes-ios.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 5,
+        "name": "Modes Guitar",
+        "operatingSystem": "macOS",
+        "applicationCategory": "MusicApplication",
+        "description": "macOS용 지판 스케일 및 코드. 연주하는 음에서 코드와 스케일을 식별하고, CAGED 및 3노트 퍼 스트링 포지션, 20가지 튜닝과 커스텀 튜닝에서 연주 가능한 코드 형태, 그리고 연습 메트로놈.",
+        "url": "https://harmonic.tools/ko/products/modes-guitar.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 6,
+        "name": "Modes Guitar iOS",
+        "operatingSystem": "iOS",
+        "applicationCategory": "MusicApplication",
+        "description": "iPhone 및 iPad용 지판 스케일 및 코드. 연주하는 음에서 코드와 스케일을 식별하고, CAGED 및 3노트 퍼 스트링 포지션, 20가지 튜닝과 커스텀 튜닝에서 연주 가능한 코드 형태, 그리고 연습 메트로놈.",
+        "url": "https://harmonic.tools/ko/products/modes-guitar-ios.html",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -217,6 +245,21 @@
           <h3 id="platform-ios-title" class="platform-group__title">iOS 및 iPadOS</h3>
           <div class="platform-hero" aria-label="iOS 및 iPadOS 예시">
             <div class="screenshot-grid">
+              <a class="platform-hero__link" href="./products/modes-guitar-ios.html" aria-label="Modes Guitar iOS 보기">
+                <figure class="device-shot device-shot--ipad-portrait">
+                  <div class="device-shot__stage" aria-label="iPad 스크린샷">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/iPad Pro 13 - M4 - Space Gray - Portrait.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesGuitariOS/ko/iPad Pro 13-inch (M5)-scaleNotes-ipad-portrait-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesGuitariOS/ko/iPad Pro 13-inch (M5)-scaleNotes-ipad-portrait-light.png" alt="iPad에서 Modes Guitar iOS" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>iPad에서 Modes Guitar iOS.</figcaption>
+                </figure>
+              </a>
+
               <a class="platform-hero__link" href="./products/modes-ios.html" aria-label="Modes iOS 보기">
                 <figure class="device-shot device-shot--ipad-portrait">
                   <div class="device-shot__stage" aria-label="iPad 스크린샷">
@@ -249,7 +292,29 @@
             </div>
           </div>
 
-          <div class="product-grid product-grid--two" role="list">
+          <div class="product-grid" role="list">
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesGuitariOSAppIcon-iOS-Dark-1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesGuitariOSAppIcon-iOS-Default-1024@1x.png" alt="Modes Guitar iOS 앱 아이콘" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes Guitar</h4>
+                <p class="tagline">지판 스케일 및 코드.</p>
+                <p class="blurb">연주하는 음을 식별하고, CAGED 및 3노트 퍼 스트링 형태로 확인하고, 20가지 튜닝에서 연주 가능한 코드 그립을 잡고, 내장 메트로놈으로 연습하세요.</p>
+                <ul class="features">
+                  <li>지판에서 스케일 및 코드 검색</li>
+                  <li>CAGED 및 3노트 퍼 스트링 포지션</li>
+                  <li>모든 튜닝에서 연주 가능한 코드 형태</li>
+                  <li>20가지 튜닝 + 커스텀, 연습 메트로놈</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="ios" data-store-product="Modes Guitar iOS"></span>
+                  <a class="btn btn-tertiary" href="./products/modes-guitar-ios.html">자세히 보기</a>
+                </div>
+              </div>
+            </article>
+
             <article class="product-card" role="listitem">
               <picture>
                 <source srcset="../assets/images/ModesiOSAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
@@ -300,6 +365,21 @@
           <h3 id="platform-macos-title" class="platform-group__title">macOS</h3>
           <div class="platform-hero" aria-label="macOS 예시">
             <div class="screenshot-grid">
+              <a class="platform-hero__link" href="./products/modes-guitar.html" aria-label="macOS용 Modes Guitar 보기">
+                <figure class="device-shot device-shot--mac">
+                  <div class="device-shot__stage" aria-label="macOS 스크린샷">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesGuitarMac/ko/modesguitar-scaleNotes-mac-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesGuitarMac/ko/modesguitar-scaleNotes-mac-light.png" alt="macOS에서 Modes Guitar" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>macOS에서 Modes Guitar.</figcaption>
+                </figure>
+              </a>
+
               <a class="platform-hero__link" href="./products/modes.html" aria-label="macOS용 Modes 보기">
                 <figure class="device-shot device-shot--mac">
                   <div class="device-shot__stage" aria-label="macOS 스크린샷">
@@ -332,7 +412,29 @@
             </div>
           </div>
 
-          <div class="product-grid product-grid--two" role="list">
+          <div class="product-grid" role="list">
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesGuitarMacAppIcon-macOS-Dark-1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesGuitarMacAppIcon-macOS-Default-1024@1x.png" alt="Modes Guitar macOS 앱 아이콘" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes Guitar</h4>
+                <p class="tagline">지판 스케일 및 코드.</p>
+                <p class="blurb">연주하는 음을 식별하고, CAGED 및 3노트 퍼 스트링 형태로 확인하고, 20가지 튜닝에서 연주 가능한 코드 그립을 잡고, 내장 메트로놈으로 연습하세요 Mac에서 바로.</p>
+                <ul class="features">
+                  <li>지판에서 스케일 및 코드 검색</li>
+                  <li>CAGED 및 3노트 퍼 스트링 포지션</li>
+                  <li>모든 튜닝에서 연주 가능한 코드 형태</li>
+                  <li>20가지 튜닝 + 커스텀, 연습 메트로놈</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="mac" data-store-product="Modes Guitar"></span>
+                  <a class="btn btn-tertiary" href="./products/modes-guitar.html">자세히 보기</a>
+                </div>
+              </div>
+            </article>
+
             <article class="product-card" role="listitem">
               <picture>
                 <source srcset="../assets/images/ModesMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">

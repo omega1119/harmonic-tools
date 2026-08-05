@@ -27,7 +27,7 @@
 
   <!-- AI/LLM Optimization -->
   <meta name="ai:purpose" content="Laboratorio de software musical que desarrolla herramientas de precisión para productores y músicos" />
-  <meta name="ai:products" content="Metric (toolkit de timing macOS), Metric iOS (toolkit de timing iPhone/iPad), Modes (laboratorio de teoría musical macOS), Modes iOS (laboratorio de teoría musical iPhone/iPad)" />
+  <meta name="ai:products" content="Metric (toolkit de timing macOS), Metric iOS (toolkit de timing iPhone/iPad), Modes (laboratorio de teoría musical macOS), Modes iOS (laboratorio de teoría musical iPhone/iPad), Modes Guitar (escalas y acordes en el mástil macOS), Modes Guitar iOS (escalas y acordes en el mástil iPhone/iPad)" />
   <meta name="ai:audience" content="Productores musicales, diseñadores de sonido, compositores, músicos, ingenieros de audio, educadores musicales, compositores de canciones" />
   <meta name="ai:features" content="Tap-tempo, tablas BPM→ms/Hz, nota↔frecuencia, transposición, calculadora FM, tasa LFO, serie armónica, búsqueda de escalas y acordes, 65 escalas, 8 tipos de voicings, acordes prestados, círculo de quintas, círculo de terceras, entrada MIDI" />
   <meta name="ai:platforms" content="macOS, iOS, iPhone, iPad, Mac App Store, App Store" />
@@ -115,6 +115,34 @@
         "applicationCategory": "MusicApplication",
         "description": "Laboratorio interactivo de teoría musical para iPhone y iPad. 65 escalas, 8 tipos de voicings, reconocimiento de acordes, armonía diatónica, acordes prestados, círculo de quintas y círculo de terceras.",
         "url": "https://harmonic.tools/es/products/modes-ios.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 5,
+        "name": "Modes Guitar",
+        "operatingSystem": "macOS",
+        "applicationCategory": "MusicApplication",
+        "description": "Escalas y acordes en el mástil para macOS. Identifique acordes y escalas a partir de las notas que toca, posiciones CAGED y de tres notas por cuerda, posturas de acordes tocables en 20 afinaciones más una afinación personalizada y un metrónomo de práctica.",
+        "url": "https://harmonic.tools/es/products/modes-guitar.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 6,
+        "name": "Modes Guitar iOS",
+        "operatingSystem": "iOS",
+        "applicationCategory": "MusicApplication",
+        "description": "Escalas y acordes en el mástil para iPhone y iPad. Identifique acordes y escalas a partir de las notas que toca, posiciones CAGED y de tres notas por cuerda, posturas de acordes tocables en 20 afinaciones más una afinación personalizada y un metrónomo de práctica.",
+        "url": "https://harmonic.tools/es/products/modes-guitar-ios.html",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -217,6 +245,21 @@
           <h3 id="platform-ios-title" class="platform-group__title">iOS e iPadOS</h3>
           <div class="platform-hero" aria-label="Ejemplos de iOS e iPadOS">
             <div class="screenshot-grid">
+              <a class="platform-hero__link" href="./products/modes-guitar-ios.html" aria-label="Ver Modes Guitar iOS">
+                <figure class="device-shot device-shot--ipad-portrait">
+                  <div class="device-shot__stage" aria-label="Captura de pantalla de iPad">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/iPad Pro 13 - M4 - Space Gray - Portrait.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesGuitariOS/es-ES/iPad Pro 13-inch (M5)-scaleNotes-ipad-portrait-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesGuitariOS/es-ES/iPad Pro 13-inch (M5)-scaleNotes-ipad-portrait-light.png" alt="Modes Guitar iOS en iPad" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>Modes Guitar iOS en iPad.</figcaption>
+                </figure>
+              </a>
+
               <a class="platform-hero__link" href="./products/modes-ios.html" aria-label="Ver Modes iOS">
                 <figure class="device-shot device-shot--ipad-portrait">
                   <div class="device-shot__stage" aria-label="Captura de pantalla de iPad">
@@ -249,7 +292,29 @@
             </div>
           </div>
 
-          <div class="product-grid product-grid--two" role="list">
+          <div class="product-grid" role="list">
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesGuitariOSAppIcon-iOS-Dark-1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesGuitariOSAppIcon-iOS-Default-1024@1x.png" alt="Icono de la app Modes Guitar iOS" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes Guitar</h4>
+                <p class="tagline">Escalas y acordes en el mástil.</p>
+                <p class="blurb">Identifique lo que está tocando, véalo en posiciones CAGED y de tres notas por cuerda, obtenga posturas de acordes tocables en 20 afinaciones y practíquelo con el metrónomo integrado.</p>
+                <ul class="features">
+                  <li>Identificación de escalas y acordes en el mástil</li>
+                  <li>Posiciones CAGED y de tres notas por cuerda</li>
+                  <li>Posturas de acordes tocables en cualquier afinación</li>
+                  <li>20 afinaciones + personalizada, metrónomo de práctica</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="ios" data-store-product="Modes Guitar iOS"></span>
+                  <a class="btn btn-tertiary" href="./products/modes-guitar-ios.html">Más información</a>
+                </div>
+              </div>
+            </article>
+
             <article class="product-card" role="listitem">
               <picture>
                 <source srcset="../assets/images/ModesiOSAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
@@ -300,6 +365,21 @@
           <h3 id="platform-macos-title" class="platform-group__title">macOS</h3>
           <div class="platform-hero" aria-label="Ejemplos de macOS">
             <div class="screenshot-grid">
+              <a class="platform-hero__link" href="./products/modes-guitar.html" aria-label="Ver Modes Guitar para macOS">
+                <figure class="device-shot device-shot--mac">
+                  <div class="device-shot__stage" aria-label="Captura de pantalla de macOS">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesGuitarMac/es-ES/modesguitar-scaleNotes-mac-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesGuitarMac/es-ES/modesguitar-scaleNotes-mac-light.png" alt="Modes Guitar en macOS" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>Modes Guitar en macOS.</figcaption>
+                </figure>
+              </a>
+
               <a class="platform-hero__link" href="./products/modes.html" aria-label="Ver Modes para macOS">
                 <figure class="device-shot device-shot--mac">
                   <div class="device-shot__stage" aria-label="Captura de pantalla de macOS">
@@ -332,7 +412,29 @@
             </div>
           </div>
 
-          <div class="product-grid product-grid--two" role="list">
+          <div class="product-grid" role="list">
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesGuitarMacAppIcon-macOS-Dark-1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesGuitarMacAppIcon-macOS-Default-1024@1x.png" alt="Icono de la app Modes Guitar macOS" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes Guitar</h4>
+                <p class="tagline">Escalas y acordes en el mástil.</p>
+                <p class="blurb">Identifique lo que está tocando, véalo en posiciones CAGED y de tres notas por cuerda, obtenga posturas de acordes tocables en 20 afinaciones y practíquelo con el metrónomo integrado directamente en su Mac.</p>
+                <ul class="features">
+                  <li>Identificación de escalas y acordes en el mástil</li>
+                  <li>Posiciones CAGED y de tres notas por cuerda</li>
+                  <li>Posturas de acordes tocables en cualquier afinación</li>
+                  <li>20 afinaciones + personalizada, metrónomo de práctica</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="mac" data-store-product="Modes Guitar"></span>
+                  <a class="btn btn-tertiary" href="./products/modes-guitar.html">Más información</a>
+                </div>
+              </div>
+            </article>
+
             <article class="product-card" role="listitem">
               <picture>
                 <source srcset="../assets/images/ModesMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">

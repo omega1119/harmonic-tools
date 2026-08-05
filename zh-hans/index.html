@@ -27,7 +27,7 @@
 
   <!-- AI/LLM Optimization -->
   <meta name="ai:purpose" content="为制作人与音乐人打造精准工具的音乐软件实验室" />
-  <meta name="ai:products" content="Metric（macOS时间工具包）、Metric iOS（iPhone/iPad时间工具包）、Modes（macOS乐理实验室）、Modes iOS（iPhone/iPad乐理实验室）" />
+  <meta name="ai:products" content="Metric（macOS时间工具包）、Metric iOS（iPhone/iPad时间工具包）、Modes（macOS乐理实验室）、Modes iOS（iPhone/iPad乐理实验室）、Modes Guitar（macOS指板音阶与和弦）、Modes Guitar iOS（iPhone/iPad指板音阶与和弦）" />
   <meta name="ai:audience" content="音乐制作人、音效设计师、作曲家、音乐人、音频工程师、音乐教育工作者、词曲作者" />
   <meta name="ai:features" content="触拍测速、BPM→ms/Hz表、音符↔频率、移调、FM计算器、LFO速率、泛音列、音阶与和弦查找器、65种音阶、8种声部排列、离调和弦、五度圈、三度圈、MIDI输入" />
   <meta name="ai:platforms" content="macOS, iOS, iPhone, iPad, Mac App Store, App Store" />
@@ -115,6 +115,34 @@
         "applicationCategory": "MusicApplication",
         "description": "适用于iPhone和iPad的互动乐理实验室。65种音阶、8种声部排列、和弦识别、自然音阶和声、离调和弦、五度圈和三度圈。",
         "url": "https://harmonic.tools/zh-hans/products/modes-ios.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 5,
+        "name": "Modes Guitar",
+        "operatingSystem": "macOS",
+        "applicationCategory": "MusicApplication",
+        "description": "适用于macOS的指板音阶与和弦。从您演奏的音符中识别和弦与音阶，CAGED与三音一弦把位，20种调弦加自定义调弦下的可弹奏和弦指型，以及练习节拍器。",
+        "url": "https://harmonic.tools/zh-hans/products/modes-guitar.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 6,
+        "name": "Modes Guitar iOS",
+        "operatingSystem": "iOS",
+        "applicationCategory": "MusicApplication",
+        "description": "适用于iPhone和iPad的指板音阶与和弦。从您演奏的音符中识别和弦与音阶，CAGED与三音一弦把位，20种调弦加自定义调弦下的可弹奏和弦指型，以及练习节拍器。",
+        "url": "https://harmonic.tools/zh-hans/products/modes-guitar-ios.html",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -217,6 +245,21 @@
           <h3 id="platform-ios-title" class="platform-group__title">iOS与iPadOS</h3>
           <div class="platform-hero" aria-label="iOS与iPadOS示例">
             <div class="screenshot-grid">
+              <a class="platform-hero__link" href="./products/modes-guitar-ios.html" aria-label="查看Modes Guitar iOS">
+                <figure class="device-shot device-shot--ipad-portrait">
+                  <div class="device-shot__stage" aria-label="iPad截图">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/iPad Pro 13 - M4 - Space Gray - Portrait.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesGuitariOS/zh-Hans/iPad Pro 13-inch (M5)-scaleNotes-ipad-portrait-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesGuitariOS/zh-Hans/iPad Pro 13-inch (M5)-scaleNotes-ipad-portrait-light.png" alt="iPad上的Modes Guitar iOS" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>iPad上的Modes Guitar iOS。</figcaption>
+                </figure>
+              </a>
+
               <a class="platform-hero__link" href="./products/modes-ios.html" aria-label="查看Modes iOS">
                 <figure class="device-shot device-shot--ipad-portrait">
                   <div class="device-shot__stage" aria-label="iPad截图">
@@ -249,7 +292,29 @@
             </div>
           </div>
 
-          <div class="product-grid product-grid--two" role="list">
+          <div class="product-grid" role="list">
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesGuitariOSAppIcon-iOS-Dark-1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesGuitariOSAppIcon-iOS-Default-1024@1x.png" alt="Modes Guitar iOS应用图标" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes Guitar</h4>
+                <p class="tagline">指板音阶与和弦。</p>
+                <p class="blurb">识别您正在演奏的内容，以CAGED和三音一弦形态查看，在20种调弦下获取可弹奏的和弦指型，并用内置节拍器进行练习。</p>
+                <ul class="features">
+                  <li>琴颈上的音阶与和弦查找器</li>
+                  <li>CAGED与三音一弦把位</li>
+                  <li>任意调弦下的可弹奏和弦指型</li>
+                  <li>20种调弦 + 自定义，练习节拍器</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="ios" data-store-product="Modes Guitar iOS"></span>
+                  <a class="btn btn-tertiary" href="./products/modes-guitar-ios.html">了解更多</a>
+                </div>
+              </div>
+            </article>
+
             <article class="product-card" role="listitem">
               <picture>
                 <source srcset="../assets/images/ModesiOSAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
@@ -300,6 +365,21 @@
           <h3 id="platform-macos-title" class="platform-group__title">macOS</h3>
           <div class="platform-hero" aria-label="macOS示例">
             <div class="screenshot-grid">
+              <a class="platform-hero__link" href="./products/modes-guitar.html" aria-label="查看macOS版Modes Guitar">
+                <figure class="device-shot device-shot--mac">
+                  <div class="device-shot__stage" aria-label="macOS截图">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesGuitarMac/zh-Hans/modesguitar-scaleNotes-mac-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesGuitarMac/zh-Hans/modesguitar-scaleNotes-mac-light.png" alt="macOS上的Modes Guitar" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>macOS上的Modes Guitar。</figcaption>
+                </figure>
+              </a>
+
               <a class="platform-hero__link" href="./products/modes.html" aria-label="查看macOS版Modes">
                 <figure class="device-shot device-shot--mac">
                   <div class="device-shot__stage" aria-label="macOS截图">
@@ -332,7 +412,29 @@
             </div>
           </div>
 
-          <div class="product-grid product-grid--two" role="list">
+          <div class="product-grid" role="list">
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesGuitarMacAppIcon-macOS-Dark-1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesGuitarMacAppIcon-macOS-Default-1024@1x.png" alt="Modes Guitar macOS应用图标" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes Guitar</h4>
+                <p class="tagline">指板音阶与和弦。</p>
+                <p class="blurb">识别您正在演奏的内容，以CAGED和三音一弦形态查看，在20种调弦下获取可弹奏的和弦指型，并直接在Mac上用内置节拍器进行练习。</p>
+                <ul class="features">
+                  <li>琴颈上的音阶与和弦查找器</li>
+                  <li>CAGED与三音一弦把位</li>
+                  <li>任意调弦下的可弹奏和弦指型</li>
+                  <li>20种调弦 + 自定义，练习节拍器</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="mac" data-store-product="Modes Guitar"></span>
+                  <a class="btn btn-tertiary" href="./products/modes-guitar.html">了解更多</a>
+                </div>
+              </div>
+            </article>
+
             <article class="product-card" role="listitem">
               <picture>
                 <source srcset="../assets/images/ModesMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">

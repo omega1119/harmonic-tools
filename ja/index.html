@@ -27,7 +27,7 @@
 
   <!-- AI/LLM Optimization -->
   <meta name="ai:purpose" content="プロデューサーとミュージシャンのための精密ツールを開発する音楽ソフトウェアラボ" />
-  <meta name="ai:products" content="Metric（macOSタイミングツールキット）、Metric iOS（iPhone/iPadタイミングツールキット）、Modes（macOS音楽理論ラボ）、Modes iOS（iPhone/iPad音楽理論ラボ）" />
+  <meta name="ai:products" content="Metric（macOSタイミングツールキット）、Metric iOS（iPhone/iPadタイミングツールキット）、Modes（macOS音楽理論ラボ）、Modes iOS（iPhone/iPad音楽理論ラボ）、Modes Guitar（macOSフレットボードスケール＆コード）、Modes Guitar iOS（iPhone/iPadフレットボードスケール＆コード）" />
   <meta name="ai:audience" content="音楽プロデューサー, サウンドデザイナー, 作曲家, ミュージシャン, オーディオエンジニア, 音楽教育者, ソングライター" />
   <meta name="ai:features" content="タップテンポ, BPM→ms/Hzテーブル, 音↔周波数, 移調, FM計算機, LFOレート, ハーモニックシリーズ, スケール&コード検索, 65スケール, 8ボイシング, 借用コード, 五度圏, 三度圏, MIDI入力" />
   <meta name="ai:platforms" content="macOS, iOS, iPhone, iPad, Mac App Store, App Store" />
@@ -115,6 +115,34 @@
         "applicationCategory": "MusicApplication",
         "description": "iPhoneおよびiPad用インタラクティブ音楽理論ラボ。65スケール、8ボイシング、コード認識、ダイアトニックハーモニー、借用コード、五度圏、三度圏。",
         "url": "https://harmonic.tools/ja/products/modes-ios.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 5,
+        "name": "Modes Guitar",
+        "operatingSystem": "macOS",
+        "applicationCategory": "MusicApplication",
+        "description": "macOS用フレットボードスケール＆コード。演奏した音からコードとスケールを識別、CAGEDおよび3ノート・パー・ストリングのポジション、20種類のチューニング＋カスタムチューニングで演奏可能なコードフォーム、練習用メトロノーム。",
+        "url": "https://harmonic.tools/ja/products/modes-guitar.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 6,
+        "name": "Modes Guitar iOS",
+        "operatingSystem": "iOS",
+        "applicationCategory": "MusicApplication",
+        "description": "iPhoneおよびiPad用フレットボードスケール＆コード。演奏した音からコードとスケールを識別、CAGEDおよび3ノート・パー・ストリングのポジション、20種類のチューニング＋カスタムチューニングで演奏可能なコードフォーム、練習用メトロノーム。",
+        "url": "https://harmonic.tools/ja/products/modes-guitar-ios.html",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -217,6 +245,21 @@
           <h3 id="platform-ios-title" class="platform-group__title">iOSおよびiPadOS</h3>
           <div class="platform-hero" aria-label="iOSおよびiPadOSの例">
             <div class="screenshot-grid">
+              <a class="platform-hero__link" href="./products/modes-guitar-ios.html" aria-label="Modes Guitar iOSを見る">
+                <figure class="device-shot device-shot--ipad-portrait">
+                  <div class="device-shot__stage" aria-label="iPadスクリーンショット">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/iPad Pro 13 - M4 - Space Gray - Portrait.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesGuitariOS/ja/iPad Pro 13-inch (M5)-scaleNotes-ipad-portrait-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesGuitariOS/ja/iPad Pro 13-inch (M5)-scaleNotes-ipad-portrait-light.png" alt="iPadでのModes Guitar iOS" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>iPadでのModes Guitar iOS。</figcaption>
+                </figure>
+              </a>
+
               <a class="platform-hero__link" href="./products/modes-ios.html" aria-label="Modes iOSを見る">
                 <figure class="device-shot device-shot--ipad-portrait">
                   <div class="device-shot__stage" aria-label="iPadスクリーンショット">
@@ -249,7 +292,29 @@
             </div>
           </div>
 
-          <div class="product-grid product-grid--two" role="list">
+          <div class="product-grid" role="list">
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesGuitariOSAppIcon-iOS-Dark-1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesGuitariOSAppIcon-iOS-Default-1024@1x.png" alt="Modes Guitar iOSアプリアイコン" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes Guitar</h4>
+                <p class="tagline">フレットボードスケール＆コード。</p>
+                <p class="blurb">演奏している音を識別し、CAGEDおよび3ノート・パー・ストリングのポジションで表示、20種類のチューニングで演奏可能なコードフォームを取得、内蔵メトロノームで練習。</p>
+                <ul class="features">
+                  <li>ネック上でスケール＆コード検索</li>
+                  <li>CAGED＆3ノート・パー・ストリングのポジション</li>
+                  <li>あらゆるチューニングで演奏可能なコードフォーム</li>
+                  <li>20種類のチューニング＋カスタム、練習用メトロノーム</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="ios" data-store-product="Modes Guitar iOS"></span>
+                  <a class="btn btn-tertiary" href="./products/modes-guitar-ios.html">詳しく見る</a>
+                </div>
+              </div>
+            </article>
+
             <article class="product-card" role="listitem">
               <picture>
                 <source srcset="../assets/images/ModesiOSAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
@@ -300,6 +365,21 @@
           <h3 id="platform-macos-title" class="platform-group__title">macOS</h3>
           <div class="platform-hero" aria-label="macOSの例">
             <div class="screenshot-grid">
+              <a class="platform-hero__link" href="./products/modes-guitar.html" aria-label="macOS用Modes Guitarを見る">
+                <figure class="device-shot device-shot--mac">
+                  <div class="device-shot__stage" aria-label="macOSスクリーンショット">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesGuitarMac/ja/modesguitar-scaleNotes-mac-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesGuitarMac/ja/modesguitar-scaleNotes-mac-light.png" alt="macOSでのModes Guitar" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>macOSでのModes Guitar。</figcaption>
+                </figure>
+              </a>
+
               <a class="platform-hero__link" href="./products/modes.html" aria-label="macOS用Modesを見る">
                 <figure class="device-shot device-shot--mac">
                   <div class="device-shot__stage" aria-label="macOSスクリーンショット">
@@ -332,7 +412,29 @@
             </div>
           </div>
 
-          <div class="product-grid product-grid--two" role="list">
+          <div class="product-grid" role="list">
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesGuitarMacAppIcon-macOS-Dark-1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesGuitarMacAppIcon-macOS-Default-1024@1x.png" alt="Modes Guitar macOSアプリアイコン" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes Guitar</h4>
+                <p class="tagline">フレットボードスケール＆コード。</p>
+                <p class="blurb">演奏している音を識別し、CAGEDおよび3ノート・パー・ストリングのポジションで表示、20種類のチューニングで演奏可能なコードフォームを取得、内蔵メトロノームで練習 Macで直接。</p>
+                <ul class="features">
+                  <li>ネック上でスケール＆コード検索</li>
+                  <li>CAGED＆3ノート・パー・ストリングのポジション</li>
+                  <li>あらゆるチューニングで演奏可能なコードフォーム</li>
+                  <li>20種類のチューニング＋カスタム、練習用メトロノーム</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="mac" data-store-product="Modes Guitar"></span>
+                  <a class="btn btn-tertiary" href="./products/modes-guitar.html">詳しく見る</a>
+                </div>
+              </div>
+            </article>
+
             <article class="product-card" role="listitem">
               <picture>
                 <source srcset="../assets/images/ModesMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
