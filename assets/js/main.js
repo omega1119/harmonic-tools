@@ -245,10 +245,12 @@
   // Apple universal links handle device routing (iOS vs Mac) and
   // localisation automatically — one URL per product is sufficient.
   const STORE_URLS = {
-    'Modes':      'https://apps.apple.com/app/modes/id6757521945',
-    'Modes iOS':  'https://apps.apple.com/app/modes/id6757521945',
-    'Metric':     'https://apps.apple.com/app/metric/id6757522050',
-    'Metric iOS': 'https://apps.apple.com/app/metric/id6757522050'
+    'Modes':            'https://apps.apple.com/app/modes/id6757521945',
+    'Modes iOS':        'https://apps.apple.com/app/modes/id6757521945',
+    'Metric':           'https://apps.apple.com/app/metric/id6757522050',
+    'Metric iOS':       'https://apps.apple.com/app/metric/id6757522050',
+    'Modes Guitar':     'https://apps.apple.com/us/app/modes-guitar/id6795276397',
+    'Modes Guitar iOS': 'https://apps.apple.com/us/app/modes-guitar/id6795276397'
   };
   const STORE_BADGE_DATA = {
     en: {
