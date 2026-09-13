@@ -1,0 +1,19 @@
+name: Site check
+
+on:
+  pull_request:
+
+jobs:
+  check-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      # continue-on-error: this repo has pre-existing findings (see the
+      # web-common Phase 3 audit) that haven't been triaged yet. Remove
+      # continue-on-error once those are cleared to make this a required check.
+      - name: Run site checks
+        continue-on-error: true
+        run: python3 .github/scripts/check-site.py .
