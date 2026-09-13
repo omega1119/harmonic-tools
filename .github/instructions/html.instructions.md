@@ -4,10 +4,13 @@ applyTo: "**/*.html"
 
 - Use semantic markup (`header`, `nav`, `main`, `section`, `footer`) over generic
   `div`s where an element already means the right thing.
-- Every localized page carries the full `hreflang` block: one
-  `<link rel="alternate" hreflang="...">` per supported locale plus `x-default`,
-  and the page's own locale must be included (self-reference), pointing at the
-  correct relative path.
+- Localized `hreflang` `<link>` tags are injected client-side by `main.js`'s
+  hreflang injector from a `HREFLANG_LANGS` array (see
+  `agents/instructions/common/js.instructions.md`) — do not look for them as
+  static markup in the HTML, and do not hand-add static `<link rel="alternate"
+  hreflang="...">` tags (that would duplicate what the script already injects).
+  When adding a locale, the array and the locale directory must be kept in
+  sync, not the HTML.
 - The `data-languages` JSON attribute on `.language-selector` elements must be
   valid JSON, list every supported locale, and use correct relative paths for the
   page's depth (e.g. `./`, `../de/`, `../../de/products/metric.html`). Keep
