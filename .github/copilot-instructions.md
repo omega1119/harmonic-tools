@@ -29,8 +29,11 @@ or JS that reads them by exact string:
 
 - No external `<script src>` beyond Google's `gtag.js` — do not add other
   third-party scripts without asking first.
-- No new Google Fonts or other external stylesheet `<link>` tags on repos that
-  currently use the system font stack — that is a deliberate choice, not a gap.
+- Fonts are self-hosted (`assets/fonts/*.woff2` + `@font-face` in `styles.css`), not
+  loaded from Google Fonts or any other external stylesheet host. Every repo used to
+  load its body font (usually Inter) from `fonts.googleapis.com`; all were migrated
+  to self-hosted `@font-face` declarations in Sep 2026. Don't reintroduce an external
+  font `<link>` — add a new self-hosted woff2 instead.
 - When adding a page, copy an existing locale's page as the template rather than
   writing one from scratch, to keep markup structure consistent across locales.
 
