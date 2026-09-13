@@ -41,8 +41,10 @@ or JS that reads them by exact string:
 ## harmonic-tools specifics
 
 - Domain `harmonic.tools`. Publisher Greenwood IT Consultancy Ltd.
-- Google Analytics measurement ID `G-JQ9FPYHNVR` — shared with `plugscope-app`, not
-  unique to this repo. Don't treat it as private when reasoning about analytics.
+- Google Analytics measurement ID `G-JQ9FPYHNVR` — unique to this repo. It is NOT
+  shared with `plugscope-app` (that repo has its own ID, `G-WMME265SQC`); an earlier
+  version of this note was wrong. `nullform-audio` and `omega1119.github.io` each have
+  their own IDs too; `bidmetric-web` and `ihr` have no analytics wired in yet.
 - 11 locales: `en`, `de`, `es`, `fr`, `pl`, `ja`, `ko`, `pt-br`, `pt-pt`, `zh-hans`,
   `zh-hant`.
 - Products, each with an iOS and a macOS page: Metric, Modes, Modes Guitar. A
