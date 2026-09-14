@@ -10,4 +10,4 @@ applyTo: "**/products/*.html"
   translated on these pages. Table body data and tag lists do not.
 - Brand and technical tokens (Siri, Shortcuts, Spotlight, Dynamic Island, Live
   Activity, Notification Center, BPM, Hz, kHz, FM, LFO, MIDI) stay as-is in every
-  locale — don't translate or localize them.
+  locale: don't translate or localize them.

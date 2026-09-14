@@ -243,7 +243,7 @@
   // all others render as disabled "Coming Soon" badges.
   //
   // Apple universal links handle device routing (iOS vs Mac) and
-  // localisation automatically — one URL per product is sufficient.
+  // localisation automatically: one URL per product is sufficient.
   const STORE_URLS = {
     'Modes':            'https://apps.apple.com/app/modes/id6757521945',
     'Modes iOS':        'https://apps.apple.com/app/modes/id6757521945',
@@ -443,15 +443,15 @@
       img.height = 53;
 
       if (storeUrl) {
-        // Active badge — wrap in a link to the store
+        // Active badge: wrap in a link to the store
         el.classList.remove('store-badge--disabled');
-        el.setAttribute('aria-label', info.alt + ' \u2014 ' + product);
+        el.setAttribute('aria-label', info.alt + ': ' + product);
         var a = document.createElement('a');
         a.href = storeUrl;
         a.appendChild(img);
         el.appendChild(a);
       } else {
-        // Coming soon — disabled badge
+        // Coming soon: disabled badge
         el.setAttribute('aria-label', product + ' ' + info.ariaPrefix);
         el.appendChild(img);
         var label = document.createElement('span');
