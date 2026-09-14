@@ -45,10 +45,10 @@ harmonic-tools/
 
 ## Products
 
-- **Metric** — Desktop timing lab for macOS
-- **Metric iOS** — Timing toolkit for iOS
-- **Modes** — Music theory workspace for macOS
-- **Modes iOS** — Touch-first theory lab for iOS
+- **Metric**: Desktop timing lab for macOS
+- **Metric iOS**: Timing toolkit for iOS
+- **Modes**: Music theory workspace for macOS
+- **Modes iOS**: Touch-first theory lab for iOS
 
 ## Localization
 
@@ -80,5 +80,5 @@ The site is deployed via GitHub Pages from the repo root on the `main` branch.
 
 ## Related Repositories
 
-- [omega1119.github.io](https://github.com/omega1119/omega1119.github.io) — gitc.digital website
-- [nullform-audio](https://github.com/omega1119/nullform-audio) — nullform.audio website
+- [omega1119.github.io](https://github.com/omega1119/omega1119.github.io): gitc.digital website
+- [nullform-audio](https://github.com/omega1119/nullform-audio): nullform.audio website
