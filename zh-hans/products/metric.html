@@ -19,8 +19,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title>Metric macOS版 | 时间与频率工具包 | Harmonic Tools</title>
-  <meta name="description" content="节拍器、触拍测速、BPM表、音符↔频率、移调、FM与LFO计算器和32次泛音。现已支持Siri、Shortcuts和BPM小组件，尽在Mac上。" />
-  <meta name="keywords" content="节拍器, BPM, 触拍测速, 延迟计算器, 音符频率, FM合成, LFO, 泛音, 移调, Siri, Shortcuts, 小组件, 音乐制作, macOS, Mac, DAW" />
+  <meta name="description" content="节拍器、触拍测速、BPM表、音符↔频率、移调、FM与LFO计算器和32次泛音。现已支持菜单栏触拍测速、Siri、Shortcuts和BPM小组件，尽在Mac上。" />
+  <meta name="keywords" content="节拍器, BPM, 触拍测速, 延迟计算器, 音符频率, FM合成, LFO, 泛音, 移调, 菜单栏, Siri, Shortcuts, 小组件, 音乐制作, macOS, Mac, DAW" />
   <meta name="author" content="Harmonic Tools" />
   <meta name="robots" content="index, follow" />
 
@@ -28,7 +28,7 @@
   <meta name="ai:app_name" content="Metric" />
   <meta name="ai:platform" content="macOS" />
   <meta name="ai:category" content="音乐制作工具、时间计算器" />
-  <meta name="ai:primary_features" content="节拍器、触拍测速、BPM→ms/Hz表、音符↔频率、移调/速度、FM计算器、LFO速率、泛音列、Siri、Shortcuts、小组件" />
+  <meta name="ai:primary_features" content="节拍器、触拍测速、BPM→ms/Hz表、音符↔频率、移调/速度、FM计算器、LFO速率、泛音列、菜单栏触拍测速、Siri、Shortcuts、小组件" />
   <meta name="ai:use_cases" content="保持节拍、延迟时间计算、速度匹配、频率查询、合成运算、制作工作流" />
 
   <link rel="canonical" href="https://harmonic.tools/zh-hans/products/metric.html" />
@@ -37,7 +37,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://harmonic.tools/zh-hans/products/metric.html" />
   <meta property="og:title" content="Metric macOS版 | 时间与频率工具包" />
-  <meta property="og:description" content="节拍器、触拍测速、BPM表、音符↔频率、移调、FM与LFO计算器和32次泛音。现已支持Siri、Shortcuts和BPM小组件。" />
+  <meta property="og:description" content="节拍器、触拍测速、BPM表、音符↔频率、移调、FM与LFO计算器和32次泛音。现已支持菜单栏触拍测速、Siri、Shortcuts和BPM小组件。" />
   <meta property="og:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
   <meta property="og:image:alt" content="Metric macOS应用图标" />
   <meta property="og:site_name" content="Harmonic Tools" />
@@ -46,7 +46,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Metric macOS版 | 时间与频率工具包" />
-  <meta name="twitter:description" content="节拍器、触拍测速、BPM表、音符↔频率、移调、FM与LFO计算器和32次泛音。现已支持Siri、Shortcuts和BPM小组件。" />
+  <meta name="twitter:description" content="节拍器、触拍测速、BPM表、音符↔频率、移调、FM与LFO计算器和32次泛音。现已支持菜单栏触拍测速、Siri、Shortcuts和BPM小组件。" />
   <meta name="twitter:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
   <meta name="twitter:image:alt" content="Metric macOS应用图标" />
 
@@ -62,7 +62,7 @@
     "name": "Metric",
     "operatingSystem": "macOS",
     "applicationCategory": "MusicApplication",
-    "description": "适用于macOS的窗口式时间与频率工具包，现内置节拍器。触拍测速、BPM→ms/Hz表、音符↔频率查询、移调与速度辅助、FM + LFO计算器和32次泛音列探索器，集于一个简洁的侧边栏导航应用中。现已支持Siri、Shortcuts和通知中心小组件。",
+    "description": "适用于macOS的窗口式时间与频率工具包，现内置节拍器。触拍测速、BPM→ms/Hz表、音符↔频率查询、移调与速度辅助、FM + LFO计算器和32次泛音列探索器，集于一个简洁的侧边栏导航应用中。现已支持菜单栏触拍测速、Siri、Shortcuts和通知中心小组件。",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -77,11 +77,12 @@
       "节拍器（触拍测速、拍号、细分）",
       "触拍测速",
       "BPM→ms/Hz表（直拍/附点/三连音）",
-      "音符↔频率查询（可调音准）",
+      "音符↔频率查询（A4 = 440 Hz）",
       "移调与速度辅助",
       "FM计算器（比率 + 音高校正）",
       "LFO速率计算器 + 反向查询",
       "泛音列探索器",
+      "菜单栏触拍测速与延迟时间",
       "Siri、Shortcuts与BPM小组件"
     ]
   }
@@ -115,8 +116,9 @@
         <ul class="product-highlights">
           <li>节拍器，含触拍测速与可视节拍</li>
           <li>BPM → ms / Hz 转换器（直拍、附点、三连音）</li>
-          <li>音符 ↔ 频率表（108个音符，可调音准）</li>
+          <li>音符 ↔ 频率表（108个音符，A4 = 440 Hz）</li>
           <li>移调与速度、FM计算器、LFO速率、32次泛音</li>
+          <li>菜单栏触拍测速，右键单击即可查看延迟时间</li>
           <li>Siri、Shortcuts与通知中心BPM小组件</li>
         </ul>
 
@@ -153,6 +155,19 @@
               </div>
             </div>
             <figcaption>保存和调用速度预设。常用BPM一键即达。</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS截图">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/zh-Hans/metric-menubar-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/zh-Hans/metric-menubar-mac-light.png" alt="macOS上的菜单栏触拍测速与延迟时间" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>在菜单栏中敲击速度。右键单击可查看1/1到1/32的延迟时间，单击数值即可复制。</figcaption>
           </figure>
 
           <figure class="device-shot device-shot--mac">
@@ -266,7 +281,7 @@
                 </picture>
               </div>
             </div>
-            <figcaption>精细调整您的设置。调整A4音准、采样率和偏好设置。</figcaption>
+            <figcaption>设置与关于。查看版本并获取支持。</figcaption>
           </figure>
         </div>
       </div>
@@ -291,15 +306,22 @@
       <h3>Siri、Shortcuts与小组件</h3>
       <p>免提操控Metric。让Siri启动或停止节拍器、设定BPM、触拍测速、将BPM转换为毫秒、查询音符频率或移调速度。每个工具也都是Shortcuts操作，BPM小组件让您的速度常驻通知中心。</p>
 
+      <h3>菜单栏触拍测速</h3>
+      <p>单击菜单栏图标即可敲击速度，无需打开App。右键单击可查看1/1到1/32的延迟时间（毫秒），单击数值即可复制。可选仅菜单栏模式和登录时打开。</p>
+
       <h3>专为桌面打造</h3>
       <ul>
-        <li>完全离线运行——无需账户、无广告、无追踪</li>
+        <li>完全离线运行，无需账户、无广告、无追踪</li>
         <li>原生macOS应用，侧边栏导航</li>
         <li>深色模式感知界面，跟随系统外观</li>
         <li>三种行业标准采样率：44.1 kHz、48 kHz和96 kHz</li>
-        <li>可调整窗口大小——与DAW并排使用</li>
+        <li>可调整窗口大小，可与DAW并排使用</li>
       </ul>
-      <p>无论您是编程延迟的制作人、雕琢FM音色的音效设计师、调整振荡器的合成器演奏者还是检查频率的音频工程师，Metric都将每一个时间与频率答案呈现在您的桌面上。</p>
+
+      <h3>辅助功能</h3>
+      <p>支持VoiceOver（旁白）和语音控制，也可使用键盘操作：方向键和空格键。</p>
+
+      <p>无论您是编程延迟的制作人、雕琢FM音色的音效设计师、调整振荡器的合成器演奏者还是检查频率的音频工程师，Metric都将每一个时间与频率答案呈现在您的桌面上。免费试用7天：试用结束后，一次性购买即可解锁完整功能。无订阅。</p>
     </section>
   </main>
 

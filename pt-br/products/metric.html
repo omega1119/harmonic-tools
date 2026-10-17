@@ -19,8 +19,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title>Metric para macOS | Toolkit de Tempo e Frequência | Harmonic Tools</title>
-  <meta name="description" content="Metrônomo, tap tempo, tabelas de BPM, nota↔frequência, transposição, calculadoras FM e LFO, e 32 harmônicos. Agora com Siri, Shortcuts e um widget de BPM, diretamente no seu Mac." />
-  <meta name="keywords" content="metrônomo, BPM, tap tempo, calculadora de delay, frequência de notas, síntese FM, LFO, harmônicos, transposição, Siri, Shortcuts, widget, produção musical, macOS, Mac, DAW" />
+  <meta name="description" content="Metrônomo, tap tempo, tabelas de BPM, nota↔frequência, transposição, calculadoras FM e LFO, e 32 harmônicos. Agora com tap tempo na barra de menus, Siri, Shortcuts e um widget de BPM, diretamente no seu Mac." />
+  <meta name="keywords" content="metrônomo, BPM, tap tempo, calculadora de delay, frequência de notas, síntese FM, LFO, harmônicos, transposição, barra de menus, Siri, Shortcuts, widget, produção musical, macOS, Mac, DAW" />
   <meta name="author" content="Harmonic Tools" />
   <meta name="robots" content="index, follow" />
 
@@ -28,7 +28,7 @@
   <meta name="ai:app_name" content="Metric" />
   <meta name="ai:platform" content="macOS" />
   <meta name="ai:category" content="Utilitários de produção musical, calculadoras de tempo" />
-  <meta name="ai:primary_features" content="Metrônomo, tap tempo, tabela BPM→ms/Hz, nota↔frequência, transposição/velocidade, calculadora FM, taxas LFO, série harmônica, Siri, Shortcuts, widget" />
+  <meta name="ai:primary_features" content="Metrônomo, tap tempo, tabela BPM→ms/Hz, nota↔frequência, transposição/velocidade, calculadora FM, taxas LFO, série harmônica, tap tempo na barra de menus, Siri, Shortcuts, widget" />
   <meta name="ai:use_cases" content="Manter o tempo, cálculo de tempo de delay, sincronização de tempo, consulta de frequência, matemática de síntese, workflow de produção" />
 
   <link rel="canonical" href="https://harmonic.tools/pt-br/products/metric.html" />
@@ -37,7 +37,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://harmonic.tools/pt-br/products/metric.html" />
   <meta property="og:title" content="Metric para macOS | Toolkit de Tempo e Frequência" />
-  <meta property="og:description" content="Metrônomo, tap tempo, tabelas de BPM, nota↔frequência, transposição, calculadoras FM e LFO, e 32 harmônicos. Agora com Siri, Shortcuts e um widget de BPM." />
+  <meta property="og:description" content="Metrônomo, tap tempo, tabelas de BPM, nota↔frequência, transposição, calculadoras FM e LFO, e 32 harmônicos. Agora com tap tempo na barra de menus, Siri, Shortcuts e um widget de BPM." />
   <meta property="og:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
   <meta property="og:image:alt" content="Ícone do app Metric macOS" />
   <meta property="og:site_name" content="Harmonic Tools" />
@@ -46,7 +46,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Metric para macOS | Toolkit de Tempo e Frequência" />
-  <meta name="twitter:description" content="Metrônomo, tap tempo, tabelas de BPM, nota↔frequência, transposição, calculadoras FM e LFO, e 32 harmônicos. Agora com Siri, Shortcuts e um widget de BPM." />
+  <meta name="twitter:description" content="Metrônomo, tap tempo, tabelas de BPM, nota↔frequência, transposição, calculadoras FM e LFO, e 32 harmônicos. Agora com tap tempo na barra de menus, Siri, Shortcuts e um widget de BPM." />
   <meta name="twitter:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
   <meta name="twitter:image:alt" content="Ícone do app Metric macOS" />
 
@@ -62,7 +62,7 @@
     "name": "Metric",
     "operatingSystem": "macOS",
     "applicationCategory": "MusicApplication",
-    "description": "Toolkit de tempo e frequência em janelas para macOS, agora com um metrônomo integrado. Tap tempo, tabelas BPM→ms/Hz, consulta nota↔frequência, transposição e velocidade, calculadoras FM + LFO e um explorador de 32 harmônicos: tudo em um app limpo com navegação por barra lateral. Agora com Siri, Shortcuts e um widget na Notification Center.",
+    "description": "Toolkit de tempo e frequência em janelas para macOS, agora com um metrônomo integrado. Tap tempo, tabelas BPM→ms/Hz, consulta nota↔frequência, transposição e velocidade, calculadoras FM + LFO e um explorador de 32 harmônicos: tudo em um app limpo com navegação por barra lateral. Agora com tap tempo na barra de menus, Siri, Shortcuts e um widget na Notification Center.",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -77,11 +77,12 @@
       "Metronome (tap tempo, time signatures, subdivisions)",
       "Tap tempo",
       "BPM→ms/Hz table (straight/dotted/triplet)",
-      "Note↔frequency lookup (tuning-aware)",
+      "Note↔frequency lookup (A4 = 440 Hz)",
       "Transpose & speed helpers",
       "FM calculator (ratio + pitch correction)",
       "LFO rate calculator + reverse lookup",
       "Harmonic series explorer",
+      "Menu bar tap tempo and delay times",
       "Siri, Shortcuts & BPM widget"
     ]
   }
@@ -115,8 +116,9 @@
         <ul class="product-highlights">
           <li>Metrônomo com tap tempo e batidas visuais</li>
           <li>BPM → ms / Hz conversor (normal, pontuado, tercina)</li>
-          <li>Tabela Nota ↔ Frequência (108 notas, ajuste de afinação)</li>
+          <li>Tabela Nota ↔ Frequência (108 notas, A4 = 440 Hz)</li>
           <li>Transposição e Velocidade, Calculadora FM, Taxas LFO, 32 Harmônicos</li>
+          <li>Tap tempo na barra de menus, com os tempos de delay a um clique direito</li>
           <li>Siri, Shortcuts e um widget de BPM na Notification Center</li>
         </ul>
 
@@ -153,6 +155,19 @@
               </div>
             </div>
             <figcaption>Salve e recupere presets de tempo. Mantenha seus BPMs favoritos a um clique.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS screenshot">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/pt-BR/metric-menubar-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/pt-BR/metric-menubar-mac-light.png" alt="Tap tempo e tempos de delay na barra de menus do macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Marque um andamento pela barra de menus. Clique com o botão direito para ver os tempos de delay de 1/1 a 1/32 e clique em um valor para copiá-lo.</figcaption>
           </figure>
 
           <figure class="device-shot device-shot--mac">
@@ -266,7 +281,7 @@
                 </picture>
               </div>
             </div>
-            <figcaption>Ajuste sua configuração. Altere afinação A4, taxa de amostragem e preferências.</figcaption>
+            <figcaption>Configurações e Sobre. Confira sua versão e encontre suporte.</figcaption>
           </figure>
         </div>
       </div>
@@ -291,6 +306,9 @@
       <h3>Siri, Shortcuts e Widget</h3>
       <p>Controle o Metric sem usar as mãos. Peça à Siri para iniciar ou parar o metrônomo, definir um BPM, tocar um tempo, converter BPM em ms, encontrar a frequência de uma nota ou transpor um tempo. Cada ferramenta também é uma ação dos Shortcuts, e o widget de BPM mantém seu tempo na Notification Center.</p>
 
+      <h3>Tap Tempo na Barra de Menus</h3>
+      <p>Clique no ícone da barra de menus para marcar um andamento sem abrir o app. Com o botão direito, veja os tempos de delay de 1/1 a 1/32 em milissegundos e clique em um valor para copiá-lo. Modo somente barra de menus e abertura no login, opcionais.</p>
+
       <h3>Feito para Seu Desktop</h3>
       <ul>
         <li>Funciona totalmente offline: sem conta, sem anúncios, sem rastreamento</li>
@@ -299,7 +317,11 @@
         <li>Três taxas de amostragem padrão da indústria: 44,1 kHz, 48 kHz e 96 kHz</li>
         <li>Janela redimensionável: mantenha-a aberta ao lado da sua DAW</li>
       </ul>
-      <p>Seja você um produtor programando delays, um sound designer esculpindo timbres FM, um tecladista afinando osciladores ou um engenheiro de áudio verificando frequências, o Metric coloca todas as respostas de tempo e frequência no seu desktop.</p>
+
+      <h3>Acessibilidade</h3>
+      <p>Funciona com o VoiceOver e o Controle por Voz e pode ser usado pelo teclado, com as setas e a barra de espaço.</p>
+
+      <p>Seja você um produtor programando delays, um sound designer esculpindo timbres FM, um tecladista afinando osciladores ou um engenheiro de áudio verificando frequências, o Metric coloca todas as respostas de tempo e frequência no seu desktop. Experimente grátis por 7 dias: após o período de teste, desbloqueie o acesso completo com uma compra única. Sem assinaturas.</p>
     </section>
   </main>
 

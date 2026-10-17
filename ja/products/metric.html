@@ -19,8 +19,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <title>macOS用Metric | テンポ＆周波数ツールキット | Harmonic Tools</title>
-  <meta name="description" content="メトロノーム、タップテンポ、BPMテーブル、音↔周波数、移調、FM＆LFO計算機、32ハーモニクス。Siri、Shortcuts、BPMウィジェットに対応し、Macで直接。" />
-  <meta name="keywords" content="メトロノーム, BPM, タップテンポ, ディレイ計算機, 音の周波数, FM合成, LFO, ハーモニクス, 移調, Siri, Shortcuts, ウィジェット, 音楽制作, macOS, Mac, DAW" />
+  <meta name="description" content="メトロノーム、タップテンポ、BPMテーブル、音↔周波数、移調、FM＆LFO計算機、32ハーモニクス。メニューバーでのタップテンポ、Siri、Shortcuts、BPMウィジェットに対応し、Macで直接。" />
+  <meta name="keywords" content="メトロノーム, BPM, タップテンポ, ディレイ計算機, 音の周波数, FM合成, LFO, ハーモニクス, 移調, メニューバー, Siri, Shortcuts, ウィジェット, 音楽制作, macOS, Mac, DAW" />
   <meta name="author" content="Harmonic Tools" />
   <meta name="robots" content="index, follow" />
 
@@ -28,7 +28,7 @@
   <meta name="ai:app_name" content="Metric" />
   <meta name="ai:platform" content="macOS" />
   <meta name="ai:category" content="音楽制作ユーティリティ, タイミング計算機" />
-  <meta name="ai:primary_features" content="メトロノーム, タップテンポ, BPM→ms/Hzテーブル, 音↔周波数, 移調/速度, FM計算機, LFOレート, ハーモニックシリーズ, Siri, Shortcuts, ウィジェット" />
+  <meta name="ai:primary_features" content="メトロノーム, タップテンポ, BPM→ms/Hzテーブル, 音↔周波数, 移調/速度, FM計算機, LFOレート, ハーモニックシリーズ, メニューバーでのタップテンポ, Siri, Shortcuts, ウィジェット" />
   <meta name="ai:use_cases" content="テンポキープ, ディレイタイム計算, テンポ同期, 周波数検索, シンセシス計算, 音楽制作ワークフロー" />
 
   <link rel="canonical" href="https://harmonic.tools/ja/products/metric.html" />
@@ -37,7 +37,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://harmonic.tools/ja/products/metric.html" />
   <meta property="og:title" content="macOS用Metric | テンポ＆周波数ツールキット" />
-  <meta property="og:description" content="メトロノーム、タップテンポ、BPMテーブル、音↔周波数、移調、FM＆LFO計算機、32ハーモニクス。Siri、Shortcuts＆BPMウィジェットに対応。" />
+  <meta property="og:description" content="メトロノーム、タップテンポ、BPMテーブル、音↔周波数、移調、FM＆LFO計算機、32ハーモニクス。メニューバーでのタップテンポ、Siri、Shortcuts＆BPMウィジェットに対応。" />
   <meta property="og:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
   <meta property="og:image:alt" content="Metric macOSアイコン" />
   <meta property="og:site_name" content="Harmonic Tools" />
@@ -46,7 +46,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="macOS用Metric | テンポ＆周波数ツールキット" />
-  <meta name="twitter:description" content="メトロノーム、タップテンポ、BPMテーブル、音↔周波数、移調、FM＆LFO計算機、32ハーモニクス。Siri、Shortcuts＆BPMウィジェットに対応。" />
+  <meta name="twitter:description" content="メトロノーム、タップテンポ、BPMテーブル、音↔周波数、移調、FM＆LFO計算機、32ハーモニクス。メニューバーでのタップテンポ、Siri、Shortcuts＆BPMウィジェットに対応。" />
   <meta name="twitter:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
   <meta name="twitter:image:alt" content="Metric macOSアイコン" />
 
@@ -62,7 +62,7 @@
     "name": "Metric",
     "operatingSystem": "macOS",
     "applicationCategory": "MusicApplication",
-    "description": "macOS用タイミング＆周波数ツールキット、内蔵メトロノーム付き。タップテンポ、BPM→ms/Hzテーブル、音↔周波数検索、移調＆速度、FM+LFO計算機、32ハーモニクスエクスプローラー サイドバーナビゲーションの一つのアプリで。Siri、Shortcuts、通知センターウィジェットに対応。",
+    "description": "macOS用タイミング＆周波数ツールキット、内蔵メトロノーム付き。タップテンポ、BPM→ms/Hzテーブル、音↔周波数検索、移調＆速度、FM+LFO計算機、32ハーモニクスエクスプローラー：サイドバーナビゲーションの一つのアプリで。メニューバーでのタップテンポ、Siri、Shortcuts、通知センターウィジェットに対応。",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -77,11 +77,12 @@
       "メトロノーム（タップテンポ、拍子、細分化）",
       "タップテンポ",
       "BPM→ms/Hzテーブル（通常/付点/三連符）",
-      "音↔周波数検索（チューニング調整可能）",
+      "音↔周波数検索（A4 = 440 Hz）",
       "移調＆速度",
       "FM計算機（レシオ＋ピッチ補正）",
       "LFOレート計算機＋逆引き検索",
       "ハーモニックシリーズエクスプローラー",
+      "メニューバーでのタップテンポとディレイタイム",
       "Siri、Shortcuts＆BPMウィジェット"
     ]
   }
@@ -115,8 +116,9 @@
         <ul class="product-highlights">
           <li>タップテンポ＆ビジュアルビート付きメトロノーム</li>
           <li>BPM → ms / Hz コンバーター（通常、付点、三連符）</li>
-          <li>音 ↔ 周波数テーブル（108音、チューニング調整可能）</li>
+          <li>音 ↔ 周波数テーブル（108音、A4 = 440 Hz）</li>
           <li>移調＆速度、FM計算機、LFOレート、32ハーモニクス</li>
+          <li>メニューバーでタップテンポ、右クリックひとつでディレイタイムを表示</li>
           <li>Siri、Shortcuts＆通知センターBPMウィジェット</li>
         </ul>
 
@@ -153,6 +155,19 @@
               </div>
             </div>
             <figcaption>テンポプリセットを保存・呼び出し。よく使うBPMをワンクリックで。</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOSスクリーンショット">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/ja/metric-menubar-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/ja/metric-menubar-mac-light.png" alt="macOSのメニューバーでタップテンポとディレイタイム" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>メニューバーからテンポをタップ。右クリックで1/1から1/32までのディレイタイムを表示し、値をクリックしてコピーできます。</figcaption>
           </figure>
 
           <figure class="device-shot device-shot--mac">
@@ -261,7 +276,7 @@
                 </picture>
               </div>
             </div>
-            <figcaption>設定を調整。A4チューニング、サンプルレート、環境設定。</figcaption>
+            <figcaption>設定とApp情報。バージョンの確認やサポートへのアクセスができます。</figcaption>
           </figure>
         </div>
       </div>
@@ -286,15 +301,22 @@
       <h3>Siri、Shortcuts＆ウィジェット</h3>
       <p>Metricをハンズフリーで操作。Siriにメトロノームの開始・停止、BPMの設定、テンポのタップ、BPMからmsへの変換、音の周波数の検索、テンポの移調を頼めます。すべてのツールはShortcutsアクションにも対応し、BPMウィジェットはテンポを通知センターに表示します。</p>
 
+      <h3>メニューバーでタップテンポ</h3>
+      <p>メニューバーのアイコンをクリックすると、アプリを開かずにテンポをタップできます。右クリックで1/1から1/32までのディレイタイムをミリ秒で表示し、値をクリックしてコピーできます。メニューバーのみのモードとログイン時の起動も選べます。</p>
+
       <h3>デスクトップのための設計</h3>
       <ul>
-        <li>完全オフライン動作 アカウント、広告、トラッキングなし</li>
+        <li>完全オフライン動作。アカウント、広告、トラッキングなし</li>
         <li>サイドバーナビゲーションのネイティブmacOSアプリ</li>
         <li>システムテーマに従うダークモード対応インターフェース</li>
         <li>3つの標準サンプルレート：44.1kHz、48kHz、96kHz</li>
-        <li>リサイズ可能なウィンドウ DAWの横に開いておけます</li>
+        <li>リサイズ可能なウィンドウ。DAWの横に開いておけます</li>
       </ul>
-      <p>ディレイをプログラミングするプロデューサー、FM音色を仕上げるサウンドデザイナー、オシレーターをチューニングするキーボーディスト、周波数を確認するオーディオエンジニア Metricはすべてのタイミング＆周波数の答えをデスクトップにお届けします。</p>
+
+      <h3>アクセシビリティ</h3>
+      <p>VoiceOverと音声コントロールに対応し、矢印キーとスペースバーでキーボードからも操作できます。</p>
+
+      <p>ディレイをプログラミングするプロデューサー、FM音色を仕上げるサウンドデザイナー、オシレーターをチューニングするキーボーディスト、周波数を確認するオーディオエンジニアまで、Metricはすべてのタイミング＆周波数の答えをデスクトップにお届けします。7日間無料でお試しください。試用期間後は一度きりの購入でフルアクセスがアンロックされます。サブスクリプションはありません。</p>
     </section>
   </main>
 
