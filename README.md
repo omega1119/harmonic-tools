@@ -23,6 +23,8 @@ harmonic-tools/
 │   │   ├── MetriciOS/       # Metric iOS screenshots (localized)
 │   │   ├── ModesMac/        # Modes macOS screenshots (localized)
 │   │   ├── ModesiOS/        # Modes iOS screenshots (localized)
+│   │   ├── ModesGuitarMac/  # Modes Guitar macOS screenshots (localized)
+│   │   ├── ModesGuitariOS/  # Modes Guitar iOS screenshots (localized)
 │   │   └── ...              # App icons, OG images, SVG assets
 │   └── js/
 │       ├── main.js          # Theme toggle, modals & utilities
@@ -31,7 +33,9 @@ harmonic-tools/
 │   ├── metric.html
 │   ├── metric-ios.html
 │   ├── modes.html
-│   └── modes-ios.html
+│   ├── modes-ios.html
+│   ├── modes-guitar.html
+│   └── modes-guitar-ios.html
 └── en/                      # English locale
     ├── index.html           # Main landing page
     ├── privacy.html         # Privacy policy
@@ -40,7 +44,9 @@ harmonic-tools/
         ├── metric.html
         ├── metric-ios.html
         ├── modes.html
-        └── modes-ios.html
+        ├── modes-ios.html
+        ├── modes-guitar.html
+        └── modes-guitar-ios.html
 ```
 
 ## Products
@@ -49,12 +55,14 @@ harmonic-tools/
 - **Metric iOS**: Timing toolkit for iOS
 - **Modes**: Music theory workspace for macOS
 - **Modes iOS**: Touch-first theory lab for iOS
+- **Modes Guitar**: Fretboard scales, chords, strobe tuner and metronome for macOS
+- **Modes Guitar iOS**: The same fretboard tools for iPhone and iPad
 
 ## Localization
 
 The site supports multiple languages. Currently available:
 
-- English (`/en/`)
+- English (`/en/`), German (`/de/`), Spanish (`/es/`), French (`/fr/`), Polish (`/pl/`), Japanese (`/ja/`), Korean (`/ko/`), Brazilian Portuguese (`/pt-br/`), European Portuguese (`/pt-pt/`), Simplified Chinese (`/zh-hans/`) and Traditional Chinese (`/zh-hant/`)
 
 To add a new language:
 
