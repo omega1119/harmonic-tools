@@ -184,17 +184,17 @@
   // Populates <ul id="primary-menu" class="nav-list"></ul> based on page type.
   // Index pages get 4 anchor links; sub-pages get 2 links (Home + Products).
   const NAV_STRINGS = {
-    en: { products: 'Products', pillars: 'Focus Areas', philosophy: 'Philosophy', contact: 'Contact', home: 'Home' },
-    de: { products: 'Produkte', pillars: 'Bereiche', philosophy: 'Philosophie', contact: 'Kontakt', home: 'Startseite' },
-    es: { products: 'Productos', pillars: '\u00c1reas', philosophy: 'Filosof\u00eda', contact: 'Contacto', home: 'Inicio' },
-    fr: { products: 'Produits', pillars: 'Domaines', philosophy: 'Philosophie', contact: 'Contact', home: 'Accueil' },
-    ja: { products: '\u88fd\u54c1', pillars: '\u5206\u91ce', philosophy: '\u7406\u5ff5', contact: '\u304a\u554f\u3044\u5408\u308f\u305b', home: '\u30db\u30fc\u30e0' },
-    ko: { products: '\uc81c\ud488', pillars: '\ubd84\uc57c', philosophy: '\ucca0\ud559', contact: '\uc5f0\ub77d\ucc98', home: '\ud648' },
-    pl: { products: 'Produkty', pillars: 'Obszary', philosophy: 'Filozofia', contact: 'Kontakt', home: 'Strona g\u0142\u00f3wna' },
-    'pt-br': { products: 'Produtos', pillars: '\u00c1reas', philosophy: 'Filosofia', contact: 'Contato', home: 'In\u00edcio' },
-    'pt-pt': { products: 'Produtos', pillars: '\u00c1reas', philosophy: 'Filosofia', contact: 'Contacto', home: 'In\u00edcio' },
+    en: { products: 'Products', pillars: 'Focus areas', philosophy: 'Philosophy', contact: 'Contact', home: 'Home' },
+    de: { products: 'Produkte', pillars: 'Schwerpunkte', philosophy: 'Philosophie', contact: 'Kontakt', home: 'Startseite' },
+    es: { products: 'Productos', pillars: '\u00c1reas de trabajo', philosophy: 'Filosof\u00eda', contact: 'Contacto', home: 'Inicio' },
+    fr: { products: 'Produits', pillars: 'Axes de travail', philosophy: 'Philosophie', contact: 'Contact', home: 'Accueil' },
+    ja: { products: '\u88fd\u54c1', pillars: '\u6ce8\u529b\u5206\u91ce', philosophy: '\u7406\u5ff5', contact: '\u304a\u554f\u3044\u5408\u308f\u305b', home: '\u30db\u30fc\u30e0' },
+    ko: { products: '\uc81c\ud488', pillars: '\uc8fc\uc694 \ubd84\uc57c', philosophy: '\ucca0\ud559', contact: '\uc5f0\ub77d\ucc98', home: '\ud648' },
+    pl: { products: 'Produkty', pillars: 'Obszary dzia\u0142ania', philosophy: 'Filozofia', contact: 'Kontakt', home: 'Strona g\u0142\u00f3wna' },
+    'pt-br': { products: 'Produtos', pillars: '\u00c1reas de foco', philosophy: 'Filosofia', contact: 'Contato', home: 'In\u00edcio' },
+    'pt-pt': { products: 'Produtos', pillars: '\u00c1reas de foco', philosophy: 'Filosofia', contact: 'Contacto', home: 'In\u00edcio' },
     'zh-hans': { products: '\u4ea7\u54c1', pillars: '\u9886\u57df', philosophy: '\u7406\u5ff5', contact: '\u8054\u7cfb\u6211\u4eec', home: '\u9996\u9875' },
-    'zh-hant': { products: '\u7522\u54c1', pillars: '\u9818\u57df', philosophy: '\u7406\u5ff5', contact: '\u806f\u7d61\u6211\u5011', home: '\u9996\u9801' }
+    'zh-hant': { products: '\u7522\u54c1', pillars: '\u91cd\u9ede\u9818\u57df', philosophy: '\u7406\u5ff5', contact: '\u806f\u7d61\u6211\u5011', home: '\u9996\u9801' }
   };
 
   function initNavItems() {
@@ -254,7 +254,7 @@
   };
   const STORE_BADGE_DATA = {
     en: {
-      comingSoon: 'Coming Soon',
+      comingSoon: 'Coming soon',
       ios: {
         alt: 'Download on the App Store',
         ariaPrefix: 'coming soon on the App Store',
@@ -467,17 +467,17 @@
   // Injects the Organization schema block into <head> on index pages.
   // Only the description varies per language.
   const ORG_DESCRIPTIONS = {
-    en: 'Music software lab building precision tools for producers and musicians. Metric timing toolkit and Modes music theory lab for macOS and iOS.',
-    de: 'Musiksoftware-Labor, das Pr\u00e4zisionswerkzeuge f\u00fcr Produzenten und Musiker entwickelt. Metric-Timing-Toolkit und Modes-Musiktheorie-Labor f\u00fcr macOS und iOS.',
-    es: 'Laboratorio de software musical que desarrolla herramientas de precisi\u00f3n para productores y m\u00fasicos. Toolkit de timing Metric y laboratorio de teor\u00eda musical Modes para macOS e iOS.',
-    fr: 'Laboratoire de logiciels musicaux cr\u00e9ant des outils de pr\u00e9cision pour producteurs et musiciens. Bo\u00eete \u00e0 outils Metric pour le timing et laboratoire de th\u00e9orie musicale Modes pour macOS et iOS.',
-    ja: '\u30d7\u30ed\u30c7\u30e5\u30fc\u30b5\u30fc\u3068\u30df\u30e5\u30fc\u30b8\u30b7\u30e3\u30f3\u306e\u305f\u3081\u306e\u7cbe\u5bc6\u30c4\u30fc\u30eb\u3092\u958b\u767a\u3059\u308b\u97f3\u697d\u30bd\u30d5\u30c8\u30a6\u30a7\u30a2\u30e9\u30dc\u3002macOS\u304a\u3088\u3073iOS\u7528\u30bf\u30a4\u30df\u30f3\u30b0\u30c4\u30fc\u30eb\u30ad\u30c3\u30c8Metric\u3068\u97f3\u697d\u7406\u8ad6\u30e9\u30dcModes\u3002',
-    ko: '\ud504\ub85c\ub4c0\uc11c\uc640 \ubba4\uc9c0\uc158\uc744 \uc704\ud55c \uc815\ubc00 \ub3c4\uad6c\ub97c \uac1c\ubc1c\ud558\ub294 \uc74c\uc545 \uc18c\ud504\ud2b8\uc6e8\uc5b4 \uc5f0\uad6c\uc18c. macOS \ubc0f iOS\uc6a9 \ud0c0\uc774\ubc0d \ud234\ud0b7 Metric\uacfc \uc74c\uc545 \uc774\ub860 \uc5f0\uad6c\uc18c Modes.',
-    pl: 'Laboratorium oprogramowania muzycznego tworz\u0105ce precyzyjne narz\u0119dzia dla producent\u00f3w i muzyk\u00f3w. Zestaw narz\u0119dzi Metric do taktowania oraz laboratorium teorii muzyki Modes na macOS i iOS.',
-    'pt-br': 'Laborat\u00f3rio de software musical que cria ferramentas de precis\u00e3o para produtores e m\u00fasicos. Toolkit de timing Metric e laborat\u00f3rio de teoria musical Modes para macOS e iOS.',
-    'pt-pt': 'Laborat\u00f3rio de software musical que cria ferramentas de precis\u00e3o para produtores e m\u00fasicos. Toolkit de tempo Metric e laborat\u00f3rio de teoria musical Modes para macOS e iOS.',
-    'zh-hans': '\u4e13\u4e3a\u97f3\u4e50\u5236\u4f5c\u4eba\u548c\u97f3\u4e50\u5bb6\u6253\u9020\u7cbe\u5bc6\u5de5\u5177\u7684\u97f3\u4e50\u8f6f\u4ef6\u5b9e\u9a8c\u5ba4\u3002\u9002\u7528\u4e8e macOS \u548c iOS \u7684\u8282\u62cd\u5de5\u5177 Metric \u548c\u4e50\u7406\u5b9e\u9a8c\u5ba4 Modes\u3002',
-    'zh-hant': '\u5c08\u70ba\u97f3\u6a02\u88fd\u4f5c\u4eba\u548c\u97f3\u6a02\u5bb6\u6253\u9020\u7cbe\u5bc6\u5de5\u5177\u7684\u97f3\u6a02\u8edf\u9ad4\u5be6\u9a57\u5ba4\u3002\u9069\u7528\u65bc macOS \u548c iOS \u7684\u7bc0\u62cd\u5de5\u5177 Metric \u548c\u6a02\u7406\u5be6\u9a57\u5ba4 Modes\u3002'
+    en: 'Music software for producers and musicians: Metric (timing and frequency toolkit), Modes (music theory) and Modes Guitar (fretboard scales and chords) for macOS and iOS.',
+    de: 'Musiksoftware f\u00fcr Produzenten und Musiker: Metric (Werkzeuge f\u00fcr Timing und Frequenzen), Modes (Musiktheorie) und Modes Guitar (Tonleitern und Akkorde auf dem Griffbrett) f\u00fcr macOS und iOS.',
+    es: 'Software musical para productores y m\u00fasicos: Metric (herramientas de tempo y frecuencia), Modes (teor\u00eda musical) y Modes Guitar (escalas y acordes en el m\u00e1stil) para macOS e iOS.',
+    fr: 'Logiciels musicaux pour producteurs et musiciens\u00a0: Metric (outils de timing et de fr\u00e9quences), Modes (th\u00e9orie musicale) et Modes Guitar (gammes et accords sur le manche) pour macOS et iOS.',
+    ja: '\u30d7\u30ed\u30c7\u30e5\u30fc\u30b5\u30fc\u3068\u30df\u30e5\u30fc\u30b8\u30b7\u30e3\u30f3\u5411\u3051\u306e\u97f3\u697d\u30bd\u30d5\u30c8\u30a6\u30a7\u30a2\u3002\u30bf\u30a4\u30df\u30f3\u30b0\u3068\u5468\u6ce2\u6570\u306e\u30c4\u30fc\u30eb\u30ad\u30c3\u30c8Metric\u3001\u97f3\u697d\u7406\u8ad6\u30a2\u30d7\u30eaModes\u3001\u30d5\u30ec\u30c3\u30c8\u30dc\u30fc\u30c9\u306e\u30b9\u30b1\u30fc\u30eb\u3068\u30b3\u30fc\u30c9\u3092\u6271\u3046Modes Guitar\u3092\u3001macOS\u3068iOS\u5411\u3051\u306b\u63d0\u4f9b\u3057\u3066\u3044\u307e\u3059\u3002',
+    ko: '\ud504\ub85c\ub4c0\uc11c\uc640 \ubba4\uc9c0\uc158\uc744 \uc704\ud55c \uc74c\uc545 \uc18c\ud504\ud2b8\uc6e8\uc5b4: macOS \ubc0f iOS\uc6a9 Metric(\ud0c0\uc774\ubc0d \ubc0f \uc8fc\ud30c\uc218 \ud234\ud0b7), Modes(\uc74c\uc545 \uc774\ub860), Modes Guitar(\uc9c0\ud310 \uc2a4\ucf00\uc77c\uacfc \ucf54\ub4dc).',
+    pl: 'Oprogramowanie muzyczne dla producent\u00f3w i muzyk\u00f3w: Metric (narz\u0119dzia do tempa i cz\u0119stotliwo\u015bci), Modes (teoria muzyki) i Modes Guitar (skale i akordy na gryfie) na macOS i iOS.',
+    'pt-br': 'Software musical para produtores e m\u00fasicos: Metric (ferramentas de tempo e frequ\u00eancia), Modes (teoria musical) e Modes Guitar (escalas e acordes no bra\u00e7o) para macOS e iOS.',
+    'pt-pt': 'Software musical para produtores e m\u00fasicos: Metric (toolkit de tempo e frequ\u00eancia), Modes (teoria musical) e Modes Guitar (escalas e acordes no bra\u00e7o) para macOS e iOS.',
+    'zh-hans': '\u9762\u5411\u5236\u4f5c\u4eba\u4e0e\u97f3\u4e50\u4eba\u7684\u97f3\u4e50\u8f6f\u4ef6\uff1a\u9002\u7528\u4e8e macOS \u548c iOS \u7684 Metric\uff08\u65f6\u95f4\u4e0e\u9891\u7387\u5de5\u5177\u5305\uff09\u3001Modes\uff08\u4e50\u7406\uff09\u548c Modes Guitar\uff08\u6307\u677f\u97f3\u9636\u4e0e\u548c\u5f26\uff09\u3002',
+    'zh-hant': '\u70ba\u88fd\u4f5c\u4eba\u8207\u97f3\u6a02\u4eba\u6253\u9020\u7684\u97f3\u6a02\u8edf\u9ad4\uff1a\u9069\u7528\u65bc macOS \u548c iOS \u7684 Metric\uff08\u6642\u9593\u8207\u983b\u7387\u5de5\u5177\u7d44\uff09\u3001Modes\uff08\u6a02\u7406\uff09\u548c Modes Guitar\uff08\u6307\u677f\u97f3\u968e\u8207\u548c\u5f26\uff09\u3002'
   };
 
   function initOrgJsonLd() {
@@ -491,7 +491,7 @@
     var schema = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      'name': 'Greenwood IT Consultancy Limited',
+      'name': 'Greenwood IT Consultancy Ltd',
       'alternateName': 'Harmonic Tools',
       'url': 'https://harmonic.tools',
       'logo': 'https://harmonic.tools/favicon.svg',
@@ -681,17 +681,17 @@
   // Reads <html lang> to select translated strings.
   // Privacy-policy href auto-computed from URL path.
   const COOKIE_STRINGS = {
-    en: { text: 'We use cookies to analyze site traffic and improve your experience. By clicking "Accept", you consent to our use of cookies.', accept: 'Accept', deny: 'Deny', privacy: 'Privacy Policy' },
-    de: { text: 'Wir verwenden Cookies, um den Website-Traffic zu analysieren und Ihre Erfahrung zu verbessern. Durch Klicken auf \u201eAkzeptieren\u201c stimmen Sie unserer Verwendung von Cookies zu.', accept: 'Akzeptieren', deny: 'Ablehnen', privacy: 'Datenschutzerkl\u00e4rung' },
-    es: { text: 'Utilizamos cookies para analizar el tr\u00e1fico del sitio y mejorar su experiencia. Al hacer clic en \u00abAceptar\u00bb acepta nuestro uso de cookies.', accept: 'Aceptar', deny: 'Rechazar', privacy: 'Pol\u00edtica de privacidad' },
-    fr: { text: 'Nous utilisons des cookies pour analyser le trafic du site et am\u00e9liorer votre exp\u00e9rience. En cliquant sur \u00ab\u00a0Accepter\u00a0\u00bb, vous consentez \u00e0 notre utilisation des cookies.', accept: 'Accepter', deny: 'Refuser', privacy: 'Politique de confidentialit\u00e9' },
-    ja: { text: '\u5f53\u30b5\u30a4\u30c8\u3067\u306f\u3001\u30c8\u30e9\u30d5\u30a3\u30c3\u30af\u306e\u5206\u6790\u3068\u30e6\u30fc\u30b6\u30fc\u30a8\u30af\u30b9\u30da\u30ea\u30a8\u30f3\u30b9\u306e\u5411\u4e0a\u306e\u305f\u3081\u306bCookie\u3092\u4f7f\u7528\u3057\u3066\u3044\u307e\u3059\u3002\u300c\u540c\u610f\u300d\u3092\u30af\u30ea\u30c3\u30af\u3059\u308b\u3068\u3001Cookie\u306e\u4f7f\u7528\u306b\u540c\u610f\u3057\u305f\u3053\u3068\u306b\u306a\u308a\u307e\u3059\u3002', accept: '\u540c\u610f', deny: '\u62d2\u5426', privacy: '\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u30dd\u30ea\u30b7\u30fc' },
-    ko: { text: '\ub2f9\uc0ac\ub294 \uc0ac\uc774\ud2b8 \ud2b8\ub798\ud53d\uc744 \ubd84\uc11d\ud558\uace0 \uc0ac\uc6a9\uc790 \uacbd\ud5d8\uc744 \uac1c\uc120\ud558\uae30 \uc704\ud574 \ucfe0\ud0a4\ub97c \uc0ac\uc6a9\ud569\ub2c8\ub2e4. \u00ab\ub3d9\uc758\u00bb\ub97c \ud074\ub9ad\ud558\uba74 \ucfe0\ud0a4 \uc0ac\uc6a9\uc5d0 \ub3d9\uc758\ud558\uac8c \ub429\ub2c8\ub2e4.', accept: '\ub3d9\uc758', deny: '\uac70\ubd80', privacy: '\uac1c\uc778\uc815\ubcf4 \ucc98\ub9ac\ubc29\uce68' },
-    pl: { text: 'U\u017cywamy plik\u00f3w cookie do analizy ruchu na stronie i poprawy Twojego do\u015bwiadczenia. Klikaj\u0105c \u201eAkceptuj\u201d, wyra\u017casz zgod\u0119 na nasze u\u017cycie plik\u00f3w cookie.', accept: 'Akceptuj', deny: 'Odrzu\u0107', privacy: 'Polityka prywatno\u015bci' },
-    'pt-br': { text: 'Usamos cookies para analisar o tr\u00e1fego do site e melhorar sua experi\u00eancia. Ao clicar em \u201cAceitar\u201d, voc\u00ea consente com o uso de cookies.', accept: 'Aceitar', deny: 'Recusar', privacy: 'Pol\u00edtica de Privacidade' },
-    'pt-pt': { text: 'Utilizamos cookies para analisar o tr\u00e1fego do site e melhorar a sua experi\u00eancia. Ao clicar em \u201cAceitar\u201d, consente a utiliza\u00e7\u00e3o de cookies.', accept: 'Aceitar', deny: 'Recusar', privacy: 'Pol\u00edtica de Privacidade' },
-    'zh-hans': { text: '\u6211\u4eec\u4f7f\u7528 Cookie \u6765\u5206\u6790\u7f51\u7ad9\u6d41\u91cf\u5e76\u6539\u5584\u60a8\u7684\u4f53\u9a8c\u3002\u70b9\u51fb\u201c\u63a5\u53d7\u201d\u5373\u8868\u793a\u540c\u610f\u6211\u4eec\u4f7f\u7528 Cookie\u3002', accept: '\u63a5\u53d7', deny: '\u62d2\u7edd', privacy: '\u9690\u79c1\u653f\u7b56' },
-    'zh-hant': { text: '\u6211\u5011\u4f7f\u7528 Cookie \u4f86\u5206\u6790\u7db2\u7ad9\u6d41\u91cf\u4e26\u6539\u5584\u60a8\u7684\u9ad4\u9a57\u3002\u9ede\u64ca\u300c\u63a5\u53d7\u300d\u5373\u8868\u793a\u540c\u610f\u6211\u5011\u4f7f\u7528 Cookie\u3002', accept: '\u63a5\u53d7', deny: '\u62d2\u7d55', privacy: '\u96b1\u79c1\u6b0a\u653f\u7b56' }
+    en: { text: 'We use cookies to analyse site traffic. By clicking "Accept", you consent to our use of cookies.', accept: 'Accept', deny: 'Deny', privacy: 'Privacy policy' },
+    de: { text: 'Wir verwenden Cookies, um den Website-Traffic zu analysieren. Mit einem Klick auf \u201eAkzeptieren\u201c stimmen Sie der Verwendung von Cookies zu.', accept: 'Akzeptieren', deny: 'Ablehnen', privacy: 'Datenschutzerkl\u00e4rung' },
+    es: { text: 'Utilizamos cookies para analizar el tr\u00e1fico del sitio. Al hacer clic en \u00abAceptar\u00bb acepta nuestro uso de cookies.', accept: 'Aceptar', deny: 'Rechazar', privacy: 'Pol\u00edtica de privacidad' },
+    fr: { text: 'Nous utilisons des cookies pour analyser le trafic du site. En cliquant sur \u00ab\u00a0Accepter\u00a0\u00bb, vous consentez \u00e0 notre utilisation des cookies.', accept: 'Accepter', deny: 'Refuser', privacy: 'Politique de confidentialit\u00e9' },
+    ja: { text: '\u5f53\u30b5\u30a4\u30c8\u3067\u306f\u3001\u30b5\u30a4\u30c8\u306e\u30c8\u30e9\u30d5\u30a3\u30c3\u30af\u3092\u5206\u6790\u3059\u308b\u305f\u3081\u306bCookie\u3092\u4f7f\u7528\u3057\u3066\u3044\u307e\u3059\u3002\u300c\u540c\u610f\u300d\u3092\u30af\u30ea\u30c3\u30af\u3059\u308b\u3068\u3001Cookie\u306e\u4f7f\u7528\u306b\u540c\u610f\u3057\u305f\u3053\u3068\u306b\u306a\u308a\u307e\u3059\u3002', accept: '\u540c\u610f', deny: '\u62d2\u5426', privacy: '\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u30dd\u30ea\u30b7\u30fc' },
+    ko: { text: '\ub2f9\uc0ac\ub294 \uc0ac\uc774\ud2b8 \ud2b8\ub798\ud53d\uc744 \ubd84\uc11d\ud558\uae30 \uc704\ud574 \ucfe0\ud0a4\ub97c \uc0ac\uc6a9\ud569\ub2c8\ub2e4. "\ub3d9\uc758"\ub97c \ud074\ub9ad\ud558\uba74 \ucfe0\ud0a4 \uc0ac\uc6a9\uc5d0 \ub3d9\uc758\ud558\uac8c \ub429\ub2c8\ub2e4.', accept: '\ub3d9\uc758', deny: '\uac70\ubd80', privacy: '\uac1c\uc778\uc815\ubcf4 \ucc98\ub9ac\ubc29\uce68' },
+    pl: { text: 'U\u017cywamy plik\u00f3w cookie do analizy ruchu na stronie. Klikaj\u0105c \u201eAkceptuj\u201d, wyra\u017casz zgod\u0119 na u\u017cywanie przez nas plik\u00f3w cookie.', accept: 'Akceptuj', deny: 'Odrzu\u0107', privacy: 'Polityka prywatno\u015bci' },
+    'pt-br': { text: 'Usamos cookies para analisar o tr\u00e1fego do site. Ao clicar em \u201cAceitar\u201d, voc\u00ea consente com o uso de cookies.', accept: 'Aceitar', deny: 'Recusar', privacy: 'Pol\u00edtica de privacidade' },
+    'pt-pt': { text: 'Utilizamos cookies para analisar o tr\u00e1fego do site. Ao clicar em \u201cAceitar\u201d, consente a utiliza\u00e7\u00e3o de cookies.', accept: 'Aceitar', deny: 'Recusar', privacy: 'Pol\u00edtica de privacidade' },
+    'zh-hans': { text: '\u6211\u4eec\u4f7f\u7528 Cookie \u6765\u5206\u6790\u7f51\u7ad9\u6d41\u91cf\u3002\u70b9\u51fb\u201c\u63a5\u53d7\u201d\u5373\u8868\u793a\u540c\u610f\u6211\u4eec\u4f7f\u7528 Cookie\u3002', accept: '\u63a5\u53d7', deny: '\u62d2\u7edd', privacy: '\u9690\u79c1\u653f\u7b56' },
+    'zh-hant': { text: '\u6211\u5011\u4f7f\u7528 Cookie \u4f86\u5206\u6790\u7db2\u7ad9\u6d41\u91cf\u3002\u9ede\u64ca\u300c\u63a5\u53d7\u300d\u5373\u8868\u793a\u540c\u610f\u6211\u5011\u4f7f\u7528 Cookie\u3002', accept: '\u63a5\u53d7', deny: '\u62d2\u7d55', privacy: '\u96b1\u79c1\u6b0a\u653f\u7b56' }
   };
 
   function initCookieConsent() {
