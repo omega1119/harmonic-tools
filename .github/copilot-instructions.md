@@ -36,6 +36,11 @@ or JS that reads them by exact string:
   font `<link>`: add a new self-hosted woff2 instead.
 - When adding a page, copy an existing locale's page as the template rather than
   writing one from scratch, to keep markup structure consistent across locales.
+- Copy must not read as generic AI text: follow
+  `.github/instructions/copy.instructions.md` for any visitor-facing wording
+  (specifics over adjectives, no filler patterns, no invented claims).
+- Privacy and terms pages follow `.github/instructions/legal.instructions.md`: same
+  sections and clause wording on every site, describing only what the site actually does.
 
 <!-- END GENERATED -->
 

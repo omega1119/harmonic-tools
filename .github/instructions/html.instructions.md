@@ -20,3 +20,7 @@ applyTo: "**/*.html"
 - Every page needs a `<title>`, a meta `description`, and `og:` / `twitter:` image
   tags that match what the page actually shows: don't copy another page's tags
   without updating them.
+- `aria-label`, `alt`, `title` and `figcaption` text is visitor-facing copy and is
+  written in the page's own language, including on translated pages ("Screenshot of
+  the iPhone app", not "iPhone screenshot" left in English). Product names, platform
+  names (macOS, iOS, iPadOS, iPhone, iPad) and brand tokens stay as they are.
