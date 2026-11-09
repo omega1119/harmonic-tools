@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ9FPYHNVR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Set default consent to denied
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+    
+    gtag('js', new Date());
+    gtag('config', 'G-JQ9FPYHNVR');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>macOS के लिए Metric | टाइमिंग और फ़्रीक्वेंसी टूलकिट | Harmonic Tools</title>
+  <meta name="description" content="मेट्रोनोम, टैप टेम्पो, BPM टेबल, स्वर↔फ़्रीक्वेंसी, ट्रांसपोज़, FM और LFO कैलकुलेटर, और 32 हार्मोनिक्स। साथ में मेनू बार में टैप टेम्पो, Siri, शॉर्टकट और BPM विजेट।" />
+  <meta name="keywords" content="मेट्रोनोम, BPM, टैप टेम्पो, डिले कैलकुलेटर, स्वर फ़्रीक्वेंसी, FM सिंथेसिस, LFO, हार्मोनिक्स, ट्रांसपोज़, मेनू बार, Siri, शॉर्टकट, विजेट, म्यूज़िक प्रोडक्शन, macOS, Mac, DAW, metronome, tap tempo" />
+  <meta name="author" content="Harmonic Tools" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- AI/LLM Optimization -->
+  <meta name="ai:app_name" content="Metric" />
+  <meta name="ai:platform" content="macOS" />
+  <meta name="ai:category" content="म्यूज़िक प्रोडक्शन यूटिलिटी, टाइमिंग कैलकुलेटर" />
+  <meta name="ai:primary_features" content="मेट्रोनोम, टैप टेम्पो, BPM→ms/Hz टेबल, स्वर↔फ़्रीक्वेंसी, ट्रांसपोज़/स्पीड, FM कैलकुलेटर, LFO रेट, हार्मोनिक सीरीज़, मेनू बार में टैप टेम्पो, Siri, शॉर्टकट, विजेट" />
+  <meta name="ai:use_cases" content="ताल बनाए रखना, डिले टाइम की गणना, टेम्पो मिलाना, फ़्रीक्वेंसी देखना, सिंथेसिस का गणित, प्रोडक्शन वर्कफ़्लो" />
+
+  <link rel="canonical" href="https://harmonic.tools/hi/products/metric.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://harmonic.tools/hi/products/metric.html" />
+  <meta property="og:title" content="macOS के लिए Metric | टाइमिंग और फ़्रीक्वेंसी टूलकिट" />
+  <meta property="og:description" content="मेट्रोनोम, टैप टेम्पो, BPM टेबल, स्वर↔फ़्रीक्वेंसी, ट्रांसपोज़, FM और LFO कैलकुलेटर, और 32 हार्मोनिक्स। साथ में मेनू बार में टैप टेम्पो, Siri, शॉर्टकट और BPM विजेट।" />
+  <meta property="og:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta property="og:image:alt" content="Metric macOS ऐप आइकन" />
+  <meta property="og:site_name" content="Harmonic Tools" />
+  <meta property="og:locale" content="hi_IN" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="macOS के लिए Metric | टाइमिंग और फ़्रीक्वेंसी टूलकिट" />
+  <meta name="twitter:description" content="मेट्रोनोम, टैप टेम्पो, BPM टेबल, स्वर↔फ़्रीक्वेंसी, ट्रांसपोज़, FM और LFO कैलकुलेटर, और 32 हार्मोनिक्स। साथ में मेनू बार में टैप टेम्पो, Siri, शॉर्टकट और BPM विजेट।" />
+  <meta name="twitter:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta name="twitter:image:alt" content="Metric macOS ऐप आइकन" />
+
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=24" />
+  <script defer src="../../assets/js/main.js?v=12"></script>
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Metric",
+    "operatingSystem": "macOS",
+    "applicationCategory": "MusicApplication",
+    "description": "macOS के लिए बिल्ट-इन मेट्रोनोम वाला, विंडो में चलने वाला टाइमिंग और फ़्रीक्वेंसी टूलकिट। टैप टेम्पो, BPM→ms/Hz टेबल, स्वर↔फ़्रीक्वेंसी लुकअप, ट्रांसपोज़ और स्पीड टूल, FM + LFO कैलकुलेटर और 32 हार्मोनिक्स वाला हार्मोनिक सीरीज़ एक्सप्लोरर, साइडबार नेविगेशन वाले ऐप में। साथ में मेनू बार में टैप टेम्पो, Siri, शॉर्टकट और नोटिफ़िकेशन सेंटर विजेट।",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Harmonic Tools"
+    },
+    "screenshot": "https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png",
+    "featureList": [
+      "मेट्रोनोम (टैप टेम्पो, टाइम सिग्नेचर, सबडिविज़न)",
+      "टैप टेम्पो",
+      "BPM→ms/Hz टेबल (स्ट्रेट/डॉटेड/ट्रिपलेट)",
+      "स्वर↔फ़्रीक्वेंसी लुकअप (A4 = 440 Hz)",
+      "ट्रांसपोज़ और स्पीड टूल",
+      "FM कैलकुलेटर (रेशियो + पिच करेक्शन)",
+      "LFO रेट कैलकुलेटर + रिवर्स लुकअप",
+      "हार्मोनिक सीरीज़ एक्सप्लोरर",
+      "मेनू बार में टैप टेम्पो और डिले टाइम",
+      "Siri, शॉर्टकट और BPM विजेट"
+    ]
+  }
+  </script>
+</head>
+<body data-cookie-consent>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="../" aria-label="Harmonic Tools होम">Harmonic Tools</a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">मेनू</button>
+        <ul id="primary-menu" class="nav-list">
+        </ul>
+      </nav>
+      <div class="language-selector" data-languages='{"en":"../../en/products/metric.html","de":"../../de/products/metric.html","es":"../../es/products/metric.html","fr":"../../fr/products/metric.html","pl":"../../pl/products/metric.html","ja":"../../ja/products/metric.html","ko":"../../ko/products/metric.html","pt-br":"../../pt-br/products/metric.html","pt-pt":"../../pt-pt/products/metric.html","zh-hans":"../../zh-hans/products/metric.html","zh-hant":"../../zh-hant/products/metric.html","ar":"../../ar/products/metric.html","bn":"../../bn/products/metric.html","da":"../../da/products/metric.html","el":"../../el/products/metric.html","fi":"../../fi/products/metric.html","hi":"./metric.html","id":"../../id/products/metric.html","it":"../../it/products/metric.html","no":"../../no/products/metric.html","pa":"../../pa/products/metric.html","sv":"../../sv/products/metric.html"}' data-active-lang="hi"></div>
+      <button class="theme-toggle" aria-label="थीम बदलें" title="थीम बदलें"></button>
+    </div>
+  </header>
+
+  <main class="container product-page">
+    <div class="product-hero">
+      <div class="product-hero__copy">
+        <picture>
+          <source srcset="../../assets/images/MetricMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+          <img src="../../assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" alt="Metric macOS ऐप आइकन" width="128" height="128" class="product-hero__icon" />
+        </picture>
+
+        <h1>macOS के लिए Metric</h1>
+        <p class="product-lead">macOS के लिए बिल्ट-इन मेट्रोनोम वाला, विंडो में चलने वाला टाइमिंग और फ़्रीक्वेंसी टूलकिट। यह टेम्पो से डिले टाइम तय करता है, FM रेशियो और साइडबैंड निकालता है, LFO को बीट से सिंक करता है और सैंपल को ट्रांसपोज़ करता है, और यह सब आकार बदलने योग्य विंडो में होता है जिसे आप अपने DAW के बगल में खुला रख सकते हैं। Siri, शॉर्टकट और नोटिफ़िकेशन सेंटर विजेट के साथ काम करता है।</p>
+
+        <ul class="product-highlights">
+          <li>टैप टेम्पो और विज़ुअल बीट वाला मेट्रोनोम</li>
+          <li>BPM → ms / Hz कन्वर्टर (स्ट्रेट, डॉटेड, ट्रिपलेट)</li>
+          <li>स्वर ↔ फ़्रीक्वेंसी टेबल (108 स्वर, A4 = 440 Hz)</li>
+          <li>ट्रांसपोज़ और स्पीड, FM कैलकुलेटर, LFO रेट, 32 हार्मोनिक्स</li>
+          <li>मेनू बार में टैप टेम्पो, ms या Hz में डिले टाइम, साथ में मेट्रोनोम और स्वर</li>
+          <li>Siri, शॉर्टकट और नोटिफ़िकेशन सेंटर BPM विजेट</li>
+        </ul>
+
+        <div class="product-cta">
+          <span class="store-badge store-badge--disabled" data-store="mac" data-store-product="Metric"></span>
+        </div>
+      </div>
+
+      <div class="product-hero__shots" aria-label="Metric macOS स्क्रीनशॉट">
+        <h2 class="product-shot-title">स्क्रीनशॉट</h2>
+        <p class="product-shot-lead">इसमें लाइट और डार्क स्क्रीनशॉट हैं, जो वेबसाइट की थीम के अनुसार बदलते हैं।</p>
+        <div class="screenshot-grid">
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS स्क्रीनशॉट">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/hi/metric-tap-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/hi/metric-tap-mac-light.png" alt="macOS पर टैप टेम्पो स्क्रीन" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>टैप करके टेम्पो नापें। आख़िरी टैप का BPM और रोलिंग औसत दिखता है।</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS स्क्रीनशॉट">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/hi/metric-tap-preset-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/hi/metric-tap-preset-mac-light.png" alt="macOS पर टैप टेम्पो प्रीसेट स्क्रीन" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>टेम्पो प्रीसेट सेव करें और दोबारा खोलें, ताकि पसंदीदा BPM एक क्लिक में मिल जाएँ।</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS स्क्रीनशॉट">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/hi/metric-menubar-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/hi/metric-menubar-mac-light.png" alt="macOS पर मेनू बार में टैप टेम्पो और डिले टाइम" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>मेनू बार से टैप टेम्पो। ms या Hz में डिले टाइम, साथ में मेट्रोनोम और स्वर।</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS स्क्रीनशॉट">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/hi/metric-bpm-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/hi/metric-bpm-mac-light.png" alt="macOS पर BPM से ms/Hz की टेबल" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>BPM को ms और Hz में बदलें, स्ट्रेट, डॉटेड और ट्रिपलेट मान के साथ।</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS स्क्रीनशॉट">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/hi/metric-noteHz-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/hi/metric-noteHz-mac-light.png" alt="macOS पर स्वर से फ़्रीक्वेंसी कन्वर्टर" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>किसी भी स्वर की फ़्रीक्वेंसी देखें। 108 स्वर, Hz, MIDI, पीरियड और सैंपल की गिनती के साथ।</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS स्क्रीनशॉट">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/hi/metric-transpose-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/hi/metric-transpose-mac-light.png" alt="macOS पर ट्रांसपोज़ और स्पीड टूल" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>की और स्पीड ट्रांसपोज़ करें। सेमीटोन शिफ़्ट, इंटरवल का नाम और नया टेम्पो।</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS स्क्रीनशॉट">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/hi/metric-fmCalc-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/hi/metric-fmCalc-mac-light.png" alt="macOS पर FM कैलकुलेटर" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>FM टिम्बर संख्याओं से बनाएँ। रेशियो, साइडबैंड और पिच करेक्शन एक ही व्यू में।</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS स्क्रीनशॉट">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/hi/metric-lfoRate-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/hi/metric-lfoRate-mac-light.png" alt="macOS पर LFO रेट कैलकुलेटर" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>LFO को बीट से सिंक करें। 4 बार से 1/32 ट्रिपलेट तक 17 डिविज़न।</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS स्क्रीनशॉट">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/hi/metric-harmonics-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/hi/metric-harmonics-mac-light.png" alt="macOS पर हार्मोनिक सीरीज़ एक्सप्लोरर" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>हार्मोनिक सीरीज़ देखें। फ़्रीक्वेंसी, स्वर और इंटरवल के साथ 32 हार्मोनिक्स।</figcaption>
+          </figure>
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS स्क्रीनशॉट">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/hi/metric-metronome-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/hi/metric-metronome-mac-light.png" alt="macOS पर मेट्रोनोम" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>विज़ुअल बीट और लाइव ट्रांसपोर्ट वाला मेट्रोनोम।</figcaption>
+          </figure>
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS स्क्रीनशॉट">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/hi/metric-widgets-intents-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/hi/metric-widgets-intents-mac-light.png" alt="macOS पर विजेट, Siri और शॉर्टकट" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>नोटिफ़िकेशन सेंटर में आपका टेम्पो। Siri, शॉर्टकट और BPM विजेट।</figcaption>
+          </figure>
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="macOS स्क्रीनशॉट">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/hi/metric-settings-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/hi/metric-settings-mac-light.png" alt="macOS पर सेटिंग स्क्रीन" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>सेटिंग और ऐप के बारे में जानकारी। अपना वर्शन देखें और सहायता पाएँ।</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <section class="product-section" aria-labelledby="features-title">
+      <h2 id="features-title">सुविधाएँ</h2>
+      <ul>
+        <li>मेट्रोनोम में टेम्पो डायल, टैप करके टेम्पो सेट करना, टाइम सिग्नेचर, सबडिविज़न और विज़ुअल बीट इंडिकेटर है।</li>
+        <li>टेम्पो नापने के लिए बड़े टैप एरिया पर क्लिक करें। Metric आपके आख़िरी टैप का BPM और अधिकतम आठ टैप का रोलिंग औसत दिखाता है, और दोनों में से कोई भी रीडिंग एक क्लिक से सीधे BPM कन्वर्टर, ट्रांसपोज़ या LFO रेट टूल में जा सकती है।</li>
+        <li>BPM → ms / Hz कन्वर्टर टेम्पो लेकर होल, हाफ़, क्वार्टर, 8th और 16th नोट के स्ट्रेट, डॉटेड और ट्रिपलेट मान देता है। हर पंक्ति में मिलीसेकंड और Hz में फ़्रीक्वेंसी दिखती है, इसलिए डिले, रीवर्ब प्री-डिले या साइडचेन की टाइमिंग बिना कैलकुलेटर के सेट हो जाती है।</li>
+        <li>स्वर फ़्रीक्वेंसी टेबल में C0 से B8 तक के सभी 108 क्रोमैटिक स्वर हैं। हर स्वर के साथ उसका MIDI नंबर, Hz में फ़्रीक्वेंसी, मिलीसेकंड में पीरियड और 44.1, 48 और 96 kHz पर सैंपल की गिनती दिखती है। मिडिल C पर निशान है। सभी मान A4 = 440 Hz पर आधारित हैं।</li>
+        <li>ट्रांसपोज़ करने के लिए मूल की और लक्ष्य की चुनें, और सेमीटोन शिफ़्ट, इंटरवल का नाम और DAW का सटीक ट्रांसपोज़ मान देखें। मूल BPM जोड़ दें, तो Metric नया टेम्पो और प्लेबैक स्पीड का अनुपात निकाल देता है। सेंट्स स्लाइडर (±100) और दो सप्तक (±24 सेमीटोन) तक फैले स्पीड स्लाइडर से बारीक सेटिंग हो जाती है।</li>
+        <li>FM कैलकुलेटर में दो मोड हैं। रेशियो एक्सप्लोरर में बेस फ़्रीक्वेंसी के साथ कैरियर और मॉड्यूलेटर रेशियो सेट होते हैं, और दस FM प्रीसेट मिलते हैं, खोखले सप्तक (1:1) से लेकर इनहार्मोनिक घंटियों (1:π) तक। पिच करेक्शन उलटा काम करता है: लक्ष्य स्वर चुनें और कैरियर और मॉड्यूलेटर की सटीक फ़्रीक्वेंसी पाएँ। दोनों मोड में साइडबैंड टेबल दिखती है, जिसमें दस तक पार्शियल, उनकी फ़्रीक्वेंसी, सबसे पास के स्वर और रंग-कोडित एम्प्लिट्यूड होते हैं, जो मॉड्यूलेशन इंडेक्स स्लाइडर से चलते हैं।</li>
+        <li>LFO रेट कैलकुलेटर किसी भी BPM को चार बार से लेकर 1/32 ट्रिपलेट तक 17 म्यूज़िकल डिविज़न में LFO रेट में बदलता है। हर पंक्ति में Hz, मिलीसेकंड में पीरियड और 44.1, 48 और 96 kHz पर प्रति साइकल सैंपल दिखते हैं। रिवर्स लुकअप में कोई भी Hz मान डालकर सबसे नज़दीकी म्यूज़िकल डिविज़न खोजा जा सकता है, और त्रुटि भी दिखती है।</li>
+        <li>हार्मोनिक सीरीज़ एक्सप्लोरर किसी फ़्रीक्वेंसी या किसी भी स्वर से शुरू करके पहले 32 हार्मोनिक्स को फ़्रीक्वेंसी, सबसे पास के स्वर का नाम, सेंट्स विचलन और इंटरवल लेबल के साथ दिखाता है। निचले क्रम के हार्मोनिक्स रंग-कोडित हैं, और 30 सेंट्स से ज़्यादा के विचलन हाइलाइट होते हैं, जिससे इनहार्मोनिक सामग्री आसानी से अलग दिखती है।</li>
+      </ul>
+
+      <h3>साझा टेम्पो और ट्यूनिंग</h3>
+      <p>एक बार टेम्पो टैप करें और BPM कन्वर्टर, ट्रांसपोज़ और LFO रेट टूल सब एक ही लाइव BPM का उपयोग करते हैं। स्वर फ़्रीक्वेंसी, FM कैलकुलेटर और हार्मोनिक्स सब A4 = 440 Hz पर चलते हैं।</p>
+
+      <h3>Siri, शॉर्टकट और विजेट</h3>
+      <p>Siri से कहें कि वह मेट्रोनोम शुरू या बंद करे, BPM सेट करे, टेम्पो टैप करे, BPM को ms में बदले, किसी स्वर की फ़्रीक्वेंसी बताए या टेम्पो ट्रांसपोज़ करे। हर टूल एक शॉर्टकट क्रिया भी है, और BPM विजेट आपका टेम्पो नोटिफ़िकेशन सेंटर में रखता है।</p>
+
+      <h3>मेनू बार टूल</h3>
+      <p>ऐप खोले बिना मेनू बार से टेम्पो टैप करें। डिले टाइम ms या Hz में देखने के लिए राइट-क्लिक करें, और कोई भी टेम्पो टाइप करें। मेट्रोनोम और स्वर पिच के आइटम वैकल्पिक हैं, और सिर्फ़ मेनू बार मोड तथा लॉगिन पर खुलने की सेटिंग भी है।</p>
+
+      <h3>डेस्कटॉप पर</h3>
+      <ul>
+        <li>पूरी तरह ऑफ़लाइन चलता है। न अकाउंट, न विज्ञापन, न ट्रैकिंग</li>
+        <li>साइडबार नेविगेशन वाला नेटिव macOS ऐप</li>
+        <li>डार्क मोड के अनुसार बदलने वाला इंटरफ़ेस, जो सिस्टम अपीयरेंस का पालन करता है</li>
+        <li>44.1, 48 और 96 kHz पर सैंपल की गिनती</li>
+        <li>आकार बदलने योग्य विंडो। इसे अपने DAW के बगल में खुला रखें</li>
+      </ul>
+
+      <h3>एक्सेसिबिलिटी</h3>
+      <p>VoiceOver और वॉइस कंट्रोल के साथ काम करता है, और कीबोर्ड से भी चलाया जा सकता है, तीर वाली कुंजियों और Space के साथ।</p>
+
+      <p>Metric को 7 दिन निःशुल्क आज़माया जा सकता है। ट्रायल के बाद पूरी एक्सेस एक बार की खरीदारी है, कोई सब्सक्रिप्शन नहीं।</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-footer-type="simple"></footer>
+</body>
+</html>

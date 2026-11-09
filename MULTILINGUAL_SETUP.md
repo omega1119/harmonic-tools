@@ -4,6 +4,8 @@ This site uses a **static, per-language folder** approach (no JavaScript-based t
 
 ## Supported Languages (current)
 
+The list below is the original set. The authoritative list (22 languages, including Arabic with `dir="rtl"`) is in `README.md`, in `HREFLANG_LANGS` in `assets/js/main.js` and in `SUPPORTED_LANGS` in `assets/js/redirect.js`.
+
 - **English**: `/en/`
 - **Polish**: `/pl/`
 - **French**: `/fr/`

@@ -1,6 +1,6 @@
 (function () {
   /** Non-English languages supported by the site. */
-  var SUPPORTED_LANGS = ['pl', 'fr', 'de', 'es', 'ko', 'ja', 'pt-br', 'pt-pt', 'zh-hans', 'zh-hant'];
+  var SUPPORTED_LANGS = ['pl', 'fr', 'de', 'es', 'ko', 'ja', 'pt-br', 'pt-pt', 'zh-hans', 'zh-hant', 'ar', 'bn', 'da', 'el', 'fi', 'hi', 'id', 'it', 'no', 'pa', 'sv'];
 
   /** Country-code → language mapping for geo-based fallback. */
   var COUNTRY_TO_LANG = {
@@ -39,7 +39,31 @@
     SG: 'zh-hans',
     TW: 'zh-hant',
     HK: 'zh-hant',
-    MO: 'zh-hant'
+    MO: 'zh-hant',
+    SA: 'ar',
+    AE: 'ar',
+    EG: 'ar',
+    IQ: 'ar',
+    JO: 'ar',
+    KW: 'ar',
+    QA: 'ar',
+    BH: 'ar',
+    OM: 'ar',
+    LB: 'ar',
+    MA: 'ar',
+    DZ: 'ar',
+    TN: 'ar',
+    BD: 'bn',
+    DK: 'da',
+    GR: 'el',
+    CY: 'el',
+    FI: 'fi',
+    ID: 'id',
+    IT: 'it',
+    SM: 'it',
+    VA: 'it',
+    NO: 'no',
+    SE: 'sv'
   };
 
   function normalizeLocale(locale) {
@@ -50,7 +74,8 @@
   var LOCALE_ALIASES = {
     'zh': 'zh-hans', 'zh-cn': 'zh-hans', 'zh-sg': 'zh-hans', 'zh-hans': 'zh-hans',
     'zh-tw': 'zh-hant', 'zh-hk': 'zh-hant', 'zh-mo': 'zh-hant', 'zh-hant': 'zh-hant',
-    'pt': 'pt-pt', 'pt-pt': 'pt-pt', 'pt-br': 'pt-br'
+    'pt': 'pt-pt', 'pt-pt': 'pt-pt', 'pt-br': 'pt-br',
+    'nb': 'no', 'nn': 'no'
   };
 
   function getPreferredLanguage() {

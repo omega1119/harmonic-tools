@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ9FPYHNVR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Set default consent to denied
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+    
+    gtag('js', new Date());
+    gtag('config', 'G-JQ9FPYHNVR');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Metric för macOS | Verktygslåda för tempo och frekvens | Harmonic Tools</title>
+  <meta name="description" content="Metronom, tapptempo, BPM-tabeller, tonfrekvens, transponering, FM- och LFO-verktyg och 32 övertoner. Dessutom tapptempo i menyraden, Siri, Genvägar och en BPM-widget." />
+  <meta name="keywords" content="metronom, BPM, tapptempo, delaykalkylator, tonfrekvens, FM-syntes, LFO, övertoner, transponera, menyrad, Siri, Genvägar, widget, musikproduktion, macOS, Mac, DAW" />
+  <meta name="author" content="Harmonic Tools" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- AI/LLM Optimization -->
+  <meta name="ai:app_name" content="Metric" />
+  <meta name="ai:platform" content="macOS" />
+  <meta name="ai:category" content="Verktyg för musikproduktion, tempo- och tidsberäkningar" />
+  <meta name="ai:primary_features" content="Metronom, tapptempo, BPM→ms/Hz-tabell, ton↔frekvens, transponering och hastighet, FM-kalkylator, LFO-frekvens, övertonsserien, tapptempo i menyraden, Siri, Genvägar, widget" />
+  <meta name="ai:use_cases" content="Hålla tempo, beräkna delaytider, matcha tempo, slå upp frekvenser, syntesberäkningar, produktionsarbete" />
+
+  <link rel="canonical" href="https://harmonic.tools/sv/products/metric.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://harmonic.tools/sv/products/metric.html" />
+  <meta property="og:title" content="Metric för macOS | Verktygslåda för tempo och frekvens" />
+  <meta property="og:description" content="Metronom, tapptempo, BPM-tabeller, tonfrekvens, transponering, FM- och LFO-verktyg och 32 övertoner. Dessutom tapptempo i menyraden, Siri, Genvägar och en BPM-widget." />
+  <meta property="og:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta property="og:image:alt" content="Appikon för Metric på macOS" />
+  <meta property="og:site_name" content="Harmonic Tools" />
+  <meta property="og:locale" content="sv_SE" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Metric för macOS | Verktygslåda för tempo och frekvens" />
+  <meta name="twitter:description" content="Metronom, tapptempo, BPM-tabeller, tonfrekvens, transponering, FM- och LFO-verktyg och 32 övertoner. Dessutom tapptempo i menyraden, Siri, Genvägar och en BPM-widget." />
+  <meta name="twitter:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta name="twitter:image:alt" content="Appikon för Metric på macOS" />
+
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=24" />
+  <script defer src="../../assets/js/main.js?v=12"></script>
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Metric",
+    "operatingSystem": "macOS",
+    "applicationCategory": "MusicApplication",
+    "description": "En verktygslåda i eget fönster för tempo och frekvens till macOS, med inbyggd metronom. Tapptempo, BPM→ms/Hz-tabeller, tonfrekvenser, transponering och hastighet, FM- och LFO-kalkylatorer och en övertonsserie med 32 övertoner, i en app med navigering i sidofältet. Dessutom tapptempo i menyraden, Siri, Genvägar och en widget i Notiscenter.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Harmonic Tools"
+    },
+    "screenshot": "https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png",
+    "featureList": [
+      "Metronom (tapptempo, taktarter, underdelningar)",
+      "Tapptempo",
+      "BPM→ms/Hz-tabell (raka, punkterade och triolvärden)",
+      "Ton↔frekvens (A4 = 440 Hz)",
+      "Transponering och hastighet",
+      "FM-kalkylator (kvoter och tonhöjdskorrigering)",
+      "LFO-frekvenskalkylator med omvänd sökning",
+      "Övertonsserien",
+      "Tapptempo och delaytider i menyraden",
+      "Siri, Genvägar och BPM-widget"
+    ]
+  }
+  </script>
+</head>
+<body data-cookie-consent>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="../" aria-label="Harmonic Tools startsida">Harmonic Tools</a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">Meny</button>
+        <ul id="primary-menu" class="nav-list">
+        </ul>
+      </nav>
+      <div class="language-selector" data-languages='{"en":"../../en/products/metric.html","de":"../../de/products/metric.html","es":"../../es/products/metric.html","fr":"../../fr/products/metric.html","pl":"../../pl/products/metric.html","ja":"../../ja/products/metric.html","ko":"../../ko/products/metric.html","pt-br":"../../pt-br/products/metric.html","pt-pt":"../../pt-pt/products/metric.html","zh-hans":"../../zh-hans/products/metric.html","zh-hant":"../../zh-hant/products/metric.html","ar":"../../ar/products/metric.html","bn":"../../bn/products/metric.html","da":"../../da/products/metric.html","el":"../../el/products/metric.html","fi":"../../fi/products/metric.html","hi":"../../hi/products/metric.html","id":"../../id/products/metric.html","it":"../../it/products/metric.html","no":"../../no/products/metric.html","pa":"../../pa/products/metric.html","sv":"./metric.html"}' data-active-lang="sv"></div>
+      <button class="theme-toggle" aria-label="Byt tema" title="Byt tema"></button>
+    </div>
+  </header>
+
+  <main class="container product-page">
+    <div class="product-hero">
+      <div class="product-hero__copy">
+        <picture>
+          <source srcset="../../assets/images/MetricMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+          <img src="../../assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" alt="Appikon för Metric på macOS" width="128" height="128" class="product-hero__icon" />
+        </picture>
+
+        <h1>Metric för macOS</h1>
+        <p class="product-lead">En verktygslåda i eget fönster för tempo och frekvens till macOS, med inbyggd metronom. Den ställer in delaytider utifrån ett tempo, räknar ut FM-kvoter och sidband, synkar en LFO till takten och transponerar ett sampel, i ett fönster som går att ändra storlek på och som du kan ha öppet bredvid din DAW. Siri, Genvägar och en widget i Notiscenter stöds.</p>
+
+        <ul class="product-highlights">
+          <li>Metronom med tapptempo och visuell taktindikator</li>
+          <li>BPM → ms / Hz-omvandlare (raka, punkterade och triolvärden)</li>
+          <li>Tabell över ton ↔ frekvens (108 toner, A4 = 440 Hz)</li>
+          <li>Transponering och hastighet, FM-kalkylator, LFO-frekvens, 32 övertoner</li>
+          <li>Tapptempo i menyraden, delaytider i ms eller Hz, plus metronom och toner</li>
+          <li>Siri, Genvägar och en BPM-widget i Notiscenter</li>
+        </ul>
+
+        <div class="product-cta">
+          <span class="store-badge store-badge--disabled" data-store="mac" data-store-product="Metric"></span>
+        </div>
+      </div>
+
+      <div class="product-hero__shots" aria-label="Skärmbilder av Metric på macOS">
+        <h2 class="product-shot-title">Skärmbilder</h2>
+        <p class="product-shot-lead">Ljusa och mörka skärmbilder som följer webbplatsens tema.</p>
+        <div class="screenshot-grid">
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Skärmbild från macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/sv/metric-tap-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/sv/metric-tap-mac-light.png" alt="Tapptempo på macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Tryck för att mäta tempo. Visar BPM från det senaste trycket och ett löpande medelvärde.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Skärmbild från macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/sv/metric-tap-preset-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/sv/metric-tap-preset-mac-light.png" alt="Förinställningar för tapptempo på macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Spara och hämta tempoförinställningar, så att dina favorittempon bara ligger ett klick bort.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Skärmbild från macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/sv/metric-menubar-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/sv/metric-menubar-mac-light.png" alt="Tapptempo och delaytider i menyraden på macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Tapptempo från menyraden. Delaytider i ms eller Hz, plus metronom och toner.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Skärmbild från macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/sv/metric-bpm-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/sv/metric-bpm-mac-light.png" alt="BPM → ms / Hz-tabell på macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Omvandla BPM till ms och Hz, med raka, punkterade och triolvärden.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Skärmbild från macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/sv/metric-noteHz-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/sv/metric-noteHz-mac-light.png" alt="Omvandlare mellan ton och frekvens på macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Slå upp frekvensen för valfri ton. 108 toner med Hz, MIDI, period och antal samplar.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Skärmbild från macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/sv/metric-transpose-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/sv/metric-transpose-mac-light.png" alt="Transponering och hastighet på macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Transponera tonart och hastighet. Halvtonsskifte, intervallnamn och det nya tempot.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Skärmbild från macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/sv/metric-fmCalc-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/sv/metric-fmCalc-mac-light.png" alt="FM-kalkylator på macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Formge FM-klang med siffror. Kvoter, sidband och tonhöjdskorrigering i en vy.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Skärmbild från macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/sv/metric-lfoRate-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/sv/metric-lfoRate-mac-light.png" alt="LFO-frekvenskalkylator på macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Synka din LFO till takten. 17 notvärden från 4 takter till 1/32-triol.</figcaption>
+          </figure>
+
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Skärmbild från macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/sv/metric-harmonics-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/sv/metric-harmonics-mac-light.png" alt="Övertonsserien på macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Utforska övertonsserien. 32 övertoner med frekvenser, toner och intervall.</figcaption>
+          </figure>
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Skärmbild från macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/sv/metric-metronome-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/sv/metric-metronome-mac-light.png" alt="Metronom på macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Metronom med visuell taktindikator och start- och stoppkontroller.</figcaption>
+          </figure>
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Skärmbild från macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/sv/metric-widgets-intents-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/sv/metric-widgets-intents-mac-light.png" alt="Widget, Siri och Genvägar på macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Ditt tempo i Notiscenter. Siri, Genvägar och en BPM-widget.</figcaption>
+          </figure>
+          <figure class="device-shot device-shot--mac">
+            <div class="device-shot__stage" aria-label="Skärmbild från macOS">
+              <img class="device-shot__bezel" src="../../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+              <div class="device-shot__screen">
+                <picture>
+                  <source srcset="../../assets/images/MetricMac/sv/metric-settings-mac-dark.png" data-theme="dark">
+                  <img src="../../assets/images/MetricMac/sv/metric-settings-mac-light.png" alt="Inställningar på macOS" loading="lazy" />
+                </picture>
+              </div>
+            </div>
+            <figcaption>Inställningar och Om. Se vilken version du har och hitta support.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <section class="product-section" aria-labelledby="features-title">
+      <h2 id="features-title">Funktioner</h2>
+      <ul>
+        <li>Metronomen har en temporatt, tapptempo, taktarter, underdelningar och en visuell taktindikator.</li>
+        <li>Klicka på den stora tryckytan för att mäta tempo. Metric visar BPM från ditt senaste tryck och ett löpande medelvärde över upp till åtta tryck, och något av värdena kan skickas direkt till BPM-omvandlaren, Transponera eller LFO-frekvens med ett klick.</li>
+        <li>BPM → ms / Hz-omvandlaren tar ett tempo och ger raka, punkterade och triolvärden för hel-, halv-, fjärdedels-, åttondels- och sextondelsnoter. Varje rad visar millisekunder och frekvens i Hz, så att du kan ställa in delay, pre-delay för reverb eller sidechain-timing utan miniräknare.</li>
+        <li>Tonfrekvenstabellen listar alla 108 kromatiska toner från C0 till B8. Varje ton visar sitt MIDI-nummer, sin frekvens i Hz, sin period i millisekunder och antal samplar vid 44,1, 48 och 96 kHz. Mellersta C är markerat. Utgår från A4 = 440 Hz.</li>
+        <li>För transponering väljer du en ursprungstonart och en måltonart och ser halvtonsskiftet, intervallnamnet och det exakta transponeringsvärdet för din DAW. Lägg till ett ursprungligt BPM så räknar Metric ut det nya tempot och hastighetskvoten för uppspelningen. Ett centreglage (±100) och ett hastighetsreglage som spänner över två oktaver (±24 halvtoner) ger finjustering.</li>
+        <li>FM-kalkylatorn har två lägen. Kvotutforskare ställer in bärvågs- och modulatorkvoter utifrån en basfrekvens och erbjuder tio FM-förinställningar, från ihåliga oktaver (1:1) till inharmoniska klockljud (1:π). Tonhöjdskorrigering fungerar åt andra hållet: välj en målton och få exakta bärvågs- och modulatorfrekvenser. Båda lägena visar en sidbandstabell med upp till tio deltoner, deras frekvenser, närmaste toner och färgkodade amplituder som styrs av ett reglage för modulationsindex.</li>
+        <li>LFO-frekvenskalkylatorn omvandlar valfritt BPM till LFO-frekvenser över 17 musikaliska notvärden, från fyra takter ned till 1/32-triol. Varje rad visar Hz, period i millisekunder och samplar per cykel vid 44,1, 48 och 96 kHz. Med omvänd sökning anger du valfritt Hz-värde och hittar närmaste musikaliska notvärde, med avvikelsen angiven.</li>
+        <li>Övertonsserien utgår från en frekvens eller valfri ton och listar de första 32 övertonerna med frekvens, närmaste tonnamn, avvikelse i cent och intervallbeteckning. Övertoner av låg ordning är färgkodade, och avvikelser på mer än 30 cent markeras, så att inharmoniskt innehåll är lätt att upptäcka.</li>
+      </ul>
+
+      <h3>Delat tempo och delad stämning</h3>
+      <p>Tryck in ett tempo en gång så använder BPM-omvandlaren, Transponera och LFO-frekvens alla samma aktuella BPM. Tonfrekvens, FM-kalkylatorn och Övertoner utgår alla från A4 = 440 Hz.</p>
+
+      <h3>Siri, Genvägar och widget</h3>
+      <p>Be Siri starta eller stoppa metronomen, ställa in ett BPM, tappa ett tempo, omvandla BPM till ms, hitta en tonfrekvens eller transponera ett tempo. Varje verktyg är också en åtgärd i Genvägar, och BPM-widgeten visar ditt tempo i Notiscenter.</p>
+
+      <h3>Verktyg i menyraden</h3>
+      <p>Tappa ett tempo från menyraden utan att öppna appen. Högerklicka för delaytider i ms eller Hz och skriv in valfritt tempo. Objekten för metronom och tonhöjder är valfria, och det finns inställningar för enbart menyrad och start vid inloggning.</p>
+
+      <h3>På skrivbordet</h3>
+      <ul>
+        <li>Fungerar helt offline. Inget konto, inga annonser, ingen spårning</li>
+        <li>Äkta macOS-app med navigering i sidofältet</li>
+        <li>Gränssnitt som anpassas till mörkt läge och följer systemets utseende</li>
+        <li>Antal samplar vid 44,1, 48 och 96 kHz</li>
+        <li>Fönster som går att ändra storlek. Ha det öppet bredvid din DAW</li>
+      </ul>
+
+      <h3>Tillgänglighet</h3>
+      <p>Fungerar med VoiceOver och Röststyrning och kan användas från tangentbordet, med piltangenter och mellanslag.</p>
+
+      <p>Metric är gratis att prova i 7 dagar. Efter provperioden köper du full åtkomst en gång, utan prenumeration.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-footer-type="simple"></footer>
+</body>
+</html>

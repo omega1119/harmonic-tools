@@ -28,7 +28,9 @@
     'pt-br':'Português (Brasil)', 'pt-pt':'Português (Portugal)',
     'zh-hans':'简体中文', 'zh-hant':'繁體中文',
     it:'Italiano', nl:'Nederlands', zh:'中文', ru:'Русский',
-    sv:'Svenska', da:'Dansk', fi:'Suomi', nb:'Norsk',
+    sv:'Svenska', da:'Dansk', fi:'Suomi', nb:'Norsk', no:'Norsk',
+    ar:'العربية', bn:'বাংলা', el:'Ελληνικά', hi:'हिन्दी',
+    id:'Bahasa Indonesia', pa:'ਪੰਜਾਬੀ',
     tr:'Türkçe', cs:'Čeština', ro:'Română', hu:'Magyar'
   };
   const GLOBE_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"><path fill="currentColor" fill-rule="evenodd" d="M2 16c0 7.72 6.28 14 14 14s14-6.28 14-14S23.72 2 16 2S2 8.28 2 16m2.041-1c.15-1.81.703-3.506 1.568-5h3.55a16 16 0 0 0-1.128 5zm5.994 0a14 14 0 0 1 1.31-5H15v5zM15 17h-4.965a14 14 0 0 0 1.31 5H15zm0 7h-2.494A14 14 0 0 0 15 26.73zm4.005 3.62A12 12 0 0 0 24.94 24h-3.074a16 16 0 0 1-2.86 3.62M22.84 22h3.55v.002A11.9 11.9 0 0 0 27.959 17h-3.99a16 16 0 0 1-1.13 5m-.875-5a14 14 0 0 1-1.31 5H17v-5zm2.004-2h3.99a11.9 11.9 0 0 0-1.569-5.002V10h-3.55a16 16 0 0 1 1.13 5m-3.315-5a14 14 0 0 1 1.31 5H17v-5zm1.212-2h3.073a12 12 0 0 0-5.926-3.618A16 16 0 0 1 21.865 8M17 5.27V8h2.494A14 14 0 0 0 17 5.27m-2 0A14 14 0 0 0 12.506 8H15zM17 24v2.73A14 14 0 0 0 19.494 24zM5.609 22h3.554a16 16 0 0 1-1.132-5H4.04c.15 1.81.703 3.506 1.568 5M13 27.621A16 16 0 0 1 10.14 24H7.06a12 12 0 0 0 5.941 3.621M10.134 8a16 16 0 0 1 2.853-3.617A12 12 0 0 0 7.061 8z" clip-rule="evenodd"/></svg>';
@@ -82,7 +84,18 @@
     'pt-br': { privacy: 'Privacidade', terms: 'Termos de Uso' },
     'pt-pt': { privacy: 'Privacidade', terms: 'Termos e Condi\u00e7\u00f5es' },
     'zh-hans': { privacy: '\u9690\u79c1\u653f\u7b56', terms: '\u670d\u52a1\u6761\u6b3e' },
-    'zh-hant': { privacy: '\u96b1\u79c1\u6b0a\u653f\u7b56', terms: '\u670d\u52d9\u689d\u6b3e' }
+    'zh-hant': { privacy: '\u96b1\u79c1\u6b0a\u653f\u7b56', terms: '\u670d\u52d9\u689d\u6b3e' },
+    ar: { privacy: 'الخصوصية', terms: 'الشروط' },
+    bn: { privacy: 'গোপনীয়তা', terms: 'শর্তাবলী' },
+    da: { privacy: 'Privatliv', terms: 'Vilkår' },
+    el: { privacy: 'Απόρρητο', terms: 'Όροι' },
+    fi: { privacy: 'Tietosuoja', terms: 'Ehdot' },
+    hi: { privacy: 'गोपनीयता', terms: 'शर्तें' },
+    id: { privacy: 'Privasi', terms: 'Ketentuan' },
+    it: { privacy: 'Privacy', terms: 'Termini' },
+    no: { privacy: 'Personvern', terms: 'Vilkår' },
+    pa: { privacy: 'ਪਰਦੇਦਾਰੀ', terms: 'ਸ਼ਰਤਾਂ' },
+    sv: { privacy: 'Integritet', terms: 'Villkor' }
   };
 
   function initFooter() {
@@ -119,11 +132,11 @@
   initFooter();
 
   // ── Hreflang Injector ───────────────────────────────────
-  // Generates all 8 <link rel="alternate" hreflang="..."> tags
+  // Generates one <link rel="alternate" hreflang="..."> tag per supported language
   // by detecting the current page's language prefix and page path,
   // then substituting each supported language prefix.
   // x-default always points to the English version.
-  const HREFLANG_LANGS = ['en', 'pl', 'fr', 'de', 'es', 'ko', 'ja', 'pt-br', 'pt-pt', 'zh-hans', 'zh-hant'];
+  const HREFLANG_LANGS = ['en', 'pl', 'fr', 'de', 'es', 'ko', 'ja', 'pt-br', 'pt-pt', 'zh-hans', 'zh-hant', 'ar', 'bn', 'da', 'el', 'fi', 'hi', 'id', 'it', 'no', 'pa', 'sv'];
   const HREFLANG_ORIGIN = 'https://harmonic.tools';
 
   function initHreflang() {
@@ -166,7 +179,18 @@
     'pt-br': 'Pular para o conteúdo',
     'pt-pt': 'Saltar para o conteúdo',
     'zh-hans': '跳至正文',
-    'zh-hant': '跳至正文'
+    'zh-hant': '跳至正文',
+    ar: 'انتقل إلى المحتوى',
+    bn: 'মূল বিষয়বস্তুতে যান',
+    da: 'Gå til indhold',
+    el: 'Μετάβαση στο περιεχόμενο',
+    fi: 'Siirry sisältöön',
+    hi: 'सामग्री पर जाएँ',
+    id: 'Langsung ke konten',
+    it: 'Vai al contenuto',
+    no: 'Hopp til innhold',
+    pa: 'ਸਮੱਗਰੀ ਵੱਲ ਜਾਓ',
+    sv: 'Hoppa till innehåll'
   };
 
   function initSkipLink() {
@@ -194,7 +218,18 @@
     'pt-br': { products: 'Produtos', pillars: '\u00c1reas de foco', philosophy: 'Filosofia', contact: 'Contato', home: 'In\u00edcio' },
     'pt-pt': { products: 'Produtos', pillars: '\u00c1reas de foco', philosophy: 'Filosofia', contact: 'Contacto', home: 'In\u00edcio' },
     'zh-hans': { products: '\u4ea7\u54c1', pillars: '\u9886\u57df', philosophy: '\u7406\u5ff5', contact: '\u8054\u7cfb\u6211\u4eec', home: '\u9996\u9875' },
-    'zh-hant': { products: '\u7522\u54c1', pillars: '\u91cd\u9ede\u9818\u57df', philosophy: '\u7406\u5ff5', contact: '\u806f\u7d61\u6211\u5011', home: '\u9996\u9801' }
+    'zh-hant': { products: '\u7522\u54c1', pillars: '\u91cd\u9ede\u9818\u57df', philosophy: '\u7406\u5ff5', contact: '\u806f\u7d61\u6211\u5011', home: '\u9996\u9801' },
+    ar: { products: 'المنتجات', pillars: 'مجالات التركيز', philosophy: 'الفلسفة', contact: 'التواصل', home: 'الرئيسية' },
+    bn: { products: 'পণ্য', pillars: 'মূল ক্ষেত্র', philosophy: 'দর্শন', contact: 'যোগাযোগ', home: 'হোম' },
+    da: { products: 'Produkter', pillars: 'Fokusområder', philosophy: 'Filosofi', contact: 'Kontakt', home: 'Hjem' },
+    el: { products: 'Προϊόντα', pillars: 'Τομείς εστίασης', philosophy: 'Φιλοσοφία', contact: 'Επικοινωνία', home: 'Αρχική' },
+    fi: { products: 'Tuotteet', pillars: 'Painopistealueet', philosophy: 'Filosofia', contact: 'Yhteystiedot', home: 'Etusivu' },
+    hi: { products: 'प्रोडक्ट', pillars: 'मुख्य क्षेत्र', philosophy: 'दृष्टिकोण', contact: 'संपर्क', home: 'होम' },
+    id: { products: 'Produk', pillars: 'Area fokus', philosophy: 'Filosofi', contact: 'Kontak', home: 'Beranda' },
+    it: { products: 'Prodotti', pillars: 'Aree di lavoro', philosophy: 'Filosofia', contact: 'Contatti', home: 'Home' },
+    no: { products: 'Produkter', pillars: 'Fokusområder', philosophy: 'Filosofi', contact: 'Kontakt', home: 'Hjem' },
+    pa: { products: 'ਉਤਪਾਦ', pillars: 'ਮੁੱਖ ਖੇਤਰ', philosophy: 'ਫ਼ਲਸਫ਼ਾ', contact: 'ਸੰਪਰਕ', home: 'ਮੁੱਖ ਪੰਨਾ' },
+    sv: { products: 'Produkter', pillars: 'Fokusområden', philosophy: 'Filosofi', contact: 'Kontakt', home: 'Hem' }
   };
 
   function initNavItems() {
@@ -417,6 +452,171 @@
         dark: 'Download-on-the-Mac-App-Store/HKTW(TC)/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_CNTC_RGB_blk_100217.svg',
         light: 'Download-on-the-Mac-App-Store/HKTW(TC)/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_CNTC_RGB_wht_100217.svg'
       }
+    },
+    ar: {
+      comingSoon: 'قريبًا',
+      ios: {
+        alt: 'التنزيل من App Store',
+        ariaPrefix: 'قريبًا على App Store',
+        dark: 'Download-on-the-App-Store/AR/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_AR_RGB_blk_102417.svg',
+        light: 'Download-on-the-App-Store/AR/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_AR_RGB_wht_102417.svg'
+      },
+      mac: {
+        alt: 'التنزيل من Mac App Store',
+        ariaPrefix: 'قريبًا على Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/AR/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_AR_RGB_blk_102417.svg',
+        light: 'Download-on-the-Mac-App-Store/AR/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_AR_RGB_wht_102417.svg'
+      }
+    },
+    bn: {
+      comingSoon: 'শীঘ্রই আসছে',
+      ios: {
+        alt: 'App Store থেকে ডাউনলোড করুন',
+        ariaPrefix: 'শীঘ্রই App Store-এ আসছে',
+        dark: 'Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg',
+        light: 'Download-on-the-App-Store/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg'
+      },
+      mac: {
+        alt: 'Mac App Store থেকে ডাউনলোড করুন',
+        ariaPrefix: 'শীঘ্রই Mac App Store-এ আসছে',
+        dark: 'Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg',
+        light: 'Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_wht_092917.svg'
+      }
+    },
+    da: {
+      comingSoon: 'Kommer snart',
+      ios: {
+        alt: 'Hent i App Store',
+        ariaPrefix: 'kommer snart i App Store',
+        dark: 'Download-on-the-App-Store/DK/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_DK_RGB_blk_100217.svg',
+        light: 'Download-on-the-App-Store/DK/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_DK_RGB_wht_100217.svg'
+      },
+      mac: {
+        alt: 'Hent i Mac App Store',
+        ariaPrefix: 'kommer snart i Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/DK/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_DK_RGB_blk_100217.svg',
+        light: 'Download-on-the-Mac-App-Store/DK/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_DK_RGB_wht_100217.svg'
+      }
+    },
+    el: {
+      comingSoon: 'Σύντομα διαθέσιμο',
+      ios: {
+        alt: 'Λήψη από το App Store',
+        ariaPrefix: 'σύντομα στο App Store',
+        dark: 'Download-on-the-App-Store/GR/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_GR_RGB_blk_100217.svg',
+        light: 'Download-on-the-App-Store/GR/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_GR_RGB_wht_100217.svg'
+      },
+      mac: {
+        alt: 'Λήψη από το Mac App Store',
+        ariaPrefix: 'σύντομα στο Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/GR/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_GR_RGB_blk_100217.svg',
+        light: 'Download-on-the-Mac-App-Store/GR/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_GR_RGB_wht_100217.svg'
+      }
+    },
+    fi: {
+      comingSoon: 'Tulossa pian',
+      ios: {
+        alt: 'Lataa App Storesta',
+        ariaPrefix: 'tulossa pian App Storeen',
+        dark: 'Download-on-the-App-Store/FI/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_FI_RGB_blk_100217.svg',
+        light: 'Download-on-the-App-Store/FI/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_FI_RGB_wht_100217.svg'
+      },
+      mac: {
+        alt: 'Lataa Mac App Storesta',
+        ariaPrefix: 'tulossa pian Mac App Storeen',
+        dark: 'Download-on-the-Mac-App-Store/FI/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_FI_RGB_blk_100217.svg',
+        light: 'Download-on-the-Mac-App-Store/FI/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_FI_RGB_wht_100217.svg'
+      }
+    },
+    hi: {
+      comingSoon: 'जल्द आ रहा है',
+      ios: {
+        alt: 'App Store से डाउनलोड करें',
+        ariaPrefix: 'जल्द ही App Store पर',
+        dark: 'Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg',
+        light: 'Download-on-the-App-Store/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg'
+      },
+      mac: {
+        alt: 'Mac App Store से डाउनलोड करें',
+        ariaPrefix: 'जल्द ही Mac App Store पर',
+        dark: 'Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg',
+        light: 'Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_wht_092917.svg'
+      }
+    },
+    id: {
+      comingSoon: 'Segera hadir',
+      ios: {
+        alt: 'Unduh di App Store',
+        ariaPrefix: 'segera hadir di App Store',
+        dark: 'Download-on-the-App-Store/ID/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_ID_RGB_blk_100317.svg',
+        light: 'Download-on-the-App-Store/ID/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_ID_RGB_wht_100317.svg'
+      },
+      mac: {
+        alt: 'Unduh di Mac App Store',
+        ariaPrefix: 'segera hadir di Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/ID/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_ID_RGB_blk_100317.svg',
+        light: 'Download-on-the-Mac-App-Store/ID/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_ID_RGB_wht_100317.svg'
+      }
+    },
+    it: {
+      comingSoon: 'Prossimamente',
+      ios: {
+        alt: 'Scarica su App Store',
+        ariaPrefix: 'prossimamente su App Store',
+        dark: 'Download-on-the-App-Store/IT/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_IT_RGB_blk_100317.svg',
+        light: 'Download-on-the-App-Store/IT/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_IT_RGB_wht_100317.svg'
+      },
+      mac: {
+        alt: 'Scarica su Mac App Store',
+        ariaPrefix: 'prossimamente su Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/IT/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_IT_RGB_blk_100317.svg',
+        light: 'Download-on-the-Mac-App-Store/IT/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_IT_RGB_wht_100317.svg'
+      }
+    },
+    no: {
+      comingSoon: 'Kommer snart',
+      ios: {
+        alt: 'Last ned fra App Store',
+        ariaPrefix: 'kommer snart i App Store',
+        dark: 'Download-on-the-App-Store/NO/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_NO_RGB_blk_100317.svg',
+        light: 'Download-on-the-App-Store/NO/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_NO_RGB_wht_100317.svg'
+      },
+      mac: {
+        alt: 'Last ned fra Mac App Store',
+        ariaPrefix: 'kommer snart i Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/NO/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_NO_RGB_blk_100317.svg',
+        light: 'Download-on-the-Mac-App-Store/NO/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_NO_RGB_wht_100317.svg'
+      }
+    },
+    pa: {
+      comingSoon: 'ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ',
+      ios: {
+        alt: 'App Store ਤੋਂ ਡਾਊਨਲੋਡ ਕਰੋ',
+        ariaPrefix: 'ਜਲਦੀ ਹੀ App Store ਵਿੱਚ',
+        dark: 'Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg',
+        light: 'Download-on-the-App-Store/US/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg'
+      },
+      mac: {
+        alt: 'Mac App Store ਤੋਂ ਡਾਊਨਲੋਡ ਕਰੋ',
+        ariaPrefix: 'ਜਲਦੀ ਹੀ Mac App Store ਵਿੱਚ',
+        dark: 'Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_blk_092917.svg',
+        light: 'Download-on-the-Mac-App-Store/US/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_US-UK_RGB_wht_092917.svg'
+      }
+    },
+    sv: {
+      comingSoon: 'Kommer snart',
+      ios: {
+        alt: 'Hämta i App Store',
+        ariaPrefix: 'kommer snart i App Store',
+        dark: 'Download-on-the-App-Store/SE/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_SE_RGB_blk_100317.svg',
+        light: 'Download-on-the-App-Store/SE/Download_on_App_Store/White_lockup/SVG/Download_on_the_App_Store_Badge_SE_RGB_wht_100317.svg'
+      },
+      mac: {
+        alt: 'Hämta i Mac App Store',
+        ariaPrefix: 'kommer snart i Mac App Store',
+        dark: 'Download-on-the-Mac-App-Store/SE/Download_on_Mac_App_Store/Black_lockup/SVG/Download_on_the_Mac_App_Store_Badge_SE_RGB_blk_100317.svg',
+        light: 'Download-on-the-Mac-App-Store/SE/Download_on_Mac_App_Store/White_lockup/SVG/Download_on_the_Mac_App_Store_Badge_SE_RGB_wht_100317.svg'
+      }
     }
   };
 
@@ -477,7 +677,18 @@
     'pt-br': 'Software musical para produtores e m\u00fasicos: Metric (ferramentas de tempo e frequ\u00eancia), Modes (teoria musical) e Modes Guitar (escalas e acordes no bra\u00e7o) para macOS e iOS.',
     'pt-pt': 'Software musical para produtores e m\u00fasicos: Metric (toolkit de tempo e frequ\u00eancia), Modes (teoria musical) e Modes Guitar (escalas e acordes no bra\u00e7o) para macOS e iOS.',
     'zh-hans': '\u9762\u5411\u5236\u4f5c\u4eba\u4e0e\u97f3\u4e50\u4eba\u7684\u97f3\u4e50\u8f6f\u4ef6\uff1a\u9002\u7528\u4e8e macOS \u548c iOS \u7684 Metric\uff08\u65f6\u95f4\u4e0e\u9891\u7387\u5de5\u5177\u5305\uff09\u3001Modes\uff08\u4e50\u7406\uff09\u548c Modes Guitar\uff08\u6307\u677f\u97f3\u9636\u4e0e\u548c\u5f26\uff09\u3002',
-    'zh-hant': '\u70ba\u88fd\u4f5c\u4eba\u8207\u97f3\u6a02\u4eba\u6253\u9020\u7684\u97f3\u6a02\u8edf\u9ad4\uff1a\u9069\u7528\u65bc macOS \u548c iOS \u7684 Metric\uff08\u6642\u9593\u8207\u983b\u7387\u5de5\u5177\u7d44\uff09\u3001Modes\uff08\u6a02\u7406\uff09\u548c Modes Guitar\uff08\u6307\u677f\u97f3\u968e\u8207\u548c\u5f26\uff09\u3002'
+    'zh-hant': '\u70ba\u88fd\u4f5c\u4eba\u8207\u97f3\u6a02\u4eba\u6253\u9020\u7684\u97f3\u6a02\u8edf\u9ad4\uff1a\u9069\u7528\u65bc macOS \u548c iOS \u7684 Metric\uff08\u6642\u9593\u8207\u983b\u7387\u5de5\u5177\u7d44\uff09\u3001Modes\uff08\u6a02\u7406\uff09\u548c Modes Guitar\uff08\u6307\u677f\u97f3\u968e\u8207\u548c\u5f26\uff09\u3002',
+    ar: 'برامج موسيقية للمنتجين والموسيقيين: Metric (أدوات التوقيت والتردد) وModes (نظرية الموسيقى) وModes Guitar (السلالم والتآلفات على ذراع الغيتار) لنظامي macOS وiOS.',
+    bn: 'প্রযোজক ও সংগীতশিল্পীদের জন্য সংগীত সফটওয়্যার: macOS ও iOS-এর জন্য Metric (টাইমিং ও ফ্রিকোয়েন্সি টুলকিট), Modes (সংগীততত্ত্ব) এবং Modes Guitar (ফ্রেটবোর্ডে স্কেল ও কর্ড)।',
+    da: 'Musiksoftware til producere og musikere: Metric (værktøjer til tempo og frekvens), Modes (musikteori) og Modes Guitar (skalaer og akkorder på gribebrættet) til macOS og iOS.',
+    el: 'Λογισμικό μουσικής για παραγωγούς και μουσικούς: Metric (εργαλεία χρονισμού και συχνότητας), Modes (θεωρία της μουσικής) και Modes Guitar (κλίμακες και συγχορδίες στην ταστιέρα) για macOS και iOS.',
+    fi: 'Musiikkiohjelmistoja tuottajille ja muusikoille: Metric (tempon ja taajuuden työkalut), Modes (musiikin teoria) ja Modes Guitar (asteikot ja soinnut otelaudalla) macOS:lle ja iOS:lle.',
+    hi: 'प्रोड्यूसरों और संगीतकारों के लिए संगीत सॉफ़्टवेयर: macOS और iOS के लिए Metric (टाइमिंग और फ़्रीक्वेंसी टूलकिट), Modes (संगीत सिद्धांत) और Modes Guitar (फ़्रेटबोर्ड पर स्केल और कॉर्ड)।',
+    id: 'Perangkat lunak musik untuk produser dan musisi: Metric (toolkit tempo dan frekuensi), Modes (teori musik) dan Modes Guitar (skala dan akor di fretboard) untuk macOS dan iOS.',
+    it: 'Software musicale per produttori e musicisti: Metric (strumenti per tempo e frequenze), Modes (teoria musicale) e Modes Guitar (scale e accordi sulla tastiera) per macOS e iOS.',
+    no: 'Musikkprogramvare for produsenter og musikere: Metric (verktøy for tempo og frekvens), Modes (musikkteori) og Modes Guitar (skalaer og akkorder på gripebrettet) for macOS og iOS.',
+    pa: 'ਪ੍ਰੋਡਿਊਸਰਾਂ ਅਤੇ ਸੰਗੀਤਕਾਰਾਂ ਲਈ ਸੰਗੀਤ ਸਾਫ਼ਟਵੇਅਰ: macOS ਅਤੇ iOS ਲਈ Metric (ਟਾਈਮਿੰਗ ਅਤੇ ਫ਼੍ਰੀਕੁਐਂਸੀ ਟੂਲਕਿੱਟ), Modes (ਸੰਗੀਤ ਸਿਧਾਂਤ) ਅਤੇ Modes Guitar (ਫ੍ਰੇਟਬੋਰਡ ਉੱਤੇ ਸਕੇਲ ਅਤੇ ਕੋਰਡ)।',
+    sv: 'Musikprogram för producenter och musiker: Metric (verktyg för tempo och frekvens), Modes (musikteori) och Modes Guitar (skalor och ackord på greppbrädan) för macOS och iOS.'
   };
 
   function initOrgJsonLd() {
@@ -691,7 +902,18 @@
     'pt-br': { text: 'Usamos cookies para analisar o tr\u00e1fego do site. Ao clicar em \u201cAceitar\u201d, voc\u00ea consente com o uso de cookies.', accept: 'Aceitar', deny: 'Recusar', privacy: 'Pol\u00edtica de privacidade' },
     'pt-pt': { text: 'Utilizamos cookies para analisar o tr\u00e1fego do site. Ao clicar em \u201cAceitar\u201d, consente a utiliza\u00e7\u00e3o de cookies.', accept: 'Aceitar', deny: 'Recusar', privacy: 'Pol\u00edtica de privacidade' },
     'zh-hans': { text: '\u6211\u4eec\u4f7f\u7528 Cookie \u6765\u5206\u6790\u7f51\u7ad9\u6d41\u91cf\u3002\u70b9\u51fb\u201c\u63a5\u53d7\u201d\u5373\u8868\u793a\u540c\u610f\u6211\u4eec\u4f7f\u7528 Cookie\u3002', accept: '\u63a5\u53d7', deny: '\u62d2\u7edd', privacy: '\u9690\u79c1\u653f\u7b56' },
-    'zh-hant': { text: '\u6211\u5011\u4f7f\u7528 Cookie \u4f86\u5206\u6790\u7db2\u7ad9\u6d41\u91cf\u3002\u9ede\u64ca\u300c\u63a5\u53d7\u300d\u5373\u8868\u793a\u540c\u610f\u6211\u5011\u4f7f\u7528 Cookie\u3002', accept: '\u63a5\u53d7', deny: '\u62d2\u7d55', privacy: '\u96b1\u79c1\u6b0a\u653f\u7b56' }
+    'zh-hant': { text: '\u6211\u5011\u4f7f\u7528 Cookie \u4f86\u5206\u6790\u7db2\u7ad9\u6d41\u91cf\u3002\u9ede\u64ca\u300c\u63a5\u53d7\u300d\u5373\u8868\u793a\u540c\u610f\u6211\u5011\u4f7f\u7528 Cookie\u3002', accept: '\u63a5\u53d7', deny: '\u62d2\u7d55', privacy: '\u96b1\u79c1\u6b0a\u653f\u7b56' },
+    ar: { text: 'نستخدم ملفات تعريف الارتباط لتحليل حركة الزيارات إلى الموقع. بالنقر على «قبول» فإنك توافق على استخدامنا لها.', accept: 'قبول', deny: 'رفض', privacy: 'سياسة الخصوصية' },
+    bn: { text: 'আমরা সাইটের ট্রাফিক বিশ্লেষণের জন্য কুকি ব্যবহার করি। "গ্রহণ করুন" ক্লিক করলে আপনি আমাদের কুকি ব্যবহারে সম্মতি দিচ্ছেন।', accept: 'গ্রহণ করুন', deny: 'প্রত্যাখ্যান করুন', privacy: 'গোপনীয়তা নীতি' },
+    da: { text: 'Vi bruger cookies til at analysere trafikken på webstedet. Ved at klikke på "Accepter" samtykker du til vores brug af cookies.', accept: 'Accepter', deny: 'Afvis', privacy: 'Privatlivspolitik' },
+    el: { text: 'Χρησιμοποιούμε cookies για την ανάλυση της επισκεψιμότητας του ιστότοπου. Κάνοντας κλικ στο «Αποδοχή», συναινείτε στη χρήση των cookies.', accept: 'Αποδοχή', deny: 'Απόρριψη', privacy: 'Πολιτική απορρήτου' },
+    fi: { text: 'Käytämme evästeitä sivuston liikenteen analysointiin. Napsauttamalla "Hyväksy" annat suostumuksesi evästeiden käyttöön.', accept: 'Hyväksy', deny: 'Hylkää', privacy: 'Tietosuojakäytäntö' },
+    hi: { text: 'हम साइट के ट्रैफ़िक का विश्लेषण करने के लिए कुकीज़ का उपयोग करते हैं। "स्वीकार करें" पर क्लिक करके आप कुकीज़ के हमारे उपयोग के लिए सहमति देते हैं।', accept: 'स्वीकार करें', deny: 'अस्वीकार करें', privacy: 'गोपनीयता नीति' },
+    id: { text: 'Kami menggunakan cookie untuk menganalisis lalu lintas situs. Dengan mengeklik "Terima", Anda menyetujui penggunaan cookie oleh kami.', accept: 'Terima', deny: 'Tolak', privacy: 'Kebijakan privasi' },
+    it: { text: 'Utilizziamo i cookie per analizzare il traffico del sito. Facendo clic su "Accetta", acconsenti all\'uso dei cookie.', accept: 'Accetta', deny: 'Rifiuta', privacy: 'Informativa sulla privacy' },
+    no: { text: 'Vi bruker informasjonskapsler til å analysere trafikken på nettstedet. Ved å klikke på «Godta» samtykker du til at vi bruker informasjonskapsler.', accept: 'Godta', deny: 'Avslå', privacy: 'Personvernerklæring' },
+    pa: { text: 'ਅਸੀਂ ਸਾਈਟ ਦੇ ਟ੍ਰੈਫ਼ਿਕ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਨ ਲਈ ਕੂਕੀਜ਼ ਵਰਤਦੇ ਹਾਂ। "ਮਨਜ਼ੂਰ ਕਰੋ" \'ਤੇ ਕਲਿੱਕ ਕਰਕੇ ਤੁਸੀਂ ਕੂਕੀਜ਼ ਦੀ ਸਾਡੀ ਵਰਤੋਂ ਲਈ ਸਹਿਮਤੀ ਦਿੰਦੇ ਹੋ।', accept: 'ਮਨਜ਼ੂਰ ਕਰੋ', deny: 'ਅਸਵੀਕਾਰ ਕਰੋ', privacy: 'ਪਰਦੇਦਾਰੀ ਨੀਤੀ' },
+    sv: { text: 'Vi använder cookies för att analysera trafiken på webbplatsen. Genom att klicka på "Godkänn" samtycker du till vår användning av cookies.', accept: 'Godkänn', deny: 'Avvisa', privacy: 'Integritetspolicy' }
   };
 
   function initCookieConsent() {

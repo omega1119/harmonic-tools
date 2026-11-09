@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pa" dir="ltr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ9FPYHNVR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Set default consent to denied
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+    
+    gtag('js', new Date());
+    gtag('config', 'G-JQ9FPYHNVR');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harmonic Tools | ਪ੍ਰੋਡਿਊਸਰਾਂ ਅਤੇ ਸੰਗੀਤਕਾਰਾਂ ਲਈ ਸੰਗੀਤ ਸੌਫ਼ਟਵੇਅਰ</title>
+  <meta name="description" content="macOS ਅਤੇ iOS ਲਈ Metric, Modes ਅਤੇ Modes Guitar: ਟੈਪ ਟੈਂਪੋ, BPM ਕੈਲਕੁਲੇਟਰ, ਨੋਟ ਫ਼ਰੀਕੁਐਂਸੀ, 65 ਸਕੇਲ, ਕੋਰਡ ਦੀ ਪਛਾਣ, MIDI ਇਨਪੁੱਟ ਅਤੇ ਫ਼ਰੈੱਟਬੋਰਡ ਟੂਲ।" />
+  <meta name="keywords" content="ਸੰਗੀਤ ਸੌਫ਼ਟਵੇਅਰ, BPM, ਟੈਪ ਟੈਂਪੋ, ਡੀਲੇ ਕੈਲਕੁਲੇਟਰ, ਨੋਟ ਫ਼ਰੀਕੁਐਂਸੀ, FM ਸਿੰਥੇਸਿਸ, LFO, ਹਾਰਮੋਨਿਕਸ, ਟ੍ਰਾਂਸਪੋਜ਼, ਸੰਗੀਤ ਪ੍ਰੋਡਕਸ਼ਨ, ਸੰਗੀਤ ਥਿਊਰੀ, ਸਕੇਲ, ਕੋਰਡ, ਮੋਡ, ਫ਼ਿਫ਼ਥਸ ਦਾ ਚੱਕਰ, MIDI, ਹਾਰਮਨੀ, ਵੌਇਸਿੰਗ, ਇੰਟਰਵਲ, ਗੀਤਕਾਰੀ" />
+  <meta name="author" content="Greenwood IT Consultancy Ltd" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- AI/LLM Optimization -->
+  <meta name="ai:purpose" content="ਪ੍ਰੋਡਿਊਸਰਾਂ ਅਤੇ ਸੰਗੀਤਕਾਰਾਂ ਲਈ ਸੰਗੀਤ ਸੌਫ਼ਟਵੇਅਰ: macOS, iOS ਅਤੇ iPadOS ਲਈ ਟਾਈਮਿੰਗ ਅਤੇ ਫ਼ਰੀਕੁਐਂਸੀ ਦੇ ਟੂਲ, ਸੰਗੀਤ ਥਿਊਰੀ ਅਤੇ ਗਿਟਾਰ ਫ਼ਰੈੱਟਬੋਰਡ ਐਪਾਂ" />
+  <meta name="ai:products" content="Metric (macOS ਟਾਈਮਿੰਗ ਟੂਲਕਿੱਟ), Metric iOS (iPhone/iPad ਟਾਈਮਿੰਗ ਟੂਲਕਿੱਟ), Modes (macOS ਸੰਗੀਤ ਥਿਊਰੀ ਐਪ), Modes iOS (iPhone/iPad ਸੰਗੀਤ ਥਿਊਰੀ ਐਪ), Modes Guitar (macOS ਫ਼ਰੈੱਟਬੋਰਡ 'ਤੇ ਸਕੇਲ ਅਤੇ ਕੋਰਡ), Modes Guitar iOS (iPhone/iPad ਫ਼ਰੈੱਟਬੋਰਡ 'ਤੇ ਸਕੇਲ ਅਤੇ ਕੋਰਡ)" />
+  <meta name="ai:audience" content="ਸੰਗੀਤ ਪ੍ਰੋਡਿਊਸਰ, ਸਾਊਂਡ ਡਿਜ਼ਾਈਨਰ, ਸੰਗੀਤਕਾਰ, ਆਡੀਓ ਇੰਜੀਨੀਅਰ, ਸੰਗੀਤ ਦੇ ਅਧਿਆਪਕ, ਗੀਤਕਾਰ" />
+  <meta name="ai:features" content="ਟੈਪ ਟੈਂਪੋ, BPM→ms/Hz ਸਾਰਣੀਆਂ, ਨੋਟ↔ਫ਼ਰੀਕੁਐਂਸੀ, ਟ੍ਰਾਂਸਪੋਜ਼, FM ਕੈਲਕੁਲੇਟਰ, LFO ਰੇਟ, ਹਾਰਮੋਨਿਕ ਸੀਰੀਜ਼, ਸਕੇਲ ਅਤੇ ਕੋਰਡ ਫ਼ਾਈਂਡਰ, 65 ਸਕੇਲ, 8 ਵੌਇਸਿੰਗ ਕਿਸਮਾਂ, ਉਧਾਰ ਲਏ ਕੋਰਡ, ਫ਼ਿਫ਼ਥਸ ਦਾ ਚੱਕਰ, ਥਰਡਸ ਦਾ ਚੱਕਰ, MIDI ਇਨਪੁੱਟ" />
+  <meta name="ai:platforms" content="macOS, iOS, iPhone, iPad, Mac App Store, App Store" />
+  <meta name="citation:title" content="Harmonic Tools | ਪ੍ਰੋਡਿਊਸਰਾਂ ਅਤੇ ਸੰਗੀਤਕਾਰਾਂ ਲਈ ਸੰਗੀਤ ਸੌਫ਼ਟਵੇਅਰ" />
+  <meta name="citation:publisher" content="Greenwood IT Consultancy Ltd" />
+
+  <link rel="canonical" href="https://harmonic.tools/pa/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://harmonic.tools/pa/" />
+  <meta property="og:title" content="Harmonic Tools | ਪ੍ਰੋਡਿਊਸਰਾਂ ਅਤੇ ਸੰਗੀਤਕਾਰਾਂ ਲਈ ਸੰਗੀਤ ਸੌਫ਼ਟਵੇਅਰ" />
+  <meta property="og:description" content="ਟੈਪ ਟੈਂਪੋ, BPM ਕੈਲਕੁਲੇਟਰ, ਨੋਟ ਫ਼ਰੀਕੁਐਂਸੀ, 65 ਸਕੇਲ, ਕੋਰਡ ਦੀ ਪਛਾਣ, MIDI, ਫ਼ਰੈੱਟਬੋਰਡ ਟੂਲ: macOS ਅਤੇ iOS ਲਈ Metric, Modes ਅਤੇ Modes Guitar।" />
+  <meta property="og:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta property="og:image:alt" content="Harmonic Tools" />
+  <meta property="og:site_name" content="Harmonic Tools" />
+  <meta property="og:locale" content="pa_IN" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:url" content="https://harmonic.tools/pa/" />
+  <meta name="twitter:title" content="Harmonic Tools | ਪ੍ਰੋਡਿਊਸਰਾਂ ਅਤੇ ਸੰਗੀਤਕਾਰਾਂ ਲਈ ਸੰਗੀਤ ਸੌਫ਼ਟਵੇਅਰ" />
+  <meta name="twitter:description" content="ਟੈਪ ਟੈਂਪੋ, BPM ਕੈਲਕੁਲੇਟਰ, ਨੋਟ ਫ਼ਰੀਕੁਐਂਸੀ, 65 ਸਕੇਲ, ਕੋਰਡ ਦੀ ਪਛਾਣ, MIDI, ਫ਼ਰੈੱਟਬੋਰਡ ਟੂਲ: macOS ਅਤੇ iOS ਲਈ Metric, Modes ਅਤੇ Modes Guitar।" />
+  <meta name="twitter:image" content="https://harmonic.tools/assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" />
+  <meta name="twitter:image:alt" content="Harmonic Tools" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../assets/css/styles.css?v=24" />
+  <script defer src="../assets/js/main.js?v=12"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "SoftwareApplication",
+        "position": 1,
+        "name": "Metric",
+        "operatingSystem": "macOS",
+        "applicationCategory": "MusicApplication",
+        "description": "macOS ਲਈ ਟਾਈਮਿੰਗ ਅਤੇ ਫ਼ਰੀਕੁਐਂਸੀ ਦਾ ਵਿੰਡੋ ਵਾਲਾ ਟੂਲਕਿੱਟ। ਮੈਟਰੋਨੋਮ, ਮੀਨੂ ਬਾਰ ਸ਼ੌਰਟਕੱਟ ਨਾਲ ਟੈਪ ਟੈਂਪੋ, BPM→ms/Hz ਸਾਰਣੀਆਂ, ਨੋਟ↔ਫ਼ਰੀਕੁਐਂਸੀ ਖੋਜ, ਟ੍ਰਾਂਸਪੋਜ਼, FM + LFO ਕੈਲਕੁਲੇਟਰ ਅਤੇ 32 ਹਾਰਮੋਨਿਕਸ।",
+        "url": "https://harmonic.tools/pa/products/metric.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 2,
+        "name": "Metric iOS",
+        "operatingSystem": "iOS",
+        "applicationCategory": "MusicApplication",
+        "description": "iPhone ਅਤੇ iPad ਲਈ ਟਾਈਮਿੰਗ ਅਤੇ ਫ਼ਰੀਕੁਐਂਸੀ ਦਾ ਟੂਲਕਿੱਟ। ਮੈਟਰੋਨੋਮ, ਟੈਪ ਟੈਂਪੋ, BPM→ms/Hz ਸਾਰਣੀਆਂ, ਨੋਟ↔ਫ਼ਰੀਕੁਐਂਸੀ, ਟ੍ਰਾਂਸਪੋਜ਼, FM + LFO ਕੈਲਕੁਲੇਟਰ ਅਤੇ 32 ਹਾਰਮੋਨਿਕਸ।",
+        "url": "https://harmonic.tools/pa/products/metric-ios.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 3,
+        "name": "Modes",
+        "operatingSystem": "macOS",
+        "applicationCategory": "MusicApplication",
+        "description": "macOS ਲਈ ਸੰਗੀਤ ਥਿਊਰੀ ਐਪ। 65 ਸਕੇਲ, 8 ਕਿਸਮਾਂ ਦੀ ਵੌਇਸਿੰਗ, ਕੋਰਡ ਦੀ ਪਛਾਣ, ਡਾਇਆਟੋਨਿਕ ਹਾਰਮਨੀ, ਉਧਾਰ ਲਏ ਕੋਰਡ, ਫ਼ਿਫ਼ਥਸ ਦਾ ਚੱਕਰ ਅਤੇ ਥਰਡਸ ਦਾ ਚੱਕਰ।",
+        "url": "https://harmonic.tools/pa/products/modes.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 4,
+        "name": "Modes iOS",
+        "operatingSystem": "iOS",
+        "applicationCategory": "MusicApplication",
+        "description": "iPhone ਅਤੇ iPad ਲਈ ਸੰਗੀਤ ਥਿਊਰੀ ਐਪ। 65 ਸਕੇਲ, 8 ਕਿਸਮਾਂ ਦੀ ਵੌਇਸਿੰਗ, ਕੋਰਡ ਦੀ ਪਛਾਣ, ਡਾਇਆਟੋਨਿਕ ਹਾਰਮਨੀ, ਉਧਾਰ ਲਏ ਕੋਰਡ, ਫ਼ਿਫ਼ਥਸ ਦਾ ਚੱਕਰ ਅਤੇ ਥਰਡਸ ਦਾ ਚੱਕਰ।",
+        "url": "https://harmonic.tools/pa/products/modes-ios.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 5,
+        "name": "Modes Guitar",
+        "operatingSystem": "macOS",
+        "applicationCategory": "MusicApplication",
+        "description": "macOS ਲਈ ਫ਼ਰੈੱਟਬੋਰਡ 'ਤੇ ਸਕੇਲ ਅਤੇ ਕੋਰਡ। ਜਿਹੜੇ ਨੋਟ ਤੁਸੀਂ ਵਜਾ ਰਹੇ ਹੋ ਉਨ੍ਹਾਂ ਤੋਂ ਕੋਰਡ ਅਤੇ ਸਕੇਲ ਪਛਾਣੋ, CAGED ਅਤੇ ਪ੍ਰਤੀ ਤਾਰ ਤਿੰਨ ਨੋਟ ਵਾਲੀਆਂ ਪੁਜ਼ੀਸ਼ਨਾਂ, 20 ਟਿਊਨਿੰਗ ਅਤੇ ਇੱਕ ਕਸਟਮ ਟਿਊਨਿੰਗ ਵਿੱਚ ਵਜਾਉਣਯੋਗ ਕੋਰਡ ਸ਼ੇਪ, ਸਟ੍ਰੋਬ ਟਿਊਨਰ ਅਤੇ ਅਭਿਆਸ ਮੈਟਰੋਨੋਮ।",
+        "url": "https://harmonic.tools/pa/products/modes-guitar.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "position": 6,
+        "name": "Modes Guitar iOS",
+        "operatingSystem": "iOS",
+        "applicationCategory": "MusicApplication",
+        "description": "iPhone ਅਤੇ iPad ਲਈ ਫ਼ਰੈੱਟਬੋਰਡ 'ਤੇ ਸਕੇਲ ਅਤੇ ਕੋਰਡ। ਜਿਹੜੇ ਨੋਟ ਤੁਸੀਂ ਵਜਾ ਰਹੇ ਹੋ ਉਨ੍ਹਾਂ ਤੋਂ ਕੋਰਡ ਅਤੇ ਸਕੇਲ ਪਛਾਣੋ, CAGED ਅਤੇ ਪ੍ਰਤੀ ਤਾਰ ਤਿੰਨ ਨੋਟ ਵਾਲੀਆਂ ਪੁਜ਼ੀਸ਼ਨਾਂ, 20 ਟਿਊਨਿੰਗ ਅਤੇ ਇੱਕ ਕਸਟਮ ਟਿਊਨਿੰਗ ਵਿੱਚ ਵਜਾਉਣਯੋਗ ਕੋਰਡ ਸ਼ੇਪ, ਸਟ੍ਰੋਬ ਟਿਊਨਰ ਅਤੇ ਅਭਿਆਸ ਮੈਟਰੋਨੋਮ।",
+        "url": "https://harmonic.tools/pa/products/modes-guitar-ios.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-cookie-consent>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="./" aria-label="Harmonic Tools ਹੋਮ">Harmonic Tools</a>
+      <nav class="nav" role="navigation" aria-label="ਮੁੱਖ">
+        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false">ਮੀਨੂ</button>
+        <ul id="primary-menu" class="nav-list">
+        </ul>
+      </nav>
+      <div class="language-selector" data-languages='{"en":"../en/","de":"../de/","es":"../es/","fr":"../fr/","pl":"../pl/","ja":"../ja/","ko":"../ko/","pt-br":"../pt-br/","pt-pt":"../pt-pt/","zh-hans":"../zh-hans/","zh-hant":"../zh-hant/","ar":"../ar/","bn":"../bn/","da":"../da/","el":"../el/","fi":"../fi/","hi":"../hi/","id":"../id/","it":"../it/","no":"../no/","pa":"./","sv":"../sv/"}' data-active-lang="pa"></div>
+      <button class="theme-toggle" aria-label="ਥੀਮ ਬਦਲੋ" title="ਥੀਮ ਬਦਲੋ"></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ═══════════════════════════════════════════
+         HERO Brand Positioning
+         ═══════════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <p class="hero-label">Harmonic.Tools</p>
+        <h1 id="hero-title">Mac, iPhone ਅਤੇ iPad ਲਈ ਸੰਗੀਤ ਥਿਊਰੀ ਅਤੇ ਟਾਈਮਿੰਗ ਐਪਾਂ</h1>
+        <p class="subhead">ਸਕੇਲ, ਕੋਰਡ, ਟੈਂਪੋ ਅਤੇ ਫ਼ਰੀਕੁਐਂਸੀ ਦੀਆਂ ਗਣਨਾਵਾਂ, ਅਤੇ ਗਿਟਾਰ ਫ਼ਰੈੱਟਬੋਰਡ ਦਾ ਹਵਾਲਾ।</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#products">ਉਤਪਾਦ ਵੇਖੋ</a>
+          <a class="btn btn-secondary" href="#pillars">ਮੁੱਖ ਖੇਤਰ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         WHAT WE BUILD Brand Statement
+         ═══════════════════════════════════════════ -->
+    <section class="brand-statement" aria-labelledby="brand-title">
+      <div class="container">
+        <h2 id="brand-title" class="section-title">ਅਸੀਂ ਕੀ ਬਣਾਉਂਦੇ ਹਾਂ</h2>
+        <p class="brand-text">Harmonic.Tools macOS, iOS ਅਤੇ iPadOS ਲਈ ਢਾਂਚਾਬੱਧ ਸੰਗੀਤ ਐਪਾਂ ਬਣਾਉਂਦਾ ਹੈ।</p>
+        <p class="brand-text">ਤਿੰਨ ਉਤਪਾਦ ਹਨ: ਟਾਈਮਿੰਗ ਅਤੇ ਫ਼ਰੀਕੁਐਂਸੀ ਲਈ Metric, ਸੰਗੀਤ ਥਿਊਰੀ ਲਈ Modes ਅਤੇ ਫ਼ਰੈੱਟਬੋਰਡ ਲਈ Modes Guitar। ਹਰ ਇੱਕ Mac ਐਪ ਅਤੇ iPhone ਤੇ iPad ਐਪ ਵਜੋਂ ਉਪਲਬਧ ਹੈ।</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CORE FOCUS AREAS Ecosystem Pillars
+         ═══════════════════════════════════════════ -->
+    <section id="pillars" class="pillars" aria-labelledby="pillars-title">
+      <div class="container">
+        <h2 id="pillars-title" class="section-title">ਮੁੱਖ ਖੇਤਰ</h2>
+        <div class="pillar-grid" role="list">
+          <article class="pillar-card" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="24" r="12" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="24" cy="24" r="4" fill="currentColor" opacity="0.4"/></svg>
+            </div>
+            <h3>ਹਾਰਮੋਨਿਕ ਪ੍ਰਣਾਲੀਆਂ</h3>
+            <p>65 ਸਕੇਲ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਮੋਡ, ਇੰਟਰਵਲ ਫ਼ਾਰਮੂਲੇ ਅਤੇ 20 ਗਿਟਾਰ ਟਿਊਨਿੰਗ।</p>
+          </article>
+          <article class="pillar-card" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="48" height="48"><rect x="6" y="6" width="36" height="36" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="6" y1="18" x2="42" y2="18" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="6" y1="30" x2="42" y2="30" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="18" y1="6" x2="18" y2="42" stroke="currentColor" stroke-width="1" opacity="0.5"/><line x1="30" y1="6" x2="30" y2="42" stroke="currentColor" stroke-width="1" opacity="0.5"/></svg>
+            </div>
+            <h3>ਰਚਨਾ ਦੇ ਟੂਲ</h3>
+            <p>ਰੋਮਨ ਅੰਕਾਂ ਅਤੇ ਫ਼ੰਕਸ਼ਨ ਲੇਬਲਾਂ ਵਾਲੇ ਡਾਇਆਟੋਨਿਕ ਕੋਰਡ, ਉਧਾਰ ਲਏ ਕੋਰਡ, ਅਤੇ ਮੌਡੂਲੇਸ਼ਨ ਦੀ ਯੋਜਨਾ ਲਈ ਫ਼ਿਫ਼ਥਸ ਤੇ ਥਰਡਸ ਦੇ ਚੱਕਰ।</p>
+          </article>
+          <article class="pillar-card" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="48" height="48"><line x1="8" y1="40" x2="40" y2="8" stroke="currentColor" stroke-width="1.5"/><circle cx="14" cy="34" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="34" cy="14" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="24" x2="40" y2="24" stroke="currentColor" stroke-width="0.75" opacity="0.3"/></svg>
+            </div>
+            <h3>ਵਿਸ਼ਲੇਸ਼ਣ ਅਤੇ ਹਵਾਲਾ</h3>
+            <p>ਇੰਟਰਵਲ, ਕੀ, ਕੋਰਡ ਅਤੇ ਸਕੇਲ ਦੀ ਖੋਜ, ਨਾਲ ਨੋਟ ਫ਼ਰੀਕੁਐਂਸੀ, ਡੀਲੇ ਟਾਈਮ ਅਤੇ ਹਾਰਮੋਨਿਕ ਸੀਰੀਜ਼।</p>
+          </article>
+          <article class="pillar-card" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="48" height="48"><rect x="10" y="28" width="4" height="12" rx="1" fill="currentColor" opacity="0.3"/><rect x="18" y="20" width="4" height="20" rx="1" fill="currentColor" opacity="0.5"/><rect x="26" y="14" width="4" height="26" rx="1" fill="currentColor" opacity="0.7"/><rect x="34" y="8" width="4" height="32" rx="1" fill="currentColor" opacity="0.9"/></svg>
+            </div>
+            <h3>ਸਾਜ਼ ਅਤੇ ਇਨਪੁੱਟ</h3>
+            <p>MIDI ਕੀਬੋਰਡ ਇਨਪੁੱਟ, ਸਕੇਲ ਅਤੇ ਕੋਰਡ ਦਾ ਫ਼ਰੈੱਟਬੋਰਡ ਦ੍ਰਿਸ਼, ਅਤੇ ਸਟ੍ਰੋਬ ਟਿਊਨਰ।</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PRODUCTS Current Product Showcase
+         ═══════════════════════════════════════════ -->
+    <section id="products" class="products" aria-labelledby="products-title">
+      <div class="container">
+        <h2 id="products-title" class="section-title">ਉਤਪਾਦ</h2>
+        <p class="section-lead">ਟਾਈਮਿੰਗ ਅਤੇ ਫ਼ਰੀਕੁਐਂਸੀ ਦੇ ਟੂਲ, ਸੰਗੀਤ ਥਿਊਰੀ ਐਪ ਅਤੇ ਗਿਟਾਰ ਫ਼ਰੈੱਟਬੋਰਡ ਐਪ, ਹਰ ਇੱਕ Mac ਲਈ ਅਤੇ iPhone ਤੇ iPad ਲਈ।</p>
+
+        <div class="platform-group" aria-labelledby="platform-ios-title">
+          <h3 id="platform-ios-title" class="platform-group__title">iOS ਅਤੇ iPadOS</h3>
+          <div class="platform-hero" aria-label="iOS ਅਤੇ iPadOS ਦੀਆਂ ਉਦਾਹਰਣਾਂ">
+            <div class="screenshot-grid">
+              <a class="platform-hero__link" href="./products/modes-guitar-ios.html" aria-label="Modes Guitar iOS ਵੇਖੋ">
+                <figure class="device-shot device-shot--ipad-portrait">
+                  <div class="device-shot__stage" aria-label="iPad ਸਕਰੀਨਸ਼ਾਟ">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/iPad Pro 13 - M4 - Space Gray - Portrait.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesGuitariOS/pa-IN/iPad Pro 13-inch (M5)-scaleNotes-ipad-portrait-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesGuitariOS/pa-IN/iPad Pro 13-inch (M5)-scaleNotes-ipad-portrait-light.png" alt="iPad 'ਤੇ Modes Guitar iOS" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>iPad 'ਤੇ Modes Guitar iOS।</figcaption>
+                </figure>
+              </a>
+
+              <a class="platform-hero__link" href="./products/modes-ios.html" aria-label="Modes iOS ਵੇਖੋ">
+                <figure class="device-shot device-shot--ipad-portrait">
+                  <div class="device-shot__stage" aria-label="iPad ਸਕਰੀਨਸ਼ਾਟ">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/iPad Pro 13 - M4 - Space Gray - Portrait.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesiOS/pa-IN/iPad Pro 13-inch (M5)-scaleChord-ipad-portrait-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesiOS/pa-IN/iPad Pro 13-inch (M5)-scaleChord-ipad-portrait-light.png" alt="iPad 'ਤੇ Modes iOS" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>iPad 'ਤੇ Modes iOS।</figcaption>
+                </figure>
+              </a>
+
+              <a class="platform-hero__link" href="./products/metric-ios.html" aria-label="Metric iOS ਵੇਖੋ">
+                <figure class="device-shot device-shot--iphone">
+                  <div class="device-shot__stage" aria-label="iPhone ਸਕਰੀਨਸ਼ਾਟ">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/iPhone 17 Pro - Deep Blue - Portrait.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/MetriciOS/pa-IN/iPhone 17 Pro Max-tap-iphone-portrait-dark.png" data-theme="dark">
+                        <img src="../assets/images/MetriciOS/pa-IN/iPhone 17 Pro Max-tap-iphone-portrait-light.png" alt="iPhone 'ਤੇ Metric iOS" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>iPhone 'ਤੇ Metric iOS।</figcaption>
+                </figure>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-grid" role="list">
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesGuitariOSAppIcon-iOS-Dark-1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesGuitariOSAppIcon-iOS-Default-1024@1x.png" alt="Modes Guitar iOS ਐਪ ਆਈਕਨ" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes Guitar</h4>
+                <p class="tagline">ਫ਼ਰੈੱਟਬੋਰਡ 'ਤੇ ਸਕੇਲ ਅਤੇ ਕੋਰਡ।</p>
+                <p class="blurb">ਜਿਹੜੇ ਨੋਟ ਤੁਸੀਂ ਵਜਾ ਰਹੇ ਹੋ ਉਨ੍ਹਾਂ ਤੋਂ ਕੋਰਡ ਅਤੇ ਸਕੇਲ ਪਛਾਣੋ, ਸਕੇਲ ਨੂੰ CAGED ਅਤੇ ਪ੍ਰਤੀ ਤਾਰ ਤਿੰਨ ਨੋਟ ਵਾਲੀਆਂ ਸ਼ੇਪਾਂ ਵਿੱਚ ਵੇਖੋ, 20 ਟਿਊਨਿੰਗ ਵਿੱਚ ਵਜਾਉਣਯੋਗ ਕੋਰਡ ਸ਼ੇਪ ਵੇਖੋ, ਸਟ੍ਰੋਬ ਟਿਊਨਰ ਨਾਲ ਟਿਊਨ ਕਰੋ ਅਤੇ ਬਿਲਟ-ਇਨ ਮੈਟਰੋਨੋਮ ਨਾਲ ਅਭਿਆਸ ਕਰੋ।</p>
+                <ul class="features">
+                  <li>ਨੈੱਕ 'ਤੇ ਸਕੇਲ ਅਤੇ ਕੋਰਡ ਫ਼ਾਈਂਡਰ</li>
+                  <li>CAGED ਅਤੇ ਪ੍ਰਤੀ ਤਾਰ ਤਿੰਨ ਨੋਟ ਵਾਲੀਆਂ ਪੁਜ਼ੀਸ਼ਨਾਂ</li>
+                  <li>ਕਿਸੇ ਵੀ ਟਿਊਨਿੰਗ ਵਿੱਚ ਵਜਾਉਣਯੋਗ ਕੋਰਡ ਸ਼ੇਪ</li>
+                  <li>20 ਟਿਊਨਿੰਗ + ਕਸਟਮ, ਸਟ੍ਰੋਬ ਟਿਊਨਰ, ਅਭਿਆਸ ਮੈਟਰੋਨੋਮ</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="ios" data-store-product="Modes Guitar iOS"></span>
+                  <a class="btn btn-tertiary" href="./products/modes-guitar-ios.html">ਹੋਰ ਜਾਣੋ</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesiOSAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesiOSAppIcon-macOS-Default-1024x1024@1x.png" alt="Modes iOS ਐਪ ਆਈਕਨ" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes</h4>
+                <p class="tagline">ਸੰਗੀਤ ਥਿਊਰੀ ਐਪ।</p>
+                <p class="blurb">65 ਸਕੇਲ, 8 ਕਿਸਮਾਂ ਦੀ ਵੌਇਸਿੰਗ ਵਿੱਚ ਕੋਰਡ, ਅਤੇ ਫ਼ਿਫ਼ਥਸ ਤੇ ਥਰਡਸ ਦੇ ਇੰਟਰਐਕਟਿਵ ਚੱਕਰ।</p>
+                <ul class="features">
+                  <li>ਸਕੇਲ ਅਤੇ ਕੋਰਡ ਫ਼ਾਈਂਡਰ (MIDI + ਟੱਚ ਕੀਬੋਰਡ)</li>
+                  <li>65 ਸਕੇਲ · 21 ਕੋਰਡ ਕਿਸਮਾਂ · 8 ਵੌਇਸਿੰਗ</li>
+                  <li>ਸਾਂਝੇ ਨੋਟ, ਸਾਂਝੇ ਕੋਰਡ, ਉਧਾਰ ਲਏ ਕੋਰਡ</li>
+                  <li>ਫ਼ਿਫ਼ਥਸ / ਥਰਡਸ ਦਾ ਚੱਕਰ</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="ios" data-store-product="Modes iOS"></span>
+                  <a class="btn btn-tertiary" href="./products/modes-ios.html">ਹੋਰ ਜਾਣੋ</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/MetriciOSAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/MetriciOSAppIcon-macOS-Default-1024x1024@1x.png" alt="Metric iOS ਐਪ ਆਈਕਨ" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Metric</h4>
+                <p class="tagline">ਟਾਈਮਿੰਗ ਅਤੇ ਫ਼ਰੀਕੁਐਂਸੀ ਟੂਲਕਿੱਟ।</p>
+                <p class="blurb">ਮੈਟਰੋਨੋਮ, ਟੈਪ ਟੈਂਪੋ, BPM ਸਾਰਣੀਆਂ, ਨੋਟ↔ਫ਼ਰੀਕੁਐਂਸੀ, ਟ੍ਰਾਂਸਪੋਜ਼, FM ਤੇ LFO ਕੈਲਕੁਲੇਟਰ ਅਤੇ 32 ਹਾਰਮੋਨਿਕਸ, ਸਭ ਔਫ਼ਲਾਈਨ ਚੱਲਦੇ ਹਨ।</p>
+                <ul class="features">
+                  <li>ਸਾਂਝੇ BPM ਵਾਲਾ ਮੈਟਰੋਨੋਮ ਅਤੇ ਟੈਪ ਟੈਂਪੋ</li>
+                  <li>BPM → ms / Hz ਕਨਵਰਟਰ</li>
+                  <li>ਨੋਟ ↔ ਫ਼ਰੀਕੁਐਂਸੀ (108 ਨੋਟ, A4 = 440 Hz)</li>
+                  <li>ਟ੍ਰਾਂਸਪੋਜ਼, FM, LFO ਅਤੇ ਹਾਰਮੋਨਿਕਸ</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="ios" data-store-product="Metric iOS"></span>
+                  <a class="btn btn-tertiary" href="./products/metric-ios.html">ਹੋਰ ਜਾਣੋ</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="platform-group" aria-labelledby="platform-macos-title">
+          <h3 id="platform-macos-title" class="platform-group__title">macOS</h3>
+          <div class="platform-hero" aria-label="macOS ਦੀਆਂ ਉਦਾਹਰਣਾਂ">
+            <div class="screenshot-grid">
+              <a class="platform-hero__link" href="./products/modes-guitar.html" aria-label="macOS ਲਈ Modes Guitar ਵੇਖੋ">
+                <figure class="device-shot device-shot--mac">
+                  <div class="device-shot__stage" aria-label="macOS ਸਕਰੀਨਸ਼ਾਟ">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesGuitarMac/pa-IN/modesguitar-scaleNotes-mac-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesGuitarMac/pa-IN/modesguitar-scaleNotes-mac-light.png" alt="macOS 'ਤੇ Modes Guitar" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>macOS 'ਤੇ Modes Guitar।</figcaption>
+                </figure>
+              </a>
+
+              <a class="platform-hero__link" href="./products/modes.html" aria-label="macOS ਲਈ Modes ਵੇਖੋ">
+                <figure class="device-shot device-shot--mac">
+                  <div class="device-shot__stage" aria-label="macOS ਸਕਰੀਨਸ਼ਾਟ">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/ModesMac/pa-IN/modes-scaleChord-mac-dark.png" data-theme="dark">
+                        <img src="../assets/images/ModesMac/pa-IN/modes-scaleChord-mac-light.png" alt="macOS 'ਤੇ Modes" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>macOS 'ਤੇ Modes।</figcaption>
+                </figure>
+              </a>
+
+              <a class="platform-hero__link" href="./products/metric.html" aria-label="macOS ਲਈ Metric ਵੇਖੋ">
+                <figure class="device-shot device-shot--mac">
+                  <div class="device-shot__stage" aria-label="macOS ਸਕਰੀਨਸ਼ਾਟ">
+                    <img class="device-shot__bezel" src="../assets/images/Bezels/MacBook Air 13&quot; - 4th Gen - Midnight.png" alt="" loading="lazy" />
+                    <div class="device-shot__screen">
+                      <picture>
+                        <source srcset="../assets/images/MetricMac/pa-IN/metric-tap-mac-dark.png" data-theme="dark">
+                        <img src="../assets/images/MetricMac/pa-IN/metric-tap-mac-light.png" alt="macOS 'ਤੇ Metric" loading="lazy" />
+                      </picture>
+                    </div>
+                  </div>
+                  <figcaption>macOS 'ਤੇ Metric।</figcaption>
+                </figure>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-grid" role="list">
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesGuitarMacAppIcon-macOS-Dark-1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesGuitarMacAppIcon-macOS-Default-1024@1x.png" alt="Modes Guitar macOS ਐਪ ਆਈਕਨ" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes Guitar</h4>
+                <p class="tagline">ਫ਼ਰੈੱਟਬੋਰਡ 'ਤੇ ਸਕੇਲ ਅਤੇ ਕੋਰਡ।</p>
+                <p class="blurb">ਜਿਹੜੇ ਨੋਟ ਤੁਸੀਂ ਵਜਾ ਰਹੇ ਹੋ ਉਨ੍ਹਾਂ ਤੋਂ ਕੋਰਡ ਅਤੇ ਸਕੇਲ ਪਛਾਣੋ, ਸਕੇਲ ਨੂੰ CAGED ਅਤੇ ਪ੍ਰਤੀ ਤਾਰ ਤਿੰਨ ਨੋਟ ਵਾਲੀਆਂ ਸ਼ੇਪਾਂ ਵਿੱਚ ਵੇਖੋ, 20 ਟਿਊਨਿੰਗ ਵਿੱਚ ਵਜਾਉਣਯੋਗ ਕੋਰਡ ਸ਼ੇਪ ਵੇਖੋ, ਸਟ੍ਰੋਬ ਟਿਊਨਰ ਨਾਲ ਟਿਊਨ ਕਰੋ ਅਤੇ ਬਿਲਟ-ਇਨ ਮੈਟਰੋਨੋਮ ਨਾਲ ਅਭਿਆਸ ਕਰੋ।</p>
+                <ul class="features">
+                  <li>ਨੈੱਕ 'ਤੇ ਸਕੇਲ ਅਤੇ ਕੋਰਡ ਫ਼ਾਈਂਡਰ</li>
+                  <li>CAGED ਅਤੇ ਪ੍ਰਤੀ ਤਾਰ ਤਿੰਨ ਨੋਟ ਵਾਲੀਆਂ ਪੁਜ਼ੀਸ਼ਨਾਂ</li>
+                  <li>ਕਿਸੇ ਵੀ ਟਿਊਨਿੰਗ ਵਿੱਚ ਵਜਾਉਣਯੋਗ ਕੋਰਡ ਸ਼ੇਪ</li>
+                  <li>20 ਟਿਊਨਿੰਗ + ਕਸਟਮ, ਸਟ੍ਰੋਬ ਟਿਊਨਰ, ਅਭਿਆਸ ਮੈਟਰੋਨੋਮ</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="mac" data-store-product="Modes Guitar"></span>
+                  <a class="btn btn-tertiary" href="./products/modes-guitar.html">ਹੋਰ ਜਾਣੋ</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/ModesMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/ModesMacAppIcon-macOS-Default-1024x1024@1x.png" alt="Modes macOS ਐਪ ਆਈਕਨ" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Modes</h4>
+                <p class="tagline">ਸੰਗੀਤ ਥਿਊਰੀ ਐਪ।</p>
+                <p class="blurb">65 ਸਕੇਲ, 8 ਕਿਸਮਾਂ ਦੀ ਵੌਇਸਿੰਗ ਵਿੱਚ ਕੋਰਡ, ਅਤੇ ਫ਼ਿਫ਼ਥਸ ਤੇ ਥਰਡਸ ਦੇ ਇੰਟਰਐਕਟਿਵ ਚੱਕਰ।</p>
+                <ul class="features">
+                  <li>ਸਕੇਲ ਅਤੇ ਕੋਰਡ ਫ਼ਾਈਂਡਰ (MIDI + ਕੀਬੋਰਡ)</li>
+                  <li>65 ਸਕੇਲ · 21 ਕੋਰਡ ਕਿਸਮਾਂ · 8 ਵੌਇਸਿੰਗ</li>
+                  <li>ਸਾਂਝੇ ਨੋਟ, ਸਾਂਝੇ ਕੋਰਡ, ਉਧਾਰ ਲਏ ਕੋਰਡ</li>
+                  <li>ਫ਼ਿਫ਼ਥਸ / ਥਰਡਸ ਦਾ ਚੱਕਰ</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="mac" data-store-product="Modes"></span>
+                  <a class="btn btn-tertiary" href="./products/modes.html">ਹੋਰ ਜਾਣੋ</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" role="listitem">
+              <picture>
+                <source srcset="../assets/images/MetricMacAppIcon-macOS-Dark-1024x1024@1x.png" data-theme="dark">
+                <img class="product-icon" src="../assets/images/MetricMacAppIcon-macOS-Default-1024x1024@1x.png" alt="Metric macOS ਐਪ ਆਈਕਨ" loading="lazy" width="128" height="128" />
+              </picture>
+              <div class="product-content">
+                <h4>Metric</h4>
+                <p class="tagline">ਟਾਈਮਿੰਗ ਅਤੇ ਫ਼ਰੀਕੁਐਂਸੀ ਟੂਲਕਿੱਟ।</p>
+                <p class="blurb">ਮੈਟਰੋਨੋਮ, ਟੈਪ ਟੈਂਪੋ, BPM ਸਾਰਣੀਆਂ, ਨੋਟ↔ਫ਼ਰੀਕੁਐਂਸੀ, ਟ੍ਰਾਂਸਪੋਜ਼, FM ਤੇ LFO ਕੈਲਕੁਲੇਟਰ ਅਤੇ 32 ਹਾਰਮੋਨਿਕਸ, ਨਾਲ ਮੀਨੂ ਬਾਰ ਵਿੱਚ ਟੈਪ ਟੈਂਪੋ ਅਤੇ ਡੀਲੇ ਟਾਈਮ।</p>
+                <ul class="features">
+                  <li>ਸਾਂਝੇ BPM ਵਾਲਾ ਮੈਟਰੋਨੋਮ ਅਤੇ ਟੈਪ ਟੈਂਪੋ</li>
+                  <li>BPM → ms / Hz ਹਵਾਲਾ ਸਾਰਣੀਆਂ</li>
+                  <li>ਨੋਟ ↔ ਫ਼ਰੀਕੁਐਂਸੀ (108 ਨੋਟ, A4 = 440 Hz)</li>
+                  <li>ਟ੍ਰਾਂਸਪੋਜ਼, FM, LFO ਅਤੇ ਹਾਰਮੋਨਿਕਸ</li>
+                </ul>
+                <div class="actions">
+                  <span class="store-badge store-badge--disabled" data-store="mac" data-store-product="Metric"></span>
+                  <a class="btn btn-tertiary" href="./products/metric.html">ਹੋਰ ਜਾਣੋ</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PHILOSOPHY Declarative Positioning
+         ═══════════════════════════════════════════ -->
+    <section id="philosophy" class="philosophy" aria-labelledby="philosophy-title">
+      <div class="container">
+        <h2 id="philosophy-title" class="section-title">ਫ਼ਲਸਫ਼ਾ</h2>
+        <blockquote class="philosophy-quote">
+          <p>ਸੰਗੀਤ ਨੂੰ ਇੱਕ ਢਾਂਚਾਬੱਧ ਪ੍ਰਣਾਲੀ ਵਜੋਂ ਵੇਖਿਆ ਜਾ ਸਕਦਾ ਹੈ।</p>
+        </blockquote>
+        <p class="philosophy-text">Harmonic.Tools ਅਜਿਹੀਆਂ ਐਪਾਂ ਬਣਾਉਂਦਾ ਹੈ ਜੋ ਦਿਖਾਉਂਦੀਆਂ ਹਨ ਕਿ ਨੋਟ, ਸਕੇਲ, ਕੋਰਡ ਅਤੇ ਟੈਂਪੋ ਇੱਕ-ਦੂਜੇ ਨਾਲ ਕਿਵੇਂ ਜੁੜੇ ਹੋਏ ਹਨ।</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT Brand Identity
+         ═══════════════════════════════════════════ -->
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title" class="section-title">ਸਾਡੇ ਬਾਰੇ</h2>
+        <p>Harmonic.Tools Apple ਪਲੇਟਫ਼ਾਰਮਾਂ ਲਈ ਸੰਗੀਤ ਸੌਫ਼ਟਵੇਅਰ ਬਣਾਉਂਦਾ ਹੈ।</p>
+        <p>ਐਪਾਂ Swift ਅਤੇ SwiftUI ਵਿੱਚ ਲਿਖੀਆਂ ਗਈਆਂ ਹਨ।</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT
+         ═══════════════════════════════════════════ -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section-title">ਸੰਪਰਕ</h2>
+        <ul class="contact-list">
+          <li><span>ਈਮੇਲ:</span> <a href="#" data-email="contact|gitc.digital" aria-label="Harmonic Tools ਨੂੰ ਈਮੇਲ ਕਰੋ">ਈਮੇਲ ਵੇਖੋ</a></li>
+          <li><span>GitHub:</span> <a href="https://github.com/omega1119" rel="me">github.com/omega1119</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-footer-type="full"></footer>
+</body>
+</html>

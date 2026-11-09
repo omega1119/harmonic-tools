@@ -62,7 +62,9 @@ harmonic-tools/
 
 The site supports multiple languages. Currently available:
 
-- English (`/en/`), German (`/de/`), Spanish (`/es/`), French (`/fr/`), Polish (`/pl/`), Japanese (`/ja/`), Korean (`/ko/`), Brazilian Portuguese (`/pt-br/`), European Portuguese (`/pt-pt/`), Simplified Chinese (`/zh-hans/`) and Traditional Chinese (`/zh-hant/`)
+- English (`/en/`), German (`/de/`), Spanish (`/es/`), French (`/fr/`), Polish (`/pl/`), Japanese (`/ja/`), Korean (`/ko/`), Brazilian Portuguese (`/pt-br/`), European Portuguese (`/pt-pt/`), Simplified Chinese (`/zh-hans/`), Traditional Chinese (`/zh-hant/`), Arabic (`/ar/`, right-to-left), Bengali (`/bn/`), Danish (`/da/`), Greek (`/el/`), Finnish (`/fi/`), Hindi (`/hi/`), Indonesian (`/id/`), Italian (`/it/`), Norwegian (`/no/`), Punjabi (`/pa/`) and Swedish (`/sv/`)
+
+Screenshot folders under `assets/images/*/` use App Store Connect locale codes (`en-US`, `de-DE`, `pt-BR`, `ar-SA`, `pa-IN`, ...), not the site folder slugs.
 
 To add a new language:
 
